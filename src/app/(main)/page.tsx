@@ -47,6 +47,7 @@ import MegaFoundationPage from './mega-foundation/page';
 import { Hero } from './Hero';
 import MegaMediaHub from '../components/MegaMediaHub';
 import MegaTactilePlates from './MegaTactilePlates';
+import MegaRebarSection from './MegaRebarSection';
 
 export default function Home() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -106,6 +107,7 @@ export default function Home() {
             <MegaQSeries/>
             <MegaProducts />
             <MegaMediaHub/>
+            <MegaRebarSection/>
             <MegaTactilePlates/>
             <LiveStreamCommandCenter />
              <MegaFeaShowcase/>

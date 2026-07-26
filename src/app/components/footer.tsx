@@ -64,7 +64,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-[#1a1a1a] text-gray-300 border-t border-gray-800 font-sans">
-      <div className="w-full px-4 sm:px-6 lg:px-10 py-3 pt-16 ">
+      <div className="w-full px-4 sm:px-6 lg:px-10 lg:pr-20 py-3 pt-16 ">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 xl:gap-16 border-b border-gray-800 pb-12">
 
           <div className="flex flex-col justify-evenly gap-16 space-y-6">
@@ -93,21 +93,37 @@ const Footer = () => {
               </div>
             </div>
 
-            <div>
-              <div className="text-sm space-y-1 text-gray-400">
-                <p>105 MAXES ROAD</p>
-                <p>MELVILLE, NY 11737, USA</p>
-
+            <div className="flex flex-row flex-wrap gap-8 mt-4">
+              <div>
+                <h4 className="text-white text-xs font-semibold mb-2">New York Office</h4>
+                <div className="text-sm space-y-1 text-gray-400">
+                  <p>105 MAXES ROAD</p>
+                  <p>MELVILLE, NY 11737, USA</p>
+                </div>
+                <p className='mt-2'>
+                  <a
+                    href="tel:+15127828880"
+                    className="hover:text-white transition-colors duration-200 text-sm"
+                  >
+                    +1 (512) 782-8880
+                  </a>
+                </p>
               </div>
-              {/* Added Mobile Number with Link */}
-              <p className='mt-4'>
-                <a
-                  href="tel:+15127828880"
-                  className="hover:text-white transition-colors duration-200"
-                >
-                  +1 (512) 782-8880
-                </a>
-              </p>
+              <div>
+                <h4 className="text-white text-xs font-semibold mb-2">Florida Office</h4>
+                <div className="text-sm space-y-1 text-gray-400">
+                  <p>850 NW FEDERAL HWY</p>
+                  <p>STUART, FL 34994, USA</p>
+                </div>
+                <p className='mt-2'>
+                  <a
+                    href="tel:+17722970700"
+                    className="hover:text-white transition-colors duration-200 text-sm"
+                  >
+                    (772) 297-0700
+                  </a>
+                </p>
+              </div>
             </div>
 
           </div>

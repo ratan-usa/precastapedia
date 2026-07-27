@@ -167,7 +167,7 @@ export default function MegaRebarLiteCatalog() {
           {REBAR_LITE_PRODUCTS.map((product) => (
             <div 
               key={product.id}
-              className="bg-gray-50 border border-gray-200 p-6 flex flex-col justify-between group rounded-none hover:border-[#cc2221] hover:bg-white transition-all duration-300 shadow-sm"
+              className="bg-[#cc2221] border border-gray-200 p-6 flex flex-col justify-between group rounded-none hover:border-[#cc2221] hover:bg-black transition-all duration-300 shadow-sm"
             >
               <div>
                 {/* Image Frame */}
@@ -185,20 +185,20 @@ export default function MegaRebarLiteCatalog() {
                 </div>
 
                 {/* Specs Standard Badge */}
-                <span className="text-[10px] font-mono tracking-widest text-[#cc2221] uppercase font-bold block mb-2">
+                <span className="text-[10px] font-mono tracking-widest text-white uppercase font-bold block mb-2">
                   {product.materialStandard}
                 </span>
 
                 {/* Product Title & Tagline */}
-                <h3 className="text-xl font-black uppercase tracking-tight text-[#0a0a0a] group-hover:text-[#cc2221] transition-colors mb-1">
+                <h3 className="text-xl font-black uppercase tracking-tight text-white   transition-colors mb-1">
                   {product.name}
                 </h3>
-                <p className="text-xs font-mono uppercase tracking-wider text-gray-400 font-bold mb-3">
+                <p className="text-xs font-mono uppercase tracking-wider text-white font-bold mb-3">
                   {product.tagline}
                 </p>
 
                 {/* Full Detailed Description */}
-                <p className="text-xs text-gray-600 font-light leading-relaxed mb-4">
+                <p className="text-xs text-gray-300 font-light leading-relaxed mb-4">
                   {product.description}
                 </p>
 
@@ -208,7 +208,7 @@ export default function MegaRebarLiteCatalog() {
                     Engineering Highlights:
                   </span>
                   {product.keyFeatures.map((feature, idx) => (
-                    <div key={idx} className="flex items-start gap-1.5 text-xs text-gray-700">
+                    <div key={idx} className="flex items-start gap-1.5 text-xs text-gray-300">
                       <CheckCircle2 className="w-3.5 h-3.5 text-[#cc2221] shrink-0 mt-0.5" />
                       <span>{feature}</span>
                     </div>

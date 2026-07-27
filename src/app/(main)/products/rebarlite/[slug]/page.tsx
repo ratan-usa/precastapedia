@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, useRouter } from "next/navigation";
 import { ArrowLeft, CheckCircle2, ShieldCheck, Download, FileText, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { REBAR_LITE_PRODUCTS } from "@/app/(main)/MegaRebarLiteCatalog";
@@ -15,6 +15,7 @@ interface PageProps {
 }
 
 export default async function RebarLiteDetailPage({ params }: PageProps) {
+  const router = useRouter();
   const resolvedParams = await params;
   const slug = resolvedParams.slug;
   const product = REBAR_LITE_PRODUCTS.find((p) => p.slug === slug);
@@ -29,12 +30,13 @@ export default async function RebarLiteDetailPage({ params }: PageProps) {
 
         {/* Navigation Breadcrumb */}
         <div>
-          <Link
-            href="/products/rebarlite"
+          <Button 
+          variant={'outline'}
+            onClick={router.back}
             className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-widest text-[#cc2221] hover:text-[#0a0a0a] transition-colors"
           >
             <ArrowLeft className="w-4 h-4" /> Back to RebarLite™ Catalog
-          </Link>
+          </Button>
         </div>
 
         {/* HERO TITLE MATRIX */}

@@ -48,6 +48,7 @@ import { Hero } from './Hero';
 import MegaMediaHub from '../components/MegaMediaHub';
 import MegaTactilePlates from './MegaTactilePlates';
 import MegaRebarSection from './MegaRebarSection';
+import MegaRebarLiteCatalog from './MegaRebarLiteCatalog';
 
 export default function Home() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -108,6 +109,7 @@ export default function Home() {
             <MegaProducts />
             <MegaMediaHub/>
             <MegaRebarSection/>
+            <MegaRebarLiteCatalog/>
             <MegaTactilePlates/>
             <LiveStreamCommandCenter />
              <MegaFeaShowcase/>

@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Geist } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import { cn } from "@/lib/utils";
 import AdBanner from "@/components/AdBanner";
+import Header from "@/components/Header";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={cn("font-sans", geist.variable)}>
       <body className={`${inter.className} antialiased bg-gray-50 text-gray-900 flex flex-col min-h-screen relative`}>
         {/* Left Sticky Skyscraper Ad (2XL screens) */}
         <AdBanner format="side-sticky" slotName="Left Gutter Skyscraper" className="left-4" />
@@ -36,7 +38,6 @@ export default function RootLayout({
         <main className="flex-grow max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8 w-full">
           {children}
         </main>
-        <Footer />
       </body>
     </html>
   );

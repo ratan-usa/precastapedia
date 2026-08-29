@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, Layers, Box, Columns, Footprints, Shield, Zap, Sparkles, ArrowRight, CheckCircle2 } from "lucide-react";
+import AdBanner from "@/components/AdBanner";
 
 
 const componentsList = [

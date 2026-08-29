@@ -3,10 +3,10 @@
 import React from "react";
 
 const breakingNews = [
-  "🏗️ Hollowcore slab production surpasses 2M units globally in Q2 2026",
-  "🌊 New marine-grade precast mix achieves 150+ year saltwater resistance",
-  "📐 New ASTM C1577 standards released for precast box culverts design loads",
-  "🌍 Precast concrete market projected to reach $195B by 2030",
+  "Hollowcore slab production surpasses 2M units globally in Q2 2026",
+  "New marine-grade precast mix achieves 150+ year saltwater resistance",
+  "New ASTM C1577 standards released for precast box culverts design loads",
+  "Precast concrete market projected to reach $195B by 2030",
 ];
 
 export default function BreakingNewsTicker() {

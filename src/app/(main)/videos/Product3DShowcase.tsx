@@ -20,7 +20,7 @@ const PRODUCT_VIDEOS = [
     description: "Full rotation showcase highlighting our high-precision ductile iron height adjustment ring mechanism.",
     duration: "0:45",
     type: "360_ROTATION",
-    src: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/paving_riser/paving riser 1.5213.mp4`, // Restored valid video path to prevent .glb breaks
+    src: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/paving_riser/paving_riser_1.5213.mp4`, // Restored valid video path to prevent .glb breaks
     thumbnail: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/PAVING-RISERS/paving_riser_1.5200.png` 
   },
   {
@@ -29,7 +29,7 @@ const PRODUCT_VIDEOS = [
     description: "Technical exploded breakdown showing the multi-ton load capacity and interlocking frame security.",
     duration: "1:10",
     type: "EXPLODED_VIEW",
-    src: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/paving_riser/paving riser 1.5213.mp4`, 
+    src: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/paving_riser/paving_riser_1.5213.mp4`, 
     thumbnail: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/PAVING-RISERS/paving_riser_1.5201.png` 
   },
   {
@@ -38,7 +38,7 @@ const PRODUCT_VIDEOS = [
     description: "Step-by-step industrial 3D animation showing a standard heavy-traffic utility utility valve box casing setup.",
     duration: "2:00",
     type: "ANIMATION", 
-    src: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/paving_riser/paving riser 1.5213.mp4`, 
+    src: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/paving_riser/paving_riser_1.5213.mp4`, 
     thumbnail: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/PAVING-RISERS/paving_riser_1.5203.png` 
   },
   {

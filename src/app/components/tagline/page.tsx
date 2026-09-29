@@ -47,7 +47,7 @@ const tagLines = [
         id: 8,
         lines: "Boundless Possibilities.",
         description: "Reflects the limitless technological, engineering, and industrial capabilities of Mega Foundries. Whether scaling production or innovating with new materials, the potential for growth is endless.",
-        imgUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image8.jpeg"`
+        imgUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image8.jpeg`
     },
     {
         id: 9,

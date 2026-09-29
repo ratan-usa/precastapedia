@@ -121,7 +121,7 @@ export const REBAR_LITE_PRODUCTS: RebarLiteProduct[] = [
       "High resistance to corrosive wastewater environments"
     ],
     applications: ["Storm Drain Pipes", "Sanitary Manholes", "Culverts & Retention Vaults"],
-    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/reber/Pipe_and_manhole_mesh.png"`
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/reber/Pipe_and_manhole_mesh.png`
   },
   {
     id: "continuous-high-chairs",

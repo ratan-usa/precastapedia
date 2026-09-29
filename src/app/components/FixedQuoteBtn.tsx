@@ -35,7 +35,7 @@ const FixedQuoteBtn = () => {
       {/* ========================================= */}
       <div className="fixed top-30 right-0 z-[9999]">
         <Link
-          href="/quote"
+          href="/contact"
           className="
             flex items-center gap-2
             bg-[#cc2221] hover:bg-[#b01e1d] text-white font-bold

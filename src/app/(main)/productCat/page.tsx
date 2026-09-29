@@ -184,7 +184,7 @@ export default function MarketplacePage() {
     unit: "sets",
     status: "In Stock",
     brand: "Iteco",
-    image: "/api/placeholder/400/300"
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/api/placeholder/400/300`
   };
 
   const newArrivals = [
@@ -196,7 +196,7 @@ export default function MarketplacePage() {
       unit: "Tons",
       status: "In Stock",
       isConfigured: false,
-      image: "/api/placeholder/300/300",
+      image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/api/placeholder/300/300`,
       meta: { "Brand": "FusionChem Solutions", "Condition": "Brand New" }
     },
     {
@@ -207,7 +207,7 @@ export default function MarketplacePage() {
       unit: "",
       status: "By Order",
       isConfigured: true,
-      image: "/api/placeholder/300/300",
+      image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/api/placeholder/300/300`,
       meta: { "Manufacturer": "Acciona", "Model Number": "MOLPW-750" }
     },
     {
@@ -218,7 +218,7 @@ export default function MarketplacePage() {
       unit: "piece",
       status: "In Stock",
       isConfigured: false,
-      image: "/api/placeholder/300/300",
+      image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/api/placeholder/300/300`,
       meta: { "Brand": "SunTech", "Power": "450W" }
     }
   ];

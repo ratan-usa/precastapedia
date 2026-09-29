@@ -54,7 +54,7 @@ export default function ProductCalculator() {
             
             <div className="relative w-full max-w-md mx-auto lg:mx-0 aspect-square"> 
               <Image 
-                src="/assets/image9.jpeg" 
+                src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image9.jpeg`} 
                 alt="Pricing Calculator Illustration"
                 fill
                 className="object-contain"

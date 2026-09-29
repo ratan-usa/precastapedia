@@ -62,7 +62,7 @@ const MaterialsHelpCenter = () => {
 
         <div className="absolute inset-0 z-0 w-full h-full">
           <Image
-            src={'/assets/image16.jpg'}
+            src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image16.jpg`}
             alt="Industrial background image"
             fill
             className="object-cover"

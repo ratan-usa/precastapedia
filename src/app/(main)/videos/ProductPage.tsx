@@ -21,71 +21,71 @@ const ASSET_LIBRARY = [
     id: '1',
     name: 'Heavy Duty Manhole Cover & Frame',
     type: 'MODEL',
-    url: '/gib files/black1.glb',
-    thumbnail: '/assets/image1.jpeg'
+    url: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/gib_files/black1.glb`,
+    thumbnail: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image1.jpeg`
   },
   {
     id: '2',
     name: 'Ductile Iron Gully Grating (Fe 50007)',
     type: 'MODEL',
-    url: '/gib files/black1.glb',
-    thumbnail: '/assets/image2.jpeg'
+    url: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/gib_files/black1.glb`,
+    thumbnail: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image2.jpeg`
   },
   {
     id: '3',
     name: 'Heavy Traffic Airport Grating - 90 Ton',
     type: 'MODEL',
-    url: '/gib files/black1.glb',
-    thumbnail: '/assets/image3.jpeg'
+    url: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/gib_files/black1.glb`,
+    thumbnail: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image3.jpeg`
   },
   {
     id: '4',
     name: 'Industrial Cast Iron Oil & Grease Separator',
     type: 'MODEL',
-    url: '/gib files/black1.glb',
-    thumbnail: '/assets/image4.jpg'
+    url: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/gib_files/black1.glb`,
+    thumbnail: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image4.jpg`
   },
   {
     id: '5',
     name: 'Ductile Iron Electrical Junction Box Cover',
     type: 'MODEL',
-    url: '/gib files/black1.glb',
-    thumbnail: '/assets/image5.jpeg'
+    url: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/gib_files/black1.glb`,
+    thumbnail: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image5.jpeg`
   },
   {
     id: '6',
     name: 'Cast Iron Multi-Flanged Slurry Valve Body',
     type: 'MODEL',
-    url: '/gib files/black1.glb',
-    thumbnail: '/assets/image6.jpg'
+    url: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/gib_files/black1.glb`,
+    thumbnail: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image6.jpg`
   },
   {
     id: '7',
     name: 'Surface Linear Drainage Casting Segment',
     type: 'MODEL',
-    url: '/gib files/black1.glb',
-    thumbnail: '/assets/image7.jpeg'
+    url: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/gib_files/black1.glb`,
+    thumbnail: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image7.jpeg`
   },
   {
     id: '8',
     name: 'Articulated Telecom Inspection Chamber Hatch',
     type: 'MODEL',
-    url: '/gib files/black1.glb',
-    thumbnail: '/assets/image8.jpeg'
+    url: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/gib_files/black1.glb`,
+    thumbnail: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image8.jpeg`
   },
   {
     id: '9',
     name: 'High-Pressure 90° Flanged Elbow Fitting',
     type: 'MODEL',
-    url: '/gib files/black1.glb',
-    thumbnail: '/assets/image9.jpeg'
+    url: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/gib_files/black1.glb`,
+    thumbnail: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image9.jpeg`
   },
   {
     id: '10',
     name: 'Ductile Iron Tree Grate Protection Ring',
     type: 'MODEL',
-    url: '/gib files/black1.glb',
-    thumbnail: '/assets/image10.jpeg'
+    url: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/gib_files/black1.glb`,
+    thumbnail: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image10.jpeg`
   }
 ];
 

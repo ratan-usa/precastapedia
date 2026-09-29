@@ -94,7 +94,7 @@ export default function MegaRebarSection() {
               {/* Product Visual */}
               <div className="relative w-full h-full opacity-100">
                 <Image 
-                  src="/reber.png" 
+                  src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/reber.png` }
                   alt="Structural Steel Rebar Section Profile"
                   width={800}
                   height={600}

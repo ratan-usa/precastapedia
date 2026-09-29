@@ -28,7 +28,7 @@ export default function SourcingRequest() {
             {/* === BACKGROUND IMAGE === */}
             <div className="absolute inset-0 z-0">
                 <Image
-                    src="/assets/image11.jpg" // Replace with your actual background image
+                    src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image11.jpg`} // Replace with your actual background image
                     alt="Office Background"
                     fill
                     className="object-cover"

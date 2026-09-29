@@ -50,7 +50,7 @@ export default function HighFlowGrates() {
               {/* Dynamic Video Element */}
               <video
                 ref={videoRef}
-                src="/video/trench/Trench 500 Animation.498.mp4"
+                src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/trench/Trench_500_Animation.498.mp4`}
                 loop
                 muted
                 playsInline
@@ -60,7 +60,7 @@ export default function HighFlowGrates() {
 
               {/* Static Backdrop Cover Image */}
               <Image
-                src="/assets/image2.jpeg" 
+                src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image2.jpeg` }
                 alt="Hydraulic Interception Testing Simulation"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105 group-hover:opacity-20 grayscale group-hover:grayscale-0"
@@ -147,7 +147,7 @@ export default function HighFlowGrates() {
             </span>
             <div className="w-full h-32 relative bg-white border border-gray-100 rounded-xs overflow-hidden mb-4 p-2">
               <Image 
-                src="/assets/image5.jpeg" 
+                src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image5.jpeg`} 
                 alt="Standard Flat High Flow Grate"
                 fill
                 className="object-contain p-2 grayscale group-hover:grayscale-0 transition-all duration-300"
@@ -165,7 +165,7 @@ export default function HighFlowGrates() {
             </span>
             <div className="w-full h-32 relative bg-white border border-gray-100 rounded-xs overflow-hidden mb-4 p-2">
               <Image 
-                src="/assets/image14.jpeg" 
+                src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image14.jpeg` }
                 alt="Rear-Curb Deflection Casting"
                 fill
                 className="object-contain p-2 grayscale group-hover:grayscale-0 transition-all duration-300"
@@ -183,7 +183,7 @@ export default function HighFlowGrates() {
             </span>
             <div className="w-full h-32 relative bg-white border border-gray-100 rounded-xs overflow-hidden mb-4 p-2">
               <Image 
-                src="/assets/image18.jpeg" 
+                src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image18.jpeg` }
                 alt="High-Velocity Integrated Weir Unit"
                 fill
                 className="object-contain p-2 grayscale group-hover:grayscale-0 transition-all duration-300"
@@ -201,7 +201,7 @@ export default function HighFlowGrates() {
             </span>
             <div className="w-full h-32 relative bg-white border border-gray-100 rounded-xs overflow-hidden mb-4 p-2">
               <Image 
-                src="/assets/image2.jpeg" 
+                src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image2.jpeg`} 
                 alt="Complete High Flow Catch Basin Assembly Frame"
                 fill
                 className="object-contain p-2 grayscale group-hover:grayscale-0 transition-all duration-300"

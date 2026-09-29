@@ -46,7 +46,7 @@ export default function StartSelling() {
           {/* === LEFT: IMAGE === */}
           <div className="relative w-full h-[500px] rounded-3xl overflow-hidden shadow-xl">
             <Image
-              src="/assets/image18.jpeg" // Replace with your image
+              src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image18.jpeg`} // Replace with your image
               alt="Two business men shaking hands in a warehouse"
               fill
               className="object-cover"

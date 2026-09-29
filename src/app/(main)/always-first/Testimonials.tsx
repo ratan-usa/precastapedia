@@ -11,48 +11,48 @@ const products = [
         title: "Industrial Valve Castings",
         description: "Experience the precision of our high-pressure valve castings. Manufactured using advanced sand casting techniques, these valves are tested for zero-leakage performance in oil & gas applications. Available in Stainless Steel and Duplex Alloys.",
         features: ["Pressure tested to 5000 PSI", "Corrosion-resistant coating", "ASME certified"],
-        video: "/video/video1.mp4", // Replace with real video path
-        poster: "/assets/image1.jpeg" // Optional thumbnail
+        video: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/video1.mp4`, // Replace with real video path
+        poster: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image1.jpeg` // Optional thumbnail
     },
     {
         id: 2,
         title: "Automotive Engine Blocks",
         description: "Our automated molding line produces engine blocks with superior dimensional accuracy. See how we maintain consistent wall thickness and optimal heat dissipation properties for high-performance vehicles.",
         features: ["Grey Iron & Aluminum options", "Robotic core assembly", "Just-in-time delivery"],
-        video: "/video/video2.mp4",
-        poster: "/assets/image2.jpeg"
+        video: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/video2.mp4`,
+        poster: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image2.jpeg`
     },
     {
         id: 3,
         title: "Aerospace Turbine Blades",
         description: "Investment casting at its finest. Watch the intricate process of creating turbine blades that withstand extreme temperatures. Our vacuum casting furnace ensures defect-free metallurgical structure.",
         features: ["Superalloy composition", "X-Ray inspection verified", "Micron-level tolerance"],
-        video: "/video/video3.mp4",
-        poster: "/assets/image3.jpeg"
+        video: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/video3.mp4`,
+        poster: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image3.jpeg`
     },
     {
         id: 4,
         title: "Industrial Valve Castings",
         description: "Experience the precision of our high-pressure valve castings. Manufactured using advanced sand casting techniques, these valves are tested for zero-leakage performance in oil & gas applications. Available in Stainless Steel and Duplex Alloys.",
         features: ["Pressure tested to 5000 PSI", "Corrosion-resistant coating", "ASME certified"],
-        video: "/video/video4.mp4", // Replace with real video path
-        poster: "/assets/image4.jpg" // Optional thumbnail
+        video: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/video4.mp4`, // Replace with real video path
+        poster: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image4.jpg` // Optional thumbnail
     },
     {
         id: 5,
         title: "Automotive Engine Blocks",
         description: "Our automated molding line produces engine blocks with superior dimensional accuracy. See how we maintain consistent wall thickness and optimal heat dissipation properties for high-performance vehicles.",
         features: ["Grey Iron & Aluminum options", "Robotic core assembly", "Just-in-time delivery"],
-        video: "/video/video5.mp4",
-        poster: "/assets/image5.jpeg"
+        video: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/video5.mp4`,
+        poster: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image5.jpeg`
     },
     {
         id: 6,
         title: "Aerospace Turbine Blades",
         description: "Investment casting at its finest. Watch the intricate process of creating turbine blades that withstand extreme temperatures. Our vacuum casting furnace ensures defect-free metallurgical structure.",
         features: ["Superalloy composition", "X-Ray inspection verified", "Micron-level tolerance"],
-        video: "/video/video6.mp4",
-        poster: "/assets/image6.jpg"
+        video: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/video6.mp4`,
+        poster: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image6.jpg`
     },
 ];
 

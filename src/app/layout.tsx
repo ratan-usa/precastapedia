@@ -29,7 +29,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
          {/* Optional: Add custom favicon links here if needed */}
-         <link rel="icon" type="image/png" href="/apple-touch-icon.png" />
+         <link rel="icon" type="image/png" href={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/apple-touch-icon.png`} />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate-50 text-slate-900`}>
         

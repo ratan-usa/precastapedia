@@ -50,7 +50,7 @@ export default function BackgroundMusic() {
       <audio 
         ref={audioRef} 
         loop 
-        src="/audio/background.mpeg"  // <--- PUT YOUR MUSIC FILE HERE
+        src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/audio/background.mpeg`}  // <--- PUT YOUR MUSIC FILE HERE
       />
 
       {/* Floating Toggle Button */}

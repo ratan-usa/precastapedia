@@ -31,7 +31,7 @@ export default function CategoryList() {
  
                         <div className="relative w-full lg:w-[320px] h-64 lg:h-full shrink-0 group">
                             <Image 
-                                src={category.bannerImage || '/assets/placeholder.jpg'}
+                                src={category.bannerImage || `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/placeholder.jpg`}
                                 alt={category.label}
                                 fill
                                 className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -55,7 +55,7 @@ export default function CategoryList() {
                                         {/* Image */}
                                         <div className="relative aspect-[16/10] w-full overflow-hidden rounded-lg mb-3 border border-gray-100 shadow-sm">
                                             <Image
-                                                src={sub.image || '/assets/placeholder.jpg'}
+                                                src={sub.image || `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/placeholder.jpg`}
                                                 alt={sub.name}
                                                 fill
                                                 className="object-cover transition-transform duration-500 group-hover:scale-110"

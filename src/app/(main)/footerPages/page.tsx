@@ -13,7 +13,7 @@ export default function FooterHero({
         <section className="relative w-full py-16 sm:py-24 bg-white">
             <div className="absolute inset-0 z-0 h-[325px] w-full">
                 <Image
-                    src={'/assets/image8.jpeg'}
+                    src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image8.jpeg`}
                     alt="Industrial background image"
                     layout="fill"
                     objectFit="cover"
@@ -91,7 +91,7 @@ export default function FooterHero({
                                         <Image
                                             width={1200}
                                             height={600}
-                                            src="/assets/image12.jpg"
+                                            src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image12.jpg`}
                                             alt="Industrial Transformer Unit"
                                             className="max-h-full max-w-full object-contain drop-shadow-lg"
                                         />

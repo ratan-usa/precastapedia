@@ -49,7 +49,7 @@ export default function PartnerProgramPage() {
           <div className="relative h-[400px] md:h-full w-full">
             <div className="absolute inset-0 bg-neutral-200">
               <Image
-                src="/assets/image8.jpeg"
+                src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image8.jpeg`}
                 alt="Global Industrial Logistics"
                 fill
                 className="object-cover"
@@ -131,7 +131,7 @@ export default function PartnerProgramPage() {
 
               <div className="relative bg-white rounded-md overflow-hidden aspect-16/10 border border-neutral-800">
                 <Image
-                  src="/assets/dashboard-screenshot.jpg"
+                  src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/dashboard-screenshot.jpg`}
                   alt="Foundry Management Dashboard"
                   fill
                   className="object-cover object-top"

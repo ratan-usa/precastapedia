@@ -7,7 +7,7 @@ export const newsArticles = [
     slug: "indian-culture-tapestry-diversity",
     author: "Mega Foundries Admin",
     date: "20 Nov 2025",
-    image: "/assets/image1.jpeg",
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image1.jpeg`,
     excerpt: "Discover the richness of Indian culture, a vibrant blend of traditions, festivals, art, and spirituality, celebrated worldwide for its diversity."
   },
   {
@@ -16,7 +16,7 @@ export const newsArticles = [
     slug: "managing-power-transformers",
     author: "Mega Foundries Admin",
     date: "08 Oct 2025",
-    image: "/assets/image2.jpeg",
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image2.jpeg`,
     excerpt: "Utilities are under intense pressure to maximize the use of their current transformer asset base in order to keep rates down while yet providing excellence."
   },
   {
@@ -25,7 +25,7 @@ export const newsArticles = [
     slug: "guidelines-protection-system",
     author: "Mega Foundries Admin",
     date: "24 Sep 2025",
-    image: "/assets/image3.jpeg",
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image3.jpeg`,
     excerpt: "Relay protection and the whole bunch of protection system engineering around the substation are quite interesting from the point of view of creativity."
   },
   {
@@ -34,7 +34,7 @@ export const newsArticles = [
     slug: "high-voltage-cable-construction",
     author: "Mega Foundries Admin",
     date: "24 Sep 2025",
-    image: "/assets/image4.jpg",
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image4.jpg`,
     excerpt: "This technical article discusses twelve different methods for laying high voltage cables. Out of the ten, four are deemed conventional and eight are specialized."
   }
 ];
@@ -45,7 +45,7 @@ export const blogPosts = [
     slug: "future-of-metal-casting-automation",
     author: "Mega Editorial Team",
     date: "28 Nov 2025",
-    image: "/assets/image15.jpeg",
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image15.jpeg`,
     excerpt: "How robotic arms and automated molding lines are increasing precision and safety in modern foundries."
   },
   {
@@ -54,7 +54,7 @@ export const blogPosts = [
     slug: "ductile-iron-vs-grey-iron",
     author: "Engineering Dept",
     date: "15 Nov 2025",
-    image: "/assets/image14.jpeg",
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image14.jpeg`,
     excerpt: "A technical deep dive into the metallurgical differences, tensile strengths, and best applications for each iron type."
   },
   {
@@ -63,7 +63,7 @@ export const blogPosts = [
     slug: "supply-chain-resilience",
     author: "Logistics Lead",
     date: "02 Nov 2025",
-    image: "/assets/image13.jpg",
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image13.jpg`,
     excerpt: "Strategies for mitigating raw material shortages and ensuring on-time delivery for large-scale infrastructure projects."
   },
   {
@@ -72,7 +72,7 @@ export const blogPosts = [
     slug: "sustainability-in-forging",
     author: "Mega Admin",
     date: "25 Oct 2025",
-    image: "/assets/image11.jpg",
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image11.jpg`,
     excerpt: "Exploring new electric furnace technologies and sand reclamation processes that are making foundries greener."
   }
 ];
@@ -82,45 +82,45 @@ export const hotProductsData = {
     {
       id: 1,
       title: "Cross Sectional / CORE LV CABLES",
-      videoUrl: "/video/video32.mp4",
+      videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/video32.mp4`,
     },
     {
       id: 2,
       title: "AUXILIARY CABLES (CONTROL...)",
-      videoUrl: "/video/video26.mp4",
+      videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/video26.mp4`,
     },
     {
       id: 3,
       title: "Prefabricated Modular Buildings...",
-      videoUrl: "/video/video27.mp4",
+      videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/video27.mp4`,
     },
     {
       id: 4,
       title: "Flexible Use of Mobile Internal...",
-      videoUrl: "/video/video28.mp4",
+      videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/video28.mp4`,
     },
     {
       id: 5,
       title: "Kysb Open Circuit Cooling...",
-      videoUrl: "/video/video29.mp4",
+      videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/video29.mp4`,
     },
     {
       id: 6,
       title: "1HP Stainless Steel Electric...",
-      videoUrl: "/video/video30.mp4",
+      videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/video30.mp4`,
     },
     {
       id: 7,
       title: "High Quality Single-Stage...",
-      videoUrl: "/video/video31.mp4",
+      videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/video31.mp4`,
     }, {
       id: 8,
       title: "Flexible Use of Mobile Internal...",
-      videoUrl: "/video/video33.mp4",
+      videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/video33.mp4`,
     }, {
       id: 9,
       title: "AUXILIARY CABLES (CONTROL...)",
-      videoUrl: "/video/video34.mp4",
+      videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/video34.mp4`,
     },
   ]
 }
@@ -131,77 +131,77 @@ export const newInnovationData = {
     {
       id: 1,
       title: "Cross Sectional / CORE LV CABLES",
-      videoUrl: "/video/newInnovation/video1.mp4",
+      videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/newInnovation/video1.mp4`,
     },
     {
       id: 2,
       title: "AUXILIARY CABLES (CONTROL)",
-      videoUrl: "/video/newInnovation/video2.mp4",
+      videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/newInnovation/video2.mp4`,
     }
     ,
     {
       id: 3,
       title: "AUXILIARY CABLES (CONTROL)",
-      videoUrl: "/video/newInnovation/video3.mp4",
+      videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/newInnovation/video3.mp4`,
     }, {
       id: 4,
       title: "Cross Sectional / CORE LV CABLES",
-      videoUrl: "/video/newInnovation/video4.mp4",
+      videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/newInnovation/video4.mp4`,
     }, {
       id: 5,
       title: "Cross Sectional / CORE LV CABLES",
-      videoUrl: "/video/newInnovation/video5.mp4",
+      videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/newInnovation/video5.mp4`,
     },
     {
       id: 6,
       title: "AUXILIARY CABLES (CONTROL)",
-      videoUrl: "/video/newInnovation/video4.mp4",
+      videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/newInnovation/video4.mp4`,
     }
     ,
     {
       id: 7,
       title: "AUXILIARY CABLES (CONTROL)",
-      videoUrl: "/video/newInnovation/video7.mp4",
+      videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/newInnovation/video7.mp4`,
     }, {
       id: 8,
       title: "Cross Sectional / CORE LV CABLES",
-      videoUrl: "/video/newInnovation/video8.mp4",
+      videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/newInnovation/video8.mp4`,
     }, {
       id: 9,
       title: "Cross Sectional / CORE LV CABLES",
-      videoUrl: "/video/newInnovation/video9.mp4",
+      videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/newInnovation/video9.mp4`,
     },
     {
       id: 10,
       title: "AUXILIARY CABLES (CONTROL)",
-      videoUrl: "/video/newInnovation/video10.mp4",
+      videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/newInnovation/video10.mp4`,
     }
     ,
     {
       id: 11,
       title: "AUXILIARY CABLES (CONTROL)",
-      videoUrl: "/video/newInnovation/video11.mp4",
+      videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/newInnovation/video11.mp4`,
     }
     ,
     {
       id: 12,
       title: "AUXILIARY CABLES (CONTROL)",
-      videoUrl: "/video/newInnovation/PAM ring mold.mp4",
+      videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/newInnovation/PAM_ring_mold.mp4`,
     },
     {
       id: 13,
       title: "AUXILIARY CABLES (CONTROL)",
-      videoUrl: "/video/newInnovation/video12.mp4",
+      videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/newInnovation/video12.mp4`,
     },
     {
       id: 14,
       title: "AUXILIARY CABLES (CONTROL)",
-      videoUrl: "/video/newInnovation/USF 600101-A.517.mp4",
+      videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/newInnovation/USF-600101-A.517.mp4`,
     },
     {
       id: 15,
       title: "AUXILIARY CABLES (CONTROL)",
-      videoUrl: "/video/newInnovation/9013 A Mega.467.mp4",
+      videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/newInnovation/9013_A_Mega.467.mp4`,
     }
   ]
 };
@@ -213,41 +213,41 @@ export const paving_riser = {
     {
       id: 1,
       title: "Cross Sectional / CORE LV CABLES",
-      videoUrl: "/video/paving_riser/9013 A Mega.467.mp4",
+      videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/paving_riser/9013_A_Mega.467.mp4`,
     },
     {
       id: 2,
       title: "AUXILIARY CABLES (CONTROL)",
-      videoUrl: "/video/paving_riser/FV0 Mega.469.mp4",
+      videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/paving_riser/FV0_Mega.469.mp4`,
     }
     ,
     {
       id: 3,
       title: "AUXILIARY CABLES (CONTROL)",
-      videoUrl: "/video/paving_riser/paving riser 1.5216.mp4",
+      videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/paving_riser/paving_riser_1.5216.mp4`,
     }, {
       id: 4,
       title: "Cross Sectional / CORE LV CABLES",
-      videoUrl: "/video/paving_riser/paving riser 1.5217.mp4",
+      videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/paving_riser/paving_riser_1.5217.mp4`,
     }, {
       id: 5,
       title: "Cross Sectional / CORE LV CABLES",
-      videoUrl: "/video/paving_riser/Fire Dumper Mega.470.mp4",
+      videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/paving_riser/Fire_Dumper_Mega.470.mp4`,
     },
     {
       id: 6,
       title: "AUXILIARY CABLES (CONTROL)",
-      videoUrl: "/video/paving_riser/MJ-MJ TEES.970.mp4",
+      videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/paving_riser/MJ-MJ_TEES.970.mp4`,
     }
     ,
     {
       id: 7,
       title: "AUXILIARY CABLES (CONTROL)",
-      videoUrl: "/video/paving_riser/paving riser 1.5223.mp4",
+      videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/paving_riser/paving-riser-1.5223.mp4`,
     }, {
       id: 8,
       title: "Cross Sectional / CORE LV CABLES",
-      videoUrl: "/video/paving_riser/5073 Empire state.471.mp4",
+      videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/paving_riser/5073-Empire-state.471.mp4`,
     },
   ]
 };

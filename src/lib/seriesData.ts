@@ -41,7 +41,7 @@ export const allSeries = [
   {
     title: "6000 SERIES",
     items: [
-      "Pipe grates", "Beehive frames & grates", "Stool type frames & grates",
+      "pipe_grates", "Beehive frames & grates", "Stool type frames & grates",
       "Pipe beehive frames & grates", "Ditch type frames & grates", "Convex grates"
     ]
   },

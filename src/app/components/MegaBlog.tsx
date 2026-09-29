@@ -26,7 +26,7 @@ const BLOG_POSTS: BlogPost[] = [
     date: "June 18, 2026",
     author: "Dr. Marcus Vance",
     readTime: "6 min read",
-    image: "/assets/image1.jpeg"
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image1.jpeg`
   },
   {
     id: "2",
@@ -37,7 +37,7 @@ const BLOG_POSTS: BlogPost[] = [
     date: "May 24, 2026",
     author: "Sarah Jenkins, PE",
     readTime: "8 min read",
-    image: "/assets/image2.jpeg"
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image2.jpeg`
   },
   {
     id: "3",
@@ -48,7 +48,7 @@ const BLOG_POSTS: BlogPost[] = [
     date: "May 02, 2026",
     author: "Chief Engineer Ben",
     readTime: "5 min read",
-    image: "/assets/image3.jpeg"
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image3.jpeg`
   }
 ];
 

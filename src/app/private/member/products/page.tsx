@@ -14,7 +14,7 @@ import Image from 'next/image';
 // Helper to display images
 const getThumbnail = (docs: ApiDocument[]) => {
   const primary = docs?.find(d => d.isPrimary && d.type === 'IMAGE');
-  return primary?.thumbnailUrl || primary?.url || '/placeholder.png'; // Add a real placeholder image in public folder
+  return primary?.thumbnailUrl || primary?.url || `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image1.jpeg`;
 };
 
 export default function AdminProductList() {
@@ -137,7 +137,7 @@ export default function AdminProductList() {
                              src={getThumbnail(product.documents)} 
                              alt={product.productName} 
                              className="w-full h-full object-cover"
-                             onError={(e) => { e.currentTarget.src = '/placeholder.png' }}
+                             onError={(e) => { e.currentTarget.src = `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image1.jpeg` }}
                            />
                         </div>
                         <div>

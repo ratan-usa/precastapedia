@@ -70,8 +70,10 @@ export default function CareersPage() {
       <section className="relative h-[60vh] flex items-center justify-center bg-slate-900 text-white overflow-hidden">
         {/* Background Image Placeholder */}
         <div className="absolute inset-0 bg-slate-800">
-          {/* Replace with <Image> of workers in safety gear */}
-          <div className="absolute inset-0 bg-[url('/assets/image14.jpeg')] opacity-20"></div>
+          <div 
+            className="absolute inset-0 bg-cover bg-center opacity-20"
+            style={{ backgroundImage: `url(${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image14.jpeg)` }}
+          />
           <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent"></div>
         </div>
 
@@ -180,7 +182,7 @@ export default function CareersPage() {
               <div className="relative aspect-square md:aspect-[4/3] bg-slate-800 rounded-xl overflow-hidden border border-slate-700 shadow-2xl">
                 <div className="absolute inset-0 flex items-center justify-center text-slate-500">
                   <Image
-                    src={'/assets/image8.jpeg'}
+                    src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image8.jpeg`}
                     alt="Case Study Image"
                     fill
                     className="object-cover"

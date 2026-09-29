@@ -36,8 +36,10 @@ export default function NewTechnologiesPage() {
       {/* === HERO SECTION === */}
       <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
         {/* Background Effects */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-slate-900 via-slate-950 to-black"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[url('/assets/image9.jpeg')] opacity-10"></div>
+        <div 
+          className="absolute top-0 left-0 w-full h-full bg-cover bg-center opacity-10"
+          style={{ backgroundImage: `url(${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image9.jpeg)` }}
+        />
         
         {/* Glowing Orb/Graphic */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-red-600/20 blur-[120px] rounded-full animate-pulse"></div>

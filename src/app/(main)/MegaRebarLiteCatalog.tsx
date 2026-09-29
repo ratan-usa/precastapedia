@@ -31,7 +31,7 @@ export const REBAR_LITE_PRODUCTS: RebarLiteProduct[] = [
       "Resistant to high impact shear stresses"
     ],
     applications: ["Structural Concrete Slabs", "Bridge Decks", "Industrial Flooring"],
-    image: "/reber/RebarLite Mesh™.png"
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/reber/RebarLite_Mesh.png`
   },
   {
     id: "engineered-welded-wire",
@@ -46,7 +46,7 @@ export const REBAR_LITE_PRODUCTS: RebarLiteProduct[] = [
       "Tailored pitch and spacing parameters"
     ],
     applications: ["Precast Concrete Panels", "Tilt-Up Wall Construction", "Highway Paving"],
-    image: "/reber/Engineered welded wire.png"
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/reber/Engineered_welded_wire.png`
   },
   {
     id: "construction-mesh",
@@ -61,7 +61,7 @@ export const REBAR_LITE_PRODUCTS: RebarLiteProduct[] = [
       "Available in sheets or easy-roll rolls"
     ],
     applications: ["Commercial Footings", "Basement Slabs", "Parking Lot Structures"],
-    image: "/reber/Construction mesh.png"
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/reber/Construction_mesh.png`
   },
   {
     id: "mining-mesh",
@@ -76,7 +76,7 @@ export const REBAR_LITE_PRODUCTS: RebarLiteProduct[] = [
       "Epoxy or galvanized anti-corrosion finishes"
     ],
     applications: ["Mine Shaft Stabilization", "Tunnel Headings", "Shotcrete Reinforcement"],
-    image: "/reber/Mining mesh.png"
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/reber/Mining_mesh.png`
   },
   {
     id: "straight-cut-wire",
@@ -91,7 +91,7 @@ export const REBAR_LITE_PRODUCTS: RebarLiteProduct[] = [
       "Strict straightness tolerances"
     ],
     applications: ["Precast Cage Assembly", "Masonry Ties", "Industrial Steel Binding"],
-    image: "/reber/Straight & cut wire.png"
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/reber/Straight_cut_wire.png`
   },
   {
     id: "cage-welding-coils",
@@ -106,7 +106,7 @@ export const REBAR_LITE_PRODUCTS: RebarLiteProduct[] = [
       "High yield strength under automated resistance welding"
     ],
     applications: ["Precast Concrete Pipes", "Foundation Pilings", "Utility Pole Cages"],
-    image: "/reber/Coils for cage-welding machines.png"
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/reber/Coils_for_cage-welding_machines.png`
   },
   {
     id: "pipe-manhole-mesh",
@@ -121,7 +121,7 @@ export const REBAR_LITE_PRODUCTS: RebarLiteProduct[] = [
       "High resistance to corrosive wastewater environments"
     ],
     applications: ["Storm Drain Pipes", "Sanitary Manholes", "Culverts & Retention Vaults"],
-    image: "/reber/Pipe and manhole mesh.png"
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/reber/Pipe_and_manhole_mesh.png"`
   },
   {
     id: "continuous-high-chairs",
@@ -136,7 +136,7 @@ export const REBAR_LITE_PRODUCTS: RebarLiteProduct[] = [
       "Available with epoxy or plastic-dipped feet for rust prevention"
     ],
     applications: ["Bridge Deck Rebar Placement", "Slab-on-Grade", "Elevated Deck Forms"],
-    image: "/reber/Continuous high chairs.png"
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/reber/Continuous_high_chairs.png`
   }
 ];
 

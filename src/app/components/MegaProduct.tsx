@@ -5,14 +5,14 @@ const categories = [
   "Trench Systems",
   "Paving Risers",
   "Hactches & Access Covers for Inspection Chambers",
-  "Fiber Optic, Telecom & Electrical Covers",
+  "Fiber Optic, Telecom & Electrical_Covers",
   "Precast Concrete Molds",
   "Petro Gas Station Products",
   "Tree Grates",
   "Marine Castings",
-  "Detectable Warning Plates",
+  "Detectable_Warning_Plates",
   "Water Works Products",
-  "Ornamental Castings",
+  "Ornamental_Castings",
   "Water Sampling Station",
   "Precast Concrete Molds"
 ];
@@ -22,42 +22,42 @@ const products = [
     id: "manhole-covers",
     title: "Manhole Covers",
     description: "Available in modern designs and various resistance classes. Metalverse  Industries ductile iron castings are engineered securely for high-load municipal sealing and sewage networks.",
-    image: "/assets/image4.jpg",
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image4.jpg`,
     link: "/products/manhole-covers"
   },
   {
     id: "trench-system",
     title: "Trench Systems",
     description: "High-performance iron castings supplied in multiple sizes and load classes for efficient rainwater collection on urban roads, highways, parking lots, and industrial plants.",
-    image: "/assets/MEGA/pre-trench-01.JPG",
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/MEGA/pre-trench-01.JPG`,
     link: "/products/gully-gratings"
   },
   {
     id: "paving-risers",
     title: "Paving Risers",
     description: "Heavy-duty iron castings engineered to withstand intensive point loads up to 90 tons. The ultimate casting solution for heavy industrial zones, logistics hubs, airports, and dockyards.",
-    image: "/assets/PAVING-RISERS/paving riser 1.5201.png",
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/PAVING-RISERS/paving_riser_1.5201.png`,
     link: "/products/heavy-traffic"
   },
   {
     id: "Hatches & Access-covers",
     title: "Hactches & Access Covers for Inspection Chambers",
     description: "Versatile casting solutions for inspection and access over water, sewage, and electrical distribution chambers. Built with airtight sealing, dual-face options, and modular sizing.",
-    image: "/assets/MEGA/HATCHES COVER.png",
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/MEGA/HATCHES_COVER.png`,
     link: "/products/access-covers"
   },
   {
     id: "utility-telecom-electrical",
-    title: "Fiber Optic, Telecom & Electrical Covers",
+    title: "Fiber Optic, Telecom & Electrical_Covers",
     description: "Specialized infrastructure castings offering secure access, single/articulated mechanics, and tamper-proof locking mechanisms across varying heavy-duty utility networks.",
-    image: "/assets/MEGA/Electrical Covers.jpeg",
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/MEGA/Electrical_Covers.jpeg`,
     link: "/products/telecom-covers"
   },
   {
     id: "precast-concrete molds",
     title: "Precast Concrete Molds",
     description: "Premium linear drainage solutions engineered with solid ductile iron casting gratings to ensure rapid surface water evacuation and maximum performance.",
-    image: "/assets/MEGA/catch-01 (3).JPG",
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/MEGA/catch-01.JPG`,
     link: "/products/drainage-castings"
   },
   
@@ -65,56 +65,56 @@ const products = [
     id: "petro-gas-station-products",
     title: "Petro Gas Station Products",
     description: "Specialized infrastructure castings offering secure access, single/articulated mechanics, and tamper-proof locking mechanisms across varying heavy-duty utility networks.",
-    image: "/assets/MEGA/MONITERING WELL STATION.11 - Copy.png",
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/MEGA/MONITERING_WELL_STATION.png`,
     link: "/products/telecom-covers"
   },
   {
     id: "tree-grates",
     title: "Tree Grates",
     description: "Premium linear drainage solutions engineered with solid ductile iron casting gratings to ensure rapid surface water evacuation and maximum performance.",
-    image: "/assets/image9.jpeg",
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image9.jpeg`,
     link: "/products/drainage-castings"
   },
   {
     id: "marine-castings",
     title: "Marine Castings",
     description: "Specialized infrastructure castings offering secure access, single/articulated mechanics, and tamper-proof locking mechanisms across varying heavy-duty utility networks.",
-    image: "/assets/image7.jpeg",
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image7.jpeg`,
     link: "/products/telecom-covers"
   },
   {
     id: "detectable-warning-plates",
-    title: "Detectable Warning Plates",
+    title: "Detectable_Warning_Plates",
     description: "Premium linear drainage solutions engineered with solid ductile iron casting gratings to ensure rapid surface water evacuation and maximum performance.",
-    image: "/assets/MEGA/Detectable Warning Plates.jpeg",
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/MEGA/Detectable_Warning_Plates.jpeg`,
     link: "/products/drainage-castings"
   },
   {
     id: "water-works-product",
     title: "Water Works Products",
     description: "Specialized infrastructure castings offering secure access, single/articulated mechanics, and tamper-proof locking mechanisms across varying heavy-duty utility networks.",
-    image: "/assets/MEGA/1.1 - Copy.png",
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/MEGA/1.1-Copy.png`,
     link: "/products/telecom-covers"
   },
   {
     id: "ornamental-castings",
-    title: "Ornamental Castings",
+    title: "Ornamental_Castings",
     description: "Premium linear drainage solutions engineered with solid ductile iron casting gratings to ensure rapid surface water evacuation and maximum performance.",
-    image: "/assets/MEGA/Ornamental Castings.jpeg",
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/MEGA/Ornamental_Castings.jpeg`,
     link: "/products/drainage-castings"
   },
   {
     id: "water-sampling-station",
     title: "Water Sampling Station",
     description: "Specialized infrastructure castings offering secure access, single/articulated mechanics, and tamper-proof locking mechanisms across varying heavy-duty utility networks.",
-    image: "/assets/MEGA/sampling stations.png",
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/MEGA/sampling_stations.png`,
     link: "/products/telecom-covers"
   },
   {
     id: "precast-concrete molds",
     title: "Precast Concrete Molds",
     description: "Premium linear drainage solutions engineered with solid ductile iron casting gratings to ensure rapid surface water evacuation and maximum performance.",
-    image: "/assets/MEGA/catch-01 (3).JPG",
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/MEGA/catch-01.JPG`,
     link: "/products/drainage-castings"
   }
 ];

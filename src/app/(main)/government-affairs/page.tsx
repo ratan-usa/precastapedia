@@ -10,7 +10,10 @@ export default function GovernmentAffairsPage() {
       {/* === HERO SECTION === */}
       <section className="relative h-[55vh] flex items-center bg-slate-900">
         {/* Abstract Background: Subtle map or architectural lines */}
-        <div className="absolute inset-0 bg-[url('/assets/image4.jpg')] opacity-10"></div>
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-10"
+          style={{ backgroundImage: `url(${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image4.jpg)` }}
+        />
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/90 to-slate-900/40"></div>
         
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -107,7 +110,7 @@ export default function GovernmentAffairsPage() {
             <div className="aspect-[4/3] bg-slate-800 rounded-xl overflow-hidden relative border border-slate-700">
                <div className="absolute inset-0 flex items-center justify-center text-slate-500 font-bold">
                  <Image
-                   src={'/assets/image6.jpeg'}
+                   src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image6.jpeg`}
                    alt="Case Study Image"
                    fill
                    className="object-cover"

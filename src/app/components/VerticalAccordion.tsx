@@ -26,7 +26,7 @@ const items: AccordionItem[] = [
         category: "Irrigation",
         title: "Water Control Systems",
         description: "Smart water flow management components designed for precise control and regulation.",
-        image: "/assets/image10.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image10.jpeg`,
         color: "bg-[#cc2221]", // Active Red
         icon: Zap
     },
@@ -35,7 +35,7 @@ const items: AccordionItem[] = [
         category: "Earth Moving",
         title: "Bucket Teeth & Adaptors",
         description: "High-strength bucket teeth engineered for superior digging performance.",
-        image: "/assets/image1.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image1.jpeg`,
         color: "bg-[#cc2221]",
         icon: Settings
     },
@@ -44,7 +44,7 @@ const items: AccordionItem[] = [
         category: "Cathodic",
         title: "Zinc Anodes Protection",
         description: "High-purity zinc and aluminium cast anodes for corrosion prevention.",
-        image: "/assets/image18.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image18.jpeg`,
         color: "bg-[#cc2221]",
         icon: Shield
     },
@@ -53,7 +53,7 @@ const items: AccordionItem[] = [
     //     category: "Precast",
     //     title: "Concrete Molds",
     //     description: "High-precision molds for producing durable infrastructure elements.",
-    //     image: "/assets/image15.jpeg",
+    //     image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image15.jpeg`,
     //     color: "bg-[#cc2221]",
     //     icon: Cuboid
     // },
@@ -62,7 +62,7 @@ const items: AccordionItem[] = [
         category: "Mining",
         title: "Crusher Wear Parts",
         description: "Heavy-duty components designed for high-impact crushing environments.",
-        image: "/assets/image16.jpg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image16.jpg`,
         color: "bg-[#cc2221]",
         icon: Sun
     },
@@ -71,7 +71,7 @@ const items: AccordionItem[] = [
         category: "Alloys",
         title: "Metals & Castings",
         description: "Engineered metal and alloy products for industrial applications.",
-        image: "/assets/image14.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image14.jpeg`,
         color: "bg-[#cc2221]",
         icon: Droplets
     },
@@ -80,7 +80,7 @@ const items: AccordionItem[] = [
         category: "Paving",
         title: "Adjustable Risers",
         description: "Height-adjustable pedestal risers for outdoor paving applications.",
-        image: "/assets/image12.jpg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image12.jpg`,
         color: "bg-[#cc2221]",
         icon: Cog
     },
@@ -89,7 +89,7 @@ const items: AccordionItem[] = [
         category: "Water Works",
         title: "Joint Fittings",
         description: "Mechanical joint fittings for secure water distribution networks.",
-        image: "/assets/image13.jpg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image13.jpg`,
         color: "bg-[#cc2221]",
         icon: Droplets
     },
@@ -98,7 +98,7 @@ const items: AccordionItem[] = [
         category: "Fabrication",
         title: "Custom Metal Works",
         description: "High-precision machining and fabrication services engineered for accuracy.",
-        image: "/assets/image10.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image10.jpeg`,
         color: "bg-[#cc2221]",
         icon: Wrench
     },
@@ -107,7 +107,7 @@ const items: AccordionItem[] = [
         category: "Foundry",
         title: "Equipment & Tools",
         description: "State-of-the-art tools ensuring micron-level tolerance for components.",
-        image: "/assets/image12.jpg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image12.jpg`,
         color: "bg-[#cc2221]",
         icon: Flame
     },
@@ -116,7 +116,7 @@ const items: AccordionItem[] = [
         category: "Oil & Gas",
         title: "High Pressure Valves",
         description: "Components built for harsh marine and high-pressure environments.",
-        image: "/assets/image16.jpg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image16.jpg`,
         color: "bg-[#cc2221]",
         icon: Flame
     },
@@ -125,7 +125,7 @@ const items: AccordionItem[] = [
         category: "Infrastructure",
         title: "Construction Parts",
         description: "Heavy-duty scaffolding and infrastructure support components.",
-        image: "/assets/image15.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image15.jpeg`,
         color: "bg-[#cc2221]",
         icon: Building
     },
@@ -134,7 +134,7 @@ const items: AccordionItem[] = [
         category: "Utility",
         title: "Power Energy",
         description: "Reliable components for power transmission and energy sectors.",
-        image: "/assets/image14.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image14.jpeg`,
         color: "bg-[#cc2221]",
         icon: Bolt
     },
@@ -143,7 +143,7 @@ const items: AccordionItem[] = [
         category: "Defence",
         title: "Aerospace Grade",
         description: "Certified high-grade materials for defence and aerospace contracts.",
-        image: "/assets/image18.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image18.jpeg`,
         color: "bg-[#cc2221]",
         icon: Shield
     },
@@ -152,7 +152,7 @@ const items: AccordionItem[] = [
         category: "Manufacturing",
         title: "Custom OEM",
         description: "Tailor-made casting solutions to meet unique project requirements.",
-        image: "/assets/image1.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image1.jpeg`,
         color: "bg-[#cc2221]",
         icon: Hammer
     },
@@ -161,7 +161,7 @@ const items: AccordionItem[] = [
         category: "Snow Plough",
         title: "Winter Equipment",
         description: "Industrial grade snow clearing attachments and machinery parts.",
-        image: "/assets/image9.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image9.jpeg`,
         color: "bg-[#cc2221]",
         icon: Cog
     }

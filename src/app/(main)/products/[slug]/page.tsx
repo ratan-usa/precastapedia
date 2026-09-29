@@ -43,7 +43,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
                     <div className="relative aspect-[4/3] w-full bg-gray-100 rounded-2xl overflow-hidden border border-gray-200">
                         {/* Fallback to a placeholder if image path is broken */}
                         <Image
-                            src={product.image || '/assets/placeholder.jpg'}
+                            src={product.image || `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/placeholder.jpg`}
                             alt={product.title}
                             fill
                             className="object-cover"

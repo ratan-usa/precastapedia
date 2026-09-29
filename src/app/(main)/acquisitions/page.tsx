@@ -35,7 +35,7 @@ const AboutSection = () => {
     <section className="relative w-full py-16 sm:py-24 bg-white">
       <div className="absolute inset-0 z-0 h-[225px] w-full">
         <Image
-          src={'/assets/image11.jpg'}
+          src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image11.jpg`}
           alt="Industrial background image"
           layout="fill"
           objectFit="cover"

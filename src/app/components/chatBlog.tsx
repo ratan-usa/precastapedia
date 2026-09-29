@@ -66,7 +66,7 @@ const ChatBlog = () => {
         <div className='order-first md:order-last'> {/* Place image first on mobile, last on desktop */}
           <div className="relative w-full aspect-video">
             <Image
-              src={'/chatblog.jpeg'}
+              src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/chatblog.jpeg`}
               alt='Live Chat Interface Demonstration'
               // Use 'fill' to make the image take up the full space of the parent container
               fill

@@ -27,7 +27,7 @@ export default async function MaterialPage({ params }: PageProps) {
 
       <div className="relative h-[400px] w-full">
         <Image
-          src={data.image || "/assets/image11.jpg"}
+          src={data.image || `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image11.jpg`}
           alt={data.title}
           fill
           className="object-cover"

@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" type="image/png" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" href={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/apple-touch-icon.png`} />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <div className="hidden md:block">

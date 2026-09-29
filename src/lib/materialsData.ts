@@ -15,7 +15,7 @@ export const categories = [
   {
     title: "Trench Products",
     slug: "trench-products",
-    video: "/video/trench/Trench 500 Animation.498.mp4",
+    video: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/trench/Trench_500_Animation.498.mp4`,
     description: "Heavy-duty drainage solutions for high-traffic industrial environments.",
     specs: ["Ductile Iron Construction", "Load Class D400+", "Anti-Slip Surface", "UV Resistant Coating"],
     icon: Wrench,
@@ -24,7 +24,7 @@ export const categories = [
   {
     title: "Cleanouts",
     slug: "cleanouts",
-    image: "/assets/PAVING-RISERS/products/cleanout.jpeg",
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/PAVING-RISERS/products/cleanout.jpeg`,
     description: "Professional grade access points for plumbing and waste systems.",
     specs: ["Gas-tight Seals", "Brass/Nickel Finish", "Easy-access Design", "Corrosion Resistant"],
     icon: Droplet,
@@ -33,16 +33,16 @@ export const categories = [
   {
     title: "New Innovations",
     slug: "new-innovations",
-    image: "/assets/MEGA/MONITERING WELL STATION.11 - Copy.png", // Construction/Infrastructure image
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/MEGA/MONITERING_WELL_STATION.png`, // Construction/Infrastructure image
     description: "Cutting-edge casting technologies and patent-pending industrial designs.",
     specs: ["Patent-pending Technology", "Sustainable Materials", "IoT Ready Sensors", "High Precision Molding"],
     icon: Lightbulb,
     color: "bg-red-700",
   },
   {
-    title: "Pipe Grates",
+    title: "pipe_grates",
     slug: "pipe-grates",
-    video: "/assets/PAVING-RISERS/products/pipe grate.mp4",
+    video: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/PAVING-RISERS/products/pipe_grate.mp4`,
     description: "Optimized water flow and debris management for municipal projects.",
     specs: ["High Flow Efficiency", "Debris Filtration", "Cast Iron Durability", "Custom Sizes Available"],
     icon: Grid3X3,
@@ -51,16 +51,16 @@ export const categories = [
   {
     title: "Hinged Castings",
     slug: "hinged-castings",
-    image: "/assets/MEGA/HATCHES COVER.jpeg", // Construction/Infrastructure image
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/MEGA/HATCHES_COVER.jpeg`, // Construction/Infrastructure image
     description: "Ergonomic, easy-access manhole and utility covers for safety.",
     specs: ["Ergonomic Lift Assist", "Safety Lock System", "Heavy Duty Hinge", "Reduced Maintenance Cost"],
     icon: DoorOpen,
     color: "bg-red-700",
   }, 
   {
-    title: "MJ Fittings",
+    title: "MJ_Fittings",
     slug: "mj-fittings",
-    image: "/assets/MEGA/MJ Fittings.jpeg",
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/MEGA/MJ_Fittings.jpeg`,
     description: "Our range of mechanical joint (MJ) fittings are engineered for superior sealing performance in underground water and gas pipelines.   ",
     specs: ["ISO 2531/EN 545 Standard", "Flange Sizes: 50mm - 1200mm", "Working Pressure: Up to 16 Bar", "Corrosion-Resistant Epoxy Coating"],
     icon: Wrench,
@@ -75,7 +75,7 @@ export const materialsData: Record<string, any> = {
     description: "Known for its excellent machinability, vibration dampening, and wear resistance. Ideal for engine blocks, manhole covers, and heavy machinery bases.",
     properties: ["High compressive strength", "Good castability", "Vibration damping", "Wear resistance"],
     applications: ["Automotive engine blocks", "Pipe fittings", "Machine tool bases", "Manhole covers"],
-    image: "/assets/image16.jpg"
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image16.jpg`
   },
   "ductile-iron": {
     title: "Ductile Iron",
@@ -83,7 +83,7 @@ export const materialsData: Record<string, any> = {
     description: "Also known as nodular cast iron, it offers the castability of gray iron but with much higher tensile strength and toughness.",
     properties: ["High ductility", "Impact resistance", "High tensile strength", "Elasticity"],
     applications: ["Water and sewer pipes", "Automotive crankshafts", "Wind turbine hubs", "Hydraulic components"],
-    image: "/assets/image13.jpg"
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image13.jpg`
   },
   "steel": {
     title: "Steel",
@@ -91,7 +91,7 @@ export const materialsData: Record<string, any> = {
     description: "The backbone of modern construction. We offer carbon, alloy, and tool steels tailored to structural integrity and durability needs.",
     properties: ["High yield strength", "Weldability", "Versatility", "Durability"],
     applications: ["Structural beams", "Automotive chassis", "Construction equipment", "Tools and dies"],
-    image: "/assets/image11.jpg"
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image11.jpg`
   },
   "aluminum": {
     title: "Aluminum",
@@ -99,7 +99,7 @@ export const materialsData: Record<string, any> = {
     description: "Lightweight yet strong, aluminum is essential for aerospace, automotive, and marine industries requiring corrosion resistance.",
     properties: ["Lightweight", "Corrosion resistant", "High thermal conductivity", "Non-magnetic"],
     applications: ["Aerospace components", "Automotive panels", "Heat sinks", "Marine fittings"],
-    image: "/assets/image7.jpeg"
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image7.jpeg`
   },
   "stainless": {
     title: "Stainless Steel",
@@ -107,6 +107,6 @@ export const materialsData: Record<string, any> = {
     description: "Selected for its corrosion resistance and hygiene properties. Essential for medical, food processing, and chemical industries.",
     properties: ["Excellent corrosion resistance", "High temperature strength", "Hygienic surface", "Low maintenance"],
     applications: ["Food processing equipment", "Medical instruments", "Chemical tanks", "Architectural cladding"],
-    image: "/assets/image12.jpg"
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image12.jpg`
   }
 };

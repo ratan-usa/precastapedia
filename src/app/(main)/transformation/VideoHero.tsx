@@ -15,7 +15,7 @@ export default function VideoHero() {
         playsInline
         className="absolute inset-0 w-full h-full object-cover opacity-60"
       >
-        <source src="/video/video2.mp4" type="video/mp4" />
+        <source src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/video2.mp4`} type="video/mp4" />
 
         Your browser does not support the video tag.
       </video>

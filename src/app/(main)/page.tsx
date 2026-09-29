@@ -68,43 +68,9 @@ export default function Home() {
 
     return (
         <div className="bg-white">
-            {/* 1. HERO VIDEO (LCP - Static/Fast) */}
-            {/* <header className="relative w-full overflow-hidden flex items-center justify-center min-h-[500px] md:min-h-[700px]">
-                <video
-                    autoPlay loop muted playsInline
-                    className="absolute inset-0 w-full h-full object-cover z-0"
-                >
-                    <source src="/video/282244_small.mp4" type="video/mp4" />
-                </video>
-                <div className="absolute inset-0 bg-[#cc2221]/20 z-0 pointer-events-none" />
-
-                <div className="relative z-10 container mx-auto px-4 text-center">
-                    <div className="inline-block p-6 md:p-0">
-                        <p className="text-[12px] md:text-[16px] font-bold uppercase tracking-widest text-[#cc2221] mb-4 bg-white/90 px-4 py-2 rounded-full inline-block shadow-sm">
-                            MEGA FOUNDRIES | Global Industrial Hub
-                        </p>
-                        <h1 className="text-white font-bold leading-tight tracking-tight drop-shadow-lg">
-                            <span className="block text-[24px] md:text-[50px]">The World's Advanced Consortium of</span>
-                            <span className="block text-[14px] md:text-[30px] text-[#cc2221] uppercase font-black bg-white/90 rounded px-4 py-1 my-2">
-                                Foundries, Forge Shops & Fabricators
-                            </span>
-                            <span className="block text-[32px] md:text-[80px] font-light">Under One Universe</span>
-                        </h1>
-
-                        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
-                            <Button className="w-full sm:w-auto bg-[#cc2221] hover:bg-red-700 text-white md:px-12 md:py-8 md:text-xl rounded-full">
-                                Explore Capabilities
-                            </Button>
-                            <Button variant="outline" className="w-full sm:w-auto border-2 border-white text-white bg-transparent hover:bg-white hover:text-[#cc2221] md:px-12 md:py-8 md:text-xl rounded-full">
-                                <Link href={'/sellerHomepage'}>Succeed With Us</Link>
-                            </Button>
-                        </div>
-                    </div>
-                </div>
-            </header> */}
+            
             <Hero />
-            <Product3DShowcase />
-            {/* 2. CORE PRODUCTS (High Priority) */}
+            <Product3DShowcase /> 
             <MegaQSeries/>
             <MegaProducts />
             <MegaMediaHub/>

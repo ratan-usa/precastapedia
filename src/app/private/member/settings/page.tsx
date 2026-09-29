@@ -81,7 +81,7 @@ export default function SettingsPage() {
               
               <div className="flex items-center gap-6">
                 <Avatar className="h-20 w-20 border-2 border-slate-100">
-                    <AvatarImage src="/placeholder-user.jpg" />
+                    <AvatarImage src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image1.jpeg`} />
                     <AvatarFallback className="text-lg bg-slate-900 text-white">RP</AvatarFallback>
                 </Avatar>
                 <div>

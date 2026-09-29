@@ -21,13 +21,13 @@ import { Card, CardContent } from "@/components/ui/card"
 
 // 1. Your Local Images
 const myImages = [
-  "/assets/image10.jpeg",
-  "/assets/image1.jpeg",
-  "/assets/image18.jpeg",
-  "/assets/image9.jpeg",
-  "/assets/image11.jpg",
-  "/assets/image14.jpeg",
-  "/assets/image16.jpg",
+  `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image10.jpeg`,
+  `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image1.jpeg`,
+  `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image18.jpeg`,
+  `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image9.jpeg`,
+  `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image11.jpg`,
+  `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image14.jpeg`,
+  `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image16.jpg`,
 ]
 
 // 2. Data Flattened 
@@ -40,8 +40,8 @@ const products = [
     price: "View Catalog",
     isHero: true,
     icon: Zap,
-    image: "/assets/image10.jpeg",
-    video: "/video/custom solutions/5900-E CN tower Brick.478.mp4" // <--- Add your video path here
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image10.jpeg`,
+    video: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/custom_solutions/5900-E-CN-tower-Brick.478.mp4` // <--- Add your video path here
   },
   { id: "earth_moving", title: "Bucket Teeth & Excavator Adaptors", category: "Earth Moving", brand: "HeavyDuty", price: "$450.00", icon: Zap },
   { id: "cathodic", title: "Zinc & Aluminium Sacrificial Anodes", category: "Protection", brand: "MarineSafe", price: "$120.00", icon: Settings },
@@ -112,7 +112,7 @@ export function MegaStories() {
                       playsInline
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     >
-                      <source src={heroProduct.video || "/video/NEW NEXT GENERATION DESIGNER MANHOLE COVER.mp4"} type="video/mp4" />
+                      <source src={heroProduct.video || `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/NEW_NEXT_GENERATION_DESIGNER_D-BOXES.mp4`} type="video/mp4" />
                       Your browser does not support the video tag.
                     </video>
                 </div>

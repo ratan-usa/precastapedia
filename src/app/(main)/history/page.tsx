@@ -33,7 +33,10 @@ export default function HistoryPage() {
       {/* === HERO SECTION === */}
       <section className="relative py-24 bg-slate-900 text-white overflow-hidden">
         {/* Background Texture */}
-        <div className="absolute inset-0 opacity-20 bg-[url('/assets/image13.jpg')]"></div>
+        <div 
+          className="absolute inset-0 opacity-20 bg-cover bg-center"
+          style={{ backgroundImage: `url(${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image13.jpg)` }}
+        />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-end justify-between gap-8">
           <div className="max-w-2xl">
@@ -79,7 +82,7 @@ export default function HistoryPage() {
             <div className="absolute inset-0 bg-slate-900/10 mix-blend-multiply z-10"></div>
             <div className="w-full h-full bg-slate-300 flex items-center justify-center text-slate-500 font-bold">
               <Image
-                src={'/assets/image3.jpeg'}
+                src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image3.jpeg`}
                 alt="Case Study Image"
                 fill
                 className="object-cover"

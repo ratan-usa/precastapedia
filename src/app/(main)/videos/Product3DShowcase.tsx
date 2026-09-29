@@ -20,8 +20,8 @@ const PRODUCT_VIDEOS = [
     description: "Full rotation showcase highlighting our high-precision ductile iron height adjustment ring mechanism.",
     duration: "0:45",
     type: "360_ROTATION",
-    src: "video/paving_riser/paving riser 1.5213.mp4", // Restored valid video path to prevent .glb breaks
-    thumbnail: "/assets/PAVING-RISERS/paving riser 1.5200.png" 
+    src: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/paving_riser/paving riser 1.5213.mp4`, // Restored valid video path to prevent .glb breaks
+    thumbnail: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/PAVING-RISERS/paving_riser_1.5200.png` 
   },
   {
     id: 2,
@@ -29,8 +29,8 @@ const PRODUCT_VIDEOS = [
     description: "Technical exploded breakdown showing the multi-ton load capacity and interlocking frame security.",
     duration: "1:10",
     type: "EXPLODED_VIEW",
-    src: "video/paving_riser/paving riser 1.5213.mp4", 
-    thumbnail: "/assets/PAVING-RISERS/paving riser 1.5201.png" 
+    src: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/paving_riser/paving riser 1.5213.mp4`, 
+    thumbnail: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/PAVING-RISERS/paving_riser_1.5201.png` 
   },
   {
     id: 3,
@@ -38,17 +38,17 @@ const PRODUCT_VIDEOS = [
     description: "Step-by-step industrial 3D animation showing a standard heavy-traffic utility utility valve box casing setup.",
     duration: "2:00",
     type: "ANIMATION", 
-    src: "video/paving_riser/paving riser 1.5213.mp4", 
-    thumbnail: "/assets/PAVING-RISERS/paving riser 1.5203.png" 
+    src: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/paving_riser/paving riser 1.5213.mp4`, 
+    thumbnail: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/PAVING-RISERS/paving_riser_1.5203.png` 
   },
   {
     id: 4,
-    title: "Custom Foundry Components",
+    title: "Custom_Foundry_Components",
     description: "Finite Element Analysis (FEA) testing simulation illustrating severe shear stress distribution on custom cast matrices.",
     duration: "0:30",
     type: "SIMULATION",
-    src: "video/Custom Foundry Components.mp4", 
-    thumbnail: "/assets/PAVING-RISERS/paving riser 1.5204.png" 
+    src: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/Custom_Foundry_Components.mp4`, 
+    thumbnail: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/PAVING-RISERS/paving_riser_1.5204.png` 
   }
 ];
 

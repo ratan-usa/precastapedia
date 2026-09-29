@@ -92,7 +92,7 @@ export default async function CategoryDetailPage({ params }: PageProps) {
                 <div className="bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 h-full flex flex-col">
                   <div className="relative aspect-[4/3] w-full overflow-hidden">
                     <Image
-                      src={sub.image || '/assets/placeholder.jpg'}
+                      src={sub.image || `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/placeholder.jpg`}
                       alt={sub.name}
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-110"

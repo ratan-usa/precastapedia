@@ -8,31 +8,31 @@ const HISTORY_DATA = [
     year: "1985",
     title: " The Foundation",
     description: "Mega Foundries was established in Pittsburgh, PA, with a single blast furnace and a mission to forge the highest quality steel components for the American automotive industry.",
-    image: "/assets/image1.jpeg" // Replace with real image path
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image1.jpeg` // Replace with real image path
   },
   {
     year: "1992",
     title: "Expansion to Aerospace",
     description: "After achieving ISO 9001 certification, we expanded our operations to supply critical alloy parts to major aerospace contractors, marking our entry into high-precision manufacturing.",
-    image: "/assets/image2.jpeg"
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image2.jpeg`
   },
   {
     year: "2005",
     title: "Going Global",
     description: "We opened our first international facility in Germany, allowing us to serve the European market directly and increasing our global production capacity by 200%.",
-    image: "/assets/image3.jpeg"
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image3.jpeg`
   },
   {
     year: "2018",
     title: "Sustainable Steel",
     description: "Mega Foundries committed to a greener future by retrofitting all plants with electric arc furnaces, reducing carbon emissions by 40% and setting a new industry standard.",
-    image: "/assets/image4.jpeg"
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image4.jpeg`
   },
   {
     year: "2025",
     title: "The Next Era",
     description: "Today, we are pioneering AI-driven metallurgy and 3D metal printing, ensuring Mega Foundries remains the backbone of modern infrastructure.",
-    image: "/assets/image5.jpeg"
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image5.jpeg`
   }
 ];
 
@@ -53,7 +53,10 @@ export default function MakingHistoryPage() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-slate-800 via-slate-950 to-black opacity-90 z-0"></div>
 
         {/* Decorative 'Sparks' or Graphic (Optional) */}
-        <div className="absolute top-0 left-0 w-full h-full opacity-20 bg-[url('/assets/image2.jpeg')]"></div>
+        <div 
+          className="absolute top-0 left-0 w-full h-full opacity-20 bg-cover bg-center"
+          style={{ backgroundImage: `url(${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image2.jpeg)` }}
+        />
 
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           <div className="inline-block mb-4 px-3 py-1 border border-red-600 rounded text-red-500 text-xs font-bold tracking-widest uppercase">

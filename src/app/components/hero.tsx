@@ -2,7 +2,7 @@ import React from 'react'
 
 const HeroSection = () => {
     // Note: The image URL is a placeholder. Replace it with your actual image path.
-    const imageUrl = "/assets/image21.jpeg";
+    const imageUrl = `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image21.jpeg`;
 
     return (
         <div

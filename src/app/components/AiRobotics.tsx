@@ -28,7 +28,10 @@ const techFeatures = [
 export default function AiRobotics() {
   return (
     <section className="py-24 bg-black text-white overflow-hidden relative">
-      <div className="absolute inset-0 opacity-10 pointer-events-none bg-[url('/assets/image16.jpg')]" />
+      <div 
+        className="absolute inset-0 opacity-10 pointer-events-none bg-cover bg-center" 
+        style={{ backgroundImage: `url(${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image16.jpg)` }}
+      />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -41,7 +44,7 @@ export default function AiRobotics() {
           >
             <div className="relative z-10 rounded-3xl border border-white/10 overflow-hidden bg-black backdrop-blur-xl p-2 shadow-2xl">
               <Image
-                src="/assets/image8.jpeg"
+                src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image8.jpeg`}
                 alt="AI Robotics"
                 className="rounded-2xl opacity-80"
                 width={1000}

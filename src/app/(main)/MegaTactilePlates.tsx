@@ -88,8 +88,8 @@ export default function MegaTactilePlates() {
               {/* Static Asset Visual - Visibility fixed by clearing transparency filters */}
               <div className="relative w-full h-full opacity-100">
                 <Image
-                  // src="/assets/image5.jpeg" 
-                  src="/assets/MEGA/Detectable%20Warning%20Plates.jpeg"
+                  // src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image5.jpeg`} 
+                  src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/MEGA/Detectable_Warning_Plates.jpeg`}
 
                   alt="Cast Iron Tactile Plate Mechanical Profile"
                   fill

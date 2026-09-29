@@ -19,7 +19,7 @@ const apricotsFont = localFont({
 const words = ["Foundries.", "Forge Shops.", "Fabricators."]; 
 
 export const Hero = ({
-  videoSrc = "/video/282244_small.mp4"
+  videoSrc = `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/282244_small.mp4`
 }: HeroProps) => {
   const [index, setIndex] = useState(0);
   const [subIndex, setSubIndex] = useState(0);

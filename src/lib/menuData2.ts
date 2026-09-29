@@ -4,7 +4,7 @@ export const menuData = {
     id: 'construction_castings',
     label: 'CONSTRUCTION CASTINGS',
     icon: Zap, // change icon if you like
-    bannerImage: '/assets/image1.jpeg',
+    bannerImage: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image1.jpeg`,
     color: 'bg-[#cc2221] text-white',
 
     categories: [
@@ -13,10 +13,10 @@ export const menuData = {
       {
         name: "MANHOLE COVERS & FRAMES",
         slug: "manhole-covers-and-frames",
-        image: "/assets/image1.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image1.jpeg`,
         description:
           "Durable ductile iron an d gray iron manhole covers and frames engineered for municipal, highway, and smart-city infrastructure.",
-        videoUrl: "/video/manhole-covers.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/manhole-covers.mp4`,
         items: [
           "Circular manhole covers",
           "Square & rectangular manhole covers",
@@ -31,10 +31,10 @@ export const menuData = {
       {
         name: "DRAINAGE & GRATING CASTINGS",
         slug: "drainage-and-grating-castings",
-        image: "/assets/image2.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image2.jpeg`,
         description:
           "High-strength drainage gratings and trench covers designed for stormwater control, highways, airports, and industrial facilities.",
-        videoUrl: "/video/drainage-gratings.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/drainage-gratings.mp4`,
         items: [
           "Trench gratings",
           "Kerb inlet grates",
@@ -49,10 +49,10 @@ export const menuData = {
       {
         name: "CONSTRUCTION MACHINERY CAST COMPONENTS",
         slug: "construction-machinery-cast-components",
-        image: "/assets/image3.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image3.jpeg`,
         description:
           "Precision cast components manufactured for excavators, loaders, batching plants, cranes and concrete machinery.",
-        videoUrl: "/video/machinery-cast-components.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/machinery-cast-components.mp4`,
         items: [
           "Pump housings",
           "Gearbox casings",
@@ -67,10 +67,10 @@ export const menuData = {
       {
         name: "STRUCTURAL & ARCHITECTURAL CASTINGS",
         slug: "structural-and-architectural-castings",
-        image: "/assets/image4.jpg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image4.jpg`,
         description:
           "Decorative and structural castings used in building architecture, railing systems, façade elements, and landscape structures.",
-        videoUrl: "/video/architectural-castings.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/architectural-castings.mp4`,
         items: [
           "Cast balustrades & railings",
           "Lamp post castings",
@@ -85,10 +85,10 @@ export const menuData = {
       {
         name: "UTILITY & INFRASTRUCTURE CASTINGS",
         slug: "utility-and-infrastructure-castings",
-        image: "/assets/image5.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image5.jpeg`,
         description:
           "Castings designed for water supply systems, telecom chambers, electric networks, and smart city infrastructure projects.",
-        videoUrl: "/video/utility-castings.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/utility-castings.mp4`,
         items: [
           "Surface boxes",
           "Valve boxes",
@@ -104,7 +104,7 @@ export const menuData = {
     id: 'water_works_casting',
     label: 'WATER WORKS CASTINGS',
     icon: DropletsIcon, // or any icon you prefer
-    bannerImage: '/assets/image2.jpeg',
+    bannerImage: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image2.jpeg`,
     color: 'bg-blue-100 text-blue-900',
 
     categories: [
@@ -113,10 +113,10 @@ export const menuData = {
       {
         name: "VALVE BODIES & COMPONENTS",
         slug: "valve-bodies-and-components",
-        image: "/assets/image6.jpg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image6.jpg`,
         description:
           "High-strength cast valve bodies and components designed for potable water, wastewater and industrial water handling applications.",
-        videoUrl: "/video/valve-bodies.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/valve-bodies.mp4`,
         items: [
           "Gate valve bodies",
           "Butterfly valve bodies",
@@ -131,10 +131,10 @@ export const menuData = {
       {
         name: "HYDRANT & WATER DISTRIBUTION CASTINGS",
         slug: "hydrant-and-water-distribution-castings",
-        image: "/assets/image7.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image7.jpeg`,
         description:
           "Cast components used in municipal water networks for underground and above-ground fire hydrants and distribution systems.",
-        videoUrl: "/video/hydrant-castings.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/hydrant-castings.mp4`,
         items: [
           "Fire hydrant bodies",
           "Hydrant risers",
@@ -149,10 +149,10 @@ export const menuData = {
       {
         name: "PIPE FITTINGS & CONNECTOR CASTINGS",
         slug: "pipe-fittings-and-connector-castings",
-        image: "/assets/image8.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image8.jpeg`,
         description:
           "Ductile iron and alloy cast fittings engineered for water pipelines, joint connections and network pressure systems.",
-        videoUrl: "/video/pipe-fitting-castings.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/pipe-fitting-castings.mp4`,
         items: [
           "Flanged fittings",
           "Socket fittings",
@@ -167,10 +167,10 @@ export const menuData = {
       {
         name: "METER BOX & ACCESS INFRASTRUCTURE CASTINGS",
         slug: "meter-box-and-access-castings",
-        image: "/assets/image9.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image9.jpeg`,
         description:
           "Durable castings used for water meter housings, access covers and inspection systems in urban water networks.",
-        videoUrl: "/video/meter-box-castings.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/meter-box-castings.mp4`,
         items: [
           "Water meter box covers",
           "Cast iron enclosures",
@@ -184,10 +184,10 @@ export const menuData = {
       {
         name: "PUMP & FLOW EQUIPMENT CASTINGS",
         slug: "pump-and-flow-equipment-castings",
-        image: "/assets/image10.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image10.jpeg`,
         description:
           "Precision-engineered castings for pumps and fluid movement systems used in potable water, irrigation and wastewater treatment.",
-        videoUrl: "/video/pump-castings.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/pump-castings.mp4`,
         items: [
           "Pump casings",
           "Impeller castings",
@@ -203,15 +203,15 @@ export const menuData = {
     id: 'trench_products',
     label: 'TRENCH PRODUCTS',
     icon: Settings,
-    bannerImage: '/assets/image3.jpeg',
+    bannerImage: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image3.jpeg`,
     color: 'bg-[#cc2221] text-white',
     categories: [
       {
         name: "ZINC & ALUMINIUM CAST ANODES",
         slug: "zinc-aluminium-cast-anodes",
-        image: "/assets/image11.jpg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image11.jpg`,
         description: "High-purity zinc and aluminium cast anodes designed for long-term corrosion prevention in marine and industrial environments.",
-        videoUrl: "/video/video1.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/video1.mp4`,
         items: [
           "Zinc slab anodes",
           "Aluminium block anodes",
@@ -223,9 +223,9 @@ export const menuData = {
       {
         name: "COATED TITANIUM ANODES",
         slug: "coated-titanium-anodes",
-        image: "/assets/image12.jpg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image12.jpg`,
         description: "Mixed-metal oxide (MMO) coated titanium anodes built for high-performance cathodic protection with minimal maintenance.",
-        videoUrl: "/video/video1.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/video1.mp4`,
         items: [
           "MMO rod anodes",
           "MMO mesh anodes",
@@ -237,9 +237,9 @@ export const menuData = {
       {
         name: "MAGNESIUM ANODES",
         slug: "magnesium-anodes",
-        image: "/assets/image13.jpg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image13.jpg`,
         description: "Premium magnesium anodes designed for cathodic protection in underground and freshwater applications.",
-        videoUrl: "/video/video1.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/video1.mp4`,
         items: [
           "High potential magnesium anodes",
           "AZ63 magnesium rods",
@@ -251,9 +251,9 @@ export const menuData = {
       {
         name: "TRANSFORMERS & RECTIFIERS",
         slug: "transformers-rectifiers",
-        image: "/assets/image14.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image14.jpeg`,
         description: "Reliable transformers and rectifiers engineered to deliver controlled DC output for cathodic protection systems.",
-        videoUrl: "/video/video1.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/video1.mp4`,
         items: [
           "Transformer rectifier units (TRU)",
           "Digital automatic rectifiers",
@@ -265,9 +265,9 @@ export const menuData = {
       {
         name: "JUNCTION BOXES",
         slug: "junction-boxes",
-        image: "/assets/image15.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image15.jpeg`,
         description: "Industrial-grade junction boxes designed for safe and secure connectivity in cathodic protection setups.",
-        videoUrl: "/video/video1.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/video1.mp4`,
         items: [
           "Test station junction boxes",
           "Current distribution boxes",
@@ -279,9 +279,9 @@ export const menuData = {
       {
         name: "MONITORING EQUIPMENTS",
         slug: "monitoring-equipments",
-        image: "/assets/image16.jpg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image16.jpg`,
         description: "Advanced monitoring equipment for tracking, measuring and maintaining optimal cathodic protection levels.",
-        videoUrl: "/video/video1.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/video1.mp4`,
         items: [
           "Reference electrodes",
           "Remote monitoring units (RMU)",
@@ -293,9 +293,9 @@ export const menuData = {
       {
         name: "CALES & WIRING SYSTEMS",
         slug: "cales-and-wiring-systems",
-        image: "/assets/image17.jpg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image17.jpg`,
         description: "Durable cabling and wiring systems engineered for cathodic protection installations in challenging conditions.",
-        videoUrl: "/video/video1.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/video1.mp4`,
         items: [
           "Anode lead wires",
           "High molecular weight polyethylene cables",
@@ -311,7 +311,7 @@ export const menuData = {
   //   id: 'precast_molds',
   //   label: 'PRECAST & MOLDS',
   //   icon: Shapes, // choose any lucide icon you like
-  //   bannerImage: '/assets/image4.jpg',
+  //   bannerImage: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image4.jpg`,
   //   color: 'bg-orange-100 text-orange-900',
 
   //   categories: [
@@ -320,10 +320,10 @@ export const menuData = {
   //     {
   //       name: "PRECAST CONCRETE MOLDS",
   //       slug: "precast-concrete-molds",
-  //       image: "/assets/image18.jpeg",
+  //       image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image18.jpeg`,
   //       description:
   //         "High-precision molds engineered for manufacturing durable, dimensionally accurate precast concrete elements.",
-  //       videoUrl: "/video/mold/2 feet mold.54.mp4",
+  //       videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/mold/2-feet-mold.54.mp4`,
 
   //       items: [
   //         "Slab molds",
@@ -338,10 +338,10 @@ export const menuData = {
   //     {
   //       name: "PRECAST ROAD & HIGHWAY MOLDS",
   //       slug: "precast-road-and-highway-molds",
-  //       image: "/assets/image19.jpeg",
+  //       image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image19.jpeg`,
   //       description:
   //         "Molds designed for precast components used in roads, highways, bridges and transportation infrastructure.",
-  //       videoUrl: "/video/mold/2 feet mold.54.mp4",
+  //       videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/mold/2-feet-mold.54.mp4`,
 
   //       items: [
   //         "Crash barrier molds",
@@ -356,10 +356,10 @@ export const menuData = {
   //     {
   //       name: "PRECAST PIPE MOLDS",
   //       slug: "precast-pipe-molds",
-  //       image: "/assets/image20.jpeg",
+  //       image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image20.jpeg`,
   //       description:
   //         "Heavy-duty molds for manufacturing RCC and precast concrete pipes with high load-bearing capacity.",
-  //       videoUrl: "/video/mold/2 feet mold.54.mp4",
+  //       videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/mold/2-feet-mold.54.mp4`,
 
   //       items: [
   //         "RCC Hume pipe molds",
@@ -374,10 +374,10 @@ export const menuData = {
   //     {
   //       name: "PRECAST BUILDING COMPONENTS",
   //       slug: "precast-building-components",
-  //       image: "/assets/image1.jpeg",
+  //       image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image1.jpeg`,
   //       description:
   //         "Molds used for precast elements in residential, commercial and industrial building construction.",
-  //       videoUrl: "/video/mold/2 feet mold.54.mp4",
+  //       videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/mold/2-feet-mold.54.mp4`,
 
   //       items: [
   //         "Wall panel molds",
@@ -392,10 +392,10 @@ export const menuData = {
   //     {
   //       name: "LANDSCAPE & URBAN MOLDS",
   //       slug: "landscape-and-urban-molds",
-  //       image: "/assets/image2.jpeg",
+  //       image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image2.jpeg`,
   //       description:
   //         "Architectural molds for landscape development, garden structures and city beautification elements.",
-  //       videoUrl: "/video/mold/2 feet mold.54.mp4",
+  //       videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/mold/2-feet-mold.54.mp4`,
 
   //       items: [
   //         "Paving block molds",
@@ -410,10 +410,10 @@ export const menuData = {
   //     {
   //       name: "UTILITY & MUNICIPAL PRECAST MOLDS",
   //       slug: "utility-and-municipal-precast-molds",
-  //       image: "/assets/image3.jpeg",
+  //       image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image3.jpeg`,
   //       description:
   //         "Molds developed for smart city projects, utilities and public infrastructure applications.",
-  //       videoUrl: "/video/mold/2 feet mold.54.mp4",
+  //       videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/mold/2-feet-mold.54.mp4`,
 
   //       items: [
   //         "Manhole cover molds",
@@ -428,10 +428,10 @@ export const menuData = {
   //     {
   //       name: "WALL & BOUNDRY MOLDS",
   //       slug: "wall-and-boundary-molds",
-  //       image: "/assets/image4.jpg",
+  //       image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image4.jpg`,
   //       description:
   //         "Precast molds for compound walls, fencing and boundary applications offering high strength and fast installation.",
-  //       videoUrl: "/video/mold/2 feet mold.54.mp4",
+  //       videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/mold/2-feet-mold.54.mp4`,
 
   //       items: [
   //         "Prestressed boundary wall molds",
@@ -446,10 +446,10 @@ export const menuData = {
   //     {
   //       name: "INDUSTRIAL PRECAST MOLDS",
   //       slug: "industrial-precast-molds",
-  //       image: "/assets/image5.jpeg",
+  //       image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image5.jpeg`,
   //       description:
   //         "Molds for precast elements used in factories, warehouses, utility buildings and heavy industry projects.",
-  //       videoUrl: "/video/mold/2 feet mold.54.mp4",
+  //       videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/mold/2-feet-mold.54.mp4`,
 
   //       items: [
   //         "Machine foundation molds",
@@ -464,10 +464,10 @@ export const menuData = {
   //     {
   //       name: "AGRICULTURE PRECAST MOLDS",
   //       slug: "agriculture-precast-molds",
-  //       image: "/assets/image6.jpg",
+  //       image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image6.jpg`,
   //       description:
   //         "Precast molds designed for agricultural infrastructure and farm development components.",
-  //       videoUrl: "/video/mold/2 feet mold.54.mp4",
+  //       videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/mold/2-feet-mold.54.mp4`,
 
   //       items: [
   //         "Irrigation canal molds",
@@ -482,10 +482,10 @@ export const menuData = {
   //     {
   //       name: "MODULAR MOLDS SYSTEMS",
   //       slug: "modular-molds-systems",
-  //       image: "/assets/image7.jpeg",
+  //       image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image7.jpeg`,
   //       description:
   //         "Flexible modular mold systems allowing quick size changes and high productivity for multiple product designs.",
-  //       videoUrl: "/video/mold/2 feet mold.54.mp4",
+  //       videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/mold/2-feet-mold.54.mp4`,
 
   //       items: [
   //         "Adjustable shuttering systems",
@@ -500,10 +500,10 @@ export const menuData = {
   //     {
   //       name: "MOLDS ACCESSORIES",
   //       slug: "molds-accessories",
-  //       image: "/assets/image8.jpeg",
+  //       image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image8.jpeg`,
   //       description:
   //         "Accessories that enhance mold performance, surface finish and production efficiency.",
-  //       videoUrl: "/video/mold/2 feet mold.54.mp4",
+  //       videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/mold/2-feet-mold.54.mp4`,
 
   //       items: [
   //         "Vibration systems",
@@ -520,7 +520,7 @@ export const menuData = {
     id: 'buildings_supply',
     label: 'BUILDING SUPPLY',
     icon: Building2, // choose any lucide icon you like
-    bannerImage: '/assets/image5.jpeg',
+    bannerImage: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image5.jpeg`,
     color: 'bg-stone-100 text-stone-900',
 
     categories: [
@@ -529,10 +529,10 @@ export const menuData = {
       {
         name: "CEMENT, MORTAR & CONCRETE PRODUCTS",
         slug: "cement-mortar-concrete-products",
-        image: "/assets/image9.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image9.jpeg`,
         description:
           "High-quality cementitious materials and ready-mix solutions for structural, masonry and finishing applications in building projects.",
-        videoUrl: "/video/cement-products.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/cement-products.mp4`,
         items: [
           "Portland cement",
           "Ready-mix concrete",
@@ -546,10 +546,10 @@ export const menuData = {
       {
         name: "BRICKS, BLOCKS & MASONRY UNITS",
         slug: "bricks-blocks-masonry-units",
-        image: "/assets/image10.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image10.jpeg`,
         description:
           "Structural and lightweight masonry products for walls, partitions and façade applications.",
-        videoUrl: "/video/masonry-units.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/masonry-units.mp4`,
         items: [
           "Clay bricks",
           "Concrete blocks",
@@ -563,10 +563,10 @@ export const menuData = {
       {
         name: "ROOFING & CLADDING SYSTEMS",
         slug: "roofing-and-cladding-systems",
-        image: "/assets/image11.jpg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image11.jpg`,
         description:
           "Durable roofing and exterior cladding solutions engineered for weather resistance and architectural aesthetics.",
-        videoUrl: "/video/roofing-cladding.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/roofing-cladding.mp4`,
         items: [
           "Metal roofing sheets",
           "Sandwich panels",
@@ -580,10 +580,10 @@ export const menuData = {
       {
         name: "DOORS, WINDOWS & HARDWARE",
         slug: "doors-windows-hardware",
-        image: "/assets/image12.jpg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image12.jpg`,
         description:
           "Energy-efficient doors and windows with a complete range of architectural hardware for commercial and residential buildings.",
-        videoUrl: "/video/doors-windows.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/doors-windows.mp4`,
         items: [
           "UPVC doors & windows",
           "Aluminium doors & windows",
@@ -597,10 +597,10 @@ export const menuData = {
       {
         name: "PLUMBING & SANITARY SYSTEMS",
         slug: "plumbing-and-sanitary-systems",
-        image: "/assets/image13.jpg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image13.jpg`,
         description:
           "Comprehensive plumbing and sanitary ware solutions designed for water supply, drainage and hygiene management.",
-        videoUrl: "/video/plumbing-sanitary.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/plumbing-sanitary.mp4`,
         items: [
           "CPVC / UPVC piping systems",
           "Sanitary fittings",
@@ -614,10 +614,10 @@ export const menuData = {
       {
         name: "ELECTRICAL & LIGHTING PRODUCTS",
         slug: "electrical-and-lighting-products",
-        image: "/assets/image14.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image14.jpeg`,
         description:
           "Electrical distribution and lighting solutions for residential, industrial and commercial building infrastructure.",
-        videoUrl: "/video/electrical-lighting.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/electrical-lighting.mp4`,
         items: [
           "Switches & sockets",
           "MCB & distribution boards",
@@ -633,7 +633,7 @@ export const menuData = {
     id: 'tree_grates',
     label: 'TREE GRATES',
     icon: TreePineIcon, // choose any lucide icon you prefer
-    bannerImage: '/assets/image6.jpg',
+    bannerImage: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image6.jpg`,
     color: 'bg-green-100 text-green-900',
 
     categories: [
@@ -642,10 +642,10 @@ export const menuData = {
       {
         name: "SQUARE TREE GRATES",
         slug: "square-tree-grates",
-        image: "/assets/image15.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image15.jpeg`,
         description:
           "Heavy-duty square tree grates designed for pedestrian pathways, plazas, malls and urban landscaping projects.",
-        videoUrl: "/video/square-tree-grates.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/square-tree-grates.mp4`,
         items: [
           "Two-piece square grates",
           "Four-piece modular grates",
@@ -659,10 +659,10 @@ export const menuData = {
       {
         name: "CIRCULAR TREE GRATES",
         slug: "circular-tree-grates",
-        image: "/assets/image16.jpg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image16.jpg`,
         description:
           "Cast iron circular tree grates providing protection while allowing healthy aeration and water flow to tree roots.",
-        videoUrl: "/video/circular-tree-grates.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/circular-tree-grates.mp4`,
         items: [
           "One-piece circular grates",
           "Segmented circular grates",
@@ -676,10 +676,10 @@ export const menuData = {
       {
         name: "DUCTILE IRON TREE GRATES",
         slug: "ductile-iron-tree-grates",
-        image: "/assets/image17.jpg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image17.jpg`,
         description:
           "High-strength ductile iron tree grates complying with international load-class standards for public walkways and traffic areas.",
-        videoUrl: "/video/ductile-tree-grates.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/ductile-tree-grates.mp4`,
         items: [
           "Heavy duty ductile iron grates",
           "Corrosion-protected coated grates",
@@ -693,10 +693,10 @@ export const menuData = {
       {
         name: "TREE GUARDS & PROTECTION SYSTEMS",
         slug: "tree-guards-and-protection-systems",
-        image: "/assets/image18.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image18.jpeg`,
         description:
           "Protective systems designed to safeguard young trees against pedestrian traffic, vehicles and physical damage.",
-        videoUrl: "/video/tree-guards.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/tree-guards.mp4`,
         items: [
           "Steel tree guards",
           "Cast iron tree guards",
@@ -710,10 +710,10 @@ export const menuData = {
       {
         name: "CUSTOM TREE GRATES",
         slug: "custom-tree-grates",
-        image: "/assets/image19.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image19.jpeg`,
         description:
           "Tailor-made tree grate solutions engineered to meet unique architectural, city planning and landscape design requirements.",
-        videoUrl: "/video/custom-tree-grates.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/custom-tree-grates.mp4`,
         items: [
           "Custom size and shape grates",
           "Laser-cut design patterns",
@@ -729,7 +729,7 @@ export const menuData = {
     id: 'mining_products',
     label: 'MINING PRODUCTS',
     icon: Pickaxe, // pick any lucide icon you like
-    bannerImage: '/assets/image7.jpeg',
+    bannerImage: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image7.jpeg`,
     color: 'bg-stone-100 text-stone-900',
 
     categories: [
@@ -738,7 +738,7 @@ export const menuData = {
       {
         name: "CRUSHER PARTS",
         slug: "crusher-parts",
-        image: "/assets/image20.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image20.jpeg`,
         description:
           "High-strength wear parts for jaw, cone and impact crushers designed to withstand extreme abrasion and impact conditions.",
         items: [
@@ -754,7 +754,7 @@ export const menuData = {
       {
         name: "SCREEN PANELS",
         slug: "screen-panels",
-        image: "/assets/image1.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image1.jpeg`,
         description:
           "Screening panels used for separation and classification of minerals and aggregates in mining operations.",
         items: [
@@ -770,7 +770,7 @@ export const menuData = {
       {
         name: "IDLERS & ROLLERS",
         slug: "idlers-and-rollers",
-        image: "/assets/image2.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image2.jpeg`,
         description:
           "Conveyor idlers and rollers engineered for material handling in mines, ports and bulk handling facilities.",
         items: [
@@ -786,7 +786,7 @@ export const menuData = {
       {
         name: "BITS & DRILL RODS",
         slug: "bits-and-drill-rods",
-        image: "/assets/image3.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image3.jpeg`,
         description:
           "Drilling tools suitable for underground, open-cast mining and quarrying applications.",
         items: [
@@ -802,7 +802,7 @@ export const menuData = {
       {
         name: "BLOCKS & WEAR PARTS",
         slug: "blocks-and-wear-parts",
-        image: "/assets/image4.jpg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image4.jpg`,
         description:
           "Wear-resistant blocks and liners designed to extend service life of mining and material handling equipment.",
         items: [
@@ -818,7 +818,7 @@ export const menuData = {
       {
         name: "TEETH & ADAPTORS",
         slug: "teeth-and-adaptors",
-        image: "/assets/image5.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image5.jpeg`,
         description:
           "Ground engaging tools used on excavators, loaders and buckets for efficient digging and loading.",
         items: [
@@ -834,7 +834,7 @@ export const menuData = {
       {
         name: "UTILITY COMPONENTS",
         slug: "utility-components",
-        image: "/assets/image6.jpg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image6.jpg`,
         description:
           "Essential supporting components and accessories used across mining machines and processing plants.",
         items: [
@@ -852,7 +852,7 @@ export const menuData = {
     id: 'fabrication_products',
     label: 'FABRICATION PRODUCTS',
     icon: Wrench, // choose any lucide icon you prefer
-    bannerImage: '/assets/image8.jpeg',
+    bannerImage: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image8.jpeg`,
     color: 'bg-gray-100 text-gray-900',
 
     categories: [
@@ -861,10 +861,10 @@ export const menuData = {
       {
         name: "STEEL STRUCTURES & FRAMES",
         slug: "steel-structures-and-frames",
-        image: "/assets/image7.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image7.jpeg`,
         description:
           "Custom fabricated steel structures and frames designed for industrial buildings, warehouses and heavy engineering applications.",
-        videoUrl: "/video/steel-structures.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/steel-structures.mp4`,
         items: [
           "Structural steel frames",
           "PEB building structures",
@@ -878,10 +878,10 @@ export const menuData = {
       {
         name: "SHEET METAL FABRICATION COMPONENTS",
         slug: "sheet-metal-fabrication-components",
-        image: "/assets/image8.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image8.jpeg`,
         description:
           "Precision sheet metal fabricated parts produced through cutting, bending and forming processes with high dimensional accuracy.",
-        videoUrl: "/video/sheet-metal-fabrication.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/sheet-metal-fabrication.mp4`,
         items: [
           "Enclosures & cabinets",
           "Control panels",
@@ -895,10 +895,10 @@ export const menuData = {
       {
         name: "INDUSTRIAL FABRICATED EQUIPMENT",
         slug: "industrial-fabricated-equipment",
-        image: "/assets/image9.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image9.jpeg`,
         description:
           "Heavy-duty fabricated equipment for cement plants, power plants, mining, steel industries and material handling systems.",
-        videoUrl: "/video/industrial-fabricated-equipment.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/industrial-fabricated-equipment.mp4`,
         items: [
           "Hoppers & bunkers",
           "Chutes & ducts",
@@ -912,10 +912,10 @@ export const menuData = {
       {
         name: "PIPE SPOOLS & PIPING FABRICATION",
         slug: "pipe-spools-and-piping-fabrication",
-        image: "/assets/image10.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image10.jpeg`,
         description:
           "Fabricated pipe spools and piping assemblies for oil & gas, chemical plants, water treatment facilities and process industries.",
-        videoUrl: "/video/piping-fabrication.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/piping-fabrication.mp4`,
         items: [
           "Pipe spool assemblies",
           "MS/SS piping skids",
@@ -929,10 +929,10 @@ export const menuData = {
       {
         name: "CUSTOM FABRICATION & OEM PRODUCTS",
         slug: "custom-fabrication-and-oem-products",
-        image: "/assets/image11.jpg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image11.jpg`,
         description:
           "Tailor-made fabricated products developed based on client drawings, specifications and OEM manufacturing requirements.",
-        videoUrl: "/video/custom-fabrication.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/custom-fabrication.mp4`,
         items: [
           "Prototype fabrication",
           "Low-volume special fabrications",
@@ -948,7 +948,7 @@ export const menuData = {
     id: 'paving_risers',
     label: 'PAVING RISERS',
     icon: Cog, // change if you prefer
-    bannerImage: '/assets/PAVING-RISERS/paving riser 1.5200.png',
+    bannerImage: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/PAVING-RISERS/paving_riser_1.5200.png`,
     color: 'bg-[#cc2221] text-white',
 
     categories: [
@@ -957,10 +957,10 @@ export const menuData = {
       {
         name: "ADJUSTABLE PAVING RISERS",
         slug: "adjustable-paving-risers",
-        image: "/assets/PAVING-RISERS/paving riser 1.5200.png",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/PAVING-RISERS/paving_riser_1.5200.png`,
         description:
           "Height-adjustable paving risers designed for raised flooring, terraces, rooftops and outdoor decking applications.",
-        videoUrl: "/video/paving_riser/paving riser 1.5213.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/paving_riser/paving riser 1.5213.mp4`,
         items: [
           "Wide height adjustment range",
           "Self-levelling functionality",
@@ -974,10 +974,10 @@ export const menuData = {
       {
         name: "FIXED HEIGHT RISERS",
         slug: "fixed-height-risers",
-        image: "/assets/PAVING-RISERS/paving riser 1.5203.png",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/PAVING-RISERS/paving_riser_1.5203.png`,
         description:
           "Cost-effective fixed-height risers used for uniform elevation in pedestrian areas, plazas and garden paving projects.",
-        videoUrl: "/video/paving_riser/paving riser 1.5216.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/paving_riser/paving_riser_1.5216.mp4`,
         items: [
           "Low-profile supports",
           "Predefined height options",
@@ -991,10 +991,10 @@ export const menuData = {
       {
         name: "HEAVY-DUTY PEDESTAL SYSTEMS",
         slug: "heavy-duty-pedestal-systems",
-        image: "/assets/PAVING-RISERS/paving riser 1.5204.png",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/PAVING-RISERS/paving_riser_1.5204.png`,
         description:
           "Strong pedestal systems engineered for high-load applications like commercial plazas, industrial walkways and public spaces.",
-        videoUrl: "/video/paving_riser/paving riser 1.5217.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/paving_riser/paving_riser_1.5217.mp4`,
         items: [
           "Reinforced support structure",
           "High load carrying capacity",
@@ -1008,10 +1008,10 @@ export const menuData = {
       {
         name: "SELF-LEVELLING RISERS",
         slug: "self-levelling-risers",
-        image: "/assets/PAVING-RISERS/paving riser 1.5205.png",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/PAVING-RISERS/paving_riser_1.5205.png`,
         description:
           "Self-levelling risers designed to compensate for surface irregularities and slopes while maintaining level paving surfaces.",
-        videoUrl: "/video/paving_riser/paving riser 1.5223.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/paving_riser/paving-riser-1.5223.mp4`,
         items: [
           "Automatic slope correction",
           "Perfectly level paved finish",
@@ -1025,10 +1025,10 @@ export const menuData = {
       {
         name: "ACCESSORIES & SPACERS",
         slug: "paving-riser-accessories-and-spacers",
-        image: "/assets/PAVING-RISERS/paving riser 1.5200.png",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/PAVING-RISERS/paving_riser_1.5200.png`,
         description:
           "Complete range of accessories for pedestal systems including spacers, shims and edge supports for accurate tile alignment.",
-        videoUrl: "/video/paving_riser/paving riser 1.5251.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/paving_riser/paving-riser-1.5251.mp4`,
         items: [
           "Tile spacers",
           "Rubber shims",
@@ -1044,7 +1044,7 @@ export const menuData = {
   //   id: 'petro_products',
   //   label: 'PETRO PRODUCTS',
   //   icon: Flame, // choose any lucide icon you prefer
-  //   bannerImage: '/assets/image9.jpeg',
+  //   bannerImage: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image9.jpeg`,
   //   color: 'bg-amber-100 text-amber-900',
 
   //   categories: [
@@ -1053,10 +1053,10 @@ export const menuData = {
   //     {
   //       name: "REFINERY & PROCESS EQUIPMENT COMPONENTS",
   //       slug: "refinery-and-process-equipment-components",
-  //       image: "/assets/image12.jpg",
+  //       image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image12.jpg`,
   //       description:
   //         "Critical cast and fabricated components used in refineries and petrochemical process plants operating under high temperature and pressure.",
-  //       videoUrl: "/video/petro/video1.mp4",
+  //       videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/petro/video1.mp4`,
   //       items: [
   //         "Pressure vessel components",
   //         "Heat exchanger parts",
@@ -1070,10 +1070,10 @@ export const menuData = {
   //     {
   //       name: "PIPING & FLOWLINE PRODUCTS",
   //       slug: "piping-and-flowline-products",
-  //       image: "/assets/image13.jpg",
+  //       image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image13.jpg`,
   //       description:
   //         "Comprehensive range of pipeline components for upstream, midstream and downstream oil & gas transportation systems.",
-  //       videoUrl: "/video/petro/video1.mp4",
+  //       videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/petro/video1.mp4`,
   //       items: [
   //         "Pipe fittings & elbows",
   //         "Induction bends",
@@ -1087,10 +1087,10 @@ export const menuData = {
   //     {
   //       name: "VALVE & PUMP CASTINGS",
   //       slug: "valve-and-pump-castings",
-  //       image: "/assets/image14.jpeg",
+  //       image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image14.jpeg`,
   //       description:
   //         "High-performance castings for valves and pumps designed for corrosive fluids, hydrocarbons and high-pressure applications.",
-  //       videoUrl: "/video/petro/video1.mp4",
+  //       videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/petro/video1.mp4`,
   //       items: [
   //         "Gate & globe valve bodies",
   //         "Ball valve housings",
@@ -1104,10 +1104,10 @@ export const menuData = {
   //     {
   //       name: "OFFSHORE & SUBSEA COMPONENTS",
   //       slug: "offshore-and-subsea-components",
-  //       image: "/assets/image15.jpeg",
+  //       image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image15.jpeg`,
   //       description:
   //         "Components engineered for offshore platforms, subsea systems and drilling operations in harsh marine environments.",
-  //       videoUrl: "/video/petro/video1.mp4",
+  //       videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/petro/video1.mp4`,
   //       items: [
   //         "Subsea valve bodies",
   //         "Christmas tree components",
@@ -1121,10 +1121,10 @@ export const menuData = {
   //     {
   //       name: "STORAGE & TERMINAL EQUIPMENT",
   //       slug: "storage-and-terminal-equipment",
-  //       image: "/assets/image16.jpg",
+  //       image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image16.jpg`,
   //       description:
   //         "Equipment and components used in crude oil storage tanks, terminals and distribution stations.",
-  //       videoUrl: "/video/petro/video1.mp4",
+  //       videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/petro/video1.mp4`,
   //       items: [
   //         "Floating roof tank components",
   //         "Roof drain system parts",
@@ -1140,7 +1140,7 @@ export const menuData = {
   //   id: 'monitoring_wells',
   //   label: 'MONITORING WELLS',
   //   icon: LocateIcon, // choose any lucide icon you prefer
-  //   bannerImage: '/assets/image17.jpg',
+  //   bannerImage: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image17.jpg`,
   //   color: 'bg-cyan-100 text-cyan-900',
 
   //   categories: [
@@ -1148,10 +1148,10 @@ export const menuData = {
   //     {
   //       name: "GROUNDWATER MONITORING WELLS",
   //       slug: "groundwater-monitoring-wells",
-  //       image: "/assets/image18.jpeg",
+  //       image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image18.jpeg`,
   //       description:
   //         "Complete range of groundwater monitoring wells designed to measure water levels, water quality and aquifer characteristics.",
-  //       videoUrl: "/video/groundwater-monitoring-wells.mp4",
+  //       videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/groundwater-monitoring-wells.mp4`,
   //       items: [
   //         "PVC monitoring well casings",
   //         "HDPE monitoring well pipes",
@@ -1165,10 +1165,10 @@ export const menuData = {
   //     {
   //       name: "ENVIRONMENTAL OBSERVATION WELLS",
   //       slug: "environmental-observation-wells",
-  //       image: "/assets/image19.jpeg",
+  //       image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image19.jpeg`,
   //       description:
   //         "Observation wells used for environmental site assessment, contamination studies, and remediation projects.",
-  //       videoUrl: "/video/environmental-observation-wells.mp4",
+  //       videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/environmental-observation-wells.mp4`,
   //       items: [
   //         "Soil vapor monitoring wells",
   //         "Leachate observation wells",
@@ -1182,10 +1182,10 @@ export const menuData = {
   //     {
   //       name: "WELL SCREENS & FILTER PACKS",
   //       slug: "well-screens-and-filter-packs",
-  //       image: "/assets/image20.jpeg",
+  //       image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image20.jpeg`,
   //       description:
   //         "High-performance well screens and gravel filter packs designed to prevent sand entry while maintaining maximum flow rate.",
-  //       videoUrl: "/video/well-screens.mp4",
+  //       videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/well-screens.mp4`,
   //       items: [
   //         "PVC well screens",
   //         "SS slotted screens",
@@ -1199,10 +1199,10 @@ export const menuData = {
   //     {
   //       name: "MONITORING WELL HEADWORKS & COVERS",
   //       slug: "monitoring-well-headworks-and-covers",
-  //       image: "/assets/image1.jpeg",
+  //       image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image1.jpeg`,
   //       description:
   //         "Heavy-duty surface protection and access systems for monitoring wells used in industrial, roadway and urban environments.",
-  //       videoUrl: "/video/well-headworks.mp4",
+  //       videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/well-headworks.mp4`,
   //       items: [
   //         "Cast iron well covers",
   //         "Steel traffic-rated covers",
@@ -1216,10 +1216,10 @@ export const menuData = {
   //     {
   //       name: "INSTRUMENTS & DATA LOGGING SYSTEMS",
   //       slug: "instruments-and-data-logging-systems",
-  //       image: "/assets/image2.jpeg",
+  //       image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image2.jpeg`,
   //       description:
   //         "Advanced measurement and logging instruments for continuous monitoring of water level, pressure and water quality parameters.",
-  //       videoUrl: "/video/well-instruments.mp4",
+  //       videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/well-instruments.mp4`,
   //       items: [
   //         "Water level loggers",
   //         "Pressure transducers",
@@ -1235,7 +1235,7 @@ export const menuData = {
   //   id: 'water_works_tools',
   //   label: 'WATER WORKS TOOLS',
   //   icon: Wrench, // choose any lucide icon
-  //   bannerImage: '/assets/image11.jpg',
+  //   bannerImage: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image11.jpg`,
   //   color: 'bg-sky-100 text-sky-900',
 
   //   categories: [
@@ -1244,10 +1244,10 @@ export const menuData = {
   //     {
   //       name: "PIPE INSTALLATION & HANDLING TOOLS",
   //       slug: "pipe-installation-and-handling-tools",
-  //       image: "/assets/image3.jpeg",
+  //       image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image3.jpeg`,
   //       description:
   //         "Specialized tools designed for lifting, aligning, cutting and jointing water pipelines safely and efficiently.",
-  //       videoUrl: "/video/pipe-installation-tools.mp4",
+  //       videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/pipe-installation-tools.mp4`,
   //       items: [
   //         "Pipe lifting clamps",
   //         "Pipe alignment tools",
@@ -1261,10 +1261,10 @@ export const menuData = {
   //     {
   //       name: "VALVE OPERATION & MAINTENANCE TOOLS",
   //       slug: "valve-operation-and-maintenance-tools",
-  //       image: "/assets/image4.jpg",
+  //       image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image4.jpg`,
   //       description:
   //         "Tools used for installation, operation, servicing and preventive maintenance of gate valves, butterfly valves and hydrants.",
-  //       videoUrl: "/video/valve-maintenance-tools.mp4",
+  //       videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/valve-maintenance-tools.mp4`,
   //       items: [
   //         "Valve key wrenches",
   //         "Hydrant operating tools",
@@ -1278,10 +1278,10 @@ export const menuData = {
   //     {
   //       name: "LEAK DETECTION & LOCATION EQUIPMENT",
   //       slug: "leak-detection-and-location-equipment",
-  //       image: "/assets/image5.jpeg",
+  //       image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image5.jpeg`,
   //       description:
   //         "Advanced acoustic and electronic tools for detecting underground water leakage and pinpointing pipeline faults.",
-  //       videoUrl: "/video/leak-detection.mp4",
+  //       videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/leak-detection.mp4`,
   //       items: [
   //         "Acoustic leak detectors",
   //         "Ground microphones",
@@ -1295,10 +1295,10 @@ export const menuData = {
   //     {
   //       name: "TAPPING, DRILLING & CUTTING TOOLS",
   //       slug: "tapping-drilling-and-cutting-tools",
-  //       image: "/assets/image6.jpg",
+  //       image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image6.jpg`,
   //       description:
   //         "Professional tools for hot tapping, drilling and on-line connection works on pressurized and non-pressurized pipelines.",
-  //       videoUrl: "/video/tapping-cutting-tools.mp4",
+  //       videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/tapping-cutting-tools.mp4`,
   //       items: [
   //         "Hot tapping machines",
   //         "Hydrant tapping tools",
@@ -1312,10 +1312,10 @@ export const menuData = {
   //     {
   //       name: "SAFETY & SUPPORT EQUIPMENT",
   //       slug: "safety-and-support-equipment",
-  //       image: "/assets/image7.jpeg",
+  //       image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image7.jpeg`,
   //       description:
   //         "Protective and supporting equipment used during trenching, pipeline installation and confined space water works.",
-  //       videoUrl: "/video/water-works-safety.mp4",
+  //       videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/water-works-safety.mp4`,
   //       items: [
   //         "Trench shoring systems",
   //         "Confined space entry kits",
@@ -1329,9 +1329,9 @@ export const menuData = {
   // ,
   irrigation_products: {
     id: 'irrigation_products',
-    label: 'IRRIGATION PRODUCTS',
+    label: 'IRRIGATION_PRODUCTS',
     icon: Droplets, // choose any lucide icon you like
-    bannerImage: '/assets/image12.jpg',
+    bannerImage: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image12.jpg`,
     color: 'bg-green-100 text-green-900',
 
     categories: [
@@ -1340,10 +1340,10 @@ export const menuData = {
       {
         name: "PIPES & FITTINGS",
         slug: "pipes-and-fittings",
-        image: "/assets/image8.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image8.jpeg`,
         description:
           "High-performance irrigation pipes and fittings engineered for long-term durability, leak-proof performance and efficient water transport.",
-        videoUrl: "/video/IRRIGATION PRODUCTS/video1.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/IRRIGATION_PRODUCTS/video1.mp4`,
         items: [
           "HDPE pipes",
           "PVC pressure pipes",
@@ -1357,10 +1357,10 @@ export const menuData = {
       {
         name: "SPRINKLER SYSTEM",
         slug: "sprinkler-system",
-        image: "/assets/image9.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image9.jpeg`,
         description:
           "Advanced sprinkler irrigation systems designed to distribute uniform water coverage for farms, lawns, fields and plantations.",
-        videoUrl: "/video/IRRIGATION PRODUCTS/video2.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/IRRIGATION_PRODUCTS/video2.mp4`,
         items: [
           "Impact sprinklers",
           "Rain gun systems",
@@ -1374,10 +1374,10 @@ export const menuData = {
       {
         name: "WATER CONTROL",
         slug: "water-control",
-        image: "/assets/image10.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image10.jpeg`,
         description:
           "Smart irrigation control components for precise flow regulation, pressure management and automatic system operation.",
-        videoUrl: "/video/IRRIGATION PRODUCTS/video3.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/IRRIGATION_PRODUCTS/video3.mp4`,
         items: [
           "Solenoid valves",
           "Butterfly & gate valves",
@@ -1391,10 +1391,10 @@ export const menuData = {
       {
         name: "PUMPING SOLUTION",
         slug: "pumping-solution",
-        image: "/assets/image11.jpg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image11.jpg`,
         description:
           "Reliable pumping systems engineered for agricultural water lifting, drip irrigation and sprinkler irrigation applications.",
-        videoUrl: "/video/IRRIGATION PRODUCTS/video4.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/IRRIGATION_PRODUCTS/video4.mp4`,
         items: [
           "Centrifugal pumps",
           "Submersible pumps",
@@ -1408,10 +1408,10 @@ export const menuData = {
       {
         name: "AGRICULTURE TOOLS & ACCESSORIES",
         slug: "agriculture-tools-and-accessories",
-        image: "/assets/image12.jpg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image12.jpg`,
         description:
           "A wide range of accessories and tools used for installation, maintenance and operation of irrigation networks.",
-        videoUrl: "/video/IRRIGATION PRODUCTS/video1.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/IRRIGATION_PRODUCTS/video1.mp4`,
         items: [
           "Punch tools",
           "Pipe cutters",
@@ -1425,10 +1425,10 @@ export const menuData = {
       {
         name: "LANDSCAPE & GARDEN",
         slug: "landscape-and-garden",
-        image: "/assets/image13.jpg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image13.jpg`,
         description:
           "Irrigation solutions for parks, villas, resorts, golf courses, public gardens and urban landscaping projects.",
-        videoUrl: "/video/IRRIGATION PRODUCTS/video2.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/IRRIGATION_PRODUCTS/video2.mp4`,
         items: [
           "Drip irrigation kits",
           "Micro sprinklers",
@@ -1442,10 +1442,10 @@ export const menuData = {
       {
         name: "INDUSTRIAL & LARGE-SCALE",
         slug: "industrial-and-large-scale",
-        image: "/assets/image14.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image14.jpeg`,
         description:
           "Heavy-duty irrigation systems designed for commercial agriculture, greenhouses, agro-industries and large plantations.",
-        videoUrl: "/video/IRRIGATION PRODUCTS/video3.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/IRRIGATION_PRODUCTS/video3.mp4`,
         items: [
           "High-pressure filtration systems",
           "Automated fertigation units",
@@ -1461,7 +1461,7 @@ export const menuData = {
     id: 'forgings',
     label: 'FORGINGS',
     icon: Hammer, // choose any lucide icon
-    bannerImage: '/assets/image13.jpg',
+    bannerImage: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image13.jpg`,
     color: 'bg-orange-100 text-orange-900',
 
     categories: [
@@ -1470,10 +1470,10 @@ export const menuData = {
       {
         name: "OPEN DIE FORGINGS",
         slug: "open-die-forgings",
-        image: "/assets/image15.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image15.jpeg`,
         description:
           "Large-size forgings produced using open-die forging processes for heavy engineering, power and oil & gas sectors.",
-        videoUrl: "/video/open-die-forgings.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/open-die-forgings.mp4`,
         items: [
           "Blocks & slabs",
           "Discs & flanges",
@@ -1487,10 +1487,10 @@ export const menuData = {
       {
         name: "CLOSED DIE FORGINGS",
         slug: "closed-die-forgings",
-        image: "/assets/image16.jpg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image16.jpg`,
         description:
           "High-precision closed-die forgings used for automotive, mining, agriculture and construction machinery components.",
-        videoUrl: "/video/closed-die-forgings.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/closed-die-forgings.mp4`,
         items: [
           "Connecting rods",
           "Crankshafts",
@@ -1504,10 +1504,10 @@ export const menuData = {
       {
         name: "RING ROLLED FORGINGS",
         slug: "ring-rolled-forgings",
-        image: "/assets/image17.jpg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image17.jpg`,
         description:
           "Seamless rolled rings manufactured in various diameters and cross sections for bearings, turbines and gear applications.",
-        videoUrl: "/video/ring-rolled-forgings.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/ring-rolled-forgings.mp4`,
         items: [
           "Seamless rings",
           "Bearing races",
@@ -1521,10 +1521,10 @@ export const menuData = {
       {
         name: "SHAFT & STEP SHAFT FORGINGS",
         slug: "shaft-and-step-shaft-forgings",
-        image: "/assets/image18.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image18.jpeg`,
         description:
           "High-strength forged shafts designed for marine, power plant, cement plant, and heavy industrial machinery.",
-        videoUrl: "/video/shaft-forgings.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/shaft-forgings.mp4`,
         items: [
           "Straight shafts",
           "Step shafts",
@@ -1538,10 +1538,10 @@ export const menuData = {
       {
         name: "ALLOY & STAINLESS STEEL FORGINGS",
         slug: "alloy-and-stainless-steel-forgings",
-        image: "/assets/image19.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image19.jpeg`,
         description:
           "Forgings manufactured from carbon steel, alloy steel, duplex and stainless steels for critical environments and pressure applications.",
-        videoUrl: "/video/steel-forgings.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/steel-forgings.mp4`,
         items: [
           "Carbon steel forgings",
           "Alloy steel forgings",
@@ -1555,10 +1555,10 @@ export const menuData = {
       {
         name: "CUSTOM & PRECISION FORGINGS",
         slug: "custom-and-precision-forgings",
-        image: "/assets/image20.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image20.jpeg`,
         description:
           "Tailor-made precision forgings manufactured based on customer drawings, 3D models and OEM specifications.",
-        videoUrl: "/video/custom-forgings.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/custom-forgings.mp4`,
         items: [
           "Near-net shape forgings",
           "Closed tolerance forgings",
@@ -1574,7 +1574,7 @@ export const menuData = {
     id: 'marine_casting',
     label: 'MARINE CASTING',
     icon: Anchor, // choose any lucide icon you like
-    bannerImage: '/assets/image14.jpeg',
+    bannerImage: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image14.jpeg`,
     color: 'bg-blue-100 text-blue-900',
 
     categories: [
@@ -1583,10 +1583,10 @@ export const menuData = {
       {
         name: "PROPELLER & IMPELLER CASTINGS",
         slug: "propeller-and-impeller-castings",
-        image: "/assets/image15.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image15.jpeg`,
         description:
           "High-performance bronze and stainless-steel propeller and impeller castings engineered for marine propulsion systems.",
-        videoUrl: "/video/marine_castings/marine_castings1.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/marine_castings/marine_castings1.mp4`,
         items: [
           "Ship propeller castings",
           "Pump impeller castings",
@@ -1600,10 +1600,10 @@ export const menuData = {
       {
         name: "MARINE HARDWARE & DECK FITTINGS",
         slug: "marine-hardware-and-deck-fittings",
-        image: "/assets/image16.jpg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image16.jpg`,
         description:
           "Rugged deck and hull hardware components designed to withstand harsh saline and offshore environments.",
-        videoUrl: "/video/marine_castings/marine_castings2.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/marine_castings/marine_castings2.mp4`,
         items: [
           "Cleats & bollards",
           "Fairleads & chocks",
@@ -1617,10 +1617,10 @@ export const menuData = {
       {
         name: "ANODES & CORROSION PROTECTION CASTINGS",
         slug: "anodes-and-corrosion-protection-castings",
-        image: "/assets/image17.jpg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image17.jpg`,
         description:
           "Sacrificial and impressed-current anode castings designed to protect ship hulls and marine structures from corrosion.",
-        videoUrl: "/video/marine_castings/marine_castings1.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/marine_castings/marine_castings1.mp4`,
         items: [
           "Zinc anodes",
           "Aluminium anodes",
@@ -1634,10 +1634,10 @@ export const menuData = {
       {
         name: "SHIPBUILDING STRUCTURAL CASTINGS",
         slug: "shipbuilding-structural-castings",
-        image: "/assets/image18.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image18.jpeg`,
         description:
           "Heavy-duty structural castings used in hull framing, rudder systems and load-bearing areas of ships and offshore vessels.",
-        videoUrl: "/video/marine_castings/marine_castings2.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/marine_castings/marine_castings2.mp4`,
         items: [
           "Rudder horn castings",
           "Stern frame castings",
@@ -1651,10 +1651,10 @@ export const menuData = {
       {
         name: "OFFSHORE PLATFORM & SUBSEA CASTINGS",
         slug: "offshore-platform-and-subsea-castings",
-        image: "/assets/image19.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image19.jpeg`,
         description:
           "Cast components engineered for offshore drilling rigs, subsea structures, mooring and production systems.",
-        videoUrl: "/video/marine_castings/marine_castings1.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/marine_castings/marine_castings1.mp4`,
         items: [
           "Mooring chain components",
           "Subsea connector castings",
@@ -1670,7 +1670,7 @@ export const menuData = {
     id: 'earth_moving_equipments',
     label: 'EARTH MOVING EQUIPMENTS',
     icon: Truck, // choose any lucide icon you like
-    bannerImage: '/assets/image15.jpeg',
+    bannerImage: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image15.jpeg`,
     color: 'bg-yellow-100 text-yellow-900',
 
     categories: [
@@ -1679,7 +1679,7 @@ export const menuData = {
       {
         name: "BUCKET TEETH & ADAPTORS",
         slug: "bucket-teeth-and-adaptors",
-        image: "/assets/image20.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image20.jpeg`,
         description:
           "High-strength bucket teeth and adaptors engineered for superior penetration and abrasion resistance in mining and construction operations.",
         items: [
@@ -1695,7 +1695,7 @@ export const menuData = {
       {
         name: "CUTTING EDGES & END BITS",
         slug: "cutting-edges-and-end-bits",
-        image: "/assets/image1.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image1.jpeg`,
         description:
           "Wear-resistant cutting edges and end bits suitable for loaders, graders, dozers and scrapers.",
         items: [
@@ -1711,7 +1711,7 @@ export const menuData = {
       {
         name: "ROLLARS & SPROCKETS",
         slug: "rollers-and-sprockets",
-        image: "/assets/image2.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image2.jpeg`,
         description:
           "Undercarriage rollers and sprockets designed for maximum load capacity and long service life.",
         items: [
@@ -1727,7 +1727,7 @@ export const menuData = {
       {
         name: "COUPLERS & ATTACHEMENTS",
         slug: "couplers-and-attachments",
-        image: "/assets/image3.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image3.jpeg`,
         description:
           "Quick couplers and multi-purpose attachments improving machine productivity across different job applications.",
         items: [
@@ -1743,7 +1743,7 @@ export const menuData = {
       {
         name: "HYDRAULIC CYLINDER COMPONENTS",
         slug: "hydraulic-cylinder-components",
-        image: "/assets/image4.jpg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image4.jpg`,
         description:
           "Precision hydraulic cylinder components used in excavators, loaders, cranes and dozers.",
         items: [
@@ -1759,7 +1759,7 @@ export const menuData = {
       {
         name: "CAB & BODY PARTS",
         slug: "cab-and-body-parts",
-        image: "/assets/image5.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image5.jpeg`,
         description:
           "Structural and safety cabin components designed for operator comfort and machine durability.",
         items: [
@@ -1775,7 +1775,7 @@ export const menuData = {
       {
         name: "DRUVE TRAIN COMPONENTS",
         slug: "drive-train-components",
-        image: "/assets/image6.jpg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image6.jpg`,
         description:
           "Heavy-duty powertrain components ensuring efficient torque transmission and smooth machine operation.",
         items: [
@@ -1791,7 +1791,7 @@ export const menuData = {
       {
         name: "UNDERCARRIAGE COMPONENTS",
         slug: "undercarriage-components",
-        image: "/assets/image7.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image7.jpeg`,
         description:
           "Complete undercarriage spare parts suitable for excavators, bulldozers and track machines.",
         items: [
@@ -1809,7 +1809,7 @@ export const menuData = {
     id: 'custom_manufacturing',
     label: 'CUSTOM MANUFACTURING',
     icon: Wrench, // pick any lucide icon you prefer
-    bannerImage: '/assets/image16.jpg',
+    bannerImage: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image16.jpg`,
     color: 'bg-indigo-100 text-indigo-900',
 
     categories: [
@@ -1818,10 +1818,10 @@ export const menuData = {
       {
         name: "BUILD-TO-PRINT MANUFACTURING",
         slug: "build-to-print-manufacturing",
-        image: "/assets/image8.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image8.jpeg`,
         description:
           "Manufacturing services based strictly on customer drawings, 3D models and technical specifications with complete confidentiality.",
-        videoUrl: "/video/build-to-print.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/build-to-print.mp4`,
         items: [
           "Drawing-based component production",
           "Tight tolerance machining",
@@ -1835,10 +1835,10 @@ export const menuData = {
       {
         name: "PROTOTYPE & NEW PRODUCT DEVELOPMENT",
         slug: "prototype-and-new-product-development",
-        image: "/assets/image9.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image9.jpeg`,
         description:
           "Rapid prototyping and new product development support from concept design to functional prototype and pilot production.",
-        videoUrl: "/video/prototype-development.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/prototype-development.mp4`,
         items: [
           "Rapid 3D prototyping",
           "Sample & trial batch casting",
@@ -1852,10 +1852,10 @@ export const menuData = {
       {
         name: "LOW & MEDIUM VOLUME PRODUCTION",
         slug: "low-and-medium-volume-production",
-        image: "/assets/image10.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image10.jpeg`,
         description:
           "Flexible manufacturing setups ideal for specialized components, aftermarket parts and low-to-medium production requirements.",
-        videoUrl: "/video/low-volume-production.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/low-volume-production.mp4`,
         items: [
           "Small batch manufacturing",
           "Job shop production",
@@ -1869,10 +1869,10 @@ export const menuData = {
       {
         name: "MULTI-PROCESS MANUFACTURING",
         slug: "multi-process-manufacturing",
-        image: "/assets/image11.jpg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image11.jpg`,
         description:
           "End-to-end manufacturing solutions combining casting, forging, machining, fabrication and surface finishing in a single window.",
-        videoUrl: "/video/multi-process-manufacturing.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/multi-process-manufacturing.mp4`,
         items: [
           "Casting + machining integration",
           "Fabrication + machining assemblies",
@@ -1886,10 +1886,10 @@ export const menuData = {
       {
         name: "OEM / PRIVATE LABEL SOLUTIONS",
         slug: "oem-private-label-solutions",
-        image: "/assets/image12.jpg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image12.jpg`,
         description:
           "Dedicated OEM manufacturing and private label production for brands requiring custom product identity and packaging.",
-        videoUrl: "/video/oem-private-label.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/oem-private-label.mp4`,
         items: [
           "Brand-specific product development",
           "Custom packaging & labeling",
@@ -1905,7 +1905,7 @@ export const menuData = {
     id: 'forge_shop_products',
     label: 'FORGE SHOP PRODUCTS',
     icon: Hammer, // choose any lucide icon you like
-    bannerImage: '/assets/image17.jpg',
+    bannerImage: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image17.jpg`,
     color: 'bg-red-100 text-red-900',
 
     categories: [
@@ -1914,10 +1914,10 @@ export const menuData = {
       {
         name: "FORGING DIES & TOOLING",
         slug: "forging-dies-and-tooling",
-        image: "/assets/image13.jpg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image13.jpg`,
         description:
           "High-performance forging dies and tooling solutions designed for open-die, closed-die and ring-rolling operations.",
-        videoUrl: "/video/forging-dies.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/forging-dies.mp4`,
         items: [
           "Closed die impression tooling",
           "Open die tooling",
@@ -1931,10 +1931,10 @@ export const menuData = {
       {
         name: "FORGING HAMMERS & PRESS EQUIPMENT",
         slug: "forging-hammers-and-press-equipment",
-        image: "/assets/image14.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image14.jpeg`,
         description:
           "Heavy-duty forging hammers and hydraulic/mechanical presses for high-volume forging production lines.",
-        videoUrl: "/video/forging-hammers.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/forging-hammers.mp4`,
         items: [
           "Drop forging hammers",
           "Pneumatic forging hammers",
@@ -1948,10 +1948,10 @@ export const menuData = {
       {
         name: "HEATING & FURNACE SYSTEMS",
         slug: "heating-and-furnace-systems",
-        image: "/assets/image15.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image15.jpeg`,
         description:
           "Energy-efficient heating systems and industrial furnaces for billet, ingot and bar heating prior to forging.",
-        videoUrl: "/video/forging-furnace.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/forging-furnace.mp4`,
         items: [
           "Billet heating furnaces",
           "Forging reheating furnaces",
@@ -1965,10 +1965,10 @@ export const menuData = {
       {
         name: "MANIPULATORS & HANDLING SYSTEMS",
         slug: "manipulators-and-handling-systems",
-        image: "/assets/image16.jpg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image16.jpg`,
         description:
           "Material handling systems designed for safe movement of hot billets, forgings and heavy dies inside forge shops.",
-        videoUrl: "/video/forging-manipulators.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/forging-manipulators.mp4`,
         items: [
           "Hydraulic forging manipulators",
           "Billet handling systems",
@@ -1982,10 +1982,10 @@ export const menuData = {
       {
         name: "HEAT TREATMENT & FINISHING EQUIPMENT",
         slug: "heat-treatment-and-finishing-equipment",
-        image: "/assets/image17.jpg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image17.jpg`,
         description:
           "Post-forging heat treatment and finishing systems that improve mechanical properties and product surface quality.",
-        videoUrl: "/video/heat-treatment.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/heat-treatment.mp4`,
         items: [
           "Quenching tanks",
           "Tempering furnaces",
@@ -2001,7 +2001,7 @@ export const menuData = {
     id: 'industrial_machinery',
     label: 'INDUSTRIAL MACHINERY',
     icon: Factory, // choose any lucide icon you prefer
-    bannerImage: '/assets/image18.jpeg',
+    bannerImage: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image18.jpeg`,
     color: 'bg-gray-100 text-gray-900',
 
     categories: [
@@ -2010,10 +2010,10 @@ export const menuData = {
       {
         name: "MATERIAL HANDLING MACHINERY",
         slug: "material-handling-machinery",
-        image: "/assets/image19.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image19.jpeg`,
         description:
           "Heavy-duty material handling machinery designed for mines, ports, warehouses and industrial production facilities.",
-        videoUrl: "/video/material-handling-machinery.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/material-handling-machinery.mp4`,
         items: [
           "Belt conveyors",
           "Bucket elevators",
@@ -2027,10 +2027,10 @@ export const menuData = {
       {
         name: "CRUSHING & SCREENING MACHINERY",
         slug: "crushing-and-screening-machinery",
-        image: "/assets/image20.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image20.jpeg`,
         description:
           "Industrial crushers and screens used in mining, quarrying, aggregates and mineral processing applications.",
-        videoUrl: "/video/crushing-machinery.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/crushing-machinery.mp4`,
         items: [
           "Jaw crushers",
           "Cone crushers",
@@ -2044,10 +2044,10 @@ export const menuData = {
       {
         name: "POWER & ENERGY EQUIPMENT",
         slug: "power-and-energy-equipment",
-        image: "/assets/image1.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image1.jpeg`,
         description:
           "Machinery and systems supporting thermal, hydro, renewable and captive power generation plants.",
-        videoUrl: "/video/power-energy-equipment.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/power-energy-equipment.mp4`,
         items: [
           "Steam turbines components",
           "Boiler auxiliary systems",
@@ -2061,10 +2061,10 @@ export const menuData = {
       {
         name: "PROCESS INDUSTRY MACHINERY",
         slug: "process-industry-machinery",
-        image: "/assets/image2.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image2.jpeg`,
         description:
           "Machinery engineered for cement, steel, chemical, fertilizer, paper and food processing industries.",
-        videoUrl: "/video/process-industry-machinery.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/process-industry-machinery.mp4`,
         items: [
           "Kiln & mill components",
           "Mixers & blenders",
@@ -2078,10 +2078,10 @@ export const menuData = {
       {
         name: "AUTOMATION & MECHATRONICS SYSTEMS",
         slug: "automation-and-mechatronics-systems",
-        image: "/assets/image3.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image3.jpeg`,
         description:
           "Smart automation solutions integrating electrical, mechanical and control systems for improved productivity and safety.",
-        videoUrl: "/video/industrial-automation.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/industrial-automation.mp4`,
         items: [
           "Robotic handling systems",
           "Automated assembly lines",
@@ -2097,7 +2097,7 @@ export const menuData = {
     id: 'snow_plough',
     label: 'SNOW PLOUGH',
     icon: Snowflake, // choose any lucide icon you like
-    bannerImage: '/assets/image20.jpeg',
+    bannerImage: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image20.jpeg`,
     color: 'bg-blue-100 text-blue-900',
 
     categories: [
@@ -2106,10 +2106,10 @@ export const menuData = {
       {
         name: "TRUCK MOUNTED SNOW PLOUGHS",
         slug: "truck-mounted-snow-ploughs",
-        image: "/assets/image1.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image1.jpeg`,
         description:
           "Heavy-duty snow ploughs mounted on trucks for clearing highways, airports and city roads during heavy snowfall.",
-        videoUrl: "/video/truck-mounted-snow-ploughs.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/truck-mounted-snow-ploughs.mp4`,
         items: [
           "Straight blade ploughs",
           "V-type snow ploughs",
@@ -2123,10 +2123,10 @@ export const menuData = {
       {
         name: "LOADER & DOZER MOUNTED PLOUGHS",
         slug: "loader-and-dozer-mounted-ploughs",
-        image: "/assets/image2.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image2.jpeg`,
         description:
           "Snow plough attachments designed for loaders, dozers and tractors for municipal and industrial snow clearing.",
-        videoUrl: "/video/loader-mounted-ploughs.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/loader-mounted-ploughs.mp4`,
         items: [
           "Front-end loader snow ploughs",
           "Dozer blade snow ploughs",
@@ -2140,10 +2140,10 @@ export const menuData = {
       {
         name: "ROAD & STREET SNOW SWEEPERS",
         slug: "road-and-street-snow-sweepers",
-        image: "/assets/image3.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image3.jpeg`,
         description:
           "Rotary broom and mechanical sweepers for clearing light to medium snow from streets, parking areas and pedestrian zones.",
-        videoUrl: "/video/snow-sweepers.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/snow-sweepers.mp4`,
         items: [
           "Rotary broom sweepers",
           "Compact municipal sweepers",
@@ -2157,10 +2157,10 @@ export const menuData = {
       {
         name: "SALT SPREADERS & DE-ICING EQUIPMENT",
         slug: "salt-spreaders-and-de-icing-equipment",
-        image: "/assets/image4.jpg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image4.jpg`,
         description:
           "Equipment for spreading salt and de-icing chemicals to prevent road freezing and improve vehicle traction.",
-        videoUrl: "/video/salt-spreaders.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/salt-spreaders.mp4`,
         items: [
           "Truck mounted salt spreaders",
           "Towed salt spreaders",
@@ -2174,10 +2174,10 @@ export const menuData = {
       {
         name: "SNOW PLOUGH ACCESSORIES & SPARES",
         slug: "snow-plough-accessories-and-spares",
-        image: "/assets/image5.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image5.jpeg`,
         description:
           "A complete range of accessories and spare parts ensuring reliable operation of snow plough systems in harsh winter conditions.",
-        videoUrl: "/video/snow-plough-accessories.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/snow-plough-accessories.mp4`,
         items: [
           "Cutting edges & wear blades",
           "Hydraulic cylinders",
@@ -2192,7 +2192,7 @@ export const menuData = {
     id: 'metals_alloys',
     label: 'METALS & ALLOYS',
     icon: Zap, // choose any lucide icon you prefer
-    bannerImage: '/assets/image6.jpg',
+    bannerImage: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image6.jpg`,
     color: 'bg-slate-100 text-slate-900',
 
     categories: [
@@ -2201,7 +2201,7 @@ export const menuData = {
       {
         name: "DUCTILE IRON CASTINGS",
         slug: "ductile-iron-castings",
-        image: "/assets/image7.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image7.jpeg`,
         description:
           "High-strength ductile iron castings offering superior toughness and fatigue resistance for industrial applications.",
         items: [
@@ -2217,7 +2217,7 @@ export const menuData = {
       {
         name: "HIGH MANGANESE STEEL PARTS",
         slug: "high-manganese-steel-parts",
-        image: "/assets/image8.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image8.jpeg`,
         description:
           "Wear-resistant high manganese steel components ideal for impact and abrasion environments.",
         items: [
@@ -2233,7 +2233,7 @@ export const menuData = {
       {
         name: "STAINLESS STEEL COMPONENTS",
         slug: "stainless-steel-components",
-        image: "/assets/image9.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image9.jpeg`,
         description:
           "Corrosion-resistant stainless steel castings and machined parts for process industries and marine environments.",
         items: [
@@ -2249,7 +2249,7 @@ export const menuData = {
       {
         name: "ALLOY STEEL FORGED PARTS",
         slug: "alloy-steel-forged-parts",
-        image: "/assets/image10.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image10.jpeg`,
         description:
           "High-strength alloy steel forgings used in power, oil & gas, construction and heavy engineering sectors.",
         items: [
@@ -2265,7 +2265,7 @@ export const menuData = {
       {
         name: "ALUMINIUM & BRASS COMPONENTS",
         slug: "aluminium-and-brass-components",
-        image: "/assets/image12.jpg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image12.jpg`,
         description:
           "Lightweight aluminum and brass precision components for electrical, automotive and marine applications.",
         items: [
@@ -2281,7 +2281,7 @@ export const menuData = {
       {
         name: "WHITE IRON CASTINGS",
         slug: "white-iron-castings",
-        image: "/assets/image13.jpg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image13.jpg`,
         description:
           "Abrasion-resistant white cast iron parts suitable for high wear applications in mining and cement industries.",
         items: [
@@ -2297,7 +2297,7 @@ export const menuData = {
       {
         name: "COPPER & BRONZE PRECISION PARTS",
         slug: "copper-and-bronze-precision-parts",
-        image: "/assets/image14.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image14.jpeg`,
         description:
           "Precision copper and bronze castings with excellent conductivity, wear-resistance and anti-friction properties.",
         items: [
@@ -2313,7 +2313,7 @@ export const menuData = {
       {
         name: "ELECTRICAL COMPONENT ALLOYS",
         slug: "electrical-component-alloys",
-        image: "/assets/image15.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image15.jpeg`,
         description:
           "Specialty alloys used in switchgear, transformers and electrical equipment applications.",
         items: [
@@ -2329,7 +2329,7 @@ export const menuData = {
       {
         name: "METAL FABRICATED ITEMS",
         slug: "metal-fabricated-items",
-        image: "/assets/image16.jpg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image16.jpg`,
         description:
           "Fabricated metal structures and assemblies manufactured through cutting, bending and welding processes.",
         items: [
@@ -2345,7 +2345,7 @@ export const menuData = {
       {
         name: "PIPES, TUBES & FITTINGS",
         slug: "pipes-tubes-and-fittings",
-        image: "/assets/image17.jpg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image17.jpg`,
         description:
           "Comprehensive range of metallic pipes, tubes and fittings for fluid transport and structural applications.",
         items: [
@@ -2363,7 +2363,7 @@ export const menuData = {
     id: 'custom_offerings',
     label: 'CUSTOM OFFERINGS',
     icon: Hammer, // choose any lucide icon you prefer
-    bannerImage: '/assets/image2.jpeg',
+    bannerImage: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image2.jpeg`,
     color: 'bg-purple-100 text-purple-900',
 
     categories: [
@@ -2372,10 +2372,10 @@ export const menuData = {
       {
         name: "BESPOKE CASTING SOLUTIONS",
         slug: "bespoke-casting-solutions",
-        image: "/assets/image18.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image18.jpeg`,
         description:
           "Tailor-made casting solutions engineered to meet unique dimensional, metallurgical and performance requirements.",
-        videoUrl: "/video/bespoke-casting-solutions.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/bespoke-casting-solutions.mp4`,
         items: [
           "Custom geometry castings",
           "Special alloy grade castings",
@@ -2389,10 +2389,10 @@ export const menuData = {
       {
         name: "PRECISION MACHINING & FABRICATION",
         slug: "precision-machining-and-fabrication",
-        image: "/assets/image19.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image19.jpeg`,
         description:
           "High-precision machining and fabrication services for critical components requiring tight tolerance and perfect finish.",
-        videoUrl: "/video/precision-machining.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/precision-machining.mp4`,
         items: [
           "CNC turning & milling",
           "5-axis machining",
@@ -2406,10 +2406,10 @@ export const menuData = {
       {
         name: "OEM / PRIVATE LABEL MANUFACTURING",
         slug: "oem-private-label-manufacturing",
-        image: "/assets/image20.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image20.jpeg`,
         description:
           "Dedicated OEM & private label production services including brand-specific tooling, packaging and documentation.",
-        videoUrl: "/video/oem-private-label.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/oem-private-label.mp4`,
         items: [
           "Brand-specific product development",
           "Custom packaging and labelling",
@@ -2423,10 +2423,10 @@ export const menuData = {
       {
         name: "REVERSE ENGINEERING",
         slug: "reverse-engineering",
-        image: "/assets/image1.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image1.jpeg`,
         description:
           "Accurate reverse-engineering service for discontinued, legacy and critical spare components without available drawings.",
-        videoUrl: "/video/reverse-engineering.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/reverse-engineering.mp4`,
         items: [
           "3D scanning & measurement",
           "Digital model creation",
@@ -2440,10 +2440,10 @@ export const menuData = {
       {
         name: "PROJECT-BASED MANUFACTURING",
         slug: "project-based-manufacturing",
-        image: "/assets/image2.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image2.jpeg`,
         description:
           "Turnkey engineering and manufacturing executed on complete project scope including design, production and delivery.",
-        videoUrl: "/video/project-based-manufacturing.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/project-based-manufacturing.mp4`,
         items: [
           "EPC project manufacturing support",
           "Industrial project components",
@@ -2457,10 +2457,10 @@ export const menuData = {
       {
         name: "CUSTOM PRODUCT DESIGN ASSISTANCE",
         slug: "custom-product-design-assistance",
-        image: "/assets/image3.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image3.jpeg`,
         description:
           "Engineering consultation service helping clients convert ideas and application needs into manufacturable products.",
-        videoUrl: "/video/custom-design-assistance.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/custom-design-assistance.mp4`,
         items: [
           "Concept to 3D model conversion",
           "Design for manufacturability",
@@ -2476,7 +2476,7 @@ export const menuData = {
     id: 'marine_castings',
     label: 'MARINE CASTINGS',
     icon: Anchor, // choose any lucide icon
-    bannerImage: '/assets/marine_castings/marine_castings3.jpeg',
+    bannerImage: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/marine_castings/marine_castings3.jpeg`,
     color: 'bg-blue-100 text-blue-900',
 
     categories: [
@@ -2485,10 +2485,10 @@ export const menuData = {
       {
         name: "PROPELLER & PROPELLER HUB CASTINGS",
         slug: "propeller-and-propeller-hub-castings",
-        image: "/assets/marine_castings/marine_castings2.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/marine_castings/marine_castings2.jpeg`,
         description:
           "High-performance bronze and stainless-steel castings used in marine propulsion systems for vessels of all sizes.",
-        videoUrl: "/video/marine_castings/marine_castings1.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/marine_castings/marine_castings1.mp4`,
         items: [
           "Fixed pitch propeller castings",
           "Controllable pitch propeller hubs",
@@ -2502,10 +2502,10 @@ export const menuData = {
       {
         name: "DECK & MOORING CASTINGS",
         slug: "deck-and-mooring-castings",
-        image: "/assets/marine_castings/marine_castings1.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/marine_castings/marine_castings1.jpeg`,
         description:
           "Heavy-duty castings used for mooring, towing and securing vessels in ports, harbors and offshore platforms.",
-        videoUrl: "/video/marine_castings/marine_castings2.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/marine_castings/marine_castings2.mp4`,
         items: [
           "Bitts & bollards",
           "Cleats & chocks",
@@ -2519,10 +2519,10 @@ export const menuData = {
       {
         name: "RUDDER & STEERING SYSTEM CASTINGS",
         slug: "rudder-and-steering-system-castings",
-        image: "/assets/marine_castings/marine_castings2.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/marine_castings/marine_castings2.jpeg`,
         description:
           "Structural cast parts used in rudder assemblies and steering mechanisms for marine vessels and ships.",
-        videoUrl: "/video/marine_castings/Mashroom Anchor.578.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/marine_castings/Mashroom-Anchor.578.mp4`,
         items: [
           "Rudder horn castings",
           "Rudder stock castings",
@@ -2536,10 +2536,10 @@ export const menuData = {
       {
         name: "SACRIFICIAL ANODE CASTINGS",
         slug: "sacrificial-anode-castings",
-        image: "/assets/marine_castings/marine_castings3.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/marine_castings/marine_castings3.jpeg`,
         description:
           "Zinc, aluminium and magnesium anode castings designed for cathodic protection of ship hulls and marine structures.",
-        videoUrl: "/video/marine_castings/marine_castings1.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/marine_castings/marine_castings1.mp4`,
         items: [
           "Hull anodes",
           "Tank anodes",
@@ -2553,10 +2553,10 @@ export const menuData = {
       {
         name: "OFFSHORE & SUBSEA CASTINGS",
         slug: "offshore-and-subsea-castings",
-        image: "/assets/marine_castings/marine_castings1.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/marine_castings/marine_castings1.jpeg`,
         description:
           "Castings manufactured for subsea production systems, offshore platforms and deep-water equipment.",
-        videoUrl: "/video/marine_castings/Mooring Bollards.13.mp4",
+        videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/marine_castings/Mooring-Bollards.13.mp4`,
         items: [
           "Subsea connector castings",
           "Manifold components",
@@ -2571,7 +2571,7 @@ export const menuData = {
     id: 'cathodic_protection',
     label: 'CATHODIC PROTECTION',
     icon: ShieldCheck, // choose any lucide icon
-    bannerImage: '/assets/image5.jpeg',
+    bannerImage: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image5.jpeg`,
     color: 'bg-orange-100 text-orange-900',
 
     categories: [
@@ -2580,7 +2580,7 @@ export const menuData = {
       {
         name: "ZINC & ALUMINIUM CAST ANODES",
         slug: "zinc-and-aluminium-cast-anodes",
-        image: "/assets/image9.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image9.jpeg`,
         description:
           "High-efficiency sacrificial anodes for corrosion protection of pipelines, marine structures and storage tanks.",
         items: [
@@ -2596,7 +2596,7 @@ export const menuData = {
       {
         name: "COATED TITANIUM ANODES",
         slug: "coated-titanium-anodes",
-        image: "/assets/image10.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image10.jpeg`,
         description:
           "Mixed metal oxide coated titanium anodes designed for impressed current cathodic protection systems.",
         items: [
@@ -2612,7 +2612,7 @@ export const menuData = {
       {
         name: "MAGNESIUM ANODES",
         slug: "magnesium-anodes",
-        image: "/assets/image11.jpg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image11.jpg`,
         description:
           "High-potential magnesium sacrificial anodes for underground steel structures and buried pipelines.",
         items: [
@@ -2628,7 +2628,7 @@ export const menuData = {
       {
         name: "TRANSFORMERS & RECTIFIERS",
         slug: "transformers-and-rectifiers",
-        image: "/assets/image12.jpg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image12.jpg`,
         description:
           "Impressed current cathodic protection power supply equipment ensuring accurate DC output and reliability.",
         items: [
@@ -2644,7 +2644,7 @@ export const menuData = {
       {
         name: "JUNCTION BOXES",
         slug: "junction-boxes",
-        image: "/assets/image13.jpg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image13.jpg`,
         description:
           "Junction boxes for current distribution, test stations and monitoring connections in CP systems.",
         items: [
@@ -2660,7 +2660,7 @@ export const menuData = {
       {
         name: "MONITORING EQUIPMENTS",
         slug: "monitoring-equipments",
-        image: "/assets/image14.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image14.jpeg`,
         description:
           "Monitoring systems for measuring potential, current output and performance of cathodic protection networks.",
         items: [
@@ -2676,7 +2676,7 @@ export const menuData = {
       {
         name: "CALES & WIRING SYSTEMS",
         slug: "cables-and-wiring-systems",
-        image: "/assets/image15.jpeg",
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image15.jpeg`,
         description:
           "Special corrosion-resistant cables and wiring accessories for underground and marine CP applications.",
         items: [
@@ -2800,7 +2800,7 @@ export const footerColumns: FooterColumn[] = [
       {
         title: "Product Categories",
         links: [
-          makeLink("Irrigation Products", "irrigation-products"),
+          makeLink("IRRIGATION_PRODUCTS", "irrigation-products"),
           makeLink("Earth Moving Equipments", "earth-moving-equipments"),
           makeLink("Cathodic Protection", "cathodic-protection"),
           // makeLink("Precast & Molds", "precast-molds"),

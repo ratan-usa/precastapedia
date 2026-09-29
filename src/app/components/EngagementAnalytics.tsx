@@ -62,7 +62,7 @@ export default function App() {
             <Image
               width={1200}
               height={600}
-              src="/assets/image11.jpg"
+              src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image11.jpg`}
               alt="Two business professionals shaking hands in an industrial factory setting"
               className="w-full h-full object-cover rounded-4xl shadow-xl"
             />

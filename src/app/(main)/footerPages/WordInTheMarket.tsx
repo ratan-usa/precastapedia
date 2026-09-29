@@ -10,37 +10,37 @@ const marketUpdates = [
     id: 1,
     title: "Mega Foundries Quality Tests",
     description: "We test every casting batch for excellent tensile strength and durability to keep components and personnel safe under extreme conditions.",
-    image: "/assets/image9.jpeg"
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image9.jpeg`
   },
   {
     id: 2,
     title: "Production Efficiency",
     description: "Our automated molding lines increase lifetime output and reduce lead times, ensuring your project stays on schedule.",
-    image: "/assets/image10.jpeg"
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image10.jpeg`
   },
   {
     id: 3,
     title: "Enhancing Safety Standards",
     description: "Our foundry safety protocols are composed to have higher flash point protection, enhancing the safety of the component and surrounding workforce.",
-    image: "/assets/image11.jpg"
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image11.jpg`
   },
   {
     id: 4,
     title: "Diverse Product Range",
     description: "With our unique and entire product range, specific properties like heat resistance, superior finish, and longevity can be given priority.",
-    image: "/assets/image12.jpg"
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image12.jpg`
   },
   {
     id: 5,
     title: "Corrosion Resistance",
     description: "Specialized alloy coatings reduce the rate of corrosion, giving our municipal and marine castings a much longer lifespan.",
-    image: "/assets/image13.jpg"
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image13.jpg`
   },
   {
     id: 6,
     title: "Thermal Conductivity",
     description: "Industry best cooling properties are contained in our Aluminum blocks to improve powering and temperature parameters.",
-    image: "/assets/image14.jpeg"
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image14.jpeg`
   }
 ];
 

@@ -37,8 +37,10 @@ export default function MegaFoundationPage() {
 
       {/* === HERO SECTION === */}
       <section className="relative h-[60vh] flex items-center justify-center bg-slate-900 text-white overflow-hidden">
-        {/* Background: Warm, community focused image overlay */}
-        <div className="absolute inset-0 bg-[url('/assets/image4.jpg')] opacity-10"></div>
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-10"
+          style={{ backgroundImage: `url(${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image4.jpg)` }}
+        />
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-800 to-red-900/40"></div>
 
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
@@ -112,7 +114,7 @@ export default function MegaFoundationPage() {
               <div className="aspect-[4/3] bg-slate-200 rounded-2xl overflow-hidden shadow-lg">
                 <div className="absolute inset-0 flex items-center justify-center text-slate-500 font-bold">
                   <Image
-                    src={'/assets/image8.jpeg'}
+                    src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image8.jpeg`}
                     alt="Case Study Image"
                     fill
                     className="object-cover"

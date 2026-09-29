@@ -78,8 +78,8 @@ export default function LiveStreamCommandCenter() {
           <SideStreamPlayer
             title="USA Ops"
             color="blue"
-            videoSrc1="/video/video1.mp4"  // <--- Add your specific video paths here
-            videoSrc2="/video/video2.mp4"
+            videoSrc1={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/video1.mp4`}  // <--- Add your specific video paths here
+            videoSrc2={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/video2.mp4`}
           />
         </aside>
         <FixedQuoteBtn />
@@ -219,8 +219,8 @@ export default function LiveStreamCommandCenter() {
           <SideStreamPlayer
             title="Asia Ops"
             color="blue"
-            videoSrc1="/video/video3.mp4" // <--- Add your specific video paths here
-            videoSrc2="/video/video4.mp4"
+            videoSrc1={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/video3.mp4`} // <--- Add your specific video paths here
+            videoSrc2={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/video4.mp4`}
           />
         </aside>
 

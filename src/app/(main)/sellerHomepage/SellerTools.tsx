@@ -10,35 +10,35 @@ const tools = [
     number: "01",
     title: "Digital Foundry Profile",
     description: "Showcase your casting capabilities, certifications (ISO/AS9100), and furnace capacities. Let OEMs filter you by casting method—Sand, Investment, or Die Casting.",
-    image: "/assets/dashboard-store.jpg"
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/dashboard-store.jpg`
   },
   {
     id: 2,
     number: "02",
     title: "Live Metal Indexing",
     description: "Link your pricing directly to global metal exchange rates (LME). Automatically adjust quotes based on fluctuating costs of Iron, Aluminum, or Steel raw materials.",
-    image: "/assets/dashboard-pricing.jpg"
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/dashboard-pricing.jpg`
   },
   {
     id: 3,
     number: "03",
     title: "Smart RFQ Management",
     description: "Streamline the Request for Quote process. View CAD files, estimate casting weights, and submit technical proposals 70% faster than traditional email threads.",
-    image: "/assets/dashboard-quoting.jpg"
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/dashboard-quoting.jpg`
   },
   {
     id: 4,
     number: "04",
     title: "Capacity Planning Engine",
     description: "Balance your production lines efficiently. Our system helps you track mold availability, pour schedules, and cooling times to give buyers accurate lead times.",
-    image: "/assets/dashboard-engine.jpg"
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/dashboard-engine.jpg`
   },
   {
     id: 5,
     number: "05",
     title: "Global Procurement Network",
     description: "Gain visibility with international infrastructure contractors. Our algorithm matches your foundry's specific alloy expertise with relevant large-scale tenders.",
-    image: "/assets/dashboard-buyers.jpg"
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/dashboard-buyers.jpg`
   }
 ];
 

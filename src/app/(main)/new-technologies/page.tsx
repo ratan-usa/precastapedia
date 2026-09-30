@@ -32,15 +32,15 @@ const TECH_HIGHLIGHTS = [
 export default function NewTechnologiesPage() {
   return (
     <div className="min-h-screen bg-slate-950 text-white font-sans selection:bg-cyan-500 selection:text-black">
-      
+
       {/* === HERO SECTION === */}
       <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
         {/* Background Effects */}
-        <div 
+        <div
           className="absolute top-0 left-0 w-full h-full bg-cover bg-center opacity-10"
           style={{ backgroundImage: `url(${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image9.jpeg)` }}
         />
-        
+
         {/* Glowing Orb/Graphic */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-red-600/20 blur-[120px] rounded-full animate-pulse"></div>
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-cyan-500/10 blur-[80px] rounded-full mix-blend-screen"></div>
@@ -61,22 +61,22 @@ export default function NewTechnologiesPage() {
       </section>
 
       {/* === TECH SPECS GRID === */}
-      <section className="py-24 relative z-10">
+      <section className="pt-8 relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {TECH_HIGHLIGHTS.map((tech) => (
               <div key={tech.id} className="group relative bg-slate-900/50 border border-slate-800 p-8 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition-colors duration-500">
                 {/* Hover Gradient */}
                 <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/0 via-transparent to-red-500/0 group-hover:from-cyan-500/5 group-hover:to-red-500/5 transition-all duration-500"></div>
-                
+
                 <div className="relative z-10">
                   <div className="w-14 h-14 bg-slate-800 rounded-lg flex items-center justify-center mb-6 border border-slate-700 group-hover:scale-110 transition-transform group-hover:border-cyan-500 group-hover:text-cyan-400">
                     <tech.icon className="w-7 h-7" />
                   </div>
-                  
+
                   <h3 className="text-2xl font-bold text-white mb-1 group-hover:text-cyan-400 transition-colors">{tech.title}</h3>
                   <p className="text-xs font-bold text-red-500 uppercase tracking-widest mb-4">{tech.subtitle}</p>
-                  
+
                   <p className="text-slate-400 leading-relaxed mb-6 text-sm">
                     {tech.description}
                   </p>
@@ -97,15 +97,15 @@ export default function NewTechnologiesPage() {
       </section>
 
       {/* === THE LAB (R&D) SECTION === */}
-      <section className="py-24 bg-black border-y border-slate-800">
+      <section className="pt-8 bg-black border-y border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-16">
-          
+
           <div className="w-full md:w-1/2">
             <h2 className="text-4xl font-bold mb-6">Inside <span className="text-red-600">Site-X</span></h2>
             <p className="text-slate-400 mb-8 text-lg">
               Site-X is our dedicated R&D facility located in Austin, TX. Here, 50+ PhD metallurgists and data scientists work in secrecy to develop alloys that can withstand the temperatures of Mars entry and the pressure of the ocean floor.
             </p>
-            
+
             <div className="grid grid-cols-2 gap-6">
               <div className="p-4 bg-slate-900 rounded border border-slate-800">
                 <Microscope className="w-6 h-6 text-cyan-400 mb-2" />
@@ -124,12 +124,12 @@ export default function NewTechnologiesPage() {
             {/* Holographic Image Frame */}
             <div className="relative aspect-video rounded-xl overflow-hidden border border-slate-700 bg-slate-900">
               <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.05)_1px,transparent_1px)] bg-[size:20px_20px]"></div>
-              
+
               <div className="absolute inset-0 flex items-center justify-center">
-                 <div className="text-center">
-                   <Atom className="w-16 h-16 text-cyan-500/50 mx-auto mb-4 animate-spin-slow" />
-                   <p className="text-cyan-500/50 font-mono text-sm">[ PROPRIETARY ALLOY RENDERING ]</p>
-                 </div>
+                <div className="text-center">
+                  <Atom className="w-16 h-16 text-cyan-500/50 mx-auto mb-4 animate-spin-slow" />
+                  <p className="text-cyan-500/50 font-mono text-sm">[ PROPRIETARY ALLOY RENDERING ]</p>
+                </div>
               </div>
 
               {/* Scanline effect */}
@@ -155,7 +155,7 @@ export default function NewTechnologiesPage() {
       </section>
 
       {/* === CTA === */}
-      <section className="py-24 relative overflow-hidden">
+      <section className="pt-8 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-red-900 to-slate-900 opacity-50"></div>
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">Have a Challenge for Us?</h2>

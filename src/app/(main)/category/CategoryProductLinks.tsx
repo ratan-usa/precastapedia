@@ -15,15 +15,15 @@ export default function CategoryProductLinks({ items }: CategoryProductLinksProp
       <h3 className="text-xl font-bold text-gray-900 mb-6">
         All Products in this Category
       </h3>
-      
+
       <div className="flex flex-wrap gap-3">
         {items.map((item, index) => {
           // Generate the slug: "Hydro Power Control Systems" -> "hydro-power-control-systems"
           const slug = item.toLowerCase().trim().replace(/ /g, '-').replace(/[^\w-]+/g, '');
-          
+
           return (
-            <Link 
-              key={index} 
+            <Link
+              key={index}
               // Direct link to the product page
               href={`/products/${slug}`}
               className="
@@ -31,7 +31,7 @@ export default function CategoryProductLinks({ items }: CategoryProductLinksProp
                 bg-white 
                 border border-gray-200 
                 text-sm text-gray-600 
-                hover:text-[#cc2221] hover:border-[#cc2221] hover:shadow-sm
+                hover:text-[#CC0000] hover:border-[#CC0000] hover:shadow-sm
                 transition-all duration-200
                 cursor-pointer
                 rounded-md

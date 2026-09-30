@@ -15,10 +15,10 @@ export default function CategoryList() {
 
     return (
         <div className="min-h-screen bg-white py-8">
- 
+
             <div className="w-full px-4 sm:px-6 lg:px-10 mx-auto">
                 <p className="text-sm font-bold text-gray-700">
-                    <Link href={'/'} className="hover:text-[#cc2221]">Home</Link>
+                    <Link href={'/'} className="hover:text-[#CC0000]">Home</Link>
                     <span className="mx-2">/</span>
                     <span className="text-gray-500 font-normal">All Categories</span>
                 </p>
@@ -28,26 +28,26 @@ export default function CategoryList() {
 
                 {categories.map((category) => (
                     <div key={category.id} className="bg-white rounded-3xl overflow-hidden shadow-[0_2px_20px_rgba(0,0,0,0.04)] border border-gray-100 flex flex-col lg:flex-row h-auto lg:h-[600px]">
- 
+
                         <div className="relative w-full lg:w-[320px] h-64 lg:h-full shrink-0 group">
-                            <Image 
+                            <Image
                                 src={category.bannerImage || `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/placeholder.jpg`}
                                 alt={category.label}
                                 fill
                                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
- 
+
                             <div className={`absolute top-6 left-0 px-6 py-2 rounded-r-full font-bold text-lg shadow-sm ${category.color || 'bg-gray-100 text-gray-900'}`}>
                                 {category.label}
                             </div>
                         </div>
- 
+
                         <div className="flex-1 p-6 lg:p-8 flex flex-col">
 
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-8 overflow-y-auto pr-2 custom-scrollbar">
                                 {category.categories.map((sub, idx) => (
-                                    <Link 
+                                    <Link
                                         href={`/category/${(sub as any).slug || sub.name.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '')}`}
                                         key={idx}
                                         className="group flex flex-col h-full hover:-translate-y-1 transition-transform duration-300"
@@ -64,7 +64,7 @@ export default function CategoryList() {
 
                                         {/* Content */}
                                         <div className="flex flex-col grow">
-                                            <h3 className="font-bold text-gray-900 text-lg mb-2 group-hover:text-[#cc2221] transition-colors">
+                                            <h3 className="font-bold text-gray-900 text-lg mb-2 group-hover:text-[#CC0000] transition-colors">
                                                 {sub.name}
                                             </h3>
                                             <p className="text-sm text-gray-500 leading-relaxed line-clamp-3">
@@ -80,7 +80,7 @@ export default function CategoryList() {
                                 <Link href={`/category/${category.id}`}>
                                     <Button
                                         variant="ghost"
-                                        className="text-[#cc2221] hover:text-[#a01b1b] hover:bg-red-50 font-semibold flex items-center gap-2 px-4"
+                                        className="text-[#CC0000] hover:text-[#a01b1b] hover:bg-red-50 font-semibold flex items-center gap-2 px-4"
                                     >
                                         View More <ChevronDown className="w-4 h-4" />
                                     </Button>

@@ -42,11 +42,11 @@ export default function CommonQuestions() {
   return (
     <section className="py-20 bg-white">
       <div className="w-full px-4 sm:px-6 lg:px-10 py-3">
-        
+
         {/* === HEADER === */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-            Common <span className="text-[#cc2221]">Questions</span>
+            Common <span className="text-[#CC0000]">Questions</span>
           </h2>
         </div>
 
@@ -57,22 +57,22 @@ export default function CommonQuestions() {
 
             return (
               <div key={faq.id} className="w-full">
-                
+
                 {/* Question Bar */}
                 <button
                   onClick={() => toggleFAQ(index)}
                   className={`
                     w-full flex items-center justify-between p-5 text-left transition-all duration-200
                     bg-gray-50 hover:bg-gray-100
-                    border-l-[6px] ${isOpen ? 'border-[#cc2221]' : 'border-[#cc2221]'} 
+                    border-l-[6px] ${isOpen ? 'border-[#CC0000]' : 'border-[#CC0000]'} 
                     /* Note: The image shows red border for all items, even closed ones */
                   `}
                 >
                   <span className="text-lg font-medium text-gray-800">
-                    <span className="font-bold text-gray-900 mr-2">Q:</span> 
+                    <span className="font-bold text-gray-900 mr-2">Q:</span>
                     {faq.question}
                   </span>
-                  
+
                   {isOpen ? (
                     <ChevronDown className="w-5 h-5 text-gray-500" />
                   ) : (
@@ -88,7 +88,7 @@ export default function CommonQuestions() {
                   `}
                 >
                   <div className="p-5 pl-8 bg-white text-gray-600 text-base leading-relaxed border-l-[6px] border-transparent">
-                    <span className="font-bold text-gray-900 mr-2">A:</span> 
+                    <span className="font-bold text-gray-900 mr-2">A:</span>
                     {faq.answer}
                   </div>
                 </div>

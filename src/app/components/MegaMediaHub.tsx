@@ -1,123 +1,122 @@
 "use client";
 
 import React from "react";
-import { Youtube, ExternalLink, Activity, Layers } from "lucide-react";
+import { Youtube, ExternalLink } from "lucide-react";
 
 interface MediaAsset {
   id: string;
   title: string;
-  source: string;
-  badge: string;
+  source: string; 
   description: string;
   embedUrl: string;
+  watchUrl: string;
 }
 
 const VIDEO_RESOURCES: MediaAsset[] = [
   {
     id: "hydraulic-grates",
-    title: "Grate Inlets: Hydraulic Interception Lab Test",
-    source: "Federal Highway Administration (FHWA)",
-    badge: "Hydraulic Performance Model",
-    description: "Full fluid dynamic test showcasing parallel, curved, and cross-bar casting matrices under localized street section flows. Highlights frontal interception capability versus bypass side flow rates.",
-    // Embed code mapped with autoplay=1, mute=1 (required by browsers for autoplay), loop=1, and playlist fallback
-    embedUrl: "https://www.youtube.com/embed/-TLP3uBB55o?autoplay=1&mute=1&loop=1&playlist=-TLP3uBB55o&start=785"
+    title: "Hydraulic Interception Lab Test",
+    source: "Federal Highway Admin",
+    description: "Fluid dynamic test analyzing parallel & curved bar matrices under street surface flows.",
+    embedUrl: "https://www.youtube.com/embed/-TLP3uBB55o?start=785",
+    watchUrl: "https://www.youtube.com/watch?v=-TLP3uBB55o&t=785s"
   },
   {
     id: "fdm-foundry",
-    title: "Fused Deposition Modeling (FDM) Technology",
-    source: "Industrial Grade Additive Manufacturing",
-    badge: "Additive Tooling Matrix",
-    description: "Layer additive manufacturing breakdown utilizing high-grade thermoplastic matrices to construct precision patterns, low-volume components, and casting mold mockups directly from CAD layers.",
-    embedUrl: "https://www.youtube.com/embed/WHO6G67GJbM?autoplay=1&mute=1&loop=1&playlist=WHO6G67GJbM"
+    title: "FDM Tooling & Pattern Modeling",
+    source: "Additive Manufacturing",
+    description: "Layered thermoplastic matrices constructing precision tooling patterns from CAD.",
+    embedUrl: "https://www.youtube.com/embed/WHO6G67GJbM",
+    watchUrl: "https://www.youtube.com/watch?v=WHO6G67GJbM"
+  },
+  {
+    id: "iron-casting",
+    title: "Ductile Iron Induction Melting",
+    source: "Metallurgical Hearth",
+    description: "Electric induction furnace melting with nodular graphite inoculation for high tensile strength.",
+    embedUrl: "https://www.youtube.com/embed/WHO6G67GJbM",
+    watchUrl: "https://www.youtube.com/watch?v=WHO6G67GJbM"
+  },
+  {
+    id: "load-testing",
+    title: "Proof Load Stress Testing",
+    source: "AASHTO H-20 / F900",
+    description: "Hydraulic press simulation testing castings under cyclic 90-ton proof wheel loads.",
+    embedUrl: "https://www.youtube.com/embed/WHO6G67GJbM",
+    watchUrl: "https://www.youtube.com/watch?v=WHO6G67GJbM"
   }
 ];
 
 export default function MegaMediaHub() {
   return (
-    <section className="bg-white text-[#0a0a0a] py-24 font-sans border-b border-gray-100 w-full">
-      {/* Strict Fluid Layout Bounds */}
-      <div className="w-full px-4 sm:px-6 lg:px-10 space-y-16">
-        
+    <section className="bg-white text-[#0a0a0a] py-8 md:py-10 font-sans border-b border-gray-100 w-full">
+      <div className="w-full px-4 sm:px-6 lg:px-10 space-y-5">
+
         {/* --- HEADER LOGISTICS SECTION --- */}
-        <div className="border-b border-gray-200 pb-8 flex flex-col lg:flex-row lg:items-end justify-between gap-6 w-full">
+        <div className="border-b border-gray-200 pb-3 flex flex-col md:flex-row md:items-end justify-between gap-3 w-full">
           <div>
-            <span className="text-xs uppercase tracking-[0.4em] font-black text-[#cc2221] block mb-3">
+            <span className="text-[11px] uppercase tracking-[0.3em] font-black text-[#CC0000] block mb-1">
               Technical Streaming Terminal
             </span>
-            <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter text-[#0a0a0a] leading-none">
-              Simulation <span className="text-[#cc2221]">& Lab Feeds</span>
+            <h2 className="text-2xl md:text-3xl font-black uppercase tracking-tight text-[#0a0a0a]">
+              Simulation <span className="text-[#CC0000]">& Lab Feeds</span>
             </h2>
           </div>
-          <p className="text-gray-500 text-base font-light leading-relaxed max-w-xl">
-            Live infrastructure benchmarks. Real-time rendering streams visualizing hydraulic grate flow intercept dynamics alongside micro-layered thermoplastic production tooling cycles.
+          <p className="text-gray-500 text-xs sm:text-sm font-light leading-relaxed max-w-md">
+            Live technical benchmarks and simulation streams visualizing foundry dynamics and tooling cycles.
           </p>
         </div>
 
-        {/* --- DUAL SPLIT MEDIA GRID (100% Clarity Visuals) --- */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 w-full">
+        {/* --- 4 VIDEOS IN A ROW (COMPACT MINIMALISTIC) --- */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 w-full">
           {VIDEO_RESOURCES.map((video) => (
-            <div 
-              key={video.id} 
-              className="flex flex-col bg-gray-50 border border-gray-200 rounded-none overflow-hidden p-6 group hover:border-[#cc2221] hover:bg-white transition-all duration-300 shadow-sm"
+            <div
+              key={video.id}
+              className="flex flex-col justify-between bg-gray-50 border border-gray-200 p-3 group hover:border-[#CC0000] hover:bg-white transition-all duration-300 shadow-sm"
             >
-              
-              {/* Top Analytical Banner Strip */}
-              <div className="flex items-center justify-between mb-4 border-b border-gray-200 pb-3">
-                <span className="text-[10px] font-mono tracking-widest text-[#cc2221] font-bold uppercase flex items-center gap-1.5">
-                  <Activity className="w-3.5 h-3.5" /> {video.badge}
-                </span>
-                <span className="text-[9px] font-mono tracking-wider text-gray-400 uppercase">
-                  Feed // Active
-                </span>
-              </div>
-
-              {/* HIGH DEFINITION VIDEO VIEWPORT BOX */}
-              <div className="relative w-full aspect-video bg-[#0a0a0a] border border-gray-200 overflow-hidden shadow-inner mb-6">
-                <iframe
-                  src={video.embedUrl}
-                  title={video.title}
-                  allow="autoplay; encrypted-media; picture-in-picture; web-share"
-                  allowFullScreen
-                  className="absolute inset-0 w-full h-full object-cover border-none"
-                />
-              </div>
-
-              {/* CORE METADATA SPEC DATA BLOCK */}
-              <div className="flex flex-col flex-grow justify-between space-y-6">
-                <div className="space-y-2">
-                  <h3 className="text-xl font-black uppercase tracking-tight text-[#0a0a0a] group-hover:text-[#cc2221] transition-colors">
-                    {video.title}
-                  </h3>
-                  <p className="text-xs text-gray-400 font-mono uppercase tracking-wide">
-                    Origin Authority: {video.source}
-                  </p>
-                  <p className="text-gray-600 text-xs md:text-sm font-light leading-relaxed pt-2">
-                    {video.description}
-                  </p>
+              <div>
+                {/* Compact Video Frame */}
+                <div className="relative w-full aspect-video bg-black border border-gray-200 overflow-hidden mb-2.5">
+                  <iframe
+                    src={video.embedUrl}
+                    title={video.title}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="absolute inset-0 w-full h-full object-cover border-none"
+                  />
                 </div>
 
-                {/* Direct Reference Technical Anchors */}
-                <div className="pt-4 border-t border-gray-100 flex items-center justify-between">
-                  <div className="flex items-center gap-1.5 text-gray-400">
-                    <Youtube className="w-4 h-4 text-[#cc2221]" />
-                    <span className="text-[10px] font-mono uppercase tracking-widest font-bold">HD Network Source</span>
-                  </div>
-                  
-                  <a
-                    href={video.id === "hydraulic-grates" ? "https://www.youtube.com/watch?v=-TLP3uBB55o&t=785s" : "https://www.youtube.com/watch?v=WHO6G67GJbM"}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-xs font-bold text-[#cc2221] hover:text-[#0a0a0a] border-b border-dashed border-[#cc2221] pb-0.5 transition-colors uppercase tracking-wider"
-                  >
-                    Launch Native Player <ExternalLink className="w-3 h-3" />
-                  </a>
-                </div>
+                {/* Minimal Header & Source */}
+                <span className="text-[9px] font-mono uppercase tracking-widest text-[#CC0000] font-bold block mb-0.5">
+                  {video.source}
+                </span>
+                <h3 className="text-xs sm:text-sm font-black uppercase tracking-tight text-[#0a0a0a] group-hover:text-[#CC0000] transition-colors line-clamp-1 mb-1">
+                  {video.title}
+                </h3>
+                <p className="text-xs text-gray-500 font-light leading-relaxed line-clamp-2">
+                  {video.description}
+                </p>
               </div>
 
+              {/* Minimal Footer */}
+              <div className="pt-2 mt-2.5 border-t border-gray-200 flex items-center justify-between">
+                <div className="flex items-center gap-1 text-gray-400 text-[10px] font-mono uppercase">
+                  <Youtube className="w-3.5 h-3.5 text-[#CC0000]" />
+                  <span>HD Stream</span>
+                </div>
+                <a
+                  href={video.watchUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-[10px] font-bold text-[#CC0000] hover:text-black uppercase tracking-wider transition-colors"
+                >
+                  <span>Watch</span>
+                  <ExternalLink className="w-2.5 h-2.5" />
+                </a>
+              </div>
             </div>
           ))}
         </div>
- 
 
       </div>
     </section>

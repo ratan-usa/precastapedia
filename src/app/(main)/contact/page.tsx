@@ -1,4 +1,4 @@
- 
+
 import Image from "next/image";
 // Combine all blocks into a single array
 import { MapPin, Phone, Mail, ArrowRight } from 'lucide-react';
@@ -28,7 +28,7 @@ const OfficeCard = ({
   mapSrc
 }: OfficeCardProps) => {
   return (
-    <div className="bg-white rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.05)] p-6 md:p-8 flex flex-col items-center text-center border-t-4 border-transparent hover:border-[#cc2221] transition-all duration-300 relative mt-8">
+    <div className="bg-white rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.05)] p-6 md:p-8 flex flex-col items-center text-center border-t-4 border-transparent hover:border-[#CC0000] transition-all duration-300 relative mt-8">
       {/* Circular Flag Container overlapping top border */}
       <div className="absolute -top-8 p-1 bg-white rounded-full shadow-sm">
         <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-gray-100 relative">
@@ -116,7 +116,7 @@ const ContactUs = () => {
 
 
   return (
-    <section className="relative w-full py-16 sm:py-24 bg-white">
+    <section className="relative w-full py-16 sm:pt-8 bg-white">
 
 
       <div className="absolute inset-0 z-0 h-[225px] w-full">
@@ -135,7 +135,7 @@ const ContactUs = () => {
         <h2 className="text-[40px] pb-12 font-extrabold tracking-tight text-white mb-8">
           Get In Touch With Us
         </h2>
-        <p className="text-[20px] py-5 font-semibold uppercase tracking-widest text-[#cc2221] mb-2">
+        <p className="text-[20px] py-5 font-semibold uppercase tracking-widest text-[#CC0000] mb-2">
           MEGA FOUNDRIES | the best industry services
         </p>
         <div className="relative z-10 container mx-auto px-4 text-center">
@@ -143,7 +143,7 @@ const ContactUs = () => {
           <h1 className="text-[30px] lg:text-[40px] font-bold leading-tight tracking-tight">
             The World's Largest and Advanced <br />
             Consortium of
-            <span className="block mt-2 text-[#cc2221] uppercase tracking-wide drop-shadow-lg">
+            <span className="block mt-2 text-[#CC0000] uppercase tracking-wide drop-shadow-lg">
               Foundries, Forge Shops & Fabricators
             </span>
             <span className="block mt-2 text-2xl  md:text-4xl font-light ">
@@ -152,16 +152,16 @@ const ContactUs = () => {
           </h1>
 
           {/* Tagline */}
-          <p className="text-xl text-[#cc2221] md:text-[22px] font-medium   italic">
+          <p className="text-xl text-[#CC0000] md:text-[22px] font-medium   italic">
             "Think Fast and Succeed Faster"
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col py-5 sm:flex-row items-center justify-center gap-4 mt-8">
-            <Button className="bg-[#cc2221] hover:bg-red-700 text-white px-10 py-7 text-xl rounded-md font-bold shadow-[0_0_20px_rgba(204,34,33,0.4)] transition-all transform hover:scale-105">
+            <Button className="bg-[#CC0000] hover:bg-red-700 text-white px-10 py-7 text-xl rounded-md font-bold shadow-[0_0_20px_rgba(204,34,33,0.4)] transition-all transform hover:scale-105">
               Explore Capabilities
             </Button>
-            <Button variant="outline" className="px-10 text-[#cc2221] border-2 border-[#cc2221] py-7 text-xl  hover:bg-white/10 backdrop-blur-sm">
+            <Button variant="outline" className="px-10 text-[#CC0000] border-2 border-[#CC0000] py-7 text-xl  hover:bg-white/10 backdrop-blur-sm">
               Succeed With Us <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
           </div>
@@ -180,7 +180,7 @@ const ContactUs = () => {
           </div>
           {/* Section 2: Form Header Text */}
           <div className="text-center mb-12">
-            <h4 className="text-[#cc2221] font-bold uppercase tracking-wider mb-3">
+            <h4 className="text-[#CC0000] font-bold uppercase tracking-wider mb-3">
               MEGA FOUNDRIES | SEND US A MESSAGE
             </h4>
             <p className="text-gray-500">
@@ -244,7 +244,7 @@ const ContactUs = () => {
                     <Button
                       type="submit"
                       variant="outline"
-                      className="h-auto py-2 px-4 border border-[#cc2221] text-[#cc2221] hover:bg-red-50 hover:text-[#cc2221] font-semibold text-base transition-all duration-300"
+                      className="h-auto py-2 px-4 border border-[#CC0000] text-[#CC0000] hover:bg-red-50 hover:text-[#CC0000] font-semibold text-base transition-all duration-300"
                     >
                       Submit Request!
                     </Button>

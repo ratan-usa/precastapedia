@@ -1,69 +1,89 @@
-import { Anvil, Hammer, Construction, Layers, Beaker, LucideIcon } from "lucide-react";
+import { Anvil, Hammer, Construction, Layers, Beaker, LucideIcon, ShieldCheck } from "lucide-react";
 import { Wrench, Droplet, Lightbulb, Grid3X3, DoorOpen } from 'lucide-react';
-import { title } from "process";
+
 export interface Category {
   title: string;
   slug: string;
-  video?: string;       // Made optional
-  image?: string;       // Added optional static image field
+  video?: string;
+  image?: string;
   description: string;
   specs: string[];
   icon: LucideIcon;
   color: string;
 }
-export const categories = [
+
+export const categories: Category[] = [
   {
     title: "Trench Products",
     slug: "trench-products",
     video: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/trench/Trench_500_Animation.498.mp4`,
     description: "Heavy-duty drainage solutions for high-traffic industrial environments.",
-    specs: ["Ductile Iron Construction", "Load Class D400+", "Anti-Slip Surface", "UV Resistant Coating"],
+    specs: ["Ductile Iron", "Load Class D400+", "Anti-Slip Matrix"],
     icon: Wrench,
+    color: "bg-red-700",
+  },
+  {
+    title: "Paving Risers",
+    slug: "paving-risers",
+    video: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/paving_riser/paving-riser-1.5213.mp4`,
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/PAVING-RISERS/paving_riser_1.5200.png`,
+    description: "Precision height-adjustment riser rings for asphalt resurfacing without tear-outs.",
+    specs: ["ASTM A536 Grade", "AASHTO H-20", "Fast Installation"],
+    icon: Layers,
     color: "bg-red-700",
   },
   {
     title: "Cleanouts",
     slug: "cleanouts",
     image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/PAVING-RISERS/products/cleanout.jpeg`,
-    description: "Professional grade access points for plumbing and waste systems.",
-    specs: ["Gas-tight Seals", "Brass/Nickel Finish", "Easy-access Design", "Corrosion Resistant"],
+    description: "Professional grade access points for municipal plumbing and waste networks.",
+    specs: ["Gas-tight Seals", "Brass/Nickel Finish", "Corrosion Proof"],
     icon: Droplet,
     color: "bg-red-700",
   },
   {
-    title: "New Innovations",
-    slug: "new-innovations",
-    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/MEGA/MONITERING_WELL_STATION.png`, // Construction/Infrastructure image
-    description: "Cutting-edge casting technologies and patent-pending industrial designs.",
-    specs: ["Patent-pending Technology", "Sustainable Materials", "IoT Ready Sensors", "High Precision Molding"],
-    icon: Lightbulb,
-    color: "bg-red-700",
-  },
-  {
-    title: "pipe_grates",
+    title: "Pipe Grates",
     slug: "pipe-grates",
     video: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/PAVING-RISERS/products/pipe_grate.mp4`,
-    description: "Optimized water flow and debris management for municipal projects.",
-    specs: ["High Flow Efficiency", "Debris Filtration", "Cast Iron Durability", "Custom Sizes Available"],
+    description: "Optimized water flow and debris interception for municipal catch basins.",
+    specs: ["High Inflow Rate", "Debris Filtration", "Cast Iron Durability"],
     icon: Grid3X3,
     color: "bg-red-700",
   },
   {
     title: "Hinged Castings",
     slug: "hinged-castings",
-    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/MEGA/HATCHES_COVER.jpeg`, // Construction/Infrastructure image
-    description: "Ergonomic, easy-access manhole and utility covers for safety.",
-    specs: ["Ergonomic Lift Assist", "Safety Lock System", "Heavy Duty Hinge", "Reduced Maintenance Cost"],
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/MEGA/HATCHES_COVER.png`,
+    description: "Ergonomic, easy-access security manhole and utility hatch covers.",
+    specs: ["Lift Assist Hinge", "Safety Cam Lock", "Zero Deflection"],
     icon: DoorOpen,
     color: "bg-red-700",
   }, 
   {
-    title: "MJ_Fittings",
+    title: "MJ Fittings",
     slug: "mj-fittings",
     image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/MEGA/MJ_Fittings.jpeg`,
-    description: "Our range of mechanical joint (MJ) fittings are engineered for superior sealing performance in underground water and gas pipelines.   ",
-    specs: ["ISO 2531/EN 545 Standard", "Flange Sizes: 50mm - 1200mm", "Working Pressure: Up to 16 Bar", "Corrosion-Resistant Epoxy Coating"],
+    description: "Mechanical joint ductile iron fittings for pressurized underground pipelines.",
+    specs: ["ISO 2531 / EN 545", "Up to 16 Bar", "Epoxy Protected"],
     icon: Wrench,
+    color: "bg-red-700",
+  },
+  {
+    title: "Detectable Warning Plates",
+    slug: "detectable-warning-plates",
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/MEGA/Detectable_Warning_Plates.jpeg`,
+    description: "ADA-compliant cast iron tactile plates with high-traction truncated domes.",
+    specs: ["Class 35B Gray Iron", "AASHTO H-20", "Wet-Set Anchors"],
+    icon: ShieldCheck,
+    color: "bg-red-700",
+  },
+  {
+    title: "Monitoring Well Stations",
+    slug: "monitoring-well-stations",
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/MEGA/MONITERING_WELL_STATION.png`,
+    description: "Specialized cast iron flush-mount monitoring well protective vaults.",
+    specs: ["Water-Resistant O-Ring", "Bolted Lid Lock", "Traffic Heavy Duty"],
+    icon: Lightbulb,
     color: "bg-red-700",
   }
 ];

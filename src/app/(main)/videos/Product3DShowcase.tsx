@@ -2,66 +2,99 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
-import { 
-  Play, 
-  Pause, 
-  Rotate3d, 
-  ChevronRight, 
-  Layers
+import Link from 'next/link';
+import {
+  Play,
+  Rotate3d,
+  ChevronRight,
+  Layers,
+  Sparkles,
+  ShieldCheck,
+  Activity,
+  FileText
 } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 
-const PRODUCT_VIDEOS = [
+export interface PopularProductVideo {
+  id: number;
+  badge: string;
+  title: string;
+  category: string;
+  description: string;
+  materialStandard: string;
+  loadClass: string;
+  duration: string;
+  type: string;
+  src: string;
+  thumbnail: string;
+}
+
+const MOST_POPULAR_PRODUCTS: PopularProductVideo[] = [
   {
     id: 1,
-    title: "Pro Series Round Risers 360° View",
-    description: "Full rotation showcase highlighting our high-precision ductile iron height adjustment ring mechanism.",
+    badge: "#1 Most Popular",
+    title: "Pro Series Paving Risers",
+    category: "Highway & Asphalt Inlets",
+    description: "Our top-selling precision ductile iron height-adjustment riser system. Eliminates pavement tear-outs during resurfacing, saving up to 60% in municipal labor.",
+    materialStandard: "ASTM A536 Grade 80-55-06",
+    loadClass: "AASHTO H-20 / HS-20 Traffic Rated",
     duration: "0:45",
-    type: "360_ROTATION",
-    src: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/paving_riser/paving-riser-1.5213.mp4`, // Restored valid video path to prevent .glb breaks
-    thumbnail: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/PAVING-RISERS/paving_riser_1.5200.png` 
+    type: "360° ROTATION",
+    src: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/paving_riser/paving-riser-1.5213.mp4`,
+    thumbnail: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/PAVING-RISERS/paving_riser_1.5200.png`
   },
   {
     id: 2,
-    title: "Elite Manhole Systems",
-    description: "Technical exploded breakdown showing the multi-ton load capacity and interlocking frame security.",
-    duration: "1:10",
-    type: "EXPLODED_VIEW",
-    src: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/paving_riser/paving-riser-1.5213.mp4`, 
-    thumbnail: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/PAVING-RISERS/paving_riser_1.5201.png` 
+    badge: "Top Trench System",
+    title: "Heavy-Duty Trench Drain 500",
+    category: "Continuous Linear Drainage",
+    description: "Engineered monolithic ductile iron trench matrix designed for rapid fluid interception across airport aprons, industrial docks, and highway toll plazas.",
+    materialStandard: "EN 1433 / ASTM A48 Class 35B",
+    loadClass: "F900 (90-Ton Proof Load)",
+    duration: "1:15",
+    type: "3D SIMULATION",
+    src: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/trench/Trench_500_Animation.498.mp4`,
+    thumbnail: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/MEGA/pre-trench-01.JPG`
   },
   {
     id: 3,
-    title: "Infrastructure Valve Boxes",
-    description: "Step-by-step industrial 3D animation showing a standard heavy-traffic utility utility valve box casing setup.",
-    duration: "2:00",
-    type: "ANIMATION", 
-    src: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/paving_riser/paving-riser-1.5213.mp4`, 
-    thumbnail: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/PAVING-RISERS/paving_riser_1.5203.png` 
+    badge: "Municipal Standard",
+    title: "High-Flow Hydraulic Pipe Grates",
+    category: "Stormwater Management",
+    description: "High-capacity drainage inlet grate with aerodynamic vane geometry that optimizes surface inflow while blocking debris accumulation in urban catch basins.",
+    materialStandard: "Ductile Iron 65-45-12",
+    loadClass: "D400 Heavy Municipal Class",
+    duration: "0:30",
+    type: "HYDRO-DYNAMIC 3D",
+    src: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/PAVING-RISERS/products/pipe_grate.mp4`,
+    thumbnail: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/PAVING-RISERS/products/pipe_grid.jpeg`
   },
   {
     id: 4,
-    title: "Custom_Foundry_Components",
-    description: "Finite Element Analysis (FEA) testing simulation illustrating severe shear stress distribution on custom cast matrices.",
+    badge: "High-Load Security",
+    title: "Heavy Cast Hatches & Utility Covers",
+    category: "Sub-Surface Infrastructure",
+    description: "Finite Element Analysis (FEA) verified access hatches and security covers engineered for zero deflection under severe cyclic wheel loading.",
+    materialStandard: "Nodular Ductile Iron ASTM A536",
+    loadClass: "100-Ton Severe Proof Load",
     duration: "0:30",
-    type: "SIMULATION",
-    src: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/Custom_Foundry_Components.mp4`, 
-    thumbnail: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/PAVING-RISERS/paving_riser_1.5204.png` 
+    type: "FEA STRESS ANALYSIS",
+    src: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/Custom_Foundry_Components.mp4`,
+    thumbnail: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/MEGA/HATCHES_COVER.png`
   }
 ];
 
 export default function Product3DShowcase() {
   const [activeVideoIndex, setActiveVideoIndex] = useState(0);
   const videoRef = useRef<HTMLVideoElement>(null);
-  
-  const activeVideo = PRODUCT_VIDEOS[activeVideoIndex];
+
+  const activeVideo = MOST_POPULAR_PRODUCTS[activeVideoIndex];
 
   // Logic: Handle automatic transitions and infinite looping
   const handleVideoEnd = () => {
-    // Cycles to the next index, resetting cleanly to 0 after the last track ends
-    setActiveVideoIndex((prev) => (prev + 1) % PRODUCT_VIDEOS.length);
+    setActiveVideoIndex((prev) => (prev + 1) % MOST_POPULAR_PRODUCTS.length);
   };
 
   // Effect: Guarantees continuous autoplay configurations on active state alterations
@@ -75,46 +108,48 @@ export default function Product3DShowcase() {
   }, [activeVideoIndex]);
 
   return (
-    <section className="bg-zinc-950 text-white py-20 border-t border-zinc-900 w-full">
-      <div className="w-full px-4 sm:px-6 lg:px-10">
-        
+    <section className="bg-zinc-950 text-white py-8 border-t border-zinc-900 w-full relative overflow-hidden">
+      {/* Subtle Background Blueprint Grid */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:4rem_4rem] pointer-events-none" />
+
+      <div className="w-full px-4 sm:px-6 lg:px-10 relative z-10">
+
         {/* --- SECTION HEADER --- */}
-        <div className="flex flex-col md:flex-row justify-between items-end mb-10 gap-6 w-full">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-6 gap-6 w-full border-b border-zinc-900 pb-2">
           <div>
-            <div className="flex items-center gap-2 mb-2">
-              <Rotate3d className="text-[#cc2221] w-5 h-5 animate-spin-slow" />
-              <span className="text-[#cc2221] font-bold uppercase tracking-widest text-sm">
-                Interactive Showroom
+
+            <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight text-white leading-tight">
+              Most Popular Products of <br className="hidden sm:inline" />
+              <span className="text-[#CC0000]  ">
+                Mega Foundries
               </span>
-            </div>
-            <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight">
-              3D Product <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">Visualization</span>
             </h2>
           </div>
 
-          <Button 
-            disabled
-            className="gap-2 font-black uppercase tracking-widest px-8 h-12 bg-[#cc2221] text-white animate-pulse opacity-100 cursor-default"
-          >
-            <Play className="w-4 h-4 fill-current" />
-            Looping Active
-          </Button>
+          <div className="flex items-center gap-3">
+            <Link href="/contact">
+              <Button className="gap-2 font-black uppercase tracking-widest px-6 h-11 bg-[#CC0000] hover:bg-[#b01e1d] text-white text-xs rounded-none transition-colors">
+                <FileText className="w-4 h-4" />
+                Request CAD / BIM Files
+              </Button>
+            </Link>
+          </div>
         </div>
 
-        {/* --- MAIN PLAYER AREA --- */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 w-full">
-          
-          {/* LEFT: Continuous Main Screen Display */}
-          <div className="lg:col-span-2 w-full">
+        {/* --- MAIN PLAYER & PLAYLIST DISPLAY --- */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 w-full items-start">
+
+          {/* LEFT: Main Interactive Video Showcase (8 Cols) */}
+          <div className="lg:col-span-8 w-full space-y-4">
             <div className="relative aspect-video bg-black rounded-none border border-zinc-800 shadow-2xl overflow-hidden group">
-              
+
               <video
                 ref={videoRef}
-                key={activeVideo.src} 
+                key={activeVideo.src}
                 className="w-full h-full object-contain bg-black"
                 controls
                 autoPlay
-                muted // Muting guarantees the system passes absolute web browser autoplay blocks
+                muted
                 playsInline
                 onEnded={handleVideoEnd}
               >
@@ -122,71 +157,114 @@ export default function Product3DShowcase() {
                 Your browser does not support the video tag.
               </video>
 
-              {/* Minimal Top Layout Metadata overlay overlaying active performance logs */}
-              <div className="absolute top-4 left-4 z-20 flex items-center gap-2 bg-[#0a0a0a]/80 backdrop-blur-sm border border-zinc-800 px-3 py-1.5">
-                <span className="w-2 h-2 bg-[#cc2221] rounded-full animate-ping shrink-0" />
+              {/* Top-Left Live Status Badge */}
+              <div className="absolute top-4 left-4 z-20 flex items-center gap-2 bg-[#0a0a0a]/90 backdrop-blur-md border border-zinc-800 px-3 py-1.5 shadow-lg">
+                <span className="w-2 h-2 bg-[#CC0000] rounded-full animate-ping shrink-0" />
                 <span className="text-[10px] font-mono tracking-widest text-zinc-300 uppercase font-bold">
-                  Autoloop Sequence Item 0{activeVideoIndex + 1}
+                  {activeVideo.badge} • 0{activeVideoIndex + 1}/0{MOST_POPULAR_PRODUCTS.length}
                 </span>
+              </div>
+
+              {/* Top-Right Visualization Mode */}
+              <div className="absolute top-4 right-4 z-20 bg-black/80 backdrop-blur-sm border border-zinc-800 px-3 py-1 text-[10px] font-mono uppercase tracking-widest text-[#CC0000] font-bold">
+                {activeVideo.type}
               </div>
             </div>
 
-            {/* Permanent Bottom Technical Specs Drawer */}
-            <div className="mt-4 p-6 bg-zinc-900/40 border border-zinc-900 rounded-none space-y-2">
-              <div className="flex items-center gap-3">
-                <Badge variant="outline" className="text-[#cc2221] border-[#cc2221] bg-[#cc2221]/10 rounded-none uppercase text-[10px] tracking-wider font-black">
-                  {activeVideo.type.replace('_', ' ')}
-                </Badge>
-                <span className="text-xs text-gray-400 font-mono tracking-wide">{activeVideo.duration} Log Length</span>
+            {/* Bottom Technical Specifications Drawer */}
+            <div className="p-6 bg-zinc-900/60 border border-zinc-800 rounded-none space-y-4">
+              <div className="flex flex-wrap items-center justify-between gap-3 border-b border-zinc-800 pb-3">
+                <div className="flex items-center gap-2">
+                  <Badge variant="outline" className="text-[#CC0000] border-[#CC0000] bg-[#CC0000]/10 rounded-none uppercase text-[10px] tracking-wider font-black">
+                    {activeVideo.category}
+                  </Badge>
+                  <span className="text-xs text-zinc-400 font-mono tracking-wide">
+                    {activeVideo.duration} Run Duration
+                  </span>
+                </div>
+
+                <div className="flex items-center gap-4 text-xs font-mono text-zinc-400">
+                  <span className="flex items-center gap-1.5">
+                    <ShieldCheck className="w-3.5 h-3.5 text-[#CC0000]" /> {activeVideo.materialStandard}
+                  </span>
+                  <span className="flex items-center gap-1.5">
+                    <Activity className="w-3.5 h-3.5 text-emerald-400" /> {activeVideo.loadClass}
+                  </span>
+                </div>
               </div>
-              <h3 className="text-2xl font-black text-white uppercase tracking-tight">{activeVideo.title}</h3>
-              <p className="text-gray-400 text-sm font-light leading-relaxed max-w-4xl">{activeVideo.description}</p>
+
+              <div>
+                <h3 className="text-2xl font-black text-white uppercase tracking-tight mb-2">
+                  {activeVideo.title}
+                </h3>
+                <p className="text-zinc-300 text-sm font-light leading-relaxed">
+                  {activeVideo.description}
+                </p>
+              </div>
             </div>
           </div>
 
-          {/* RIGHT: Active Playlist Index Trackers */}
-          <div className="lg:col-span-1 bg-zinc-900/20 rounded-none border border-zinc-900 p-4 h-full flex flex-col justify-between min-h-[400px]">
+          {/* RIGHT: Popular Product Playlist Lineup (4 Cols) */}
+          <div className="lg:col-span-4 bg-zinc-900/30 rounded-none border border-zinc-800 p-5 flex flex-col justify-between w-full space-y-6">
             <div className="w-full">
-              <h4 className="text-gray-400 font-bold uppercase text-xs tracking-widest mb-4 flex items-center gap-2 border-b border-zinc-900 pb-3">
-                <Layers className="w-4 h-4" /> 
-                Showroom Playlist Lineup
-              </h4>
-              
-              <div className="space-y-3 overflow-y-auto pr-2 custom-scrollbar max-h-[420px]">
-                {PRODUCT_VIDEOS.map((video, idx) => {
+              <div className="flex items-center justify-between border-b border-zinc-800 pb-3 mb-4">
+                <h4 className="text-zinc-300 font-bold uppercase text-xs tracking-widest flex items-center gap-2">
+                  <Layers className="w-4 h-4 text-[#CC0000]" />
+                  Popular Lineup Playlist
+                </h4>
+                <span className="text-[10px] font-mono text-zinc-500 uppercase">
+                  Auto-playing sequence
+                </span>
+              </div>
+
+              <div className="space-y-3 overflow-y-auto pr-1 max-h-[480px]">
+                {MOST_POPULAR_PRODUCTS.map((video, idx) => {
                   const isCurrent = activeVideoIndex === idx;
                   return (
-                    <div 
+                    <div
                       key={video.id}
                       onClick={() => setActiveVideoIndex(idx)}
                       className={cn(
-                        "flex gap-4 p-3 rounded-none cursor-pointer transition-all border group items-center",
-                        isCurrent 
-                          ? "bg-[#cc2221]/10 border-[#cc2221]" 
-                          : "bg-black border-zinc-900 hover:border-zinc-700"
+                        "flex gap-3.5 p-3 rounded-none cursor-pointer transition-all border group items-center",
+                        isCurrent
+                          ? "bg-[#CC0000]/15 border-[#CC0000] shadow-md"
+                          : "bg-black/70 border-zinc-900 hover:border-zinc-700 hover:bg-zinc-900/40"
                       )}
                     >
-                      {/* Thumbnail Placeholder Window */}
-                      <div className="relative w-24 h-16 bg-zinc-900 rounded-none overflow-hidden shrink-0 flex items-center justify-center border border-zinc-800">
-                        <Image 
-                          src={video.thumbnail} 
-                          alt="thumb" 
-                          fill 
-                          className="object-cover opacity-60 group-hover:opacity-100 transition-opacity"
+                      {/* Thumbnail Container */}
+                      <div className="relative w-24 h-16 bg-white rounded-none overflow-hidden shrink-0 flex items-center justify-center border border-zinc-800 p-1">
+                        <Image
+                          src={video.thumbnail}
+                          alt={video.title}
+                          fill
+                          className="object-contain p-1 transition-transform group-hover:scale-105"
                         />
                         {isCurrent && (
-                          <div className="absolute inset-0 bg-black/60 flex items-center justify-center z-10">
-                            <div className="w-2.5 h-2.5 bg-[#cc2221] rounded-full animate-ping" />
+                          <div className="absolute inset-0 bg-black/40 flex items-center justify-center z-10">
+                            <div className="w-2.5 h-2.5 bg-[#CC0000] rounded-full animate-ping" />
                           </div>
                         )}
                       </div>
 
                       {/* Info Text Element */}
-                      <div className="flex flex-col justify-center">
-                        <h5 className={cn("font-bold text-xs uppercase tracking-wide leading-tight mb-1 transition-colors", isCurrent ? "text-[#cc2221]" : "text-white group-hover:text-[#cc2221]")}>
+                      <div className="flex flex-col justify-center min-w-0 flex-1">
+                        <div className="flex items-center justify-between gap-1 mb-0.5">
+                          <span className="text-[9px] font-mono uppercase tracking-widest text-[#CC0000] font-bold">
+                            {video.badge}
+                          </span>
+                          <span className="text-[9px] font-mono text-zinc-500">
+                            {video.duration}
+                          </span>
+                        </div>
+                        <h5 className={cn(
+                          "font-bold text-xs uppercase tracking-wide leading-tight line-clamp-1 transition-colors",
+                          isCurrent ? "text-white font-black" : "text-zinc-200 group-hover:text-white"
+                        )}>
                           {video.title}
                         </h5>
-                        <p className="text-[11px] text-gray-500 line-clamp-1">{video.description}</p>
+                        <p className="text-[11px] text-zinc-400 line-clamp-1 font-light mt-0.5">
+                          {video.category}
+                        </p>
                       </div>
                     </div>
                   );
@@ -194,11 +272,13 @@ export default function Product3DShowcase() {
               </div>
             </div>
 
-            {/* Bottom Technical Assets Outbound Request */}
-            <div className="mt-6 pt-4 border-t border-zinc-900 text-left w-full">
-               <Button variant="outline" className="w-full text-xs text-white bg-transparent border-zinc-800 hover:bg-white hover:text-black font-black uppercase tracking-wider h-11 rounded-none transition-colors">
-                 Request CAD / BIM Files <ChevronRight className="w-3 h-3 ml-2" />
-               </Button>
+            {/* Bottom Quick Action */}
+            <div className="pt-4 border-t border-zinc-800 text-left w-full space-y-2">
+              <Link href="/contact" className="block w-full">
+                <Button className="w-full bg-[#CC0000] hover:bg-white hover:text-black text-white font-black uppercase tracking-wider text-xs h-11 rounded-none transition-all flex items-center justify-center gap-2">
+                  Get Bulk Quote For Popular Lineup <ChevronRight className="w-3.5 h-3.5" />
+                </Button>
+              </Link>
             </div>
           </div>
 

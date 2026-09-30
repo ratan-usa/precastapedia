@@ -33,47 +33,47 @@ const features = [
 
 export default function ProductCalculator() {
   return (
-    <section className="relative py-24 bg-[#fffaf5] overflow-hidden">
-       
-      <div 
+    <section className="relative pt-8 bg-[#fffaf5] overflow-hidden">
+
+      <div
         className="absolute inset-0 z-0 opacity-40 pointer-events-none"
         style={{
-            backgroundImage: 'linear-gradient(#e5e7eb 1px, transparent 1px), linear-gradient(90deg, #e5e7eb 1px, transparent 1px)',
-            backgroundSize: '40px 40px'
+          backgroundImage: 'linear-gradient(#e5e7eb 1px, transparent 1px), linear-gradient(90deg, #e5e7eb 1px, transparent 1px)',
+          backgroundSize: '40px 40px'
         }}
       ></div>
 
       <div className="w-full px-4 sm:px-6 lg:px-10 py-3 mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-           
+
           <div className="text-center lg:text-left">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 leading-tight">
               Simplify Complex Pricing with Our <br />
-              <span className="text-[#cc2221]">Built-in Product Calculator..</span>
+              <span className="text-[#CC0000]">Built-in Product Calculator..</span>
             </h2>
-            
-            <div className="relative w-full max-w-md mx-auto lg:mx-0 aspect-square"> 
-              <Image 
-                src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image9.jpeg`} 
+
+            <div className="relative w-full max-w-md mx-auto lg:mx-0 aspect-square">
+              <Image
+                src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image9.jpeg`}
                 alt="Pricing Calculator Illustration"
                 fill
                 className="object-contain"
-              /> 
+              />
             </div>
           </div>
- 
+
           <div className="space-y-10">
             {features.map((feature) => (
               <div key={feature.id} className="flex gap-5 group">
-                 
+
                 <div className="shrink-0">
                   <div className="w-12 h-12 bg-white rounded-lg border border-red-100 shadow-sm flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <feature.icon className="w-6 h-6 text-[#cc2221]" strokeWidth={1.5} />
+                    <feature.icon className="w-6 h-6 text-[#CC0000]" strokeWidth={1.5} />
                   </div>
                 </div>
- 
+
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-[#cc2221] transition-colors">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-[#CC0000] transition-colors">
                     {feature.title}
                   </h3>
                   <p className="text-gray-600 text-sm leading-relaxed">

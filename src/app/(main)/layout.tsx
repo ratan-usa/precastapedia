@@ -32,7 +32,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" type="image/png" href={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/apple-touch-icon.png`} />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased pr-8`}>
         <div className="hidden md:block">
           <BackgroundMusic />
           <TopNavbar />

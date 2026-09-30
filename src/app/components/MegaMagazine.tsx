@@ -99,12 +99,12 @@ export default function MegaMagazine() {
     <section className="bg-[#0a0a0a] text-zinc-300 py-10 font-sans border-t border-zinc-950">
       {/* Absolute strict fluid full width padding */}
       <div className="w-full px-4 sm:px-6 lg:px-10">
-        
+
         {/* TOP ROW: Mega Foundries Custom Header Banner */}
         <div className="w-full bg-[#141414] border border-zinc-900 p-6 mb-8 flex flex-col md:flex-row items-center justify-between rounded-xs gap-4">
           <div className="flex items-center gap-3">
             <div className="text-2xl font-black tracking-tighter text-white">
-              MEGA <span className="text-[#cc2221]">FOUNDRIES</span>
+              MEGA <span className="text-[#CC0000]">FOUNDRIES</span>
             </div>
             <div className="h-6 w-[1px] bg-zinc-800 hidden md:block" />
             <span className="text-[10px] font-mono tracking-widest text-zinc-500 uppercase">
@@ -118,13 +118,13 @@ export default function MegaMagazine() {
 
         {/* MAIN 3-COLUMN STRUCTURE */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
-          
+
           {/* COLUMN 1: LEFT SIDEBAR TABS INDEX (Metals Selectors) */}
           <div className="md:col-span-3 bg-[#141414] border border-zinc-900 rounded-xs overflow-hidden shadow-xl">
             <div className="bg-[#1c1c1c] p-4 border-b border-zinc-900">
               <h3 className="text-xs font-bold uppercase tracking-wider text-white leading-tight">
                 Casting Source <br />
-                <span className="text-[#cc2221]">Magazine</span>
+                <span className="text-[#CC0000]">Magazine</span>
               </h3>
             </div>
             <nav className="flex flex-col">
@@ -135,8 +135,8 @@ export default function MegaMagazine() {
                     key={tab.id}
                     onClick={() => setActiveTab(tab.id)}
                     className={`w-full text-left px-4 py-2.5 text-xs font-medium border-l-2 transition-all duration-200
-                      ${isActive 
-                        ? "bg-[#0a0a0a] text-[#cc2221] border-[#cc2221] font-bold" 
+                      ${isActive
+                        ? "bg-[#0a0a0a] text-[#CC0000] border-[#CC0000] font-bold"
                         : "bg-transparent text-zinc-400 border-transparent hover:bg-[#1a1a1a] hover:text-white"
                       }
                     `}
@@ -153,17 +153,17 @@ export default function MegaMagazine() {
             <div className="border-b border-zinc-900 pb-3">
               <h2 className="text-3xl font-black tracking-tight text-white uppercase inline-block relative whitespace-nowrap">
                 {activeTab.replace("-", " ")}
-                <span className="absolute bottom-[-13px] left-0 w-12 h-[3px] bg-[#cc2221]" />
+                <span className="absolute bottom-[-13px] left-0 w-12 h-[3px] bg-[#CC0000]" />
               </h2>
             </div>
 
             <div className="space-y-4 pt-4">
-              <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight leading-snug hover:text-[#cc2221] transition-colors duration-200">
+              <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight leading-snug hover:text-[#CC0000] transition-colors duration-200">
                 {currentContent.title}
               </h3>
-              
+
               <div className="flex flex-wrap gap-2 text-xs font-mono text-zinc-500">
-                <span className="text-[#cc2221] font-bold italic">{currentContent.author}</span>
+                <span className="text-[#CC0000] font-bold italic">{currentContent.author}</span>
                 <span>•</span>
                 <span>{currentContent.date}</span>
               </div>
@@ -173,9 +173,9 @@ export default function MegaMagazine() {
               </p>
 
               <div className="pt-2">
-                <Link 
-                  href={currentContent.link} 
-                  className="text-xs font-bold uppercase tracking-wider text-[#cc2221] hover:text-white transition-colors duration-200 inline-block border-b border-dashed border-[#cc2221] pb-0.5"
+                <Link
+                  href={currentContent.link}
+                  className="text-xs font-bold uppercase tracking-wider text-[#CC0000] hover:text-white transition-colors duration-200 inline-block border-b border-dashed border-[#CC0000] pb-0.5"
                 >
                   Read Technical Spec
                 </Link>
@@ -191,9 +191,9 @@ export default function MegaMagazine() {
             <ul className="space-y-2">
               {currentContent.rightCategories.map((category, index) => (
                 <li key={index}>
-                  <Link 
+                  <Link
                     href={`/magazine/matrix/${category.toLowerCase().replace(/ /g, "-")}`}
-                    className="text-xs text-zinc-500 hover:text-[#cc2221] transition-colors duration-150 block py-0.5"
+                    className="text-xs text-zinc-500 hover:text-[#CC0000] transition-colors duration-150 block py-0.5"
                   >
                     {category}
                   </Link>

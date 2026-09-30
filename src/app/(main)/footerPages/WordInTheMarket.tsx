@@ -48,12 +48,12 @@ export default function WordInTheMarket() {
   return (
     <section className="py-16 bg-white overflow-hidden">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* === HEADER === */}
         {/* Red vertical line + Title */}
         <div className="flex items-center gap-3 mb-10">
-          <div className="w-1 h-8 bg-[#cc2221]"></div>
-          <h2 className="text-xl md:text-2xl font-normal text-[#cc2221] uppercase tracking-wide">
+          <div className="w-1 h-8 bg-[#CC0000]"></div>
+          <h2 className="text-xl md:text-2xl font-normal text-[#CC0000] uppercase tracking-wide">
             WORD IN THE MARKET
           </h2>
         </div>
@@ -61,17 +61,17 @@ export default function WordInTheMarket() {
         {/* === HORIZONTAL SCROLL LIST === */}
         <div className="flex overflow-x-auto gap-6 pb-8 -mx-4 px-4 scrollbar-hide snap-x snap-mandatory">
           {marketUpdates.map((item) => (
-            <div 
-              key={item.id} 
+            <div
+              key={item.id}
               className="min-w-[280px] md:min-w-[320px] w-[320px] shrink-0 bg-white rounded-lg snap-start group cursor-pointer"
             >
-              
+
               {/* IMAGE WITH CURVED BOTTOM */}
               <div className="relative h-48 w-full overflow-hidden">
-                <div 
+                <div
                   className="w-full h-full relative overflow-hidden transition-transform duration-500 group-hover:scale-105"
                   // This inline style creates the specific "convex" curve at the bottom
-                  style={{ borderRadius: '0 0 50% 50% / 0 0 30px 30px' }} 
+                  style={{ borderRadius: '0 0 50% 50% / 0 0 30px 30px' }}
                 >
                   <Image
                     src={item.image}
@@ -86,7 +86,7 @@ export default function WordInTheMarket() {
 
               {/* CONTENT */}
               <div className="pt-6 pr-4">
-                <h3 className="text-[#cc2221] font-medium text-lg mb-3">
+                <h3 className="text-[#CC0000] font-medium text-lg mb-3">
                   {item.title}
                 </h3>
                 <p className="text-sm text-gray-600 leading-relaxed">

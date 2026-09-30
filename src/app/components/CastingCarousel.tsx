@@ -75,13 +75,13 @@ export default function MetalDirectory() {
   const [selectedMetal, setSelectedMetal] = useState<MetalProfile>(METALS_DATA[0]);
 
   return (
-    <section className="bg-[#0a0a0a] text-white py-24 font-sans border-t border-zinc-950">
+    <section className="bg-[#0a0a0a] text-white pt-8 font-sans border-t border-zinc-950">
       {/* Dynamic Fluid Full Width Layout Container */}
       <div className="w-full px-4 sm:px-6 lg:px-10">
-        
+
         {/* Dynamic Header */}
         <div className="border-b border-zinc-900 pb-10 mb-16">
-          <span className="text-xs uppercase tracking-[0.3em] font-black text-[#cc2221] block mb-3">
+          <span className="text-xs uppercase tracking-[0.3em] font-black text-[#CC0000] block mb-3">
             Material Specifications
           </span>
           <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter">
@@ -91,7 +91,7 @@ export default function MetalDirectory() {
 
         {/* Asymmetrical Split Screen Core */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-          
+
           {/* LEFT COLUMN: Industrial Selector Index */}
           <div className="lg:col-span-5 flex flex-col gap-3">
             {METALS_DATA.map((metal) => {
@@ -103,21 +103,21 @@ export default function MetalDirectory() {
                   className={`
                     w-full text-left p-5 transition-all duration-300 rounded-xs border
                     flex items-center justify-between group
-                    ${isActive 
-                      ? "bg-[#141414] border-[#cc2221] text-white shadow-xl" 
+                    ${isActive
+                      ? "bg-[#141414] border-[#CC0000] text-white shadow-xl"
                       : "bg-[#0f0f0f] border-zinc-900 text-zinc-500 hover:border-zinc-800 hover:text-zinc-300"
                     }
                   `}
                 >
                   <div>
-                    <p className={`text-lg font-bold tracking-tight transition-colors ${isActive ? 'text-[#cc2221]' : 'text-zinc-400 group-hover:text-white'}`}>
+                    <p className={`text-lg font-bold tracking-tight transition-colors ${isActive ? 'text-[#CC0000]' : 'text-zinc-400 group-hover:text-white'}`}>
                       {metal.name}
                     </p>
                     <p className="text-xs text-zinc-600 mt-0.5 uppercase tracking-wider font-medium">
                       {metal.subtitle}
                     </p>
                   </div>
-                  <ArrowRight className={`w-4 h-4 transition-all duration-300 ${isActive ? 'text-[#cc2221] translate-x-1' : 'text-zinc-800 group-hover:text-zinc-400'}`} />
+                  <ArrowRight className={`w-4 h-4 transition-all duration-300 ${isActive ? 'text-[#CC0000] translate-x-1' : 'text-zinc-800 group-hover:text-zinc-400'}`} />
                 </button>
               );
             })}
@@ -125,15 +125,15 @@ export default function MetalDirectory() {
 
           {/* RIGHT COLUMN: The Interactive Focal Blast Window */}
           <div className="lg:col-span-7 bg-[#141414] border border-zinc-900 p-8 md:p-12 rounded-sm relative overflow-hidden min-h-[500px] flex flex-col justify-between shadow-2xl">
-            
+
             {/* Structural Geometric Backing Accents */}
-            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#cc2221]/10 to-transparent pointer-events-none" />
-            
+            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#CC0000]/10 to-transparent pointer-events-none" />
+
             <div>
               {/* Active Badge */}
-              <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#cc2221]/10 border border-[#cc2221]/20 rounded-full mb-6">
-                <Layers className="w-3.5 h-3.5 text-[#cc2221]" />
-                <span className="text-[10px] uppercase tracking-widest font-black text-[#cc2221]">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#CC0000]/10 border border-[#CC0000]/20 rounded-full mb-6">
+                <Layers className="w-3.5 h-3.5 text-[#CC0000]" />
+                <span className="text-[10px] uppercase tracking-widest font-black text-[#CC0000]">
                   Selected Spec Sheet
                 </span>
               </div>
@@ -154,13 +154,13 @@ export default function MetalDirectory() {
 
             {/* Technical Analytical Footers */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 border-t border-zinc-900/80 pt-8 mt-auto">
-              
+
               {/* Formula & Chemical Composition */}
               <div>
                 <span className="flex items-center gap-1.5 text-xs font-bold text-zinc-500 uppercase tracking-wider mb-3">
-                  <Activity className="w-3.5 h-3.5 text-[#cc2221]" /> Elemental Composition
+                  <Activity className="w-3.5 h-3.5 text-[#CC0000]" /> Elemental Composition
                 </span>
-                <div className="font-mono text-sm bg-[#0a0a0a] border border-zinc-900 p-3 text-[#cc2221] rounded-xs font-semibold">
+                <div className="font-mono text-sm bg-[#0a0a0a] border border-zinc-900 p-3 text-[#CC0000] rounded-xs font-semibold">
                   {selectedMetal.composition}
                 </div>
               </div>
@@ -168,12 +168,12 @@ export default function MetalDirectory() {
               {/* Structural Mechanical Characteristics */}
               <div>
                 <span className="flex items-center gap-1.5 text-xs font-bold text-zinc-500 uppercase tracking-wider mb-3">
-                  <ShieldAlert className="w-3.5 h-3.5 text-[#cc2221]" /> Core Mechanical Traits
+                  <ShieldAlert className="w-3.5 h-3.5 text-[#CC0000]" /> Core Mechanical Traits
                 </span>
                 <ul className="space-y-1.5">
                   {selectedMetal.properties.map((prop, idx) => (
                     <li key={idx} className="text-xs text-zinc-400 flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 bg-[#cc2221] rounded-full flex-shrink-0" />
+                      <span className="w-1.5 h-1.5 bg-[#CC0000] rounded-full flex-shrink-0" />
                       {prop}
                     </li>
                   ))}

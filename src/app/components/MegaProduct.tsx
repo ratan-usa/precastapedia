@@ -60,7 +60,7 @@ const products = [
     image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/MEGA/catch-01.JPG`,
     link: "/products/drainage-castings"
   },
-  
+
   {
     id: "petro-gas-station-products",
     title: "Petro Gas Station Products",
@@ -127,7 +127,7 @@ const MegaProduct = () => {
         {/* Header Section */}
         <div className="border-b border-zinc-800 pb-6 mb-10">
           <h2 className="text-3xl font-light tracking-wide text-white mb-2">
-            Explore <span className="font-semibold text-[#cc2221]">Mega Foundries</span> Products
+            Explore <span className="font-semibold text-[#CC0000]">Mega Foundries</span> Products
           </h2>
           <p className="text-sm text-zinc-400">
             Complete line of world-class nodular ductile iron castings (Fe 50007), delivering ultimate durability and engineering modernity to your infrastructure projects.
@@ -135,16 +135,16 @@ const MegaProduct = () => {
         </div>
 
         {/* Categorized Quick Links Menu */}
-        <div className="flex flex-wrap gap-2 justify-center md:justify-start mb-16 text-xs uppercase tracking-wider">
+        {/* <div className="flex flex-wrap gap-2 justify-center md:justify-start mb-16 text-xs uppercase tracking-wider">
           {categories.map((cat, index) => (
             <button
               key={index}
-              className="px-3 py-2 border border-zinc-800 bg-[#1a1a1a] hover:bg-[#cc2221] hover:border-[#cc2221] text-zinc-300 hover:text-white transition-all duration-200 rounded-sm"
+              className="px-3 py-2 border border-zinc-800 bg-[#1a1a1a] hover:bg-[#CC0000] hover:border-[#CC0000] text-zinc-300 hover:text-white transition-all duration-200 rounded-sm"
             >
               {cat}
             </button>
           ))}
-        </div>
+        </div> */}
 
         {/* Product Grid / Row Layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -154,11 +154,11 @@ const MegaProduct = () => {
               className="flex flex-col md:flex-row items-center gap-8 md:gap-16 border-b border-zinc-900 filter drop-shadow-[0_10px_15px_rgba(0,0,0,0.6)] transition-transform duration-300  pb-12 last:border-0"
             >
               {/* Product Image Wrapper Container */}
-              <div className="w-full md:w-1/3 flex justify-center items-center bg-[#181818] p-6 rounded-lg border border-zinc-800/40 shadow-inner group">
+              <div className="w-full md:w-1/3 flex justify-center items-center bg-white p-6 rounded-lg border border-zinc-800/40  group">
                 <img
                   src={product.image}
                   alt={product.title}
-                  className="max-h-56 object-contain filter drop-shadow-[0_10px_15px_rgba(0,0,0,0.6)] transition-transform duration-300 group-hover:scale-105"
+                  className="max-h-56 object-contain filter   transition-transform duration-300 group-hover:scale-105"
                   onError={(e) => {
                     e.currentTarget.src = "https://via.placeholder.com/300x200/222/fff?text=Casting+Product";
                   }}
@@ -179,8 +179,8 @@ const MegaProduct = () => {
                   href={product.link}
                   className="
                     inline-block text-xs font-bold uppercase tracking-widest text-white 
-                    border border-[#cc2221] px-6 py-3 bg-transparent 
-                    hover:bg-[#cc2221] transition-all duration-300 ease-in-out
+                    border border-[#CC0000] px-6 py-3 bg-transparent 
+                    hover:bg-[#CC0000] transition-all duration-300 ease-in-out
                     rounded-xs
                   "
                 >

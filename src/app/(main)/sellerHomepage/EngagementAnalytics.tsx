@@ -33,7 +33,7 @@ const EngagementAnalytics = () => {
 
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-5xl font-normal text-gray-900">
-                        Engagement <span className="text-[#cc2221]">Analytics</span>
+                        Engagement <span className="text-[#CC0000]">Analytics</span>
                     </h2>
                 </div>
 

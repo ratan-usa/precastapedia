@@ -29,7 +29,7 @@ const features = [
 ];
 const AboutSection = () => {
   return (
-    <section className="relative w-full py-16 sm:py-24 bg-white">
+    <section className="relative w-full py-16 sm:pt-8 bg-white">
       <div className="absolute inset-0 z-0 h-[225px] w-full">
         <Image
           src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image13.jpg`}
@@ -44,7 +44,7 @@ const AboutSection = () => {
         <h2 className="text-[40px] pb-12 font-extrabold tracking-tight text-white mb-8">
           Ventures
         </h2>
-        <p className="text-[20px] py-5 font-semibold uppercase tracking-widest text-[#cc2221] mb-2">
+        <p className="text-[20px] py-5 font-semibold uppercase tracking-widest text-[#CC0000] mb-2">
           MEGA FOUNDRIES - FOR THE INDUSTRY
         </p>
         <h3 className="text-[25px] sm:text-4xl font-bold max-w-4xl mx-auto mb-16">
@@ -60,7 +60,7 @@ const AboutSection = () => {
             >
               <CardHeader className="flex flex-col items-center pt-10 pb-4">
                 <div className="w-12 h-12 rounded-full border-2 border-red-300 bg-red-50 flex items-center justify-center mb-4">
-                  <feature.icon className="w-8 h-8 text-[#cc2221]" />
+                  <feature.icon className="w-8 h-8 text-[#CC0000]" />
                 </div>
                 <CardTitle className="text-[20px] font-semibold text-gray-900">
                   {feature.title}

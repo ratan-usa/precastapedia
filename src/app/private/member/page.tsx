@@ -4,10 +4,10 @@ export const dynamic = 'force-dynamic';
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import { 
-  DollarSign, 
-  ShoppingCart, 
-  Activity, 
+import {
+  DollarSign,
+  ShoppingCart,
+  Activity,
   CreditCard,
   ArrowUpRight,
   MoreHorizontal,
@@ -34,11 +34,11 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 // Import your API Helper
-import { getUserProfile } from '@/lib/api'; 
+import { getUserProfile } from '@/lib/api';
 
 export default function DashboardPage() {
   const router = useRouter();
-  
+
   // --- STATE ---
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState({
@@ -61,23 +61,23 @@ export default function DashboardPage() {
 
       // Fetch User Profile
       const res = await getUserProfile(token, tenant);
-      
+
       if (res.success && res.data) {
         console.log("✅ Dashboard Loaded for:", res.data.fullName);
         setUser({
-            name: res.data.fullName || "Member",
-            email: res.data.email,
-            role: res.data.role || "Viewer",
-            id: res.data.id // Captured ID for future API calls
+          name: res.data.fullName || "Member",
+          email: res.data.email,
+          role: res.data.role || "Viewer",
+          id: res.data.id // Captured ID for future API calls
         });
-        
+
         // Save ID for other pages (like Vendor Registration)
-        if(res.data.id) localStorage.setItem('currentUserId', res.data.id);
+        if (res.data.id) localStorage.setItem('currentUserId', res.data.id);
       }
-      
+
       setLoading(false);
     }
-    
+
     initDashboard();
   }, [router]);
 
@@ -98,44 +98,44 @@ export default function DashboardPage() {
   ];
 
   if (loading) {
-      return (
-        <div className="h-[80vh] flex flex-col items-center justify-center gap-2">
-            <Loader2 className="animate-spin text-[#cc2221] w-10 h-10" />
-            <p className="text-slate-500">Loading Dashboard...</p>
-        </div>
-      );
+    return (
+      <div className="h-[80vh] flex flex-col items-center justify-center gap-2">
+        <Loader2 className="animate-spin text-[#CC0000] w-10 h-10" />
+        <p className="text-slate-500">Loading Dashboard...</p>
+      </div>
+    );
   }
 
   return (
     <div className="space-y-8 p-1">
-      
+
       {/* --- WELCOME BANNER --- */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
-            <h2 className="text-3xl font-bold tracking-tight text-slate-900">
-                Welcome back, {user.name} 👋
-            </h2>
-            <p className="text-slate-500">
-                Here is what's happening with your projects today.
-            </p>
+          <h2 className="text-3xl font-bold tracking-tight text-slate-900">
+            Welcome back, {user.name} 👋
+          </h2>
+          <p className="text-slate-500">
+            Here is what's happening with your projects today.
+          </p>
         </div>
         <div className="flex gap-2">
-            <Button variant="outline">Download Report</Button>
-            <Button className="bg-[#cc2221] hover:bg-red-700">
-                <ShieldCheck className="w-4 h-4 mr-2"/> Verify Identity
-            </Button>
+          <Button variant="outline">Download Report</Button>
+          <Button className="bg-[#CC0000] hover:bg-red-700">
+            <ShieldCheck className="w-4 h-4 mr-2" /> Verify Identity
+          </Button>
         </div>
       </div>
 
       {/* --- STATS GRID --- */}
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
         {stats.map((stat, i) => (
-          <Card key={i} className="shadow-sm hover:shadow-md transition-shadow border-t-4 border-t-transparent hover:border-t-[#cc2221]">
+          <Card key={i} className="shadow-sm hover:shadow-md transition-shadow border-t-4 border-t-transparent hover:border-t-[#CC0000]">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-sm font-medium text-slate-600">
                 {stat.title}
               </CardTitle>
-              <stat.icon className="h-4 w-4 text-[#cc2221]" />
+              <stat.icon className="h-4 w-4 text-[#CC0000]" />
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold text-slate-900">{stat.value}</div>
@@ -152,13 +152,13 @@ export default function DashboardPage() {
         <Card className="shadow-sm">
           <CardHeader className="flex flex-row items-center justify-between">
             <div>
-                <CardTitle className="text-xl">Recent Orders</CardTitle>
-                <CardDescription>
-                    You have 12 orders moving through production today.
-                </CardDescription>
+              <CardTitle className="text-xl">Recent Orders</CardTitle>
+              <CardDescription>
+                You have 12 orders moving through production today.
+              </CardDescription>
             </div>
             <Button className="bg-slate-900 hover:bg-slate-800 text-white">
-                View All Orders <ArrowUpRight className="ml-2 h-4 w-4"/>
+              View All Orders <ArrowUpRight className="ml-2 h-4 w-4" />
             </Button>
           </CardHeader>
           <CardContent>
@@ -184,18 +184,18 @@ export default function DashboardPage() {
                     <TableCell>{order.date}</TableCell>
                     <TableCell className="text-right">{order.total}</TableCell>
                     <TableCell className="text-right">
-                        <DropdownMenu>
-                            <DropdownMenuTrigger asChild>
-                                <Button variant="ghost" className="h-8 w-8 p-0">
-                                    <MoreHorizontal className="h-4 w-4" />
-                                </Button>
-                            </DropdownMenuTrigger>
-                            <DropdownMenuContent align="end">
-                                <DropdownMenuItem>View Details</DropdownMenuItem>
-                                <DropdownMenuItem>Download Invoice</DropdownMenuItem>
-                                <DropdownMenuItem className="text-red-600">Cancel Order</DropdownMenuItem>
-                            </DropdownMenuContent>
-                        </DropdownMenu>
+                      <DropdownMenu>
+                        <DropdownMenuTrigger asChild>
+                          <Button variant="ghost" className="h-8 w-8 p-0">
+                            <MoreHorizontal className="h-4 w-4" />
+                          </Button>
+                        </DropdownMenuTrigger>
+                        <DropdownMenuContent align="end">
+                          <DropdownMenuItem>View Details</DropdownMenuItem>
+                          <DropdownMenuItem>Download Invoice</DropdownMenuItem>
+                          <DropdownMenuItem className="text-red-600">Cancel Order</DropdownMenuItem>
+                        </DropdownMenuContent>
+                      </DropdownMenu>
                     </TableCell>
                   </TableRow>
                 ))}
@@ -210,15 +210,15 @@ export default function DashboardPage() {
 
 // Helper for status colors
 function StatusBadge({ status }: { status: string }) {
-    let styles = "bg-slate-100 text-slate-600";
-    if (status === 'In Production') styles = "bg-blue-100 text-blue-700 border-blue-200 border";
-    if (status === 'Shipped') styles = "bg-yellow-100 text-yellow-700 border-yellow-200 border";
-    if (status === 'Delivered') styles = "bg-green-100 text-green-700 border-green-200 border";
-    if (status === 'Pending') styles = "bg-orange-100 text-orange-700 border-orange-200 border";
+  let styles = "bg-slate-100 text-slate-600";
+  if (status === 'In Production') styles = "bg-blue-100 text-blue-700 border-blue-200 border";
+  if (status === 'Shipped') styles = "bg-yellow-100 text-yellow-700 border-yellow-200 border";
+  if (status === 'Delivered') styles = "bg-green-100 text-green-700 border-green-200 border";
+  if (status === 'Pending') styles = "bg-orange-100 text-orange-700 border-orange-200 border";
 
-    return (
-        <Badge variant="outline" className={`${styles} font-normal`}>
-            {status}
-        </Badge>
-    );
+  return (
+    <Badge variant="outline" className={`${styles} font-normal`}>
+      {status}
+    </Badge>
+  );
 }

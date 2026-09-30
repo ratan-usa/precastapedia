@@ -70,7 +70,7 @@ export default function CareersPage() {
       <section className="relative h-[60vh] flex items-center justify-center bg-slate-900 text-white overflow-hidden">
         {/* Background Image Placeholder */}
         <div className="absolute inset-0 bg-slate-800">
-          <div 
+          <div
             className="absolute inset-0 bg-cover bg-center opacity-20"
             style={{ backgroundImage: `url(${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image14.jpeg)` }}
           />
@@ -212,7 +212,7 @@ export default function CareersPage() {
       </section>
 
       {/* === FOOTER CTA === */}
-      <section className="py-24 bg-red-600 text-white text-center">
+      <section className="pt-8 bg-red-600 text-white text-center">
         <div className="max-w-3xl mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Join the Team?</h2>
           <p className="text-red-100 text-lg mb-8">

@@ -42,9 +42,9 @@ const SearchBar = () => {
         border-r border-[#CCCCCC]
 
         /* === HOVER STATE === */
-        hover:bg-[#cc2221] 
+        hover:bg-[#CC0000] 
         hover:text-white
-        hover:border-[#cc2221]
+        hover:border-[#CC0000]
     "
                     >
                         <span className="block w-full truncate">
@@ -76,7 +76,7 @@ const SearchBar = () => {
                         className="
                             cursor-pointer text-xs font-semibold px-3 py-2 text-neutral-800
                             rounded-none
-                            focus:bg-[#cc2221] focus:text-white
+                            focus:bg-[#CC0000] focus:text-white
                         "
                     >
                         All
@@ -90,7 +90,7 @@ const SearchBar = () => {
                             className="
                                 cursor-pointer text-xs font-semibold px-3 py-2 text-neutral-800
                                 rounded-none
-                                focus:bg-[#cc2221] focus:text-white
+                                focus:bg-[#CC0000] focus:text-white
                             "
                         >
                             {section.label}
@@ -107,7 +107,7 @@ const SearchBar = () => {
             />
 
             {/* === 3. BUTTON === */}
-            <Button className="h-full rounded-none px-6 bg-[#cc2221] hover:bg-red-700 text-white font-semibold text-xs uppercase tracking-wide">
+            <Button className="h-full rounded-none px-6 bg-[#CC0000] hover:bg-red-700 text-white font-semibold text-xs uppercase tracking-wide">
                 Search
             </Button>
         </div>

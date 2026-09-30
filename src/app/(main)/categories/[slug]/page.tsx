@@ -23,7 +23,7 @@ export default async function CategoryPage() {
 
     if (!data) return notFound();
     return (
-        <main className="w-full py-24 min-h-screen  relative pb-24">
+        <main className="w-full pt-8 min-h-screen  relative pb-24">
 
             {/* ISOLATED TACTICAL BACKGROUNDS */}
             <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none z-0"></div>
@@ -33,7 +33,7 @@ export default async function CategoryPage() {
                 {/* TOP NAVIGATION */}
                 <button
                     onClick={() => router.back()}
-                    className="text-gray-400 hover:text-[#cc2221] mb-8 flex items-center gap-2 text-xs font-black uppercase tracking-widest transition-colors group bg-[#cc2221]/5 px-4 py-2 rounded border border-[#cc2221]/10 hover:border-[#cc2221]/30"
+                    className="text-gray-400 hover:text-[#CC0000] mb-8 flex items-center gap-2 text-xs font-black uppercase tracking-widest transition-colors group bg-[#CC0000]/5 px-4 py-2 rounded border border-[#CC0000]/10 hover:border-[#CC0000]/30"
                 >
                     <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
                     Return to Intelligence Center
@@ -50,7 +50,7 @@ export default async function CategoryPage() {
                     <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white" />
 
                     <div className="relative z-10 text-center px-6">
-                        <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-[#cc2221] font-black tracking-widest uppercase">
+                        <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-[#CC0000] font-black tracking-widest uppercase">
                             Industrial Excellence
                         </motion.span>
                         <motion.h1
@@ -79,7 +79,7 @@ export default async function CategoryPage() {
                             <div className="grid grid-cols-2 gap-6">
                                 {['ASTM Standards', 'Ductile Iron', 'ISO Certified', 'USA Made'].map((badge) => (
                                     <div key={badge} className="bg-slate-50 p-6 rounded-2xl border border-slate-100 flex items-center gap-4">
-                                        <div className="w-2 h-2 bg-[#cc2221] rounded-full" />
+                                        <div className="w-2 h-2 bg-[#CC0000] rounded-full" />
                                         <span className="font-bold text-slate-800">{badge}</span>
                                     </div>
                                 ))}
@@ -88,10 +88,10 @@ export default async function CategoryPage() {
 
                         {/* Sidebar CTA */}
                         <div className="space-y-6">
-                            <div className="bg-[#cc2221] p-8 rounded-[2rem] text-white shadow-2xl">
+                            <div className="bg-[#CC0000] p-8 rounded-[2rem] text-white shadow-2xl">
                                 <h3 className="text-2xl font-bold mb-4">Need a Quote?</h3>
                                 <p className="mb-8 opacity-90">Custom dimensions and volume pricing available for major projects.</p>
-                                <button className="w-full py-4 bg-white text-[#cc2221] font-black rounded-xl uppercase tracking-tighter hover:scale-105 transition-transform">
+                                <button className="w-full py-4 bg-white text-[#CC0000] font-black rounded-xl uppercase tracking-tighter hover:scale-105 transition-transform">
                                     Request RFQ
                                 </button>
                             </div>

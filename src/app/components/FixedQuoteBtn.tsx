@@ -38,7 +38,7 @@ const FixedQuoteBtn = () => {
           href="/contact"
           className="
             flex items-center gap-2
-            bg-[#cc2221] hover:bg-[#b01e1d] text-white font-bold
+            bg-[#CC0000] hover:bg-[#b01e1d] text-white font-bold
             py-3 px-8 rounded-t-lg shadow-[0_0_10px_rgba(0,0,0,0.3)]
             transition-all duration-300 ease-in-out
             origin-bottom-right 
@@ -55,7 +55,7 @@ const FixedQuoteBtn = () => {
       {/* 2. BOTTOM RIGHT FIXED STACK              */}
       {/* ========================================= */}
       <div className="fixed bottom-6 right-6 z-[9999] flex flex-col gap-4 items-center">
-        
+
 
 
         {/* BOTTOM THREE: Social / Contact Icons */}
@@ -65,8 +65,8 @@ const FixedQuoteBtn = () => {
           target="_blank"
           className="
             w-12 h-12 flex items-center justify-center 
-            bg-[#cc2221] hover:bg-[#b01e1d] text-white 
-            rounded-full shadow-lg shadow-[#cc2221]/30
+            bg-[#CC0000] hover:bg-[#b01e1d] text-white 
+            rounded-full shadow-lg shadow-[#CC0000]/30
             transition-transform hover:scale-110
           "
           title="Chat on WhatsApp"
@@ -79,8 +79,8 @@ const FixedQuoteBtn = () => {
           href="tel:+15127828880"
           className="
             w-12 h-12 flex items-center justify-center 
-            bg-[#cc2221] hover:bg-[#b01e1d] text-white 
-            rounded-full shadow-lg shadow-[#cc2221]/30
+            bg-[#CC0000] hover:bg-[#b01e1d] text-white 
+            rounded-full shadow-lg shadow-[#CC0000]/30
             transition-transform hover:scale-110
           "
           title="Call Us"
@@ -93,8 +93,8 @@ const FixedQuoteBtn = () => {
           href="mailto:sales@megafoundries.com"
           className="
             w-12 h-12 flex items-center justify-center 
-            bg-[#cc2221] hover:bg-[#b01e1d] text-white 
-            rounded-full shadow-lg shadow-[#cc2221]/30
+            bg-[#CC0000] hover:bg-[#b01e1d] text-white 
+            rounded-full shadow-lg shadow-[#CC0000]/30
             transition-transform hover:scale-110
           "
           title="Send Email"

@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
-import { Button } from '@/components/ui/button'; 
+import { Button } from '@/components/ui/button';
 import localFont from 'next/font/local';
 import { motion } from "framer-motion";
 
@@ -11,12 +11,12 @@ interface HeroProps {
 }
 
 const apricotsFont = localFont({
-  src: '../../lib/fonts/Horizon.otf', 
+  src: '../../lib/fonts/Horizon.otf',
   display: 'swap',
   fallback: ['sans-serif']
 });
 
-const words = ["Foundries.", "Forge Shops.", "Fabricators."]; 
+const words = ["Foundries.", "Forge Shops.", "Fabricators."];
 
 export const Hero = ({
   videoSrc = `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/282244_small.mp4`
@@ -57,7 +57,7 @@ export const Hero = ({
 
       {/* Ambient Gradient Overlays */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/50 z-0 pointer-events-none" />
-      <div className="absolute inset-0 bg-[#cc2221]/5 z-0 pointer-events-none mix-blend-color" />
+      <div className="absolute inset-0 bg-[#CC0000]/5 z-0 pointer-events-none mix-blend-color" />
 
       {/* 2. FLUID EDGES CONTAINER - SHIFTED CONTENT UP via pb-24 md:pb-36 */}
       <div className="relative z-10 w-full mx-auto px-4 sm:px-6 lg:px-10 pt-12 pb-48 md:pb-60">
@@ -65,9 +65,9 @@ export const Hero = ({
 
           {/* LEFT SIDE CONTENT */}
           <div className="lg:col-span-8 text-left space-y-6">
- 
+
             {/* Meta Tag Block */}
-            <div className="inline-block text-xs text-white tracking-[0.25em] font-black bg-[#cc2221] border border-[#cc2221] shadow-[0_0_20px_rgba(204,34,33,0.4)] px-4 py-2 uppercase">
+            <div className="inline-block text-xs text-white tracking-[0.25em] font-black bg-[#CC0000] border border-[#CC0000] shadow-[0_0_20px_rgba(204,34,33,0.4)] px-4 py-2 uppercase">
               MEGA FOUNDRIES | Global Industrial Hub
             </div>
 
@@ -77,11 +77,11 @@ export const Hero = ({
                 The World's Advanced <br />
                 Consortium of{" "}
                 <span className="block min-h-[1.2em] relative mt-2 lg:mt-4 flex items-center">
-                  
+
                   {/* Transparent Outline Text Effect */}
-                  <span 
+                  <span
                     className="text-transparent drop-shadow-[0_0_20px_rgba(204,34,33,0.4)] font-black select-none"
-                    style={{ 
+                    style={{
                       WebkitTextStroke: "2px #ffffff",
                     }}
                   >
@@ -92,7 +92,7 @@ export const Hero = ({
                   <motion.span
                     animate={{ opacity: [1, 0] }}
                     transition={{ repeat: Infinity, duration: 0.8 }}
-                    className="w-1.5 h-10 sm:h-14 md:h-16 bg-[#cc2221] ml-3 shadow-[0_0_15px_#cc2221] shrink-0 inline-block"
+                    className="w-1.5 h-10 sm:h-14 md:h-16 bg-[#CC0000] ml-3 shadow-[0_0_15px_#cc2221] shrink-0 inline-block"
                   />
                 </span>
               </span>
@@ -110,7 +110,7 @@ export const Hero = ({
             </div>
 
             <div className="flex flex-col gap-3 w-full max-w-xs">
-              <Button className="w-full bg-[#cc2221] hover:bg-[#b01e1d] text-white font-black uppercase tracking-widest h-12 text-xs rounded-none shadow-[0_4px_20px_rgba(204,34,33,0.3)] transition-all duration-200 border-none">
+              <Button className="w-full bg-[#CC0000] hover:bg-[#b01e1d] text-white font-black uppercase tracking-widest h-12 text-xs rounded-none shadow-[0_4px_20px_rgba(204,34,33,0.3)] transition-all duration-200 border-none">
                 Explore Capabilities
               </Button>
 
@@ -125,7 +125,7 @@ export const Hero = ({
       </div>
 
       {/* Base Identity Accent Bar */}
-      <div className="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-[#cc2221] via-black to-[#cc2221] z-20"></div>
+      <div className="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-[#CC0000] via-black to-[#CC0000] z-20"></div>
     </header>
   );
 };

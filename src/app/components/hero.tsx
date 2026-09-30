@@ -1,36 +1,87 @@
-import React from 'react'
+"use client";
+
+import React from "react";
+import Link from "next/link";
+import { ArrowUpRight, ShieldCheck, Factory, Truck, Sparkles } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
-    // Note: The image URL is a placeholder. Replace it with your actual image path.
-    const imageUrl = `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image21.jpeg`;
+  const imageUrl = `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image21.jpeg`;
 
-    return (
-        <div
-            className="relative w-full overflow-hidden flex items-center justify-center py-20 md:py-32 lg:py-40"
-            style={{
-                backgroundImage: `url(${imageUrl})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                // Mimic the image's rounded bottom edge if possible, otherwise use a subtle curve effect
-                clipPath: 'polygon(0 0, 100% 0, 100% 95%, 0 100%)',
-            }}
-        >
-            <div className="absolute inset-0 bg-neutral-900/40 backdrop-blur-[1px]"></div>
-            <div className="relative z-10 text-center max-w-4xl px-4">
+  return (
+    <section className="relative w-full overflow-hidden font-sans border-y border-zinc-800 bg-[#0a0a0a]">
+      {/* Background Image Container with Gradient Overlays */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-1000 scale-105"
+        style={{ backgroundImage: `url(${imageUrl})` }}
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/75 to-[#0a0a0a]" />
+      <div className="absolute inset-0 bg-radial from-transparent via-black/40 to-black/90" />
 
-                <p className="text-xl   font-medium text-white/90 mb-3 tracking-widest uppercase">
-                    From your desk to your dock complete undertaking by Team Mega
-                </p>
-                <h1 className="text-[30px]  font-extrabold text-white leading-tight mb-6 drop-shadow-lg">
+      {/* Main Content Matrix */}
+      <div className="relative z-10 w-full px-4 sm:px-6 lg:px-10 py-16 md:py-24 flex flex-col items-center justify-center text-center space-y-6 max-w-5xl mx-auto">
 
-                    The Largest group of Foundries & Forge Shops
-                </h1>
-                <p className="text-sm   text-white/90 leading-relaxed font-light mx-auto max-w-3xl">
-                    Mega Foundries delivers a comprehensive portfolio of products, including turbines, oil & gas equipment, water management technologies, and power generation systems. We also enable seamless access to FPC services, empowering businesses to execute large-scale industrial projects with confidence.
-                </p>
-            </div>
+        {/* Top Tagline Badge */}
+        <div className="inline-flex items-center gap-2 bg-[#CC0000]/20 border border-[#CC0000]/40 px-3.5 py-1 text-white text-[11px] font-mono uppercase tracking-[0.25em] font-bold shadow-lg backdrop-blur-md">
+          <Sparkles className="w-3.5 h-3.5 text-[#CC0000]" />
+          <span>Desk to Dock Full-Spectrum Delivery</span>
         </div>
-    );
+
+        {/* Primary Headline */}
+        <div className="space-y-3">
+          <h2 className="text-3xl sm:text-5xl md:text-6xl font-black uppercase tracking-tight text-white leading-tight drop-shadow-md">
+            The Largest Group of <br />
+            <span className="text-[#CC0000]">Foundries & Forge Shops</span>
+          </h2>
+          <p className="text-zinc-300 text-xs sm:text-sm md:text-base font-light leading-relaxed max-w-3xl mx-auto">
+            Mega Foundries delivers a comprehensive portfolio of infrastructure products—including civil municipal castings, energy & water management systems, and high-tensile structural profiles. Complete end-to-end execution from your desk to your dock.
+          </p>
+        </div>
+
+        {/* Action Triggers */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2 w-full sm:w-auto">
+          <Link href="/contact" className="w-full sm:w-auto">
+            <Button className="w-full sm:w-auto bg-[#CC0000] hover:bg-[#b01e1d] text-white font-black uppercase tracking-wider text-xs h-11 px-6 rounded-none transition-all duration-200 flex items-center justify-center gap-2 border-none shadow-lg">
+              Contact Enterprise Desk <ArrowUpRight className="w-4 h-4" />
+            </Button>
+          </Link>
+          <Link href="/about" className="w-full sm:w-auto">
+            <Button className="w-full sm:w-auto bg-black/60 hover:bg-black/90 border border-zinc-700 hover:border-zinc-500 text-white font-black uppercase tracking-wider text-xs h-11 px-6 rounded-none transition-all duration-200 flex items-center justify-center gap-2 backdrop-blur-md">
+              Foundry Capacity Matrix <Factory className="w-4 h-4 text-zinc-400" />
+            </Button>
+          </Link>
+        </div>
+
+        {/* Three Micro Metrics Bar */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-6 border-t border-zinc-800/80 w-full text-left">
+          <div className="bg-black/60 border border-zinc-800/80 p-3 flex items-center gap-3 backdrop-blur-sm">
+            <Factory className="w-5 h-5 text-[#CC0000] shrink-0" />
+            <div>
+              <span className="text-[9px] font-mono uppercase text-zinc-400 block">Annual Scale</span>
+              <span className="text-xs font-black text-white uppercase tracking-wide">Multi-Foundry Network</span>
+            </div>
+          </div>
+
+          <div className="bg-black/60 border border-zinc-800/80 p-3 flex items-center gap-3 backdrop-blur-sm">
+            <Truck className="w-5 h-5 text-[#CC0000] shrink-0" />
+            <div>
+              <span className="text-[9px] font-mono uppercase text-zinc-400 block">Logistics Guarantee</span>
+              <span className="text-xs font-black text-white uppercase tracking-wide">Desk-to-Dock Direct</span>
+            </div>
+          </div>
+
+          <div className="bg-black/60 border border-zinc-800/80 p-3 flex items-center gap-3 backdrop-blur-sm">
+            <ShieldCheck className="w-5 h-5 text-[#CC0000] shrink-0" />
+            <div>
+              <span className="text-[9px] font-mono uppercase text-zinc-400 block">Compliance</span>
+              <span className="text-xs font-black text-white uppercase tracking-wide">AASHTO & ASTM Certified</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  );
 };
 
 export default HeroSection;

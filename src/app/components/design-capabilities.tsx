@@ -1,8 +1,8 @@
 import Image from "next/image"
 import { cn } from "@/lib/utils"
-import { menuData } from "@/lib/menuData2" // 1. Import menuData
+import { menuData } from "@/lib/menuData2"
 
-// Data modeled after your "Mega Foundries" capabilities
+// Data modeled after "Mega Foundries" capabilities
 const tagLines = [
   {
     id: 1,
@@ -127,56 +127,64 @@ const tagLines = [
 ];
 
 export function DesignCapabilities() {
-
-  // 2. Extract all Category Names into a single list
   const allCategories = Object.values(menuData).flatMap(section =>
     section.categories.map(cat => cat.name)
   );
 
   return (
-    <section className="w-full py-16 px-4 md:px-8 bg-zinc-50">
-      <div className="w-full px-4 sm:px-6 lg:px-10 py-3">
+    <section className="w-full bg-white text-[#0a0a0a] py-6 md:py-8 font-sans border-b border-gray-100">
+      <div className="w-full px-4 sm:px-6 lg:px-10 space-y-4">
 
         {/* Section Heading */}
-        <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 mb-10 border-l-4 border-[#cc2221] pl-4">
-          The Mega Philosophy
-        </h2>
+        <div className="border-b border-gray-200 pb-3 flex flex-col sm:flex-row sm:items-end justify-between gap-3 w-full">
+          <div>
+            <span className="text-[11px] uppercase tracking-[0.3em] font-black text-[#CC0000] block mb-1">
+              Manufacturing Capabilities & Core Standards
+            </span>
+            <h2 className="text-2xl md:text-3xl font-black uppercase tracking-tight text-[#0a0a0a] leading-tight">
+              The Mega <span className="text-[#CC0000]">Philosophy</span>
+            </h2>
+          </div>
+          <span className="text-zinc-500 font-mono text-[11px] uppercase font-bold hidden sm:block">
+            20 Core Pillars // Global Engineering Standards
+          </span>
+        </div>
 
-        {/* The Grid Layout (2 Columns) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-24">
+        {/* The Grid Layout (2 Columns, Tight Spacing) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
           {tagLines.map((item, index) => {
-            // 3. Get category name (Loop if we run out of categories)
             const categoryTitle = allCategories[index % allCategories.length];
 
             return (
               <div
                 key={item.id}
-                className="group flex flex-row border border-[#cccccc] shadow-xl overflow-hidden hover:shadow-none transition-shadow duration-300 min-h-[240px] bg-white"
+                className="group flex flex-col sm:flex-row border border-gray-200 bg-white shadow-sm hover:border-[#CC0000] hover:shadow-md transition-all duration-300 rounded-none overflow-hidden"
               >
-                {/* Left Side: Image (Approx 35% width) */}
-                <div className="relative w-[35%] min-w-[35%] bg-zinc-100">
+                {/* Left Side: Image */}
+                <div className="relative w-full sm:w-[32%] sm:min-w-[32%] min-h-[150px] sm:min-h-full bg-zinc-100 border-b sm:border-b-0 sm:border-r border-gray-100">
                   <Image
                     src={item.imgUrl}
                     alt={item.lines}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  {/* Optional dark overlay on hover */}
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors" />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
                 </div>
 
-                {/* Right Side: Content (Approx 65% width) */}
-                <div className="w-[65%] p-6 flex flex-col justify-center">
+                {/* Right Side: Content */}
+                <div className="flex-1 p-3.5 sm:p-4 flex flex-col justify-between">
+                  <div>
+                    {/* Category Title */}
+                    <span className="text-[10px] font-mono font-bold text-[#CC0000] uppercase tracking-wider mb-1 block">
+                      {categoryTitle}
+                    </span>
 
-                  {/* 4. Display the Category Title (From Menu Data) */}
-                  <span className="text-xs font-bold text-[#cc2221] uppercase tracking-wider mb-2 block">
-                    {categoryTitle}
-                  </span>
+                    <h3 className="text-sm sm:text-base font-bold text-[#0a0a0a] mb-1.5 leading-snug group-hover:text-[#CC0000] transition-colors uppercase">
+                      {item.lines}
+                    </h3>
+                  </div>
 
-                  <h3 className="text-lg md:text-xl font-bold text-zinc-900 mb-3 leading-tight group-hover:text-[#cc2221] transition-colors">
-                    {item.lines}
-                  </h3>
-                  <p className="text-sm text-zinc-600 leading-relaxed">
+                  <p className="text-xs text-zinc-600 leading-relaxed pt-1 border-t border-gray-50">
                     {item.description}
                   </p>
                 </div>
@@ -184,6 +192,7 @@ export function DesignCapabilities() {
             );
           })}
         </div>
+
       </div>
     </section>
   )

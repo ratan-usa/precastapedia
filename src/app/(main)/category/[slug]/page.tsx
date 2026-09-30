@@ -15,7 +15,7 @@ export interface Category {
   image: string;
   description: string;
   items: string[];
-  videoUrl?: string; 
+  videoUrl?: string;
 }
 
 function getMainCategory(slug: string) {
@@ -81,8 +81,8 @@ export default async function CategoryDetailPage({ params }: PageProps) {
         </div>
 
         <div className='text-center pt-4'>
-           <h2 className='text-xl font-bold'>We are the nucleus of the metal world...</h2>
-           <p className='text-sm pt-4 '>Elastic energy description...</p>
+          <h2 className='text-xl font-bold'>We are the nucleus of the metal world...</h2>
+          <p className='text-sm pt-4 '>Elastic energy description...</p>
         </div>
 
         <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -100,13 +100,13 @@ export default async function CategoryDetailPage({ params }: PageProps) {
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
                   </div>
                   <div className="p-6 flex flex-col grow">
-                    <h3 className="font-bold text-gray-900 text-lg mb-3 group-hover:text-[#cc2221] transition-colors">
+                    <h3 className="font-bold text-gray-900 text-lg mb-3 group-hover:text-[#CC0000] transition-colors">
                       {sub.name}
                     </h3>
                     <p className="text-sm text-gray-500 leading-relaxed line-clamp-3 mb-4">
                       {sub.description}
                     </p>
-                    <span className="text-[#cc2221] text-xs font-bold uppercase tracking-wider mt-auto">
+                    <span className="text-[#CC0000] text-xs font-bold uppercase tracking-wider mt-auto">
                       View Products &rarr;
                     </span>
                   </div>
@@ -125,18 +125,18 @@ export default async function CategoryDetailPage({ params }: PageProps) {
   if (subCategoryData) {
     // New logic to find parent for videos
     const parentCategory = Object.values(menuData).find(cat => cat.id === subCategoryData.parentId);
-    
-    const allRelatedVideos = parentCategory 
+
+    const allRelatedVideos = parentCategory
       ? parentCategory.categories
-          // FIX 2: Cast 'cat' to any here to check for videoUrl
-          .filter(cat => (cat as any).videoUrl) 
-          .map((cat, index) => ({
-            id: index,
-            title: cat.name,
-            // FIX 3: Cast 'cat' to any here to access videoUrl
-            videoUrl: (cat as any).videoUrl 
-          }))
-      : []; 
+        // FIX 2: Cast 'cat' to any here to check for videoUrl
+        .filter(cat => (cat as any).videoUrl)
+        .map((cat, index) => ({
+          id: index,
+          title: cat.name,
+          // FIX 3: Cast 'cat' to any here to access videoUrl
+          videoUrl: (cat as any).videoUrl
+        }))
+      : [];
 
     return (
       <div className="min-h-screen bg-gray-50 py-12">
@@ -144,7 +144,7 @@ export default async function CategoryDetailPage({ params }: PageProps) {
 
           {/* Back Button & Title */}
           <div className="mb-8">
-            <Link href={`/category/${subCategoryData.parentId}`} className="inline-flex items-center text-sm text-gray-500 hover:text-[#cc2221] mb-4">
+            <Link href={`/category/${subCategoryData.parentId}`} className="inline-flex items-center text-sm text-gray-500 hover:text-[#CC0000] mb-4">
               <ArrowLeft className="w-4 h-4 mr-1" /> Back to {subCategoryData.parent}
             </Link>
             <h1 className="text-3xl md:text-4xl font-bold text-gray-900">
@@ -160,14 +160,14 @@ export default async function CategoryDetailPage({ params }: PageProps) {
                 <Link
                   key={index}
                   href={`/products/${item.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '')}`}
-                  className="bg-white p-6 rounded-xl border border-gray-200 hover:border-[#cc2221] hover:shadow-md transition-all group flex flex-col justify-between"
+                  className="bg-white p-6 rounded-xl border border-gray-200 hover:border-[#CC0000] hover:shadow-md transition-all group flex flex-col justify-between"
                 >
                   <div className='flex justify-evenly'>
                     <div>
-                      <div className="w-12 h-12 bg-red-50 rounded-lg mb-4 text-[#cc2221]">
+                      <div className="w-12 h-12 bg-red-50 rounded-lg mb-4 text-[#CC0000]">
                         <ChevronRight />
                       </div>
-                      <h3 className="font-bold text-lg text-gray-800 group-hover:text-[#cc2221] mb-2">
+                      <h3 className="font-bold text-lg text-gray-800 group-hover:text-[#CC0000] mb-2">
                         {item}
                       </h3>
                     </div>
@@ -185,18 +185,18 @@ export default async function CategoryDetailPage({ params }: PageProps) {
             ) : (
               <div className="col-span-full py-12 text-center bg-white rounded-xl border border-dashed border-gray-300">
                 <p className="text-gray-500">No specific products listed under this category yet.</p>
-                <Link href="/contact" className="text-[#cc2221] font-bold mt-2 inline-block">Contact us for custom requirements &rarr;</Link>
+                <Link href="/contact" className="text-[#CC0000] font-bold mt-2 inline-block">Contact us for custom requirements &rarr;</Link>
               </div>
             )}
           </div>
 
           <CategoryProductLinks items={subCategoryData.items} />
-          
+
           <HotProductVideos
             title={hotProductsData.title}
-            videos={allRelatedVideos} 
+            videos={allRelatedVideos}
           />
-          
+
           <IndustryNews />
         </div>
       </div>

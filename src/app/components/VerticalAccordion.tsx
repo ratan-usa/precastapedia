@@ -3,9 +3,9 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
-import { 
-  Zap, Settings, Cuboid, Sun, Droplets, Cog, Wrench, 
-  Anchor, Flame, Building, Bolt, Shield, Hammer 
+import {
+    Zap, Settings, Cuboid, Sun, Droplets, Cog, Wrench,
+    Anchor, Flame, Building, Bolt, Shield, Hammer
 } from 'lucide-react';
 
 // --- DATA MODEL ---
@@ -15,7 +15,7 @@ interface AccordionItem {
     category: string;
     description: string;
     image: string;
-    color: string; 
+    color: string;
     icon?: React.ElementType;
 }
 
@@ -27,7 +27,7 @@ const items: AccordionItem[] = [
         title: "Water Control Systems",
         description: "Smart water flow management components designed for precise control and regulation.",
         image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image10.jpeg`,
-        color: "bg-[#cc2221]", // Active Red
+        color: "bg-[#CC0000]", // Active Red
         icon: Zap
     },
     {
@@ -36,7 +36,7 @@ const items: AccordionItem[] = [
         title: "Bucket Teeth & Adaptors",
         description: "High-strength bucket teeth engineered for superior digging performance.",
         image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image1.jpeg`,
-        color: "bg-[#cc2221]",
+        color: "bg-[#CC0000]",
         icon: Settings
     },
     {
@@ -45,7 +45,7 @@ const items: AccordionItem[] = [
         title: "Zinc Anodes Protection",
         description: "High-purity zinc and aluminium cast anodes for corrosion prevention.",
         image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image18.jpeg`,
-        color: "bg-[#cc2221]",
+        color: "bg-[#CC0000]",
         icon: Shield
     },
     // {
@@ -54,7 +54,7 @@ const items: AccordionItem[] = [
     //     title: "Concrete Molds",
     //     description: "High-precision molds for producing durable infrastructure elements.",
     //     image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image15.jpeg`,
-    //     color: "bg-[#cc2221]",
+    //     color: "bg-[#CC0000]",
     //     icon: Cuboid
     // },
     {
@@ -63,7 +63,7 @@ const items: AccordionItem[] = [
         title: "Crusher Wear Parts",
         description: "Heavy-duty components designed for high-impact crushing environments.",
         image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image16.jpg`,
-        color: "bg-[#cc2221]",
+        color: "bg-[#CC0000]",
         icon: Sun
     },
     {
@@ -72,7 +72,7 @@ const items: AccordionItem[] = [
         title: "Metals & Castings",
         description: "Engineered metal and alloy products for industrial applications.",
         image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image14.jpeg`,
-        color: "bg-[#cc2221]",
+        color: "bg-[#CC0000]",
         icon: Droplets
     },
     {
@@ -81,7 +81,7 @@ const items: AccordionItem[] = [
         title: "Adjustable Risers",
         description: "Height-adjustable pedestal risers for outdoor paving applications.",
         image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image12.jpg`,
-        color: "bg-[#cc2221]",
+        color: "bg-[#CC0000]",
         icon: Cog
     },
     {
@@ -90,7 +90,7 @@ const items: AccordionItem[] = [
         title: "Joint Fittings",
         description: "Mechanical joint fittings for secure water distribution networks.",
         image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image13.jpg`,
-        color: "bg-[#cc2221]",
+        color: "bg-[#CC0000]",
         icon: Droplets
     },
     {
@@ -99,7 +99,7 @@ const items: AccordionItem[] = [
         title: "Custom Metal Works",
         description: "High-precision machining and fabrication services engineered for accuracy.",
         image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image10.jpeg`,
-        color: "bg-[#cc2221]",
+        color: "bg-[#CC0000]",
         icon: Wrench
     },
     {
@@ -108,7 +108,7 @@ const items: AccordionItem[] = [
         title: "Equipment & Tools",
         description: "State-of-the-art tools ensuring micron-level tolerance for components.",
         image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image12.jpg`,
-        color: "bg-[#cc2221]",
+        color: "bg-[#CC0000]",
         icon: Flame
     },
     {
@@ -117,7 +117,7 @@ const items: AccordionItem[] = [
         title: "High Pressure Valves",
         description: "Components built for harsh marine and high-pressure environments.",
         image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image16.jpg`,
-        color: "bg-[#cc2221]",
+        color: "bg-[#CC0000]",
         icon: Flame
     },
     {
@@ -126,7 +126,7 @@ const items: AccordionItem[] = [
         title: "Construction Parts",
         description: "Heavy-duty scaffolding and infrastructure support components.",
         image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image15.jpeg`,
-        color: "bg-[#cc2221]",
+        color: "bg-[#CC0000]",
         icon: Building
     },
     {
@@ -135,7 +135,7 @@ const items: AccordionItem[] = [
         title: "Power Energy",
         description: "Reliable components for power transmission and energy sectors.",
         image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image14.jpeg`,
-        color: "bg-[#cc2221]",
+        color: "bg-[#CC0000]",
         icon: Bolt
     },
     {
@@ -144,7 +144,7 @@ const items: AccordionItem[] = [
         title: "Aerospace Grade",
         description: "Certified high-grade materials for defence and aerospace contracts.",
         image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image18.jpeg`,
-        color: "bg-[#cc2221]",
+        color: "bg-[#CC0000]",
         icon: Shield
     },
     {
@@ -153,7 +153,7 @@ const items: AccordionItem[] = [
         title: "Custom OEM",
         description: "Tailor-made casting solutions to meet unique project requirements.",
         image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image1.jpeg`,
-        color: "bg-[#cc2221]",
+        color: "bg-[#CC0000]",
         icon: Hammer
     },
     {
@@ -162,7 +162,7 @@ const items: AccordionItem[] = [
         title: "Winter Equipment",
         description: "Industrial grade snow clearing attachments and machinery parts.",
         image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image9.jpeg`,
-        color: "bg-[#cc2221]",
+        color: "bg-[#CC0000]",
         icon: Cog
     }
 ];
@@ -190,8 +190,8 @@ export function VerticalAccordion() {
                                 "relative transition-all duration-500 ease-in-out border-r border-zinc-800 last:border-r-0 cursor-pointer overflow-hidden",
                                 // Active: Grow to flex-5 (takes up 5x space) with RED background
                                 // Inactive: Shrink to flex-1 (takes up 1x space) with BLACK background (No Blue)
-                                isActive 
-                                    ? `flex-[5] ${item.color}` 
+                                isActive
+                                    ? `flex-[5] ${item.color}`
                                     : "flex-[1] bg-zinc-900 hover:bg-zinc-800"
                             )}
                         >
@@ -229,7 +229,7 @@ export function VerticalAccordion() {
                                     <p className="text-sm leading-relaxed opacity-90 line-clamp-3">
                                         {item.description}
                                     </p>
-                                    
+
                                     <div className="mt-auto pt-4 flex items-center text-xs font-bold uppercase tracking-wider gap-2">
                                         View Products <span className="text-lg">→</span>
                                     </div>
@@ -245,8 +245,8 @@ export function VerticalAccordion() {
                             >
                                 <h3
                                     className="text-white/60 hover:text-white whitespace-nowrap text-sm font-bold tracking-[0.2em] uppercase transition-colors"
-                                    style={{ 
-                                        writingMode: 'vertical-rl', 
+                                    style={{
+                                        writingMode: 'vertical-rl',
                                         transform: 'rotate(180deg)',
                                         textShadow: '0px 0px 10px rgba(0,0,0,0.5)'
                                     }}

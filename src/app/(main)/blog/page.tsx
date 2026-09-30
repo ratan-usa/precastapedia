@@ -10,18 +10,18 @@ export default function BlogSection() {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Header with Red Accent */}
         <div className="flex items-end justify-between mb-12">
           <div>
-            <span className="text-[#cc2221] font-bold text-xs uppercase tracking-widest block mb-2">
+            <span className="text-[#CC0000] font-bold text-xs uppercase tracking-widest block mb-2">
               Knowledge Hub
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-              Latest <span className="text-[#cc2221]">Insights</span>
+              Latest <span className="text-[#CC0000]">Insights</span>
             </h2>
           </div>
-          <Link href="/blog" className="hidden md:block text-sm font-semibold text-gray-600 hover:text-[#cc2221] transition-colors">
+          <Link href="/blog" className="hidden md:block text-sm font-semibold text-gray-600 hover:text-[#CC0000] transition-colors">
             View All Articles &rarr;
           </Link>
         </div>
@@ -29,12 +29,12 @@ export default function BlogSection() {
         {/* Blog Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {blogPosts.map((post) => (
-            <Link 
-              key={post.id} 
+            <Link
+              key={post.id}
               href={`/blog/${post.slug}`} // Link to the dynamic blog page
               className="group flex flex-col h-full bg-white rounded-xl overflow-hidden border border-transparent hover:border-gray-100 hover:shadow-lg transition-all duration-300"
             >
-              
+
               {/* Image with Zoom Effect */}
               <div className="relative aspect-[4/3] w-full overflow-hidden bg-gray-100">
                 <Image
@@ -44,14 +44,14 @@ export default function BlogSection() {
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 {/* Date Badge over Image */}
-                <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-[#cc2221] shadow-sm">
+                <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-[#CC0000] shadow-sm">
                   {post.date}
                 </div>
               </div>
 
               {/* Content */}
               <div className="flex flex-col grow p-5">
-                
+
                 {/* Author Meta */}
                 <div className="flex items-center text-xs text-gray-400 mb-3">
                   <User className="w-3 h-3 mr-1" />
@@ -59,7 +59,7 @@ export default function BlogSection() {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-lg font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-[#cc2221] transition-colors">
+                <h3 className="text-lg font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-[#CC0000] transition-colors">
                   {post.title}
                 </h3>
 
@@ -70,7 +70,7 @@ export default function BlogSection() {
 
                 {/* Read More Link */}
                 <div className="mt-auto">
-                  <span className="text-xs font-bold uppercase tracking-wide text-[#cc2221] group-hover:underline">
+                  <span className="text-xs font-bold uppercase tracking-wide text-[#CC0000] group-hover:underline">
                     Read Article
                   </span>
                 </div>

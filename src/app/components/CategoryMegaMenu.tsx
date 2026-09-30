@@ -69,7 +69,7 @@ const menuData = {
 export default function CategoryMegaMenu() {
   // State for Top Level Tabs
   const [activeTab, setActiveTab] = useState<'energy' | 'powerGen'>('powerGen');
-  
+
   // State for the Sub-Category (Left Column)
   // We initialize it with the first category of the default active tab
   const [activeCategoryIndex, setActiveCategoryIndex] = useState(1); // Defaulting to 2nd item like image
@@ -85,39 +85,37 @@ export default function CategoryMegaMenu() {
 
   return (
     <div className="relative group w-fit">
-      
+
       {/* === TRIGGER / TOP TABS === */}
       {/* This simulates the navbar links. In a real navbar, you might trigger this on hover of a "Categories" button, 
           but here we show the tabs directly as requested in the image. */}
       <div className="flex items-center space-x-8 bg-white px-6 py-4 rounded-t-lg border-b border-gray-100">
-        
+
         {/* Tab 1: Energy */}
         <button
           onMouseEnter={() => handleTabChange('energy')}
-          className={`flex items-center gap-2 pb-2 text-sm font-semibold transition-all relative ${
-            activeTab === 'energy' ? 'text-gray-900' : 'text-gray-500 hover:text-gray-700'
-          }`}
+          className={`flex items-center gap-2 pb-2 text-sm font-semibold transition-all relative ${activeTab === 'energy' ? 'text-gray-900' : 'text-gray-500 hover:text-gray-700'
+            }`}
         >
-          <Zap className={`w-5 h-5 ${activeTab === 'energy' ? 'text-[#cc2221]' : 'text-gray-400'}`} />
+          <Zap className={`w-5 h-5 ${activeTab === 'energy' ? 'text-[#CC0000]' : 'text-gray-400'}`} />
           Energy
           {/* Red Underline Animation */}
           {activeTab === 'energy' && (
-            <span className="absolute bottom-[-17px] left-0 w-full h-[2px] bg-[#cc2221]"></span>
+            <span className="absolute bottom-[-17px] left-0 w-full h-[2px] bg-[#CC0000]"></span>
           )}
         </button>
 
         {/* Tab 2: Power Generation */}
         <button
           onMouseEnter={() => handleTabChange('powerGen')}
-          className={`flex items-center gap-2 pb-2 text-sm font-semibold transition-all relative ${
-            activeTab === 'powerGen' ? 'text-gray-900' : 'text-gray-500 hover:text-gray-700'
-          }`}
+          className={`flex items-center gap-2 pb-2 text-sm font-semibold transition-all relative ${activeTab === 'powerGen' ? 'text-gray-900' : 'text-gray-500 hover:text-gray-700'
+            }`}
         >
-          <Factory className={`w-5 h-5 ${activeTab === 'powerGen' ? 'text-[#cc2221]' : 'text-gray-400'}`} />
+          <Factory className={`w-5 h-5 ${activeTab === 'powerGen' ? 'text-[#CC0000]' : 'text-gray-400'}`} />
           Power Generation
           {/* Red Underline Animation */}
           {activeTab === 'powerGen' && (
-            <span className="absolute bottom-[-17px] left-0 w-full h-[2px] bg-[#cc2221]"></span>
+            <span className="absolute bottom-[-17px] left-0 w-full h-[2px] bg-[#CC0000]"></span>
           )}
         </button>
       </div>
@@ -125,7 +123,7 @@ export default function CategoryMegaMenu() {
 
       {/* === DROPDOWN PANEL === */}
       <div className="absolute left-0 top-full w-[800px] bg-white shadow-xl border-t border-gray-100 rounded-b-lg flex z-50 min-h-[400px]">
-        
+
         {/* --- LEFT COLUMN: CATEGORIES --- */}
         <div className="w-1/2 py-6 border-r-2 border-gray-100">
           <ul className="space-y-1">
@@ -135,11 +133,10 @@ export default function CategoryMegaMenu() {
                 <li key={index}>
                   <button
                     onMouseEnter={() => setActiveCategoryIndex(index)}
-                    className={`w-full flex items-center justify-between px-6 py-3 text-sm font-bold transition-colors ${
-                      isActive 
-                        ? 'text-[#cc2221] bg-red-50/50' 
-                        : 'text-gray-800 hover:text-[#cc2221]'
-                    }`}
+                    className={`w-full flex items-center justify-between px-6 py-3 text-sm font-bold transition-colors ${isActive
+                        ? 'text-[#CC0000] bg-red-50/50'
+                        : 'text-gray-800 hover:text-[#CC0000]'
+                      }`}
                   >
                     <span>{cat.name}</span>
                     {isActive && <ChevronRight className="w-4 h-4" />}
@@ -157,14 +154,14 @@ export default function CategoryMegaMenu() {
             <ul className="space-y-4">
               {activeSubItems.map((item, index) => (
                 <li key={index}>
-                  <Link 
+                  <Link
                     href={`/category/${item.toLowerCase().replace(/ /g, '-')}`}
                     className={`block text-sm transition-colors ${
-                        // Just styling the 3rd item red to match your image example, normally logic would differ
-                        item === 'Electrical Equipment' 
-                        ? 'text-[#cc2221] font-medium' 
-                        : 'text-gray-600 hover:text-[#cc2221]'
-                    }`}
+                      // Just styling the 3rd item red to match your image example, normally logic would differ
+                      item === 'Electrical Equipment'
+                        ? 'text-[#CC0000] font-medium'
+                        : 'text-gray-600 hover:text-[#CC0000]'
+                      }`}
                   >
                     {item}
                   </Link>

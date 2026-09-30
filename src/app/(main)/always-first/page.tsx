@@ -5,10 +5,10 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Star, Users, Globe } from "lucide-react";
 import Image from "next/image";
 import Testimonials from "./Testimonials";
- 
+
 const AboutSection = () => {
   return (
-    <section className="relative w-full py-16 sm:py-24 bg-white">
+    <section className="relative w-full py-16 sm:pt-8 bg-white">
       <div className="absolute inset-0 z-0 h-[225px] w-full">
         <Image
           src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image17.jpg`}
@@ -23,7 +23,7 @@ const AboutSection = () => {
         <h2 className="text-[40px] pb-12 font-extrabold tracking-tight text-white mb-8">
           Our Products
         </h2>
-        <p className="text-[20px] py-5 font-semibold uppercase tracking-widest text-[#cc2221] mb-2">
+        <p className="text-[20px] py-5 font-semibold uppercase tracking-widest text-[#CC0000] mb-2">
           MEGA FOUNDRIES - Products
         </p>
       </div>

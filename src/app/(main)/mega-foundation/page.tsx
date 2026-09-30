@@ -37,7 +37,7 @@ export default function MegaFoundationPage() {
 
       {/* === HERO SECTION === */}
       <section className="relative h-[60vh] flex items-center justify-center bg-slate-900 text-white overflow-hidden">
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center opacity-10"
           style={{ backgroundImage: `url(${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image4.jpg)` }}
         />
@@ -78,7 +78,7 @@ export default function MegaFoundationPage() {
       </section>
 
       {/* === OUR PILLARS === */}
-      <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="pt-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-slate-900">Our Mission Pillars</h2>
           <p className="mt-4 text-slate-600 max-w-2xl mx-auto">
@@ -160,7 +160,7 @@ export default function MegaFoundationPage() {
       </section>
 
       {/* === GRANT APPLICATION / CTA === */}
-      <section className="py-24 bg-slate-900 text-white relative overflow-hidden">
+      <section className="pt-8 bg-slate-900 text-white relative overflow-hidden">
         {/* Decorative Circles */}
         <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-red-600 opacity-10 rounded-full translate-y-1/3 -translate-x-1/3 blur-3xl"></div>

@@ -21,7 +21,7 @@ export default async function NewsDetailPage({ params }: PageProps) {
   return (
     <div className="min-h-screen bg-white py-16 px-4">
       <article className="max-w-4xl mx-auto">
-         
+
         {/* Header */}
         <div className="mb-8">
           <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -47,19 +47,19 @@ export default async function NewsDetailPage({ params }: PageProps) {
 
         {/* Content Body */}
         <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed">
-          <p className="text-xl font-medium mb-6 text-gray-900 border-l-4 border-[#cc2221] pl-4">
+          <p className="text-xl font-medium mb-6 text-gray-900 border-l-4 border-[#CC0000] pl-4">
             {article.excerpt}
           </p>
           <p>
             {/* Since we don't have full content in the array, we simulate it here */}
-            Here is the full detailed content for <strong>{article.title}</strong>. 
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor 
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+            Here is the full detailed content for <strong>{article.title}</strong>.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
             exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </p>
           <p className="mt-4">
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum.
           </p>
         </div>

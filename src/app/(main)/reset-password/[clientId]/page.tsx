@@ -10,13 +10,13 @@ import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Loader2, Lock, CheckCircle2 } from 'lucide-react';
 import { resetPassword } from '@/lib/api';
- 
+
 function ResetPasswordForm({ clientId }: { clientId: string }) {
     const searchParams = useSearchParams();
     const router = useRouter();
-    
+
     // Get context from URL
-    const email = searchParams.get('email') || ''; 
+    const email = searchParams.get('email') || '';
     const tenant = searchParams.get('tenant') || 'customer';
 
     const [passwords, setPasswords] = useState({ new: '', confirm: '' });
@@ -82,7 +82,7 @@ function ResetPasswordForm({ clientId }: { clientId: string }) {
             </CardHeader>
             <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-4">
-                    
+
                     {/* Read-only email to confirm context */}
                     <div className="space-y-2">
                         <Label>Email</Label>
@@ -91,23 +91,23 @@ function ResetPasswordForm({ clientId }: { clientId: string }) {
 
                     <div className="space-y-2">
                         <Label htmlFor="new-pass">New Password</Label>
-                        <Input 
-                            id="new-pass" 
-                            type="password" 
-                            required 
+                        <Input
+                            id="new-pass"
+                            type="password"
+                            required
                             value={passwords.new}
-                            onChange={(e) => setPasswords({...passwords, new: e.target.value})}
+                            onChange={(e) => setPasswords({ ...passwords, new: e.target.value })}
                         />
                     </div>
 
                     <div className="space-y-2">
                         <Label htmlFor="confirm-pass">Confirm Password</Label>
-                        <Input 
-                            id="confirm-pass" 
-                            type="password" 
-                            required 
+                        <Input
+                            id="confirm-pass"
+                            type="password"
+                            required
                             value={passwords.confirm}
-                            onChange={(e) => setPasswords({...passwords, confirm: e.target.value})}
+                            onChange={(e) => setPasswords({ ...passwords, confirm: e.target.value })}
                         />
                     </div>
 
@@ -117,7 +117,7 @@ function ResetPasswordForm({ clientId }: { clientId: string }) {
                         </p>
                     )}
 
-                    <Button className="w-full bg-[#cc2221] hover:bg-red-700" disabled={loading}>
+                    <Button className="w-full bg-[#CC0000] hover:bg-red-700" disabled={loading}>
                         {loading ? <Loader2 className="animate-spin mr-2" /> : "Reset Password"}
                     </Button>
                 </form>

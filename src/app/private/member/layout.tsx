@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { usePathname, useRouter } from 'next/navigation'; 
+import { usePathname, useRouter } from 'next/navigation';
 import {
   LayoutDashboard,
   Package,
@@ -29,13 +29,13 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 // Ensure this path matches where you saved the helper function
-import { getUserProfile } from '@/lib/api'; 
+import { getUserProfile } from '@/lib/api';
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
-  const router = useRouter(); 
+  const router = useRouter();
   const [isProfileLoading, setIsProfileLoading] = useState(true);
-  
+
   // --- STATE FOR USER PROFILE ---
   const [user, setUser] = useState({
     name: "",
@@ -66,7 +66,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
 
         if (isMounted && res.success && res.data) {
           console.log("✅ Layout loaded for:", res.data.fullName);
-          
+
           const fullName = res.data.fullName || res.data.name || "User";
 
           // Calculate Initials safely
@@ -108,13 +108,13 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
     localStorage.removeItem('isVendor');
 
     // 3. Dynamic Redirect
-    router.push(`/login/${currentTenant}`); 
+    router.push(`/login/${currentTenant}`);
   };
 
   // Navigation Links
   const navItems = [
     { href: '/private/member', label: 'Overview', icon: LayoutDashboard },
-    { href: '/private/member/onboarding', label: 'Become a Vendor', icon: Store }, 
+    { href: '/private/member/onboarding', label: 'Become a Vendor', icon: Store },
     { href: '/private/member/orders', label: 'Orders', icon: Package },
     { href: '/private/member/products', label: 'Products', icon: FileText },
     // { href: '/private/member/inventory', label: 'Inventory', icon: Factory },
@@ -129,7 +129,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
       {/* --- DESKTOP SIDEBAR --- */}
       <aside className="hidden md:flex w-64 flex-col bg-slate-900 text-white fixed h-full inset-y-0 z-50">
         <div className="h-16 flex items-center px-6 border-b border-slate-800 font-bold text-xl tracking-wider">
-          <span className="text-[#cc2221]">MEGA</span>FOUNDRIES
+          <span className="text-[#CC0000]">MEGA</span>FOUNDRIES
         </div>
 
         <nav className="flex-1 py-6 px-3 space-y-1">
@@ -138,7 +138,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
             return (
               <Link key={item.href} href={item.href}>
                 <span className={`flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-medium transition-colors ${isActive
-                  ? 'bg-[#cc2221] text-white'
+                  ? 'bg-[#CC0000] text-white'
                   : 'text-slate-400 hover:text-white hover:bg-slate-800'
                   }`}>
                   <item.icon className="w-4 h-4" />
@@ -171,7 +171,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
               </Button>
             </SheetTrigger>
             <SheetContent side="left" className="bg-slate-900 text-white border-none">
-              <div className="font-bold text-xl mb-8"><span className="text-[#cc2221]">MEGA</span>FOUNDRIES</div>
+              <div className="font-bold text-xl mb-8"><span className="text-[#CC0000]">MEGA</span>FOUNDRIES</div>
               <nav className="space-y-2">
                 {navItems.map((item) => (
                   <Link key={item.href} href={item.href} className="flex items-center gap-3 px-3 py-2 text-slate-300 hover:text-white">
@@ -210,7 +210,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                 <DropdownMenuLabel className="font-normal">
                   <div className="flex flex-col space-y-1">
                     {isProfileLoading ? (
-                       <div className="h-8 bg-slate-100 rounded animate-pulse" />
+                      <div className="h-8 bg-slate-100 rounded animate-pulse" />
                     ) : (
                       <>
                         <p className="text-sm font-medium leading-none">{user.name}</p>

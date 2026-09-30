@@ -1,201 +1,367 @@
-import Image from "next/image"
+"use client";
+
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
 import {
   ArrowRight,
-  Settings,
-  Zap,
-  Hammer,
-  Anchor,
+  ArrowUpRight,
+  ShieldCheck,
   Droplets,
-  Cuboid,
-  Sun,
-  Flame,
-  Building,
-  Bolt,
-  Shield,
+  Layers,
   Wrench,
-  Cog
-} from "lucide-react"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
+  Zap,
+  Grid3X3,
+  Box,
+  Hammer
+} from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 
-// 1. Your Local Images
-const myImages = [
-  `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image10.jpeg`,
-  `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image1.jpeg`,
-  `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image18.jpeg`,
-  `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image9.jpeg`,
-  `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image11.jpg`,
-  `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image14.jpeg`,
-  `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image16.jpg`,
-]
+export interface CastingZoneProduct {
+  id: string;
+  volume: string;
+  title: string;
+  category: string;
+  loadRating: string;
+  image: string;
+  video?: string;
+  icon: React.ComponentType<{ className?: string }>;
+  isHero?: boolean;
+  isWide?: boolean;
+}
 
-// 2. Data Flattened 
-const products = [
+// Exactly 11 products filling a 4-column matrix (1 Hero 2x2 + 8 standard 1x1 + 2 wide 2x1 = 16 grid units)
+const CASTING_ZONE_PRODUCTS: CastingZoneProduct[] = [
   {
-    id: "irrigation_products",
-    title: "NEW NEXT GENERATION DESIGNER MANHOLE COVER",
-    category: "Irrigation",
-    brand: "TechnoML",
-    price: "View Catalog",
-    isHero: true,
-    icon: Zap,
+    id: "designer-manhole",
+    volume: "VOL. 01",
+    title: "Next-Gen Designer Manhole Cover System",
+    category: "Municipal Castings",
+    loadRating: "F900+ Heavy Traffic",
     image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image10.jpeg`,
-    video: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/custom_solutions/5900-E-CN-tower-Brick.478.mp4` // <--- Add your video path here
+    video: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/custom_solutions/5900-E-CN-tower-Brick.478.mp4`,
+    icon: Zap,
+    isHero: true
   },
-  { id: "earth_moving", title: "Bucket Teeth & Excavator Adaptors", category: "Earth Moving", brand: "HeavyDuty", price: "$450.00", icon: Zap },
-  { id: "cathodic", title: "Zinc & Aluminium Sacrificial Anodes", category: "Protection", brand: "MarineSafe", price: "$120.00", icon: Settings },
-  // { id: "precast", title: "Precast Concrete Molds & Road Barriers", category: "Infrastructure", brand: "InfraBuild", price: "Custom", icon: Cuboid },
-  { id: "mining", title: "Crusher Parts & Screen Panels", category: "Mining", brand: "RockCrush", price: "$2,100", icon: Sun },
-  { id: "metals", title: "Ductile Iron & Stainless Steel Castings", category: "Alloys", brand: "Foundry", price: "RFQ", icon: Droplets },
-  { id: "paving", title: "Adjustable Paving Risers & Pedestals", category: "Construction", brand: "LevelUp", price: "$15.00", icon: Cog },
-  { id: "water_works", title: "Mechanical Joint Fittings & Valves", category: "Water Works", brand: "FlowControl", price: "$89.00", icon: Droplets },
-  { id: "fabrication", title: "Custom Structural Metal Fabrication", category: "Services", brand: "TechnoFab", price: "Custom", icon: Wrench },
-  { id: "marine", title: "Bronze Propellers & Marine Hulls", category: "Marine", brand: "Nautical", price: "$3,500", icon: Anchor },
-  { id: "oil_gas", title: "High-Pressure Valve Components", category: "Oil & Gas", brand: "PetroParts", price: "RFQ", icon: Flame },
-  { id: "construction", title: "Scaffolding & Infrastructure Parts", category: "Construction", brand: "BuildSafe", price: "RFQ", icon: Building },
-  { id: "utility", title: "Power Transmission Hardware", category: "Utility", brand: "GridTech", price: "$200.00", icon: Bolt },
-  { id: "utility", title: "Power Transmission Hardware", category: "Utility", brand: "GridTech", price: "$200.00", icon: Bolt },
-  { id: "utility", title: "Power Transmission Hardware", category: "Utility", brand: "GridTech", price: "$200.00", icon: Bolt },
-  { id: "defence", title: "Aerospace & Defence Grade Castings", category: "Defence", brand: "AeroCast", price: "Restricted", icon: Shield },
-  { id: "custom", title: "Bespoke OEM Manufacturing", category: "Manufacturing", brand: "TechnoML", price: "Contact", icon: Hammer },
-  { id: "snow", title: "Industrial Snow Plough Attachments", category: "Equipment", brand: "WinterOps", price: "$1,200", icon: Cog },
-]
+  {
+    id: "paving-risers",
+    volume: "VOL. 02",
+    title: "Pro Series Precision Paving Risers",
+    category: "Highway Inlets",
+    loadRating: "AASHTO H-20 Rated",
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/PAVING-RISERS/paving_riser_1.5200.png`,
+    icon: Layers
+  },
+  {
+    id: "trench-drain",
+    volume: "VOL. 03",
+    title: "Heavy-Duty Linear Trench Drain 500",
+    category: "Airport Drainage",
+    loadRating: "90-Ton Proof Load",
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/MEGA/pre-trench-01.JPG`,
+    icon: Droplets
+  },
+  {
+    id: "pipe-grates",
+    volume: "VOL. 04",
+    title: "High-Flow Hydraulic Vane Pipe Grates",
+    category: "Stormwater Systems",
+    loadRating: "D400 Heavy Municipal",
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/PAVING-RISERS/products/pipe_grid.jpeg`,
+    icon: Grid3X3
+  },
+  {
+    id: "utility-hatches",
+    volume: "VOL. 05",
+    title: "Heavy Cast Vault Hatches & Security Covers",
+    category: "Vault Infrastructure",
+    loadRating: "100-Ton Severe Proof",
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/MEGA/HATCHES_COVER.png`,
+    icon: ShieldCheck
+  },
+  {
+    id: "manhole-frames",
+    volume: "VOL. 06",
+    title: "Ductile Iron Manhole Covers & Rings",
+    category: "Sub-Surface Chambers",
+    loadRating: "Class 35B / Fe 50007",
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image1.jpeg`,
+    icon: Box
+  },
+  {
+    id: "tactile-plates",
+    volume: "VOL. 07",
+    title: "ADA Truncated Dome Detectable Warning Plates",
+    category: "Transit Accessibility",
+    loadRating: "AASHTO H-20 Wheel Load",
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/MEGA/Detectable_Warning_Plates.jpeg`,
+    icon: ShieldCheck
+  },
+  {
+    id: "mj-fittings",
+    volume: "VOL. 08",
+    title: "Mechanical Joint Ductile Iron MJ Fittings",
+    category: "Pipeline Utilities",
+    loadRating: "ISO 2531 / 16 Bar",
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/MEGA/MJ_Fittings.jpeg`,
+    icon: Wrench
+  },
+  {
+    id: "rebar-sections",
+    volume: "VOL. 09",
+    title: "Deformed Structural Rebar Reinforcement Bars",
+    category: "Concrete Metallurgy",
+    loadRating: "Grade 60 / 75 High Yield",
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/reber.png`,
+    icon: Hammer
+  },
+  {
+    id: "curb-inlets",
+    volume: "VOL. 10",
+    title: "Catch Basin & Highway Curb Inlet Assemblies",
+    category: "Stormwater Inlets",
+    loadRating: "AASHTO M-306 / H-25 Rated",
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image3.jpeg`,
+    icon: ShieldCheck,
+    isWide: true
+  },
+  {
+    id: "telecom-vaults",
+    volume: "VOL. 11",
+    title: "Sub-Surface Utility & Telecommunication Vaults",
+    category: "Grid Infrastructure",
+    loadRating: "Heavy Security Class",
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image6.jpg`,
+    icon: Box,
+    isWide: true
+  }
+];
 
 export function MegaStories() {
-  const heroProduct = products[0]
-  const gridProducts = products.slice(1) // Items 2-16
+  const heroProduct = CASTING_ZONE_PRODUCTS[0]; // Vol 01
+  const topGridProducts = CASTING_ZONE_PRODUCTS.slice(1, 5); // 4 items (Vol 02 - 05) in 2x2 grid
+  const bottomRowProducts = CASTING_ZONE_PRODUCTS.slice(5, 9); // 4 items (Vol 06 - 09) in 1 row
 
   return (
-    <section className="w-full px-4 md:px-8 py-12 bg-white">
+    <section className="w-full bg-white text-[#0a0a0a] py-6 md:py-8 font-sans border-b border-gray-100">
+      <div className="w-full px-4 sm:px-6 lg:px-10 space-y-5">
 
-      <div className="flex items-center justify-between mb-8">
-        <h2 className="text-3xl font-bold tracking-tight text-[#cc2221] uppercase border-l-4 border-black pl-4">
-          Casting zone
-        </h2>
-        <Button variant="outline" className="hidden sm:flex group border-black text-black hover:bg-zinc-100">
-          View All Categories <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-        </Button>
-      </div>
-
-      {/* === INDUSTRIAL BOOKSHELF CONTAINER === */}
-      {/* 1. The Outer Frame (Simulates the Shelf Unit) */}
-      <div className="border-[6px] border-zinc-800 bg-zinc-50 shadow-2xl relative">
-
-        {/* 2. The Horizontal Header (Requested by Client) */}
-        <div className="w-full bg-zinc-800 text-white py-4 px-6 mb-6">
-          <div className="flex justify-between items-center">
-            <h2 className="text-2xl md:text-3xl font-black uppercase tracking-widest">
-              VOLUMES 1 - 16
-            </h2>
-            <span className="text-zinc-400  text-sm hidden md:block">
-              SERIES: FOUNDRY_2025 // SPECS
+        {/* --- SECTION HEADER --- */}
+        <div className="border-b border-gray-200 pb-3 flex flex-col sm:flex-row sm:items-end justify-between gap-3 w-full">
+          <div>
+            <span className="text-[11px] uppercase tracking-[0.3em] font-black text-[#CC0000] block mb-1">
+              Foundry Production Catalog
             </span>
+            <h2 className="text-2xl md:text-3xl font-black uppercase tracking-tight text-[#0a0a0a] leading-tight">
+              Casting Zone & <span className="text-[#CC0000]">Product Volumes</span>
+            </h2>
+          </div>
+          
+          {/* Two Buttons on Top Right */}
+          <div className="flex items-center gap-2">
+            <Link href="/contact">
+              <Button variant="outline" className="border-zinc-300 text-zinc-800 hover:border-black hover:bg-zinc-100 rounded-none text-xs font-black uppercase tracking-wider h-9 px-3">
+                Download Master Spec
+              </Button>
+            </Link>
+            <Link href="/contact">
+              <Button className="bg-[#CC0000] hover:bg-[#AA0000] text-white rounded-none text-xs font-black uppercase tracking-wider h-9 px-4 flex items-center gap-1.5 shadow-sm">
+                Request Volume Quote <ArrowRight className="w-3.5 h-3.5" />
+              </Button>
+            </Link>
           </div>
         </div>
 
-        {/* 3. The Grid Content (Sitting 'inside' the shelf) */}
-        <div className="px-6 pb-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* --- INDUSTRIAL BOOKSHELF / GRID CONTAINER (White Background) --- */}
+        <div className="border border-gray-200 bg-white shadow-sm relative rounded-none overflow-hidden">
 
-{/* === HERO PRODUCT (Volume 1) === */}
-            <div className="md:col-span-2 md:row-span-2 h-full min-h-[400px]">
-              <Card className="h-full w-full p-20 overflow-hidden group border-2 border-gray-100 shadow-sm relative rounded-none bg-white cursor-pointer flex flex-col items-center justify-center">
+          {/* Bookshelf Header Strip */}
+          <div className="w-full bg-zinc-50 border-b border-gray-200 text-zinc-900 py-2.5 px-4 sm:px-6 flex flex-wrap justify-between items-center gap-2">
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 bg-[#CC0000] rounded-full animate-pulse" />
+              <h3 className="text-xs sm:text-sm font-black uppercase tracking-widest text-zinc-900">
+                VOLUMES 01 – 09 // PRODUCTION MATRIX
+              </h3>
+            </div>
+            
+            {/* Top Right Badges */}
+            <div className="flex items-center gap-2 font-mono text-[10px] uppercase font-bold">
+              <span className="bg-white border border-gray-200 text-zinc-700 px-2 py-0.5 rounded-none">
+                9 Active Volumes
+              </span>
+              <span className="bg-zinc-900 text-white px-2 py-0.5 rounded-none">
+                AASHTO / ASTM Certified
+              </span>
+            </div>
+          </div>
 
-                {/* === VIDEO CONTAINER (Reduced Size) === */}
-                {/* w-[85%] h-[55%] makes it smaller than the card, leaving white space */}
-                <div className="relative w-full h-full shadow-lg overflow-hidden z-0 mb-16"> 
+          {/* Grid Container (Clean White Background, Red-Bordered White Cards) */}
+          <div className="p-3 sm:p-4 bg-zinc-50/40 space-y-3.5">
+
+            {/* === TOP BLOCK: 50% Hero Left + 50% (2x2 Grid) Right === */}
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-3.5 items-stretch">
+
+              {/* --- 1 HERO CARD ON LEFT (50% = 6 cols) --- */}
+              <div className="lg:col-span-6 h-full min-h-[510px] flex flex-col">
+                <Card className="h-full w-full overflow-hidden border-2 border-[#CC0000] bg-white text-zinc-900 rounded-none shadow-sm flex flex-col justify-between p-3.5 group relative hover:shadow-md transition-all duration-300">
+
+                  {/* Top Header */}
+                  <div className="flex items-center justify-between z-20 pb-2 border-b border-gray-100">
+                    <Badge className="bg-[#CC0000] text-white rounded-none text-[10px] font-mono uppercase tracking-wider font-bold border-none px-2.5 py-0.5">
+                      {heroProduct.volume} // TOP SELLER
+                    </Badge>
+                    <span className="text-[11px] font-mono text-zinc-600 uppercase font-bold">
+                      {heroProduct.category}
+                    </span>
+                  </div>
+
+                  {/* Video Media Container */}
+                  <div className="relative w-full flex-1 my-2.5 bg-black border border-gray-200 rounded-none overflow-hidden min-h-[290px] flex items-center justify-center">
                     <video
                       autoPlay
                       loop
                       muted
                       playsInline
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-95 group-hover:opacity-100"
                     >
-                      <source src={heroProduct.video || `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/NEW_NEXT_GENERATION_DESIGNER_D-BOXES.mp4`} type="video/mp4" />
-                      Your browser does not support the video tag.
+                      <source
+                        src={heroProduct.video || `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/NEW_NEXT_GENERATION_DESIGNER_D-BOXES.mp4`}
+                        type="video/mp4"
+                      />
                     </video>
-                </div>
 
-                {/* Content Wrapper */}
-                <div className="absolute bottom-0 left-0 pt-8 z-20 w-full bg-white/90 backdrop-blur-sm border-t border-gray-100">
-                  <div className="flex justify-between items-start">
-                    <Badge className="mb-2 bg-transparent border border-[#cc2221] text-[#cc2221] hover:bg-[#cc2221] hover:text-white rounded-none px-2 py-0.5">
-                      TOP SELLER
-                    </Badge>
+                    {/* Blueprint Coordinates Overlay */}
+                    <div className="absolute top-2 left-2 w-2.5 h-2.5 border-t-2 border-l-2 border-white/60 pointer-events-none" />
+                    <div className="absolute top-2 right-2 w-2.5 h-2.5 border-t-2 border-r-2 border-white/60 pointer-events-none" />
+                    <div className="absolute bottom-2 left-2 w-2.5 h-2.5 border-b-2 border-l-2 border-white/60 pointer-events-none" />
+                    <div className="absolute bottom-2 right-2 w-2.5 h-2.5 border-b-2 border-r-2 border-white/60 pointer-events-none" />
                   </div>
 
-                  <h3 className="text-2xl md:text-3xl font-black leading-tight text-[#cc2221] mb-2 uppercase tracking-tight">
-                    {heroProduct.title}
-                  </h3>
-                  
-                  <div className="flex items-center justify-between border-t border-gray-200 pt-3 mt-2">
-                     <span className="text-xs font-bold text-gray-400 uppercase tracking-widest">
-                        Volume 01
-                     </span>
-                     {/* The Red Accent Color */}
-                     <span className="  font-black text-xl">
-                        {heroProduct.price}
-                     </span>
+                  {/* Content Footer */}
+                  <div className="pt-2.5 border-t border-gray-100 flex flex-col gap-1.5 z-20">
+                    <h4 className="text-lg sm:text-xl font-black leading-tight text-[#0a0a0a] uppercase tracking-tight group-hover:text-[#CC0000] transition-colors">
+                      {heroProduct.title}
+                    </h4>
+
+                    <div className="flex items-center justify-between text-xs pt-1">
+                      <span className="text-zinc-600 font-mono text-[11px] uppercase">
+                        Spec: <strong className="text-black font-sans font-bold">{heroProduct.loadRating}</strong>
+                      </span>
+                      <Link href="/contact" className="inline-flex items-center gap-1.5 text-xs font-bold text-[#CC0000] hover:text-black uppercase tracking-wider">
+                        Procure Volume <ArrowUpRight className="w-4 h-4" />
+                      </Link>
+                    </div>
                   </div>
-                </div>
-              </Card>
+                </Card>
+              </div>
+
+              {/* --- 2x2 (4 CARDS: 2 ROWS x 2 COLUMNS) ON RIGHT (50% = 6 cols) --- */}
+              <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {topGridProducts.map((product) => {
+                  const Icon = product.icon;
+                  return (
+                    <Card
+                      key={product.id}
+                      className="group flex flex-col justify-between overflow-hidden border-2 border-[#CC0000] bg-white text-zinc-900 rounded-none shadow-sm hover:shadow-md transition-all duration-200 min-h-[275px] p-2.5"
+                    >
+                      {/* Top Volume Tag & Full Category */}
+                      <div className="flex items-center justify-between pb-1.5 border-b border-gray-100 mb-1 gap-2">
+                        <span className="text-[10px] font-mono uppercase font-bold text-[#CC0000] shrink-0">
+                          {product.volume}
+                        </span>
+                        <span className="text-[9px] font-mono text-zinc-600 uppercase font-semibold text-right leading-tight">
+                          {product.category}
+                        </span>
+                      </div>
+
+                      {/* Image Container */}
+                      <div className="relative w-full flex-1 bg-zinc-50/70 border border-gray-100 rounded-none overflow-hidden my-1 min-h-[140px] flex items-center justify-center p-1.5">
+                        <Image
+                          src={product.image}
+                          alt={product.title}
+                          fill
+                          className="object-contain p-1 group-hover:scale-105 transition-all duration-300"
+                        />
+                      </div>
+
+                      {/* Details Footer */}
+                      <CardContent className="p-0 pt-1.5 border-t border-gray-100 flex flex-col justify-between gap-1 bg-transparent">
+                        <h5 className="font-bold text-[12px] leading-snug line-clamp-2 min-h-[32px] text-[#0a0a0a] group-hover:text-[#CC0000] transition-colors uppercase">
+                          {product.title}
+                        </h5>
+
+                        <div className="flex items-center justify-between text-[10px] text-zinc-600 pt-0.5 border-t border-gray-50">
+                          <span className="flex items-center gap-1 text-zinc-700 font-mono text-[9.5px]">
+                            <Icon className="w-3.5 h-3.5 text-[#CC0000] shrink-0" />
+                            <span className="font-semibold">{product.loadRating}</span>
+                          </span>
+                          <ArrowUpRight className="w-3.5 h-3.5 text-zinc-400 group-hover:text-[#CC0000] shrink-0 transition-colors" />
+                        </div>
+                      </CardContent>
+                    </Card>
+                  );
+                })}
+              </div>
+
             </div>
 
-            {/* === GRID ITEMS (Volumes 2-16) === */}
-            {gridProducts.map((product, index) => {
-              // Cycle images
-              const imageIndex = (index + 1) % myImages.length
-              const imageSrc = myImages[imageIndex]
-              const Icon = product.icon
-
-              return (
-                <Card key={product.id} className="group flex flex-col overflow-hidden border-2 border-zinc-200 hover:border-zinc-800 shadow-none hover:shadow-xl transition-all h-[320px] rounded-none">
-                  <div className="relative h-48 w-full overflow-hidden bg-zinc-100">
-                    <Image
-                      src={imageSrc}
-                      alt={product.title}
-                      fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0"
-                    />
-                    <div className="absolute top-0 left-0 p-2 w-full flex justify-between">
-                      {/* Volume Number Badge */}
-                      <Badge className="bg-zinc-900 text-white rounded-none  text-xs">
-                        VOL. {String(index + 2).padStart(2, '0')}
-                      </Badge>
+            {/* === BOTTOM BLOCK: 4 CARDS ALL IN ONE ROW === */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+              {bottomRowProducts.map((product) => {
+                const Icon = product.icon;
+                return (
+                  <Card
+                    key={product.id}
+                    className="group flex flex-col justify-between overflow-hidden border-2 border-[#CC0000] bg-white text-zinc-900 rounded-none shadow-sm hover:shadow-md transition-all duration-200 min-h-[275px] p-2.5"
+                  >
+                    {/* Top Volume Tag & Full Category */}
+                    <div className="flex items-center justify-between pb-1.5 border-b border-gray-100 mb-1 gap-2">
+                      <span className="text-[10px] font-mono uppercase font-bold text-[#CC0000] shrink-0">
+                        {product.volume}
+                      </span>
+                      <span className="text-[9px] font-mono text-zinc-600 uppercase font-semibold text-right leading-tight">
+                        {product.category}
+                      </span>
                     </div>
-                  </div>
 
-                  <CardContent className="flex-1 p-4 flex flex-col justify-between bg-white">
-                    <div>
-                      <h4 className="font-bold text-sm md:text-base leading-snug line-clamp-2 text-[#cc2221] group-hover:text-orange-600 transition-colors uppercase ">
+                    {/* Image Container */}
+                    <div className="relative w-full flex-1 bg-zinc-50/70 border border-gray-100 rounded-none overflow-hidden my-1 min-h-[140px] flex items-center justify-center p-1.5">
+                      <Image
+                        src={product.image}
+                        alt={product.title}
+                        fill
+                        className="object-contain p-1 group-hover:scale-105 transition-all duration-300"
+                      />
+                    </div>
+
+                    {/* Details Footer */}
+                    <CardContent className="p-0 pt-1.5 border-t border-gray-100 flex flex-col justify-between gap-1 bg-transparent">
+                      <h5 className="font-bold text-[12px] leading-snug line-clamp-2 min-h-[32px] text-[#0a0a0a] group-hover:text-[#CC0000] transition-colors uppercase">
                         {product.title}
-                      </h4>
-                    </div>
-                    <div className="flex items-center justify-between text-xs text-muted-foreground mt-3 pt-3 border-t border-zinc-100">
-                      <span className="font-medium text-black flex items-center gap-1">
-                        <Icon className="h-3 w-3" /> {product.brand}
-                      </span>
-                      <span className="font-bold text-black bg-zinc-100 px-2 py-1">
-                        {product.price}
-                      </span>
-                    </div>
-                  </CardContent>
-                </Card>
-              )
-            })}
+                      </h5>
+
+                      <div className="flex items-center justify-between text-[10px] text-zinc-600 pt-0.5 border-t border-gray-50">
+                        <span className="flex items-center gap-1 text-zinc-700 font-mono text-[9.5px]">
+                          <Icon className="w-3.5 h-3.5 text-[#CC0000] shrink-0" />
+                          <span className="font-semibold">{product.loadRating}</span>
+                        </span>
+                        <ArrowUpRight className="w-3.5 h-3.5 text-zinc-400 group-hover:text-[#CC0000] shrink-0 transition-colors" />
+                      </div>
+                    </CardContent>
+                  </Card>
+                );
+              })}
+            </div>
+
           </div>
+
+          {/* Bottom Shelf Lip */}
+          <div className="h-1.5 bg-zinc-100 w-full border-t border-gray-200" />
         </div>
 
-        {/* 4. The Bottom Shelf Lip (Visual Anchor) */}
-        <div className="h-4 bg-zinc-800 w-full border-t border-zinc-600"></div>
-      </div>
-
-      <div className="mt-12 text-center pb-8">
-        <Button size="lg" className="bg-zinc-900 text-white hover:bg-zinc-700 min-w-[200px] rounded-none">
-          Download Full Spec Sheet
-        </Button>
       </div>
     </section>
-  )
+  );
 }

@@ -4,7 +4,7 @@ import React from 'react';
 
 // Sample Data - Replace 'src' with your actual logo paths
 const row1 = [
-  { name: "NPCA", src: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/ProductCarousels/ASSOCIATION_SIZED/aia copy.jpg` }, 
+  { name: "NPCA", src: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/ProductCarousels/ASSOCIATION_SIZED/aia copy.jpg` },
   { name: "LICA", src: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/ProductCarousels/ASSOCIATION_SIZED/APWA.JPG` },
   { name: "PCANY", src: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/ProductCarousels/ASSOCIATION_SIZED/AWWA.JPG` },
   { name: "NUCANY", src: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/ProductCarousels/ASSOCIATION_SIZED/ccmpa copy.jpg` },
@@ -26,7 +26,7 @@ const row2 = [
   { name: "Association", src: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/ProductCarousels/sized/Nassau+Logo copy.JPG` },
   { name: "Standard", src: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/ProductCarousels/sized/NHDOTlogo.JPG` },
   { name: "Standard", src: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/ProductCarousels/sized/nj_copy.JPG` },
-  { name: "Standard", src: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/ProductCarousels/sized/ny_state_copy.JPG`},
+  { name: "Standard", src: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/ProductCarousels/sized/ny_state_copy.JPG` },
   { name: "Standard", src: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/ProductCarousels/sized/ny.JPG` },
   { name: "Standard", src: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/ProductCarousels/sized/PennDOT-Logo.png` },
   { name: "Standard", src: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/ProductCarousels/sized/RIDOT.jpg` },
@@ -41,30 +41,30 @@ export default function AssociationsCarousel() {
         <h2 className="text-2xl md:text-3xl font-bold   uppercase tracking-wide">
           Associations & Standards
         </h2>
-        {/* <div className="w-24 h-1 bg-[#cc2221] mx-auto mt-4 rounded-full"></div> */}
+        {/* <div className="w-24 h-1 bg-[#CC0000] mx-auto mt-4 rounded-full"></div> */}
       </div>
 
       {/* === CAROUSEL WRAPPER === */}
       {/* Mask fade effect on edges */}
       <div className="flex flex-col gap-2 relative [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
-        
+
         {/* === ROW 1: SCROLL LEFT === */}
         {/* width-max ensures the inner container can stretch as wide as needed */}
         <div className="flex overflow-hidden group py-2">
           <div className="flex gap-8 animate-infinite-scroll-left group-hover:paused w-max pl-4">
-             {/* Duplicate list ONCE. The CSS handles the loop by moving 50% */}
-             {[...row1, ...row1].map((item, index) => (
-                <LogoCard key={index} item={item} />
-             ))}
+            {/* Duplicate list ONCE. The CSS handles the loop by moving 50% */}
+            {[...row1, ...row1].map((item, index) => (
+              <LogoCard key={index} item={item} />
+            ))}
           </div>
         </div>
 
         {/* === ROW 2: SCROLL RIGHT === */}
         <div className="flex overflow-hidden group py-2">
           <div className="flex gap-8 animate-infinite-scroll-right group-hover:paused w-max pl-4">
-             {[...row2, ...row2].map((item, index) => (
-                <LogoCard key={index} item={item} />
-             ))}
+            {[...row2, ...row2].map((item, index) => (
+              <LogoCard key={index} item={item} />
+            ))}
           </div>
         </div>
 
@@ -112,13 +112,13 @@ function LogoCard({ item }: { item: { name: string; src: string } }) {
        hover:scale-105
        cursor-pointer
     ">
-       <Image 
-            src={item.src} 
-            alt={item.name} 
-            width={200} 
-            height={120} 
-            className="object-contain max-h-[120px] max-w-[200px] p-2" 
-        />
+      <Image
+        src={item.src}
+        alt={item.name}
+        width={200}
+        height={120}
+        className="object-contain max-h-[120px] max-w-[200px] p-2"
+      />
     </div>
   );
 }

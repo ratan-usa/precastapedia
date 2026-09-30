@@ -1,9 +1,9 @@
 'use client';
 
 import React, { useEffect, useState, useCallback } from 'react';
-import { 
-  Plus, Search, Filter, Edit, Trash2, 
-  ChevronLeft, ChevronRight, Package 
+import {
+  Plus, Search, Filter, Edit, Trash2,
+  ChevronLeft, ChevronRight, Package
 } from 'lucide-react';
 import Link from 'next/link';
 import { ApiDocument, getProducts, Product } from '@/lib/api';
@@ -20,7 +20,7 @@ const getThumbnail = (docs: ApiDocument[]) => {
 export default function AdminProductList() {
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
-  
+
   // Pagination State
   const [page, setPage] = useState(0);
   const [totalPages, setTotalPages] = useState(0);
@@ -33,7 +33,7 @@ export default function AdminProductList() {
     try {
       // Call the separated API function
       const data = await getProducts(page, PAGE_SIZE);
-      
+
       setProducts(data.content);
       setTotalPages(data.totalPages);
       setTotalElements(data.totalElements);
@@ -58,16 +58,16 @@ export default function AdminProductList() {
 
   return (
     <div className="p-6 bg-gray-50 min-h-screen">
-      
+
       {/* HEADER */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
         <div>
           <h1 className="text-2xl font-bold text-gray-900">Products</h1>
           <p className="text-sm text-gray-500">Manage your inventory and catalog.</p>
         </div>
-        <Link 
+        <Link
           href="/private/member/products/new"
-          className="inline-flex items-center gap-2 bg-[#cc2221] hover:bg-[#cc2221] text-white px-4 py-2 rounded-lg font-medium transition-colors"
+          className="inline-flex items-center gap-2 bg-[#CC0000] hover:bg-[#CC0000] text-white px-4 py-2 rounded-lg font-medium transition-colors"
         >
           <Plus className="w-4 h-4" />
           Add Product
@@ -78,10 +78,10 @@ export default function AdminProductList() {
       <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-200 mb-6 flex flex-col sm:flex-row gap-4 justify-between items-center">
         <div className="relative w-full sm:w-96">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
-          <input 
-            type="text" 
-            placeholder="Search products..." 
-            className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-[#cc2221]"
+          <input
+            type="text"
+            placeholder="Search products..."
+            className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-[#CC0000]"
           />
         </div>
         <button className="flex items-center gap-2 px-4 py-2 text-gray-600 border border-gray-300 rounded-lg hover:bg-gray-50">
@@ -130,15 +130,15 @@ export default function AdminProductList() {
                     <td className="px-6 py-4">
                       <div className="flex items-center gap-3">
                         <div className="w-12 h-12 shrink-0 bg-gray-100 rounded-lg overflow-hidden border border-gray-200">
-                           {/* eslint-disable-next-line @next/next/no-img-element */}
-                           <Image 
-                             width={1200}
-                             height={600}
-                             src={getThumbnail(product.documents)} 
-                             alt={product.productName} 
-                             className="w-full h-full object-cover"
-                             onError={(e) => { e.currentTarget.src = `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image1.jpeg` }}
-                           />
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <Image
+                            width={1200}
+                            height={600}
+                            src={getThumbnail(product.documents)}
+                            alt={product.productName}
+                            className="w-full h-full object-cover"
+                            onError={(e) => { e.currentTarget.src = `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image1.jpeg` }}
+                          />
                         </div>
                         <div>
                           <p className="font-medium text-gray-900 line-clamp-1">{product.productName}</p>
@@ -174,7 +174,7 @@ export default function AdminProductList() {
                     </td>
                     <td className="px-6 py-4 text-right">
                       <div className="flex items-center justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                        <button className="p-2 text-gray-400 hover:text-[#cc2221] hover:bg-[#cc2221] rounded-lg">
+                        <button className="p-2 text-gray-400 hover:text-[#CC0000] hover:bg-[#CC0000] rounded-lg">
                           <Edit className="w-4 h-4" />
                         </button>
                         <button className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50 rounded-lg">
@@ -195,7 +195,7 @@ export default function AdminProductList() {
             Showing <span className="font-medium">{page * PAGE_SIZE + 1}</span> to <span className="font-medium">{Math.min((page + 1) * PAGE_SIZE, totalElements)}</span> of <span className="font-medium">{totalElements}</span> results
           </span>
           <div className="flex items-center gap-2">
-            <button 
+            <button
               onClick={() => handlePageChange(page - 1)}
               disabled={page === 0}
               className="p-2 border border-gray-300 rounded-lg hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
@@ -205,7 +205,7 @@ export default function AdminProductList() {
             <span className="text-sm font-medium text-gray-700 px-2">
               Page {page + 1} of {totalPages || 1}
             </span>
-            <button 
+            <button
               onClick={() => handlePageChange(page + 1)}
               disabled={page >= totalPages - 1}
               className="p-2 border border-gray-300 rounded-lg hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"

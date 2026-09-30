@@ -31,9 +31,9 @@ export default function HistoryPage() {
     <div className="min-h-screen bg-white text-slate-900 font-sans">
 
       {/* === HERO SECTION === */}
-      <section className="relative py-24 bg-slate-900 text-white overflow-hidden">
+      <section className="relative pt-8 bg-slate-900 text-white overflow-hidden">
         {/* Background Texture */}
-        <div 
+        <div
           className="absolute inset-0 opacity-20 bg-cover bg-center"
           style={{ backgroundImage: `url(${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image13.jpg)` }}
         />

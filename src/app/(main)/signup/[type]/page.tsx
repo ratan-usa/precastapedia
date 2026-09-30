@@ -1,7 +1,7 @@
 'use client';
 
 import { useActionState, use } from 'react';
- import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Mail, Loader2, CheckCircle2 } from 'lucide-react';
@@ -20,7 +20,7 @@ export default function SignupPage({ params }: { params: Promise<{ type: string 
           </div>
           <CardTitle className="text-green-800 mb-2">Check Your Email</CardTitle>
           <CardDescription className="text-green-700">
-             We have sent a registration link to your inbox.
+            We have sent a registration link to your inbox.
           </CardDescription>
         </Card>
       </div>
@@ -29,7 +29,7 @@ export default function SignupPage({ params }: { params: Promise<{ type: string 
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-slate-50 p-4">
-      <Card className="max-w-md w-full shadow-xl border-t-4 border-t-[#cc2221]">
+      <Card className="max-w-md w-full shadow-xl border-t-4 border-t-[#CC0000]">
         <CardHeader className="text-center">
           <CardTitle className="text-2xl font-bold">Sign up for {type.toUpperCase()}</CardTitle>
           <CardDescription>Enter your work email to begin.</CardDescription>
@@ -40,7 +40,7 @@ export default function SignupPage({ params }: { params: Promise<{ type: string 
             <div className="space-y-2">
               <Input name="email" type="email" placeholder="name@company.com" required disabled={isPending} />
             </div>
-            <Button className="w-full bg-[#cc2221] hover:bg-red-700 h-12 text-md" disabled={isPending}>
+            <Button className="w-full bg-[#CC0000] hover:bg-red-700 h-12 text-md" disabled={isPending}>
               {isPending ? <Loader2 className="animate-spin mr-2" /> : <Mail className="mr-2 h-4 w-4" />}
               Send Magic Link
             </Button>

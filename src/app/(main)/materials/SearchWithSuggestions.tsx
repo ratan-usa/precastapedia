@@ -25,7 +25,7 @@ const SearchWithSuggestions = () => {
 
   useEffect(() => {
     if (query.length > 0) {
-      const results = searchData.filter(item => 
+      const results = searchData.filter(item =>
         item.title.toLowerCase().includes(query.toLowerCase()) ||
         item.category.toLowerCase().includes(query.toLowerCase())
       );
@@ -48,12 +48,12 @@ const SearchWithSuggestions = () => {
 
   return (
     <div ref={wrapperRef} className="relative w-full max-w-2xl mx-auto z-50 text-left">
-      
+
       {/* === INPUT FIELD === */}
       <div className="relative group">
         <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
           {/* Icon turns red when focused */}
-          <Search className="h-5 w-5 text-gray-400 group-focus-within:text-[#cc2221] transition-colors" />
+          <Search className="h-5 w-5 text-gray-400 group-focus-within:text-[#CC0000] transition-colors" />
         </div>
         <input
           type="text"
@@ -62,14 +62,14 @@ const SearchWithSuggestions = () => {
           placeholder="Search for materials, products, or help..."
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          onFocus={() => { if(query) setIsOpen(true) }}
+          onFocus={() => { if (query) setIsOpen(true) }}
         />
       </div>
 
       {/* === DROPDOWN RESULTS === */}
       {isOpen && (
         <div className="absolute top-full left-0 w-full mt-2 bg-white rounded-lg shadow-xl border border-gray-100 overflow-hidden max-h-[400px] overflow-y-auto animate-in fade-in slide-in-from-top-2 duration-200">
-          
+
           <div className="bg-gray-50 px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-100">
             {filteredItems.length > 0 ? "Recommended Results" : "No results found"}
           </div>
@@ -77,16 +77,16 @@ const SearchWithSuggestions = () => {
           {filteredItems.length > 0 ? (
             <div className="divide-y divide-gray-50">
               {filteredItems.map((item, index) => (
-                <Link 
-                  key={index} 
+                <Link
+                  key={index}
                   href={item.href}
                   onClick={() => setIsOpen(false)}
-                  className="block px-4 py-3 hover:bg-gray-50 transition-colors border-l-4 border-transparent hover:border-[#cc2221]"
+                  className="block px-4 py-3 hover:bg-gray-50 transition-colors border-l-4 border-transparent hover:border-[#CC0000]"
                 >
                   <div className="flex items-start">
                     <FileText className="w-4 h-4 text-gray-400 mt-1 mr-3 shrink-0" />
                     <div>
-                      <p className="text-sm font-semibold text-[#cc2221]">
+                      <p className="text-sm font-semibold text-[#CC0000]">
                         {item.title}
                       </p>
                       <p className="text-xs text-gray-400 mt-0.5 flex items-center gap-1">

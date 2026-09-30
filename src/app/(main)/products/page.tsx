@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function CatalogPage() {
   return (
-    <section className="relative w-full py-16 sm:py-24 bg-white">
+    <section className="relative w-full py-16 sm:pt-8 bg-white">
       <div className="absolute inset-0 z-0 h-[225px] w-full">
         <Image
           src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image14.jpeg`}
@@ -19,14 +19,14 @@ export default function CatalogPage() {
         <h2 className="text-[40px] pb-12 font-extrabold tracking-tight text-white mb-8">
           Our Product Category
         </h2>
-        <p className="text-[20px] py-5 font-semibold uppercase tracking-widest text-[#cc2221] mb-2">
+        <p className="text-[20px] py-5 font-semibold uppercase tracking-widest text-[#CC0000] mb-2">
           JUST HIGHER STANDARDS
         </p>
         <h3 className="text-[25px] sm:text-4xl font-bold max-w-4xl mx-auto mb-16">
           Streamline your entire material procurement process with intelligent AI automation
         </h3>
       </div>
- 
+
 
       <div className="min-h-screen bg-white py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-[1400px] mx-auto">

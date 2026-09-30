@@ -10,7 +10,7 @@ export default function FooterHero({
     title,
 }: FooterHeroPageProps) {
     return (
-        <section className="relative w-full py-16 sm:py-24 bg-white">
+        <section className="relative w-full py-16 sm:pt-8 bg-white">
             <div className="absolute inset-0 z-0 h-[325px] w-full">
                 <Image
                     src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image8.jpeg`}

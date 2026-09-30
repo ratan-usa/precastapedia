@@ -24,7 +24,7 @@ const benefits = [
 
 export default function SourcingRequest() {
     return (
-        <section id="get-quote" className="relative w-full py-16 md:py-24 overflow-hidden">
+        <section id="get-quote" className="relative w-full py-16 md:pt-8 overflow-hidden">
             {/* === BACKGROUND IMAGE === */}
             <div className="absolute inset-0 z-0">
                 <Image
@@ -45,11 +45,11 @@ export default function SourcingRequest() {
                     {/* === LEFT COLUMN: THE FORM === */}
                     <div className="bg-white rounded-xl p-6 md:p-8 shadow-2xl">
                         <div className="mb-6">
-                            <span className="text-[#cc2221] font-bold uppercase tracking-wider text-sm">
+                            <span className="text-[#CC0000] font-bold uppercase tracking-wider text-sm">
                                 SEND US A MESSAGE
                             </span>
                             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mt-1">
-                                Let’s commence <span className="text-[#cc2221]">your projects</span>
+                                Let’s commence <span className="text-[#CC0000]">your projects</span>
                             </h3>
                         </div>
 
@@ -93,13 +93,13 @@ export default function SourcingRequest() {
                             </div>
 
                             {/* Attachment Link */}
-                            <div className="flex items-center gap-2 text-[#cc2221] cursor-pointer hover:underline w-fit">
+                            <div className="flex items-center gap-2 text-[#CC0000] cursor-pointer hover:underline w-fit">
                                 <Paperclip className="w-4 h-4" />
                                 <span className="text-sm font-medium">Add Attachment</span>
                             </div>
 
                             {/* Submit Button */}
-                            <Button className="w-full sm:w-auto bg-[#cc2221] hover:bg-red-700 text-white font-bold py-6 px-8 text-base rounded-md mt-2">
+                            <Button className="w-full sm:w-auto bg-[#CC0000] hover:bg-red-700 text-white font-bold py-6 px-8 text-base rounded-md mt-2">
                                 Post Your Request
                             </Button>
                         </form>

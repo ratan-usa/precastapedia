@@ -4,7 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import {  Handshake, ListPlus, Globe, MapPinCheckInsideIcon } from 'lucide-react';
+import { Handshake, ListPlus, Globe, MapPinCheckInsideIcon } from 'lucide-react';
 
 const features = [
   {
@@ -33,16 +33,16 @@ export default function StartSelling() {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-            Start Selling Smarter with <span className="text-[#cc2221]">Mega Foundries?</span>
+            Start Selling Smarter with <span className="text-[#CC0000]">Mega Foundries?</span>
           </h2>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          
+
           {/* === LEFT: IMAGE === */}
           <div className="relative w-full h-[500px] rounded-3xl overflow-hidden shadow-xl">
             <Image
@@ -62,13 +62,13 @@ export default function StartSelling() {
               {features.map((feature, index) => (
                 <div key={index} className="flex flex-col items-start">
                   {/* Icon */}
-                  <feature.icon className="w-10 h-10 text-[#cc2221] mb-4" strokeWidth={2} />
-                  
+                  <feature.icon className="w-10 h-10 text-[#CC0000] mb-4" strokeWidth={2} />
+
                   {/* Title */}
                   <h3 className="text-xl font-bold text-gray-900 mb-3">
                     {feature.title}
                   </h3>
-                  
+
                   {/* Description */}
                   <p className="text-gray-600 leading-relaxed text-sm">
                     {feature.description}
@@ -80,7 +80,7 @@ export default function StartSelling() {
             {/* CTA Button */}
             <div className="mt-12 text-center lg:text-right">
               <Link href="/seller-registration">
-                <Button className="bg-[#cc2221] hover:bg-red-700 text-white font-bold px-8 py-6 text-lg rounded-md shadow-md transition-transform hover:-translate-y-1">
+                <Button className="bg-[#CC0000] hover:bg-red-700 text-white font-bold px-8 py-6 text-lg rounded-md shadow-md transition-transform hover:-translate-y-1">
                   Join As Supplier
                 </Button>
               </Link>

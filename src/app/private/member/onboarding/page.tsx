@@ -11,7 +11,7 @@ import { Label } from '@/components/ui/label';
 import { Loader2, Store, MapPin, FileText, User, AlertCircle, LogOut } from 'lucide-react';
 
 // ✅ Import from your new consolidated API file
-import { registerVendor, getUserProfile } from '@/lib/api'; 
+import { registerVendor, getUserProfile } from '@/lib/api';
 
 export default function VendorOnboardingPage() {
   const router = useRouter();
@@ -40,41 +40,41 @@ export default function VendorOnboardingPage() {
   // --- 1. ON LOAD: GET USER ID ---
   useEffect(() => {
     async function loadUserIdentity() {
-        const token = localStorage.getItem('authToken');
-        const tenant = localStorage.getItem('tenantSlug') || 'team';
-        
-        if (!token) {
-            router.push(`/login/${tenant}`);
-            return;
-        }
+      const token = localStorage.getItem('authToken');
+      const tenant = localStorage.getItem('tenantSlug') || 'team';
 
-        try {
-            // Call the robust profile fetcher from lib/api.ts
-            const res = await getUserProfile(token, tenant);
-            console.log("🔍 VENDOR PAGE - PROFILE CHECK:", res);
+      if (!token) {
+        router.push(`/login/${tenant}`);
+        return;
+      }
 
-            // Our new API helper normalizes the ID to 'res.data.id'
-            if (res.success && res.data && res.data.id) {
-                console.log("✅ User ID Found:", res.data.id);
-                setUserId(res.data.id);
-                
-                // Pre-fill form
-                setFormData(prev => ({ 
-                    ...prev, 
-                    email: res.data.email || prev.email,
-                    contactName: res.data.fullName || prev.contactName
-                }));
-            } else {
-                // ⚠️ Fallback if backend still has issues
-                console.warn("⚠️ User ID missing in profile. Using Placeholder to allow UI testing.");
-                setUserId("user-id-placeholder-12345"); 
-            }
-        } catch (err) {
-            console.error(err);
-            setLoadError("Unexpected error loading user profile.");
-        } finally {
-            setFetchingUser(false);
+      try {
+        // Call the robust profile fetcher from lib/api.ts
+        const res = await getUserProfile(token, tenant);
+        console.log("🔍 VENDOR PAGE - PROFILE CHECK:", res);
+
+        // Our new API helper normalizes the ID to 'res.data.id'
+        if (res.success && res.data && res.data.id) {
+          console.log("✅ User ID Found:", res.data.id);
+          setUserId(res.data.id);
+
+          // Pre-fill form
+          setFormData(prev => ({
+            ...prev,
+            email: res.data.email || prev.email,
+            contactName: res.data.fullName || prev.contactName
+          }));
+        } else {
+          // ⚠️ Fallback if backend still has issues
+          console.warn("⚠️ User ID missing in profile. Using Placeholder to allow UI testing.");
+          setUserId("user-id-placeholder-12345");
         }
+      } catch (err) {
+        console.error(err);
+        setLoadError("Unexpected error loading user profile.");
+      } finally {
+        setFetchingUser(false);
+      }
     }
     loadUserIdentity();
   }, [router]);
@@ -85,7 +85,7 @@ export default function VendorOnboardingPage() {
   };
 
   // --- 2. SUBMIT FORM ---
-// --- 2. SUBMIT FORM (FIXED) ---
+  // --- 2. SUBMIT FORM (FIXED) ---
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -159,38 +159,38 @@ export default function VendorOnboardingPage() {
     console.log("🚀 Sending Vendor Registration:", apiPayload);
 
     const res = await registerVendor(apiPayload);
-    
+
     setLoading(false);
 
     // ✅ FIX: Check if response contains "success" text, even if structure is different
     const isSuccess = res && (
-        res.id || 
-        res.success === true || 
-        (typeof res.message === 'string' && res.message.toLowerCase().includes('successfully'))
+      res.id ||
+      res.success === true ||
+      (typeof res.message === 'string' && res.message.toLowerCase().includes('successfully'))
     );
 
     if (isSuccess) {
       console.log("✅ Vendor Created:", res);
-      
+
       // 1. Mark user as Vendor
       localStorage.setItem('isVendor', 'true');
-      
+
       // 2. Extract ID safely
       let newVendorId = res.id;
-      
+
       // If ID is hidden inside the message string "Vendor created successfully with id: 693..."
       if (!newVendorId && res.message) {
-          const match = res.message.match(/id:\s*([a-f0-9]+)/i);
-          if (match && match[1]) {
-              newVendorId = match[1];
-          }
+        const match = res.message.match(/id:\s*([a-f0-9]+)/i);
+        if (match && match[1]) {
+          newVendorId = match[1];
+        }
       }
 
       if (newVendorId) {
-          console.log("🆔 Captured Vendor ID:", newVendorId);
-          localStorage.setItem('vendorId', newVendorId);
+        console.log("🆔 Captured Vendor ID:", newVendorId);
+        localStorage.setItem('vendorId', newVendorId);
       }
-      
+
       // 3. Redirect
       router.push('/dashboard/vendor');
     } else {
@@ -205,7 +205,7 @@ export default function VendorOnboardingPage() {
   if (fetchingUser) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center bg-slate-50 gap-3">
-        <Loader2 className="animate-spin w-10 h-10 text-[#cc2221]" />
+        <Loader2 className="animate-spin w-10 h-10 text-[#CC0000]" />
         <p className="text-slate-500 font-medium">Verifying User Identity...</p>
       </div>
     );
@@ -238,10 +238,10 @@ export default function VendorOnboardingPage() {
   // --- MAIN FORM ---
   return (
     <div className="min-h-screen bg-slate-50 py-10 px-4 flex justify-center">
-      <Card className="max-w-3xl w-full shadow-xl border-t-4 border-t-[#cc2221]">
+      <Card className="max-w-3xl w-full shadow-xl border-t-4 border-t-[#CC0000]">
         <CardHeader className="bg-slate-900 text-white rounded-t-sm mt-1">
           <div className="flex items-center gap-3 mb-2">
-            <Store className="w-8 h-8 text-[#cc2221]" />
+            <Store className="w-8 h-8 text-[#CC0000]" />
             <CardTitle className="text-2xl">Vendor Registration</CardTitle>
           </div>
           <CardDescription className="text-slate-400">
@@ -332,7 +332,7 @@ export default function VendorOnboardingPage() {
             </div>
 
             <div className="pt-4">
-              <Button className="w-full bg-[#cc2221] hover:bg-red-700 h-12 text-lg font-bold" disabled={loading}>
+              <Button className="w-full bg-[#CC0000] hover:bg-red-700 h-12 text-lg font-bold" disabled={loading}>
                 {loading ? <Loader2 className="animate-spin mr-2" /> : "Complete Registration"}
               </Button>
             </div>

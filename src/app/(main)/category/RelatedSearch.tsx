@@ -16,11 +16,11 @@ export default function RelatedSearch({ tags }: RelatedSearchProps) {
       <h3 className="text-xl font-bold text-gray-900 mb-4">
         Related Search
       </h3>
-      
+
       <div className="flex flex-wrap gap-3">
         {tags.map((tag, index) => (
-          <Link 
-            key={index} 
+          <Link
+            key={index}
             // Creates a search URL or product link. 
             // You can change this to `/products/${slug}` if preferred.
             href={`/search?q=${encodeURIComponent(tag)}`}
@@ -29,7 +29,7 @@ export default function RelatedSearch({ tags }: RelatedSearchProps) {
               bg-white 
               border border-gray-300 
               text-sm text-gray-600 
-              hover:text-[#cc2221] hover:border-[#cc2221] 
+              hover:text-[#CC0000] hover:border-[#CC0000] 
               transition-colors duration-200
               cursor-pointer
             "

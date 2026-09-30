@@ -43,7 +43,6 @@ import HighFlowGrates from './HighFlowGrates';
 import IndustrialManifest from './IndustrialManifest';
 import MegaQSeries from './MegaQSeries';
 import MegaFoundationPage from './mega-foundation/page';
- import MegaFeaShowcase from './MegaFeaShowcase';
 import { Hero } from './Hero';
 import MegaMediaHub from '../components/MegaMediaHub';
 import MegaTactilePlates from './MegaTactilePlates';
@@ -70,35 +69,34 @@ export default function Home() {
         <div className="bg-white">
             
             <Hero />
+            <MegaProducts />
             <Product3DShowcase /> 
             <MegaQSeries/>
-            <MegaProducts />
+            <MegaMagazine/>
             <MegaMediaHub/>
-            <MegaRebarSection/>
+            <OtherMetalsDirectory/>
             <MegaRebarLiteCatalog/>
             <MegaTactilePlates/>
-            <LiveStreamCommandCenter />
-             <MegaFeaShowcase/>
+            <MegaRebarSection/>
+            <HighFlowGrates/>
             <IndustrialManifest/>
             <ProductPage />
-            <MegaMagazine/>
-            <HighFlowGrates/>
-            <CastingCarousel />
-            <OtherMetalsDirectory/>
+            <MegaProduct />
+            <BusinessSolutions />
+            <HeroSection />
+            <CosmoBlog />
+            <MegaStories />
+            <DesignCapabilities />
+            <LiveStreamCommandCenter />
+            {/* <CastingCarousel /> */}
             {/* <MetalDirectory /> */}
             <FactoryStories /> 
             <MegaBlog />
-            <HeroSection />
             <AiRobotics />
             {/* Non-Critical Visuals */}
-            <MegaStories />
-            <BusinessSolutions />
 
             {/* Blogs & Feed */}
-            <CosmoBlog />
             <ChatBlog />
-            <MegaProduct />
-            <DesignCapabilities />
             <ProductCarousel />
             <ProductCarouselo/>
 
@@ -115,6 +113,8 @@ export default function Home() {
             <VerticalAccordion />
             <InfiniteLiveFeed />
             <AssociationsCarousel />
+
+            {/* Secondary & Custom Alloy Directory Section as Last One */}
 
             <FloatingQuoteBtn />
         </div>

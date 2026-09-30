@@ -30,10 +30,10 @@ export default async function RebarLiteDetailPage({ params }: PageProps) {
 
         {/* Navigation Breadcrumb */}
         <div>
-          <Button 
-          variant={'outline'}
+          <Button
+            variant={'outline'}
             onClick={router.back}
-            className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-widest text-[#cc2221] hover:text-[#0a0a0a] transition-colors"
+            className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-widest text-[#CC0000] hover:text-[#0a0a0a] transition-colors"
           >
             <ArrowLeft className="w-4 h-4" /> Back to RebarLite™ Catalog
           </Button>
@@ -42,7 +42,7 @@ export default async function RebarLiteDetailPage({ params }: PageProps) {
         {/* HERO TITLE MATRIX */}
         <div className="border-b border-gray-200 pb-8 flex flex-col lg:flex-row lg:items-end justify-between gap-6">
           <div>
-            <span className="text-xs uppercase tracking-[0.4em] font-black text-[#cc2221] block mb-2">
+            <span className="text-xs uppercase tracking-[0.4em] font-black text-[#CC0000] block mb-2">
               Technical Specification Sheet
             </span>
             <h1 className="text-4xl md:text-6xl font-black uppercase tracking-tighter text-[#0a0a0a]">
@@ -83,11 +83,11 @@ export default async function RebarLiteDetailPage({ params }: PageProps) {
 
             {/* Submittal Document Downloads */}
             <div className="grid grid-cols-2 gap-4">
-              <Button variant="outline" className="w-full border-gray-200 rounded-none text-xs font-bold uppercase tracking-wider h-11 flex items-center justify-center gap-2 hover:border-[#cc2221]">
-                <Download className="w-4 h-4 text-[#cc2221]" /> Submittal Sheet
+              <Button variant="outline" className="w-full border-gray-200 rounded-none text-xs font-bold uppercase tracking-wider h-11 flex items-center justify-center gap-2 hover:border-[#CC0000]">
+                <Download className="w-4 h-4 text-[#CC0000]" /> Submittal Sheet
               </Button>
-              <Button variant="outline" className="w-full border-gray-200 rounded-none text-xs font-bold uppercase tracking-wider h-11 flex items-center justify-center gap-2 hover:border-[#cc2221]">
-                <FileText className="w-4 h-4 text-[#cc2221]" /> BIM / CAD Model
+              <Button variant="outline" className="w-full border-gray-200 rounded-none text-xs font-bold uppercase tracking-wider h-11 flex items-center justify-center gap-2 hover:border-[#CC0000]">
+                <FileText className="w-4 h-4 text-[#CC0000]" /> BIM / CAD Model
               </Button>
             </div>
           </div>
@@ -103,18 +103,20 @@ export default async function RebarLiteDetailPage({ params }: PageProps) {
               </p>
             </div>
 
-            {/* Key Engineering Features */}
+            {/* Key Engineering Specifications */}
             <div className="border-t border-gray-200 pt-6">
               <h4 className="text-xs font-mono uppercase tracking-wider text-gray-400 font-bold mb-4">
                 Key Performance Characteristics:
               </h4>
               <div className="space-y-3">
-                {product.keyFeatures.map((feature, idx) => (
-                  <div key={idx} className="flex items-start gap-3 p-3 bg-gray-50 border border-gray-100">
-                    <CheckCircle2 className="w-4 h-4 text-[#cc2221] shrink-0 mt-0.5" />
-                    <span className="text-xs font-bold text-gray-800 uppercase tracking-wide">{feature}</span>
-                  </div>
-                ))}
+                <div className="flex items-start gap-3 p-3 bg-gray-50 border border-gray-100">
+                  <CheckCircle2 className="w-4 h-4 text-[#CC0000] shrink-0 mt-0.5" />
+                  <span className="text-xs font-bold text-gray-800 uppercase tracking-wide">Standard Compliance: {product.materialStandard}</span>
+                </div>
+                <div className="flex items-start gap-3 p-3 bg-gray-50 border border-gray-100">
+                  <CheckCircle2 className="w-4 h-4 text-[#CC0000] shrink-0 mt-0.5" />
+                  <span className="text-xs font-bold text-gray-800 uppercase tracking-wide">Engineered High-Tensile Structural Profile</span>
+                </div>
               </div>
             </div>
 
@@ -134,7 +136,7 @@ export default async function RebarLiteDetailPage({ params }: PageProps) {
 
             {/* Action Quote Trigger */}
             <div className="border-t border-gray-200 pt-8">
-              <Button className="w-full bg-[#cc2221] hover:bg-[#b01e1d] text-white font-black uppercase tracking-widest text-xs h-12 rounded-none transition-all duration-200 flex items-center justify-center gap-2">
+              <Button className="w-full bg-[#CC0000] hover:bg-[#b01e1d] text-white font-black uppercase tracking-widest text-xs h-12 rounded-none transition-all duration-200 flex items-center justify-center gap-2">
                 Request Production Batch Quote <ArrowUpRight className="w-4 h-4" />
               </Button>
             </div>

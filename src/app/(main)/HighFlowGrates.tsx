@@ -2,7 +2,9 @@
 
 import React, { useRef } from "react";
 import Image from "next/image";
-import { Droplet, Activity, ShieldCheck, ExternalLink } from "lucide-react";
+import Link from "next/link";
+import { Droplet, Activity, ShieldCheck, ExternalLink, ArrowUpRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function HighFlowGrates() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -21,31 +23,33 @@ export default function HighFlowGrates() {
   };
 
   return (
-    <section className="bg-white text-[#0a0a0a] py-24 font-sans border-t border-gray-100">
-      {/* Strict Fluid Layout Bounds */}
-      <div className="w-full px-4 sm:px-6 lg:px-10">
-        
-        {/* Section Heading Banner */}
-        <div className="border-b border-gray-200 pb-8 mb-16 flex flex-col md:flex-row items-start md:items-end justify-between gap-4">
+    <section className="bg-white text-[#0a0a0a] py-6 md:py-8 font-sans border-b border-gray-100 w-full">
+      <div className="w-full px-4 sm:px-6 lg:px-10 space-y-5">
+
+        {/* --- SECTION HEADER --- */}
+        <div className="border-b border-gray-200 pb-3 flex flex-col lg:flex-row lg:items-end justify-between gap-3 w-full">
           <div>
-            <span className="text-xs uppercase tracking-[0.3em] font-black text-[#cc2221] block mb-3">
+            <span className="text-[11px] uppercase tracking-[0.3em] font-black text-[#CC0000] block mb-1">
               Hydraulic Performance Logs
             </span>
-            <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter text-[#0a0a0a]">
-              High Flow Grates
+            <h2 className="text-2xl md:text-3xl font-black uppercase tracking-tight text-[#0a0a0a] leading-tight">
+              High Flow Grates & <span className="text-[#CC0000]">Drainage Systems</span>
             </h2>
           </div>
+          <p className="text-gray-500 text-xs sm:text-sm font-light leading-relaxed max-w-lg">
+            Engineered high-velocity runoff interception matrices with minimized fluid turbulence and 100% frontal-flow containment.
+          </p>
         </div>
 
-        {/* Top Split Block: Interactive Video Frame & Core Bullets */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-20">
-          
-          {/* IMAGE 1 slot: Dynamic Lab Demonstration Simulation */}
-          <div className="lg:col-span-5 w-full">
-            <div 
+        {/* --- MAIN ARCHITECTURE DISPLAY (IMAGE LEFT / CONTENT RIGHT) --- */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-3 items-stretch w-full">
+
+          {/* LEFT COLUMN: INTERACTIVE VIDEO / LAB DEMO PREVIEW (4 Cols) */}
+          <div className="lg:col-span-4 w-full flex flex-col justify-between gap-2.5">
+            <div
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
-              className="relative group rounded-sm overflow-hidden border border-gray-200 bg-slate-950 aspect-video flex flex-col justify-between shadow-lg p-4 cursor-pointer"
+              className="relative w-full aspect-[16/10] sm:aspect-[4/3] max-h-[230px] rounded-none overflow-hidden border border-gray-200 bg-[#0a0a0a] flex flex-col justify-between p-3 group cursor-pointer hover:border-[#CC0000] transition-colors duration-300"
             >
               {/* Dynamic Video Element */}
               <video
@@ -60,155 +64,169 @@ export default function HighFlowGrates() {
 
               {/* Static Backdrop Cover Image */}
               <Image
-                src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image2.jpeg` }
+                src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image2.jpeg`}
                 alt="Hydraulic Interception Testing Simulation"
                 fill
-                className="object-cover transition-transform duration-700 group-hover:scale-105 group-hover:opacity-20 grayscale group-hover:grayscale-0"
+                className="object-contain p-2 transition-transform duration-500 group-hover:scale-105 group-hover:opacity-20 grayscale group-hover:grayscale-0"
               />
-              
-              {/* Dark Ambient Mask Layer */}
+
+              {/* Ambient Dark Mask */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none z-10" />
 
               {/* Floating Top Indicator */}
-              <div className="relative z-20 self-start bg-[#cc2221] text-white px-3 py-1 text-[10px] font-mono uppercase tracking-wider font-bold">
+              <div className="relative z-20 self-start bg-[#CC0000] text-white px-2 py-0.5 text-[8px] font-mono uppercase tracking-wider font-bold">
                 Hover to Play Test
               </div>
 
               {/* Lab Outbound Anchor */}
-              <a 
-                href="https://youtu.be/-TLP3uBB55o" 
-                target="_blank" 
+              <a
+                href="https://youtu.be/-TLP3uBB55o"
+                target="_blank"
                 rel="noopener noreferrer"
-                className="relative z-20 self-start inline-flex items-center gap-2 text-xs font-bold text-white hover:text-[#cc2221] transition-colors border-b border-dashed border-white pb-0.5 mt-auto"
+                className="relative z-20 self-start inline-flex items-center gap-1.5 text-[11px] font-bold text-white hover:text-[#CC0000] transition-colors border-b border-dashed border-white/60 pb-0.5 mt-auto"
               >
                 Watch Lab Demonstration <ExternalLink className="w-3 h-3" />
               </a>
+
+              {/* Blueprint Corner Accents */}
+              <div className="absolute top-2 right-2 w-2 h-2 border-t border-r border-zinc-500 z-20 pointer-events-none" />
+              <div className="absolute bottom-2 right-2 w-2 h-2 border-b border-r border-zinc-500 z-20 pointer-events-none" />
+            </div>
+
+            {/* Action Trigger */}
+            <div className="w-full">
+              <Link href="/contact" className="block w-full">
+                <Button className="w-full bg-[#0a0a0a] hover:bg-[#CC0000] text-white font-black uppercase tracking-wider text-xs h-9 rounded-none transition-all duration-200 flex items-center justify-center gap-2 border-none">
+                  Request High-Flow Hydraulic Specs <ArrowUpRight className="w-3.5 h-3.5" />
+                </Button>
+              </Link>
             </div>
           </div>
 
-          {/* Right Side: Analytical Bullet Lists */}
-          <div className="lg:col-span-7 flex flex-col gap-6">
-            
+          {/* RIGHT COLUMN: ANALYTICAL PERFORMANCE BULLETS (8 Cols) */}
+          <div className="lg:col-span-8 space-y-2.5 w-full flex flex-col justify-between">
+
             {/* Feature 1 */}
-            <div className="flex items-start gap-4 p-5 bg-gray-50 border border-gray-100 rounded-xs group hover:border-[#cc2221] hover:bg-white transition-all duration-300 shadow-sm">
-              <div className="w-10 h-10 bg-white border border-gray-200 flex items-center justify-center flex-shrink-0 group-hover:border-[#cc2221]/40 transition-colors">
-                <Droplet className="w-5 h-5 text-[#cc2221]" />
+            <div className="flex items-start gap-3 p-3 bg-gray-50 border border-gray-100 rounded-none group hover:border-[#CC0000] hover:bg-white transition-all duration-300">
+              <div className="w-9 h-9 bg-white border border-gray-200 flex items-center justify-center flex-shrink-0 text-[#CC0000]">
+                <Droplet className="w-4 h-4" />
               </div>
-              <div>
-                <h4 className="text-lg font-black uppercase tracking-wide text-[#0a0a0a] mb-1">
+              <div className="min-w-0 flex-1">
+                <h4 className="text-xs sm:text-sm font-black uppercase tracking-wide text-[#0a0a0a] mb-0.5">
                   High Capacity Inlets for Extra Drainage
                 </h4>
-                <p className="text-sm text-gray-500 font-light leading-relaxed">
+                <p className="text-xs text-gray-500 font-light leading-relaxed">
                   Engineered to capture maximum runoff volume, clearing pooling surface water rapidly during critical peak downpour events.
                 </p>
               </div>
             </div>
 
             {/* Feature 2 */}
-            <div className="flex items-start gap-4 p-5 bg-gray-50 border border-gray-100 rounded-xs group hover:border-[#cc2221] hover:bg-white transition-all duration-300 shadow-sm">
-              <div className="w-10 h-10 bg-white border border-gray-200 flex items-center justify-center flex-shrink-0 group-hover:border-[#cc2221]/40 transition-colors">
-                <Activity className="w-5 h-5 text-[#cc2221]" />
+            <div className="flex items-start gap-3 p-3 bg-gray-50 border border-gray-100 rounded-none group hover:border-[#CC0000] hover:bg-white transition-all duration-300">
+              <div className="w-9 h-9 bg-white border border-gray-200 flex items-center justify-center flex-shrink-0 text-[#CC0000]">
+                <Activity className="w-4 h-4" />
               </div>
-              <div>
-                <h4 className="text-lg font-black uppercase tracking-wide text-[#0a0a0a] mb-1">
-                  Hydraulically Efficient
+              <div className="min-w-0 flex-1">
+                <h4 className="text-xs sm:text-sm font-black uppercase tracking-wide text-[#0a0a0a] mb-0.5">
+                  Hydraulically Efficient Cast Geometry
                 </h4>
-                <p className="text-sm text-gray-500 font-light leading-relaxed">
+                <p className="text-xs text-gray-500 font-light leading-relaxed">
                   Advanced casting geometry structures reduce fluid turbulence, driving water down into system infrastructure networks smoothly with minimized resistance.
                 </p>
               </div>
             </div>
 
             {/* Feature 3 */}
-            <div className="flex items-start gap-4 p-5 bg-gray-50 border border-gray-100 rounded-xs group hover:border-[#cc2221] hover:bg-white transition-all duration-300 shadow-sm">
-              <div className="w-10 h-10 bg-white border border-gray-200 flex items-center justify-center flex-shrink-0 group-hover:border-[#cc2221]/40 transition-colors">
-                <ShieldCheck className="w-5 h-5 text-[#cc2221]" />
+            <div className="flex items-start gap-3 p-3 bg-gray-50 border border-gray-100 rounded-none group hover:border-[#CC0000] hover:bg-white transition-all duration-300">
+              <div className="w-9 h-9 bg-white border border-gray-200 flex items-center justify-center flex-shrink-0 text-[#CC0000]">
+                <ShieldCheck className="w-4 h-4" />
               </div>
-              <div>
-                <h4 className="text-lg font-black uppercase tracking-wide text-[#0a0a0a] mb-1">
+              <div className="min-w-0 flex-1">
+                <h4 className="text-xs sm:text-sm font-black uppercase tracking-wide text-[#0a0a0a] mb-0.5">
                   100% Frontal-Flow Interception
                 </h4>
-                <p className="text-sm text-gray-500 font-light leading-relaxed">
+                <p className="text-xs text-gray-500 font-light leading-relaxed">
                   The complete horizontal casting matrix barrier alignment blocks bypass flow entirely, guaranteeing all surface water heading towards the grate is safely contained.
                 </p>
               </div>
             </div>
 
           </div>
+
         </div>
 
-        {/* BOTTOM ROW: Casting Specs Matrix showing remaining 4 product images */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pt-12 border-t border-gray-200">
-          
-          {/* IMAGE 2 slot: Standard Flat Matrix */}
-          <div className="bg-gray-50 border border-gray-100 p-6 flex flex-col justify-between group rounded-xs min-h-[280px] shadow-sm hover:bg-white hover:border-[#cc2221] transition-all duration-300">
-            <span className="text-[10px] font-mono tracking-widest text-gray-400 uppercase font-bold block mb-4">
-              Casting Spec 01 // Inline Profile
+        {/* --- BOTTOM ROW: 4 CASTING SPECS MATRIX CARDS --- */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 pt-3 border-t border-gray-200 w-full">
+
+          {/* Spec 1: Standard Flat Matrix */}
+          <div className="bg-gray-50 border border-gray-100 p-3 flex flex-col justify-between group rounded-none hover:bg-white hover:border-[#CC0000] transition-all duration-300">
+            <span className="text-[9px] font-mono tracking-widest text-gray-400 uppercase font-bold block mb-2">
+              Spec 01 // Inline Profile
             </span>
-            <div className="w-full h-32 relative bg-white border border-gray-100 rounded-xs overflow-hidden mb-4 p-2">
-              <Image 
-                src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image5.jpeg`} 
+            <div className="w-full h-24 relative bg-white border border-gray-100 rounded-none overflow-hidden mb-2 p-1.5 flex items-center justify-center">
+              <Image
+                src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image5.jpeg`}
                 alt="Standard Flat High Flow Grate"
                 fill
-                className="object-contain p-2 grayscale group-hover:grayscale-0 transition-all duration-300"
+                className="object-contain p-1 grayscale group-hover:grayscale-0 transition-all duration-300"
               />
             </div>
-            <p className="text-xs font-bold text-gray-500 uppercase tracking-wider group-hover:text-[#cc2221] transition-colors">
-              Standard Flat Grid Casting
+            <p className="text-xs font-bold text-gray-700 uppercase tracking-wide group-hover:text-[#CC0000] transition-colors truncate">
+              Standard Flat Grid
             </p>
           </div>
 
-          {/* IMAGE 3 slot: Single Rear Hood */}
-          <div className="bg-gray-50 border border-gray-100 p-6 flex flex-col justify-between group rounded-xs min-h-[280px] shadow-sm hover:bg-white hover:border-[#cc2221] transition-all duration-300">
-            <span className="text-[10px] font-mono tracking-widest text-gray-400 uppercase font-bold block mb-4">
-              Casting Spec 02 // Rear Hood
+          {/* Spec 2: Single Rear Hood */}
+          <div className="bg-gray-50 border border-gray-100 p-3 flex flex-col justify-between group rounded-none hover:bg-white hover:border-[#CC0000] transition-all duration-300">
+            <span className="text-[9px] font-mono tracking-widest text-gray-400 uppercase font-bold block mb-2">
+              Spec 02 // Rear Hood
             </span>
-            <div className="w-full h-32 relative bg-white border border-gray-100 rounded-xs overflow-hidden mb-4 p-2">
-              <Image 
-                src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image14.jpeg` }
+            <div className="w-full h-24 relative bg-white border border-gray-100 rounded-none overflow-hidden mb-2 p-1.5 flex items-center justify-center">
+              <Image
+                src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image14.jpeg`}
                 alt="Rear-Curb Deflection Casting"
                 fill
-                className="object-contain p-2 grayscale group-hover:grayscale-0 transition-all duration-300"
+                className="object-contain p-1 grayscale group-hover:grayscale-0 transition-all duration-300"
               />
             </div>
-            <p className="text-xs font-bold text-gray-500 uppercase tracking-wider group-hover:text-[#cc2221] transition-colors">
-              Rear-Curb Deflection Unit
+            <p className="text-xs font-bold text-gray-700 uppercase tracking-wide group-hover:text-[#CC0000] transition-colors truncate">
+              Rear-Curb Deflector
             </p>
           </div>
 
-          {/* IMAGE 4 slot: Multi-Window Curb Port */}
-          <div className="bg-gray-50 border border-gray-100 p-6 flex flex-col justify-between group rounded-xs min-h-[280px] shadow-sm hover:bg-white hover:border-[#cc2221] transition-all duration-300">
-            <span className="text-[10px] font-mono tracking-widest text-gray-400 uppercase font-bold block mb-4">
-              Casting Spec 03 // Ported Curb
+          {/* Spec 3: Multi-Window Curb Port */}
+          <div className="bg-gray-50 border border-gray-100 p-3 flex flex-col justify-between group rounded-none hover:bg-white hover:border-[#CC0000] transition-all duration-300">
+            <span className="text-[9px] font-mono tracking-widest text-gray-400 uppercase font-bold block mb-2">
+              Spec 03 // Ported Curb
             </span>
-            <div className="w-full h-32 relative bg-white border border-gray-100 rounded-xs overflow-hidden mb-4 p-2">
-              <Image 
-                src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image18.jpeg` }
+            <div className="w-full h-24 relative bg-white border border-gray-100 rounded-none overflow-hidden mb-2 p-1.5 flex items-center justify-center">
+              <Image
+                src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image18.jpeg`}
                 alt="High-Velocity Integrated Weir Unit"
                 fill
-                className="object-contain p-2 grayscale group-hover:grayscale-0 transition-all duration-300"
+                className="object-contain p-1 grayscale group-hover:grayscale-0 transition-all duration-300"
               />
             </div>
-            <p className="text-xs font-bold text-gray-500 uppercase tracking-wider group-hover:text-[#cc2221] transition-colors">
-              Integrated Weir Configuration
+            <p className="text-xs font-bold text-gray-700 uppercase tracking-wide group-hover:text-[#CC0000] transition-colors truncate">
+              Integrated Weir Unit
             </p>
           </div>
 
-          {/* IMAGE 5 slot: Heavy-Duty Structural Installation Assembly */}
-          <div className="bg-gray-50 border border-gray-100 p-6 flex flex-col justify-between group rounded-xs min-h-[280px] shadow-sm hover:bg-white hover:border-[#cc2221] transition-all duration-300">
-            <span className="text-[10px] font-mono tracking-widest text-gray-400 uppercase font-bold block mb-4">
-              Casting Spec 04 // Complete Assembly
+          {/* Spec 4: Heavy-Duty Structural Installation Assembly */}
+          <div className="bg-gray-50 border border-gray-100 p-3 flex flex-col justify-between group rounded-none hover:bg-white hover:border-[#CC0000] transition-all duration-300">
+            <span className="text-[9px] font-mono tracking-widest text-gray-400 uppercase font-bold block mb-2">
+              Spec 04 // Complete Assembly
             </span>
-            <div className="w-full h-32 relative bg-white border border-gray-100 rounded-xs overflow-hidden mb-4 p-2">
-              <Image 
-                src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image2.jpeg`} 
+            <div className="w-full h-24 relative bg-white border border-gray-100 rounded-none overflow-hidden mb-2 p-1.5 flex items-center justify-center">
+              <Image
+                src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image2.jpeg`}
                 alt="Complete High Flow Catch Basin Assembly Frame"
                 fill
-                className="object-contain p-2 grayscale group-hover:grayscale-0 transition-all duration-300"
+                className="object-contain p-1 grayscale group-hover:grayscale-0 transition-all duration-300"
               />
             </div>
-            <p className="text-xs font-bold text-gray-500 uppercase tracking-wider group-hover:text-[#cc2221] transition-colors">
-              Heavy Duty Assembly Setup
+            <p className="text-xs font-bold text-gray-700 uppercase tracking-wide group-hover:text-[#CC0000] transition-colors truncate">
+              Catch Basin Assembly
             </p>
           </div>
 

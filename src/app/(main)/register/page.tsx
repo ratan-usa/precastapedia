@@ -12,11 +12,11 @@ import { completeRegistration } from '@/lib/api';
 function RegisterForm() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  
+
   // 1. Get params from URL
   const clientId = searchParams.get('clientId');
   const emailParam = searchParams.get('email') || '';
-  const tenantSlug = searchParams.get('tenant') || 'foundry'; 
+  const tenantSlug = searchParams.get('tenant') || 'foundry';
 
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
@@ -53,8 +53,8 @@ function RegisterForm() {
     // Call API
     const res = await completeRegistration(clientId, tenantSlug, {
       fullName: data.fullname,
-      username: emailParam, 
-      email: emailParam,    
+      username: emailParam,
+      email: emailParam,
       password: data.password
     });
 
@@ -84,27 +84,27 @@ function RegisterForm() {
   }
 
   return (
-    <Card className="max-w-lg w-full shadow-xl border-t-4 border-t-[#cc2221]">
+    <Card className="max-w-lg w-full shadow-xl border-t-4 border-t-[#CC0000]">
       <CardHeader className="text-center pb-2">
-         <div className="mx-auto bg-red-50 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-           <ShieldCheck className="w-6 h-6 text-[#cc2221]" />
-         </div>
+        <div className="mx-auto bg-red-50 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+          <ShieldCheck className="w-6 h-6 text-[#CC0000]" />
+        </div>
         <CardTitle className="text-2xl">Complete Your Profile</CardTitle>
         <CardDescription>
           Finalizing account for <strong>{tenantSlug.toUpperCase()}</strong>
         </CardDescription>
       </CardHeader>
-      
+
       <CardContent className="pt-6">
         <form onSubmit={handleSubmit} className="space-y-4">
-          
+
           <div className="space-y-2">
             <Label htmlFor="email">Email Address</Label>
-            <Input 
-              id="email" 
-              name="email" 
-              value={emailParam} 
-              disabled 
+            <Input
+              id="email"
+              name="email"
+              value={emailParam}
+              disabled
               className="bg-slate-100 text-slate-500 cursor-not-allowed"
             />
           </div>
@@ -116,12 +116,12 @@ function RegisterForm() {
 
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-2">
-                <Label htmlFor="password">Password</Label>
-                <Input id="password" name="password" type="password" required disabled={loading} />
+              <Label htmlFor="password">Password</Label>
+              <Input id="password" name="password" type="password" required disabled={loading} />
             </div>
             <div className="space-y-2">
-                <Label htmlFor="retype">Confirm</Label>
-                <Input id="retype" name="retype" type="password" required disabled={loading} />
+              <Label htmlFor="retype">Confirm</Label>
+              <Input id="retype" name="retype" type="password" required disabled={loading} />
             </div>
           </div>
 
@@ -131,7 +131,7 @@ function RegisterForm() {
             </p>
           )}
 
-          <Button className="w-full bg-[#cc2221] hover:bg-red-700 py-6 text-md font-bold" disabled={loading}>
+          <Button className="w-full bg-[#CC0000] hover:bg-red-700 py-6 text-md font-bold" disabled={loading}>
             {loading ? (
               <>
                 <Loader2 className="animate-spin mr-2 h-5 w-5" /> Creating Account...

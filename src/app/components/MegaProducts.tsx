@@ -41,23 +41,23 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ item, index }) => {
       viewport={{ once: true }}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className="group relative flex flex-col bg-white rounded-3xl overflow-hidden shadow-[0_10px_40px_-15px_rgba(0,0,0,0.08)] hover:shadow-[0_20px_60px_-15px_rgba(204,34,33,0.18)] border border-slate-100 hover:border-[#CC0000]/30 transition-all duration-500"
+      className="group relative flex flex-col bg-[#0a0a0a] rounded-3xl overflow-hidden shadow-xl hover:shadow-[0_20px_50px_-15px_rgba(204,0,0,0.3)] border border-zinc-800 hover:border-[#CC0000] transition-all duration-500"
     >
-      {/* Media Container Box - Full Aspect Ratio Visibility */}
-      <div className="relative w-full aspect-[16/10] sm:aspect-video bg-gradient-to-br from-[#0c0f14] via-[#141820] to-[#080a0d] overflow-hidden flex items-center justify-center p-3">
+      {/* Media Container Box - Crisp White Background & 100% Unclipped Visibility */}
+      <div className="relative w-full aspect-[16/10] sm:aspect-video bg-white border-b border-zinc-800 overflow-hidden flex items-center justify-center p-4">
         {item.image ? (
-          /* STATIC IMAGE MODE - 100% UNCLIPPED CONTENT */
+          /* STATIC IMAGE MODE - 100% UNCLIPPED CONTENT ON WHITE */
           <div className="relative w-full h-full flex items-center justify-center">
             <Image
               src={item.image}
               alt={item.title}
               fill
-              className="object-contain p-2 grayscale group-hover:grayscale-0 transition-all duration-500"
+              className="object-contain p-2 transition-transform duration-500 group-hover:scale-105"
               priority={index < 3}
             />
           </div>
         ) : (
-          /* INTERACTIVE VIDEO MODE - 100% UNCLIPPED CONTENT */
+          /* INTERACTIVE VIDEO MODE - 100% UNCLIPPED CONTENT ON WHITE */
           <div className="relative w-full h-full flex items-center justify-center">
             <video
               ref={videoRef}
@@ -66,13 +66,13 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ item, index }) => {
               muted
               playsInline
               preload="metadata"
-              className="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-500"
+              className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
             />
 
             {/* Video Play Indicator Overlay */}
             {!isPlaying && (
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none transition-opacity duration-300 group-hover:opacity-0">
-                <div className="bg-black/60 backdrop-blur-sm border border-white/20 rounded-full p-3 text-white/80 shadow-lg">
+                <div className="bg-black/70 backdrop-blur-sm border border-black/20 rounded-full p-3 text-white shadow-lg">
                   <Play className="w-5 h-5 fill-current" />
                 </div>
               </div>
@@ -80,31 +80,31 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ item, index }) => {
           </div>
         )}
 
-        {/* Technical Corner Accents */}
-        <div className="absolute top-2 left-2 w-2.5 h-2.5 border-t border-l border-white/20 pointer-events-none" />
-        <div className="absolute top-2 right-2 w-2.5 h-2.5 border-t border-r border-white/20 pointer-events-none" />
-        <div className="absolute bottom-2 left-2 w-2.5 h-2.5 border-b border-l border-white/20 pointer-events-none" />
-        <div className="absolute bottom-2 right-2 w-2.5 h-2.5 border-b border-r border-white/20 pointer-events-none" />
+        {/* Subtle Technical Corner Accents on White Canvas */}
+        <div className="absolute top-2.5 left-2.5 w-2.5 h-2.5 border-t border-l border-neutral-300 pointer-events-none" />
+        <div className="absolute top-2.5 right-2.5 w-2.5 h-2.5 border-t border-r border-neutral-300 pointer-events-none" />
+        <div className="absolute bottom-2.5 left-2.5 w-2.5 h-2.5 border-b border-l border-neutral-300 pointer-events-none" />
+        <div className="absolute bottom-2.5 right-2.5 w-2.5 h-2.5 border-b border-r border-neutral-300 pointer-events-none" />
 
-        {/* Top-Right Category Icon Badge (Non-obtrusive) */}
-        <div className="absolute top-3.5 right-3.5 p-2.5 rounded-xl bg-black/60 backdrop-blur-md border border-white/10 text-white shadow-md z-10">
+        {/* Top-Right Category Icon Badge */}
+        <div className="absolute top-3.5 right-3.5 p-2.5 rounded-xl bg-black text-white shadow-md z-10 border border-zinc-800">
           <IconComponent size={18} className="text-white group-hover:text-[#CC0000] transition-colors" />
         </div>
 
         {/* Optional Video Tag Badge */}
         {!item.image && (
-          <div className="absolute bottom-3 left-3 px-2 py-0.5 rounded bg-black/70 backdrop-blur-sm border border-white/10 text-[9px] font-mono uppercase tracking-widest text-zinc-300 font-bold z-10">
+          <div className="absolute bottom-3 left-3 px-2.5 py-0.5 rounded bg-black/85 backdrop-blur-sm text-[9px] font-mono uppercase tracking-widest text-white font-bold z-10 border border-zinc-700">
             {isPlaying ? "Playing Video" : "Hover to Preview"}
           </div>
         )}
       </div>
 
-      {/* Main Content Info Block */}
-      <div className="p-7 flex flex-col flex-grow">
-        <h3 className="text-2xl font-bold text-slate-900 mb-2 group-hover:text-[#CC0000] transition-colors capitalize">
+      {/* Main Content Info Block - Black Background & White Text */}
+      <div className="p-7 flex flex-col flex-grow bg-[#0a0a0a]">
+        <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-[#CC0000] transition-colors capitalize">
           {item.title.replace(/_/g, ' ')}
         </h3>
-        <p className="text-slate-600 mb-6 flex-grow leading-relaxed font-light text-sm">
+        <p className="text-zinc-300 mb-6 flex-grow leading-relaxed font-light text-sm">
           {item.description}
         </p>
 
@@ -114,7 +114,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ item, index }) => {
             {item.specs.slice(0, 3).map((spec, i) => (
               <span
                 key={i}
-                className="text-[10px] font-mono uppercase tracking-wide bg-slate-100 text-slate-600 px-2 py-0.5 rounded"
+                className="text-[10px] font-mono uppercase tracking-wide bg-zinc-900 border border-zinc-800 text-zinc-300 px-2.5 py-1 rounded"
               >
                 {spec}
               </span>
@@ -124,7 +124,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ item, index }) => {
 
         <Link
           href={`/categories/${item.slug}`}
-          className="flex items-center justify-center gap-2.5 w-full py-3.5 bg-slate-50 rounded-xl text-[#CC0000] font-black uppercase tracking-widest text-xs hover:bg-[#CC0000] hover:text-white transition-all duration-300 border border-slate-200/60 hover:border-transparent"
+          className="flex items-center justify-center gap-2.5 w-full py-3.5 bg-zinc-900 hover:bg-[#CC0000] rounded-xl text-white font-black uppercase tracking-widest text-xs transition-all duration-300 border border-zinc-800 hover:border-transparent group-hover:shadow-lg"
         >
           View Details <ArrowRight size={15} />
         </Link>

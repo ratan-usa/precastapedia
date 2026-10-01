@@ -110,7 +110,7 @@ export default function Home() {
                 videos={newInnovationData.videos}
             />
 
-            <VerticalAccordion />
+            {/* <VerticalAccordion /> */}
             <InfiniteLiveFeed />
             <AssociationsCarousel />
 

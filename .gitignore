@@ -19,9 +19,7 @@
 
 # production
 /build
-
-# public assets (hosted on Cloudflare R2)
-/public/
+ 
 
 
 # misc

@@ -41,7 +41,7 @@ export default function MegaFeaShowcase() {
           <div className="lg:col-span-5 w-full flex justify-end">
             <div className="relative w-full max-w-[480px] aspect-[4/3] bg-gray-50 border border-gray-200 p-4 shadow-md rounded-xs group hover:border-[#CC0000] transition-colors duration-300">
               <Image
-                src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image2.jpeg`} // Replace with your FEA color heat map simulation image
+                src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/Curb_Inlet_renders.1246.png`} // Replace with your FEA color heat map simulation image
                 alt="Finite Element Analysis Structural Heat Map Simulation"
                 fill
                 className="object-cover p-2 transition-transform duration-500 group-hover:scale-102"
@@ -120,7 +120,7 @@ export default function MegaFeaShowcase() {
           <div className="lg:col-span-5 w-full flex justify-end">
             <div className="relative w-full max-w-[480px] aspect-[4/3] bg-gray-50 border border-gray-200 p-4 shadow-md rounded-xs group hover:border-[#CC0000] transition-colors duration-300">
               <Image
-                src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image2.jpeg`} // Replace with your close-up product casting macro image
+                src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/Curb_Inlet_renders.1246.png`} // Replace with your close-up product casting macro image
                 alt="Mega High-Precision Iron Casting Surface View"
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-102"

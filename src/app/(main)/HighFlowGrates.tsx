@@ -9,19 +9,6 @@ import { Button } from "@/components/ui/button";
 export default function HighFlowGrates() {
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  const handleMouseEnter = () => {
-    if (videoRef.current) {
-      videoRef.current.play().catch((err) => console.log("Video block:", err));
-    }
-  };
-
-  const handleMouseLeave = () => {
-    if (videoRef.current) {
-      videoRef.current.pause();
-      videoRef.current.currentTime = 0;
-    }
-  };
-
   return (
     <section className="bg-white text-[#0a0a0a] py-6 md:py-8 font-sans border-b border-gray-100 w-full">
       <div className="w-full px-4 sm:px-6 lg:px-10 space-y-5">
@@ -47,27 +34,18 @@ export default function HighFlowGrates() {
           {/* LEFT COLUMN: INTERACTIVE VIDEO / LAB DEMO PREVIEW (4 Cols) */}
           <div className="lg:col-span-4 w-full flex flex-col justify-between gap-2.5">
             <div
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-              className="relative w-full aspect-[16/10] sm:aspect-[4/3] max-h-[230px] rounded-none overflow-hidden border border-gray-200 bg-[#0a0a0a] flex flex-col justify-between p-3 group cursor-pointer hover:border-[#CC0000] transition-colors duration-300"
+              className="relative w-full aspect-[16/10] sm:aspect-[4/3] max-h-[230px] rounded-none overflow-hidden border border-gray-200 bg-[#0a0a0a] flex flex-col justify-between p-3 group hover:border-[#CC0000] transition-colors duration-300"
             >
-              {/* Dynamic Video Element */}
+              {/* Continuous Autoplay Video Element */}
               <video
                 ref={videoRef}
                 src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/trench/Trench_500_Animation.498.mp4`}
+                autoPlay
                 loop
                 muted
                 playsInline
                 preload="metadata"
-                className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"
-              />
-
-              {/* Static Backdrop Cover Image */}
-              <Image
-                src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image2.jpeg`}
-                alt="Hydraulic Interception Testing Simulation"
-                fill
-                className="object-contain p-2 transition-transform duration-500 group-hover:scale-105 group-hover:opacity-20 grayscale group-hover:grayscale-0"
+                className="absolute inset-0 w-full h-full object-cover z-10"
               />
 
               {/* Ambient Dark Mask */}
@@ -75,7 +53,7 @@ export default function HighFlowGrates() {
 
               {/* Floating Top Indicator */}
               <div className="relative z-20 self-start bg-[#CC0000] text-white px-2 py-0.5 text-[8px] font-mono uppercase tracking-wider font-bold">
-                Hover to Play Test
+                Hydraulic Simulation
               </div>
 
               {/* Lab Outbound Anchor */}
@@ -219,7 +197,7 @@ export default function HighFlowGrates() {
             </span>
             <div className="w-full h-24 relative bg-white border border-gray-100 rounded-none overflow-hidden mb-2 p-1.5 flex items-center justify-center">
               <Image
-                src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image2.jpeg`}
+                src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/INLET/Curb_Inlet_renders.1246.png`}
                 alt="Complete High Flow Catch Basin Assembly Frame"
                 fill
                 className="object-contain p-1 grayscale group-hover:grayscale-0 transition-all duration-300"

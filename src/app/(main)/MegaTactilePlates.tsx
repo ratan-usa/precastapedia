@@ -35,7 +35,7 @@ export default function MegaTactilePlates() {
             <div className="relative w-full aspect-[16/10] sm:aspect-[4/3] max-h-[230px] bg-gray-50 border border-gray-200 rounded-none overflow-hidden p-3 flex items-center justify-center group shadow-inner hover:border-[#CC0000] transition-colors duration-300">
               <div className="relative w-full h-full">
                 <Image
-                  src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/MEGA/Detectable_Warning_Plates.jpeg`}
+                  src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/detectable_plates/detectable_warning_plate_1.jpeg`}
                   alt="Cast Iron Tactile Plate Mechanical Profile"
                   fill
                   className="object-contain p-2 grayscale group-hover:grayscale-0 transition-all duration-500"

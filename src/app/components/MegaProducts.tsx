@@ -4,34 +4,33 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Play } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { categories, Category } from '@/lib/materialsData';
-
-interface CategoryCardProps {
-  item: Category;
-  index: number;
-}
+import { categories } from '@/data';
+import { Category, CategoryCardProps } from '@/types';
 
 const CategoryCard: React.FC<CategoryCardProps> = ({ item, index }) => {
   const IconComponent = item.icon;
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  const handleMouseEnter = () => {
-    if (!item.image && videoRef.current) {
-      videoRef.current
-        .play()
-        .then(() => setIsPlaying(true))
-        .catch((err) => console.log("Video playback error:", err));
-    }
-  };
+  const imagesList = item.images && item.images.length > 0 
+    ? item.images 
+    : (item.image ? [item.image] : []);
 
-  const handleMouseLeave = () => {
-    if (!item.image && videoRef.current) {
-      videoRef.current.pause();
-      videoRef.current.currentTime = 0;
-      setIsPlaying(false);
+  const hasVideo = Boolean(item.video);
+  const hasMultipleImages = imagesList.length > 1;
+
+  // Automatic slow slideshow for multiple images (cycles every 2.8 seconds)
+  React.useEffect(() => {
+    let interval: NodeJS.Timeout;
+    if (!hasVideo && hasMultipleImages) {
+      interval = setInterval(() => {
+        setCurrentImageIndex((prev) => (prev + 1) % imagesList.length);
+      }, 2800);
     }
-  };
+    return () => {
+      if (interval) clearInterval(interval);
+    };
+  }, [hasVideo, hasMultipleImages, imagesList.length]);
 
   return (
     <motion.div
@@ -39,42 +38,52 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ item, index }) => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.05, duration: 0.3 }}
       viewport={{ once: true }}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
       className="group relative flex flex-col bg-[#0a0a0a] rounded-xl overflow-hidden shadow-md hover:shadow-[0_15px_30px_-10px_rgba(204,0,0,0.25)] border border-zinc-800 hover:border-[#CC0000] transition-all duration-300"
     >
       {/* Media Container Box - Crisp White Background & 100% Unclipped Visibility */}
       <div className="relative w-full aspect-[16/10] bg-white border-b border-zinc-800 overflow-hidden flex items-center justify-center">
-        {item.image ? (
-          /* STATIC IMAGE MODE - 100% UNCLIPPED CONTENT ON WHITE */
-          <div className="relative w-full h-full flex items-center justify-center">
-            <Image
-              src={item.image}
-              alt={item.title}
-              fill
-              className="object-contain p-2 transition-transform duration-300 group-hover:scale-105"
-              priority={index < 4}
-            />
-          </div>
-        ) : (
-          /* INTERACTIVE VIDEO MODE - 100% UNCLIPPED CONTENT ON WHITE */
+        {hasVideo ? (
+          /* AUTOPLAY VIDEO MODE */
           <div className="relative w-full h-full flex items-center justify-center">
             <video
               ref={videoRef}
               src={item.video}
+              autoPlay
               loop
               muted
               playsInline
               preload="metadata"
-              className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
+              poster={item.image}
+              className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
             />
+          </div>
+        ) : (
+          /* AUTOMATIC MULTI-IMAGE SLIDER MODE (SLOW & SMOOTH) */
+          <div className="relative w-full h-full flex items-center justify-center">
+            {imagesList.length > 0 && (
+              <Image
+                key={imagesList[currentImageIndex]}
+                src={imagesList[currentImageIndex]}
+                alt={`${item.title} - Slide ${currentImageIndex + 1}`}
+                fill
+                className="object-contain p-2 transition-opacity duration-700 ease-in-out group-hover:scale-105"
+                priority={index < 4}
+              />
+            )}
 
-            {/* Video Play Indicator Overlay */}
-            {!isPlaying && (
-              <div className="absolute inset-0 flex items-center justify-center pointer-events-none transition-opacity duration-300 group-hover:opacity-0">
-                <div className="bg-black/70 backdrop-blur-sm border border-black/20 rounded-full p-2 text-white shadow-md">
-                  <Play className="w-4 h-4 fill-current" />
-                </div>
+            {/* Slide Progress Dots Indicator */}
+            {hasMultipleImages && (
+              <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex items-center gap-1.5 z-10 px-2 py-0.5 rounded-full bg-black/50 backdrop-blur-sm">
+                {imagesList.map((_, dotIdx) => (
+                  <span
+                    key={dotIdx}
+                    className={`h-1.5 rounded-full transition-all duration-500 ${
+                      dotIdx === currentImageIndex
+                        ? "w-4 bg-[#CC0000]"
+                        : "w-1.5 bg-white/60"
+                    }`}
+                  />
+                ))}
               </div>
             )}
           </div>
@@ -90,13 +99,6 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ item, index }) => {
         <div className="absolute top-2.5 right-2.5 p-1.5 rounded-lg bg-black text-white shadow-sm z-10 border border-zinc-800">
           <IconComponent size={14} className="text-white group-hover:text-[#CC0000] transition-colors" />
         </div>
-
-        {/* Optional Video Tag Badge */}
-        {!item.image && (
-          <div className="absolute bottom-2 left-2 px-1.5 py-0.5 rounded bg-black/85 backdrop-blur-sm text-[8px] font-mono uppercase tracking-wider text-white font-bold z-10 border border-zinc-700">
-            {isPlaying ? "Playing" : "Preview"}
-          </div>
-        )}
       </div>
 
       {/* Main Content Info Block - Black Background & White Text */}
@@ -112,7 +114,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ item, index }) => {
           {/* Key Specs Tags */}
           {item.specs && item.specs.length > 0 && (
             <div className="flex flex-wrap gap-1 mb-3">
-              {item.specs.slice(0, 2).map((spec, i) => (
+              {item.specs.slice(0, 2).map((spec: string, i: number) => (
                 <span
                   key={i}
                   className="text-[9px] font-mono uppercase tracking-wide bg-zinc-900 border border-zinc-800 text-white px-2 py-0.5 rounded"

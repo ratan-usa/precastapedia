@@ -73,16 +73,16 @@ const MOST_POPULAR_PRODUCTS: PopularProductVideo[] = [
   },
   {
     id: 4,
-    badge: "High-Load Security",
-    title: "Heavy Cast Hatches & Utility Covers",
-    category: "Sub-Surface Infrastructure",
-    description: "Finite Element Analysis (FEA) verified access hatches and security covers engineered for zero deflection under severe cyclic wheel loading.",
-    materialStandard: "Nodular Ductile Iron ASTM A536",
-    loadClass: "100-Ton Severe Proof Load",
+    badge: "ADA Accessibility",
+    title: "ADA Detectable Warning Plates",
+    category: "Tactile Safety Infrastructure",
+    description: "ADA-compliant cast iron tactile plates with high-traction truncated domes engineered for permanent wet-set anchor installations and extreme durability.",
+    materialStandard: "Class 35B Gray Iron / Ductile Iron",
+    loadClass: "AASHTO H-20 Heavy Traffic",
     duration: "0:30",
-    type: "FEA STRESS ANALYSIS",
-    src: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/Custom_Foundry_Components.mp4`,
-    thumbnail: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/MEGA/HATCHES_COVER.png`
+    type: "TACTILE 3D MODEL",
+    src: "/video/warning_plates/warning_plates.mp4",
+    thumbnail: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/detectable_plates/detectable_warning_plate_1.jpeg`
   }
 ];
 

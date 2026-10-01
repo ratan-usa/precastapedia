@@ -44,7 +44,7 @@ export default function AiRobotics() {
           >
             <div className="relative z-10 rounded-3xl border border-white/10 overflow-hidden bg-black backdrop-blur-xl p-2 shadow-2xl">
               <Image
-                src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image8.jpeg`}
+                src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image3.jpeg`}
                 alt="AI Robotics"
                 className="rounded-2xl opacity-80"
                 width={1000}

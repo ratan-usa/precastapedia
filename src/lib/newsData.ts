@@ -16,7 +16,7 @@ export const newsArticles = [
     slug: "managing-power-transformers",
     author: "Mega Foundries Admin",
     date: "08 Oct 2025",
-    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image2.jpeg`,
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/INLET/Curb_Inlet_renders.1246.png`,
     excerpt: "Utilities are under intense pressure to maximize the use of their current transformer asset base in order to keep rates down while yet providing excellence."
   },
   {
@@ -63,7 +63,7 @@ export const blogPosts = [
     slug: "supply-chain-resilience",
     author: "Logistics Lead",
     date: "02 Nov 2025",
-    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image13.jpg`,
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image3.jpeg`,
     excerpt: "Strategies for mitigating raw material shortages and ensuring on-time delivery for large-scale infrastructure projects."
   },
   {

@@ -3,7 +3,7 @@ export const categoriesData = [
         id: 'energy', // This ID matches the URL slug
         title: 'Energy',
         color: 'bg-blue-100 text-blue-900',
-        bannerImage: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image9.jpeg`,
+        bannerImage: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image3.jpeg`,
         description: "Sustainable and traditional energy solutions powering the future.",
         subCategories: [
             {

@@ -114,7 +114,7 @@ export default function MegaFoundationPage() {
               <div className="aspect-[4/3] bg-slate-200 rounded-2xl overflow-hidden shadow-lg">
                 <div className="absolute inset-0 flex items-center justify-center text-black font-bold">
                   <Image
-                    src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image8.jpeg`}
+                    src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image3.jpeg`}
                     alt="Case Study Image"
                     fill
                     className="object-cover"

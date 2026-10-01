@@ -49,7 +49,7 @@ export default function PartnerProgramPage() {
           <div className="relative h-[400px] md:h-full w-full">
             <div className="absolute inset-0 bg-neutral-200">
               <Image
-                src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image8.jpeg`}
+                src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image3.jpeg`}
                 alt="Global Industrial Logistics"
                 fill
                 className="object-cover"

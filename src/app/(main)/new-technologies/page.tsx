@@ -38,7 +38,7 @@ export default function NewTechnologiesPage() {
         {/* Background Effects */}
         <div
           className="absolute top-0 left-0 w-full h-full bg-cover bg-center opacity-10"
-          style={{ backgroundImage: `url(${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image9.jpeg)` }}
+          style={{ backgroundImage: `url(${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image3.jpeg)` }}
         />
 
         {/* Glowing Orb/Graphic */}

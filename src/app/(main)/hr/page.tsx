@@ -182,7 +182,7 @@ export default function CareersPage() {
               <div className="relative aspect-square md:aspect-[4/3] bg-slate-800 rounded-xl overflow-hidden border border-slate-700 shadow-2xl">
                 <div className="absolute inset-0 flex items-center justify-center text-black">
                   <Image
-                    src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image8.jpeg`}
+                    src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image3.jpeg`}
                     alt="Case Study Image"
                     fill
                     className="object-cover"

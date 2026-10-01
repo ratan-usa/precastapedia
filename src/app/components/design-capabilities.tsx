@@ -14,7 +14,7 @@ const tagLines = [
     id: 2,
     lines: "Mega Options. Mega Outcomes.",
     description: "Highlights the extensive variety of products, solutions, and industrial services Mega Foundries offers. From raw materials to advanced manufacturing systems, the company consistently delivers high-value outcomes that exceed expectations through versatility, innovation, and precision engineering.",
-    imgUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image2.jpeg`
+    imgUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/Curb_Inlet_renders.1246.png`
   },
   {
     id: 3,
@@ -50,13 +50,13 @@ const tagLines = [
     id: 8,
     lines: "Boundless Possibilities.",
     description: "Reflects the limitless technological, engineering, and industrial capabilities of Mega Foundries. Whether scaling production or innovating with new materials, the potential for growth is endless.",
-    imgUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image8.jpeg`
+    imgUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image3.jpeg`
   },
   {
     id: 9,
     lines: "Your Vision. Our Undertaking.",
     description: "Shows a client-centered approach where Mega Foundries converts customer concepts into real, functioning industrial solutions. This tagline reflects commitment, precision execution, and a long-term partnership mindset.",
-    imgUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image9.jpeg`
+    imgUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image3.jpeg`
   },
   {
     id: 10,
@@ -80,7 +80,7 @@ const tagLines = [
     id: 13,
     lines: "Non-Stop Innovations. Non-Stop Progress.",
     description: "Highlights Mega Foundries’ continuous investment in R&D, new materials, enhanced engineering methods, and innovative industrial solutions that advance global manufacturing standards.",
-    imgUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image13.jpg`
+    imgUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image3.jpeg`
   },
   {
     id: 14,

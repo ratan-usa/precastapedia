@@ -89,7 +89,7 @@ const items: AccordionItem[] = [
         category: "Water Works",
         title: "Joint Fittings",
         description: "Mechanical joint fittings for secure water distribution networks.",
-        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image13.jpg`,
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image3.jpeg`,
         color: "bg-[#CC0000]",
         icon: Droplets
     },
@@ -161,7 +161,7 @@ const items: AccordionItem[] = [
         category: "Snow Plough",
         title: "Winter Equipment",
         description: "Industrial grade snow clearing attachments and machinery parts.",
-        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image9.jpeg`,
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image3.jpeg`,
         color: "bg-[#CC0000]",
         icon: Cog
     }

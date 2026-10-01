@@ -31,7 +31,7 @@ export const menuData = {
       {
         name: "DRAINAGE & GRATING CASTINGS",
         slug: "drainage-and-grating-castings",
-        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image2.jpeg`,
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/Curb_Inlet_renders.1246.png`,
         description:
           "High-strength drainage gratings and trench covers designed for stormwater control, highways, airports, and industrial facilities.",
         videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/drainage-gratings.mp4`,
@@ -104,7 +104,7 @@ export const menuData = {
     id: 'water_works_casting',
     label: 'WATER WORKS CASTINGS',
     icon: DropletsIcon, // or any icon you prefer
-    bannerImage: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image2.jpeg`,
+    bannerImage: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/Curb_Inlet_renders.1246.png`,
     color: 'bg-blue-100 text-blue-900',
 
     categories: [
@@ -149,7 +149,7 @@ export const menuData = {
       {
         name: "PIPE FITTINGS & CONNECTOR CASTINGS",
         slug: "pipe-fittings-and-connector-castings",
-        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image8.jpeg`,
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image3.jpeg`,
         description:
           "Ductile iron and alloy cast fittings engineered for water pipelines, joint connections and network pressure systems.",
         videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/pipe-fitting-castings.mp4`,
@@ -167,7 +167,7 @@ export const menuData = {
       {
         name: "METER BOX & ACCESS INFRASTRUCTURE CASTINGS",
         slug: "meter-box-and-access-castings",
-        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image9.jpeg`,
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image3.jpeg`,
         description:
           "Durable castings used for water meter housings, access covers and inspection systems in urban water networks.",
         videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/meter-box-castings.mp4`,
@@ -237,7 +237,7 @@ export const menuData = {
       {
         name: "MAGNESIUM ANODES",
         slug: "magnesium-anodes",
-        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image13.jpg`,
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image3.jpeg`,
         description: "Premium magnesium anodes designed for cathodic protection in underground and freshwater applications.",
         videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/video1.mp4`,
         items: [
@@ -392,7 +392,7 @@ export const menuData = {
   //     {
   //       name: "LANDSCAPE & URBAN MOLDS",
   //       slug: "landscape-and-urban-molds",
-  //       image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image2.jpeg`,
+  //       image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/Curb_Inlet_renders.1246.png`,
   //       description:
   //         "Architectural molds for landscape development, garden structures and city beautification elements.",
   //       videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/mold/2-feet-mold.54.mp4`,
@@ -500,7 +500,7 @@ export const menuData = {
   //     {
   //       name: "MOLDS ACCESSORIES",
   //       slug: "molds-accessories",
-  //       image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image8.jpeg`,
+  //       image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image3.jpeg`,
   //       description:
   //         "Accessories that enhance mold performance, surface finish and production efficiency.",
   //       videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/mold/2-feet-mold.54.mp4`,
@@ -529,7 +529,7 @@ export const menuData = {
       {
         name: "CEMENT, MORTAR & CONCRETE PRODUCTS",
         slug: "cement-mortar-concrete-products",
-        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image9.jpeg`,
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image3.jpeg`,
         description:
           "High-quality cementitious materials and ready-mix solutions for structural, masonry and finishing applications in building projects.",
         videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/cement-products.mp4`,
@@ -597,7 +597,7 @@ export const menuData = {
       {
         name: "PLUMBING & SANITARY SYSTEMS",
         slug: "plumbing-and-sanitary-systems",
-        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image13.jpg`,
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image3.jpeg`,
         description:
           "Comprehensive plumbing and sanitary ware solutions designed for water supply, drainage and hygiene management.",
         videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/plumbing-sanitary.mp4`,
@@ -770,7 +770,7 @@ export const menuData = {
       {
         name: "IDLERS & ROLLERS",
         slug: "idlers-and-rollers",
-        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image2.jpeg`,
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/Curb_Inlet_renders.1246.png`,
         description:
           "Conveyor idlers and rollers engineered for material handling in mines, ports and bulk handling facilities.",
         items: [
@@ -852,7 +852,7 @@ export const menuData = {
     id: 'fabrication_products',
     label: 'FABRICATION PRODUCTS',
     icon: Wrench, // choose any lucide icon you prefer
-    bannerImage: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image8.jpeg`,
+    bannerImage: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image3.jpeg`,
     color: 'bg-gray-100 text-black',
 
     categories: [
@@ -878,7 +878,7 @@ export const menuData = {
       {
         name: "SHEET METAL FABRICATION COMPONENTS",
         slug: "sheet-metal-fabrication-components",
-        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image8.jpeg`,
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image3.jpeg`,
         description:
           "Precision sheet metal fabricated parts produced through cutting, bending and forming processes with high dimensional accuracy.",
         videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/sheet-metal-fabrication.mp4`,
@@ -895,7 +895,7 @@ export const menuData = {
       {
         name: "INDUSTRIAL FABRICATED EQUIPMENT",
         slug: "industrial-fabricated-equipment",
-        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image9.jpeg`,
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image3.jpeg`,
         description:
           "Heavy-duty fabricated equipment for cement plants, power plants, mining, steel industries and material handling systems.",
         videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/industrial-fabricated-equipment.mp4`,
@@ -1044,7 +1044,7 @@ export const menuData = {
   //   id: 'petro_products',
   //   label: 'PETRO PRODUCTS',
   //   icon: Flame, // choose any lucide icon you prefer
-  //   bannerImage: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image9.jpeg`,
+  //   bannerImage: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image3.jpeg`,
   //   color: 'bg-amber-100 text-amber-900',
 
   //   categories: [
@@ -1070,7 +1070,7 @@ export const menuData = {
   //     {
   //       name: "PIPING & FLOWLINE PRODUCTS",
   //       slug: "piping-and-flowline-products",
-  //       image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image13.jpg`,
+  //       image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image3.jpeg`,
   //       description:
   //         "Comprehensive range of pipeline components for upstream, midstream and downstream oil & gas transportation systems.",
   //       videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/petro/video1.mp4`,
@@ -1216,7 +1216,7 @@ export const menuData = {
   //     {
   //       name: "INSTRUMENTS & DATA LOGGING SYSTEMS",
   //       slug: "instruments-and-data-logging-systems",
-  //       image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image2.jpeg`,
+  //       image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/Curb_Inlet_renders.1246.png`,
   //       description:
   //         "Advanced measurement and logging instruments for continuous monitoring of water level, pressure and water quality parameters.",
   //       videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/well-instruments.mp4`,
@@ -1340,7 +1340,7 @@ export const menuData = {
       {
         name: "PIPES & FITTINGS",
         slug: "pipes-and-fittings",
-        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image8.jpeg`,
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image3.jpeg`,
         description:
           "High-performance irrigation pipes and fittings engineered for long-term durability, leak-proof performance and efficient water transport.",
         videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/IRRIGATION_PRODUCTS/video1.mp4`,
@@ -1357,7 +1357,7 @@ export const menuData = {
       {
         name: "SPRINKLER SYSTEM",
         slug: "sprinkler-system",
-        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image9.jpeg`,
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image3.jpeg`,
         description:
           "Advanced sprinkler irrigation systems designed to distribute uniform water coverage for farms, lawns, fields and plantations.",
         videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/IRRIGATION_PRODUCTS/video2.mp4`,
@@ -1425,7 +1425,7 @@ export const menuData = {
       {
         name: "LANDSCAPE & GARDEN",
         slug: "landscape-and-garden",
-        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image13.jpg`,
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image3.jpeg`,
         description:
           "Irrigation solutions for parks, villas, resorts, golf courses, public gardens and urban landscaping projects.",
         videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/IRRIGATION_PRODUCTS/video2.mp4`,
@@ -1461,7 +1461,7 @@ export const menuData = {
     id: 'forgings',
     label: 'FORGINGS',
     icon: Hammer, // choose any lucide icon
-    bannerImage: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image13.jpg`,
+    bannerImage: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image3.jpeg`,
     color: 'bg-orange-100 text-orange-900',
 
     categories: [
@@ -1711,7 +1711,7 @@ export const menuData = {
       {
         name: "ROLLARS & SPROCKETS",
         slug: "rollers-and-sprockets",
-        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image2.jpeg`,
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/Curb_Inlet_renders.1246.png`,
         description:
           "Undercarriage rollers and sprockets designed for maximum load capacity and long service life.",
         items: [
@@ -1818,7 +1818,7 @@ export const menuData = {
       {
         name: "BUILD-TO-PRINT MANUFACTURING",
         slug: "build-to-print-manufacturing",
-        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image8.jpeg`,
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image3.jpeg`,
         description:
           "Manufacturing services based strictly on customer drawings, 3D models and technical specifications with complete confidentiality.",
         videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/build-to-print.mp4`,
@@ -1835,7 +1835,7 @@ export const menuData = {
       {
         name: "PROTOTYPE & NEW PRODUCT DEVELOPMENT",
         slug: "prototype-and-new-product-development",
-        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image9.jpeg`,
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image3.jpeg`,
         description:
           "Rapid prototyping and new product development support from concept design to functional prototype and pilot production.",
         videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/prototype-development.mp4`,
@@ -1914,7 +1914,7 @@ export const menuData = {
       {
         name: "FORGING DIES & TOOLING",
         slug: "forging-dies-and-tooling",
-        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image13.jpg`,
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image3.jpeg`,
         description:
           "High-performance forging dies and tooling solutions designed for open-die, closed-die and ring-rolling operations.",
         videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/forging-dies.mp4`,
@@ -2061,7 +2061,7 @@ export const menuData = {
       {
         name: "PROCESS INDUSTRY MACHINERY",
         slug: "process-industry-machinery",
-        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image2.jpeg`,
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/Curb_Inlet_renders.1246.png`,
         description:
           "Machinery engineered for cement, steel, chemical, fertilizer, paper and food processing industries.",
         videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/process-industry-machinery.mp4`,
@@ -2123,7 +2123,7 @@ export const menuData = {
       {
         name: "LOADER & DOZER MOUNTED PLOUGHS",
         slug: "loader-and-dozer-mounted-ploughs",
-        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image2.jpeg`,
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/Curb_Inlet_renders.1246.png`,
         description:
           "Snow plough attachments designed for loaders, dozers and tractors for municipal and industrial snow clearing.",
         videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/loader-mounted-ploughs.mp4`,
@@ -2217,7 +2217,7 @@ export const menuData = {
       {
         name: "HIGH MANGANESE STEEL PARTS",
         slug: "high-manganese-steel-parts",
-        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image8.jpeg`,
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image3.jpeg`,
         description:
           "Wear-resistant high manganese steel components ideal for impact and abrasion environments.",
         items: [
@@ -2233,7 +2233,7 @@ export const menuData = {
       {
         name: "STAINLESS STEEL COMPONENTS",
         slug: "stainless-steel-components",
-        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image9.jpeg`,
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image3.jpeg`,
         description:
           "Corrosion-resistant stainless steel castings and machined parts for process industries and marine environments.",
         items: [
@@ -2281,7 +2281,7 @@ export const menuData = {
       {
         name: "WHITE IRON CASTINGS",
         slug: "white-iron-castings",
-        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image13.jpg`,
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image3.jpeg`,
         description:
           "Abrasion-resistant white cast iron parts suitable for high wear applications in mining and cement industries.",
         items: [
@@ -2363,7 +2363,7 @@ export const menuData = {
     id: 'custom_offerings',
     label: 'CUSTOM OFFERINGS',
     icon: Hammer, // choose any lucide icon you prefer
-    bannerImage: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image2.jpeg`,
+    bannerImage: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/Curb_Inlet_renders.1246.png`,
     color: 'bg-purple-100 text-purple-900',
 
     categories: [
@@ -2440,7 +2440,7 @@ export const menuData = {
       {
         name: "PROJECT-BASED MANUFACTURING",
         slug: "project-based-manufacturing",
-        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image2.jpeg`,
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/Curb_Inlet_renders.1246.png`,
         description:
           "Turnkey engineering and manufacturing executed on complete project scope including design, production and delivery.",
         videoUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/project-based-manufacturing.mp4`,
@@ -2580,7 +2580,7 @@ export const menuData = {
       {
         name: "ZINC & ALUMINIUM CAST ANODES",
         slug: "zinc-and-aluminium-cast-anodes",
-        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image9.jpeg`,
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image3.jpeg`,
         description:
           "High-efficiency sacrificial anodes for corrosion protection of pipelines, marine structures and storage tanks.",
         items: [
@@ -2644,7 +2644,7 @@ export const menuData = {
       {
         name: "JUNCTION BOXES",
         slug: "junction-boxes",
-        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image13.jpg`,
+        image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image3.jpeg`,
         description:
           "Junction boxes for current distribution, test stations and monitoring connections in CP systems.",
         items: [
@@ -2691,17 +2691,8 @@ export const menuData = {
   }
 
 };
-export type FooterLink = { label: string; href: string };
-
-export type FooterSection = {
-  title: string;
-  links: FooterLink[];
-};
-
-export type FooterColumn = {
-  id: string;
-  sections: FooterSection[]; // Every column now has a list of sections
-};
+import { FooterLink, FooterSection, FooterColumn } from '@/types';
+export type { FooterLink, FooterSection, FooterColumn };
 
 // 2. Helper to generate links (Prevents typing /footerPages/ 100 times)
 const makeLink = (label: string, slug: string) => ({

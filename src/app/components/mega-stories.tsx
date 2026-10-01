@@ -96,7 +96,7 @@ const CASTING_ZONE_PRODUCTS: CastingZoneProduct[] = [
     title: "ADA Truncated Dome Detectable Warning Plates",
     category: "Transit Accessibility",
     loadRating: "AASHTO H-20 Wheel Load",
-    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/MEGA/Detectable_Warning_Plates.jpeg`,
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/detectable_plates/detectable_warning_plate_1.jpeg`,
     icon: ShieldCheck
   },
   {
@@ -158,7 +158,7 @@ export function MegaStories() {
               Casting Zone & <span className="text-[#CC0000]">Product Volumes</span>
             </h2>
           </div>
-          
+
           {/* Two Buttons on Top Right */}
           <div className="flex items-center gap-2">
             <Link href="/contact">
@@ -185,7 +185,7 @@ export function MegaStories() {
                 VOLUMES 01 – 09 // PRODUCTION MATRIX
               </h3>
             </div>
-            
+
             {/* Top Right Badges */}
             <div className="flex items-center gap-2 font-mono text-[10px] uppercase font-bold">
               <span className="bg-white border border-gray-200 text-black px-2 py-0.5 rounded-none">

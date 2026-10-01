@@ -80,7 +80,7 @@ export default function IndustrialManifest() {
                 <span className="text-[#CC0000]">All Steps on a Flash</span>
               </h3>
 
-              <p className="text-black text-xs leading-relaxed font-light">
+              <p className="text-white text-xs leading-relaxed font-light">
                 We eliminated the sequential lag of traditional manufacturing by unifying pattern design, alloy formulation, and automated molding in parallel threads.
               </p>
             </div>

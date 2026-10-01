@@ -10,7 +10,7 @@ const marketUpdates = [
     id: 1,
     title: "Mega Foundries Quality Tests",
     description: "We test every casting batch for excellent tensile strength and durability to keep components and personnel safe under extreme conditions.",
-    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image9.jpeg`
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image3.jpeg`
   },
   {
     id: 2,
@@ -34,7 +34,7 @@ const marketUpdates = [
     id: 5,
     title: "Corrosion Resistance",
     description: "Specialized alloy coatings reduce the rate of corrosion, giving our municipal and marine castings a much longer lifespan.",
-    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image13.jpg`
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image3.jpeg`
   },
   {
     id: 6,

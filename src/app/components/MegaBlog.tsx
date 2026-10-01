@@ -37,7 +37,7 @@ const BLOG_POSTS: BlogPost[] = [
     date: "May 24, 2026",
     author: "Sarah Jenkins, PE",
     readTime: "8 min read",
-    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image2.jpeg`
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/Curb_Inlet_renders.1246.png`
   },
   {
     id: "3",

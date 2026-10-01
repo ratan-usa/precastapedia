@@ -11,7 +11,7 @@ export const allFactoryVideos = [
         "id": 2,
         "name": "Mega Foundries - Precision Casting",
         "location": "Ohio, USA",
-        "thumbnail": `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image2.jpeg`,
+        "thumbnail": `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/Curb_Inlet_renders.1246.png`,
         "videoUrl": `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/video2.mp4`,
         "isLive": true
     },
@@ -59,7 +59,7 @@ export const allFactoryVideos = [
         "id": 8,
         "name": "Mega Foundries - Heavy Machinery",
         "location": "Wisconsin, USA",
-        "thumbnail": `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image8.jpeg`,
+        "thumbnail": `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image3.jpeg`,
         "videoUrl": `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/video8.mp4`,
         "isLive": true
     },
@@ -67,7 +67,7 @@ export const allFactoryVideos = [
         "id": 9,
         "name": "Mega Foundries - Brass Fittings",
         "location": "New York, USA",
-        "thumbnail": `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image9.jpeg`,
+        "thumbnail": `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image3.jpeg`,
         "videoUrl": `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/video9.mp4`,
         "isLive": true
     },
@@ -99,7 +99,7 @@ export const allFactoryVideos = [
         "id": 13,
         "name": "Mega Foundries - Railway Parts",
         "location": "Tennessee, USA",
-        "thumbnail": `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image13.jpg`,
+        "thumbnail": `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image3.jpeg`,
         "videoUrl": `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/video13.mp4`,
         "isLive": true
     },
@@ -171,7 +171,7 @@ export const allFactoryVideos = [
         "id": 22,
         "name": "Mega Foundries - Defense Equipment",
         "location": "Virginia, USA",
-        "thumbnail": `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image2.jpeg`,
+        "thumbnail": `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/Curb_Inlet_renders.1246.png`,
         "videoUrl": `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/video22.mp4`,
         "isLive": true
     },

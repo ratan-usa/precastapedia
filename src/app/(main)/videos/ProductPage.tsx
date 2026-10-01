@@ -88,7 +88,7 @@ const POPULAR_ASSETS: PopularCastingAsset[] = [
     loadClass: 'AASHTO H-20 Wheel Load',
     materialStandard: 'Class 35B Gray Iron',
     modelUrl: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/gib_files/black1.glb`,
-    thumbnail: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/MEGA/Detectable_Warning_Plates.jpeg`,
+    thumbnail: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/detectable_plates/detectable_warning_plate_1.jpeg`,
     description: 'ADA-compliant cast iron warning plates with slip-resistant truncated domes and wet-set lug anchors for permanent substrate bonding.'
   }
 ];

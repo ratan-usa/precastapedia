@@ -29,14 +29,14 @@ const products = [
     id: "trench-system",
     title: "Trench Systems",
     description: "High-performance iron castings supplied in multiple sizes and load classes for efficient rainwater collection on urban roads, highways, parking lots, and industrial plants.",
-    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/MEGA/pre-trench-01.JPG`,
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/TRENCH/12_ft_2_side_interlocking_trench_with_regualar_grate.1220.png`,
     link: "/products/gully-gratings"
   },
   {
     id: "paving-risers",
     title: "Paving Risers",
     description: "Heavy-duty iron castings engineered to withstand intensive point loads up to 90 tons. The ultimate casting solution for heavy industrial zones, logistics hubs, airports, and dockyards.",
-    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/PAVING-RISERS/paving_riser_1.5201.png`,
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/paving_riser/paving_riser_with_frame_05.png`,
     link: "/products/heavy-traffic"
   },
   {
@@ -72,7 +72,7 @@ const products = [
     id: "tree-grates",
     title: "Tree Grates",
     description: "Premium linear drainage solutions engineered with solid ductile iron casting gratings to ensure rapid surface water evacuation and maximum performance.",
-    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image9.jpeg`,
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image3.jpeg`,
     link: "/products/drainage-castings"
   },
   {
@@ -86,7 +86,7 @@ const products = [
     id: "detectable-warning-plates",
     title: "Detectable Warning Plates",
     description: "Premium linear drainage solutions engineered with solid ductile iron casting gratings to ensure rapid surface water evacuation and maximum performance.",
-    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/MEGA/Detectable_Warning_Plates.jpeg?v=2`,
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/detectable_plates/detectable_warning_plate_1.jpeg`,
     link: "/products/drainage-castings"
   },
   {

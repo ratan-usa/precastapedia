@@ -14,7 +14,7 @@ const HISTORY_DATA = [
     year: "1992",
     title: "Expansion to Aerospace",
     description: "After achieving ISO 9001 certification, we expanded our operations to supply critical alloy parts to major aerospace contractors, marking our entry into high-precision manufacturing.",
-    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image2.jpeg`
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/Curb_Inlet_renders.1246.png`
   },
   {
     year: "2005",
@@ -53,9 +53,9 @@ export default function MakingHistoryPage() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-slate-800 via-slate-950 to-black opacity-90 z-0"></div>
 
         {/* Decorative 'Sparks' or Graphic (Optional) */}
-        <div 
+        <div
           className="absolute top-0 left-0 w-full h-full opacity-20 bg-cover bg-center"
-          style={{ backgroundImage: `url(${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image2.jpeg)` }}
+          style={{ backgroundImage: `url(${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/Curb_Inlet_renders.1246.png)` }}
         />
 
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">

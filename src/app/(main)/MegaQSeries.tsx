@@ -24,7 +24,7 @@ const Q_SERIES_VARIANTS: QProductVariant[] = [
     description: "Engineered for intense transit hubs demanding continuous surface drainage. Features a self-locking monolithic seating geometry that drops into existing concrete channels instantly.",
     metric: "F900+",
     metricLabel: "Load Rating Class",
-    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image2.jpeg`
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/INLET/Curb_Inlet_renders.1248.png`
   },
   {
     id: "q-700",
@@ -33,7 +33,7 @@ const Q_SERIES_VARIANTS: QProductVariant[] = [
     description: "Specially formulated from premium nodular ductile iron to withstand unpredictable lateral shifting forces. Optimized for heavy airport taxiways and industrial container shipping ports.",
     metric: "90-Ton",
     metricLabel: "Proof Load Capacity",
-    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image2.jpeg`
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/INLET/Curb_Inlet_renders.1246.png`
   },
   {
     id: "q-alpha",
@@ -42,7 +42,7 @@ const Q_SERIES_VARIANTS: QProductVariant[] = [
     description: "Our most advanced foundry design yet. Features integrated low-frequency structural health sensors embedded directly within the iron casting frame to track load cycles in real-time.",
     metric: "0.01mm",
     metricLabel: "Machined Tolerance",
-    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image2.jpeg`
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/INLET/Curb_Inlet_renders.1248.png`
   }
 ];
 
@@ -304,7 +304,7 @@ export default function MegaQSeries() {
               <div className="lg:col-span-5 w-full flex flex-col justify-between gap-3">
                 <div className="relative w-full aspect-[16/10] sm:aspect-[4/3] max-h-[280px] bg-[#0a0a0a] border border-zinc-800 rounded-none overflow-hidden p-3 flex items-center justify-center group hover:border-[#CC0000] transition-colors duration-300">
                   <Image
-                    src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image2.jpeg`}
+                    src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/Curb_Inlet_renders.1246.png`}
                     alt="Finite Element Analysis Structural Stress Simulation Heat Map"
                     fill
                     className="object-contain p-2 opacity-95 group-hover:opacity-100 transition-opacity duration-300"

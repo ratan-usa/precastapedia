@@ -32,7 +32,7 @@ const AboutSection = () => {
     <section className="relative w-full py-16 sm:pt-8 bg-white">
       <div className="absolute inset-0 z-0 h-[225px] w-full">
         <Image
-          src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image2.jpeg`}
+          src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/Curb_Inlet_renders.1246.png`}
           alt="Industrial background image"
           layout="fill"
           objectFit="cover"

@@ -20,7 +20,7 @@ const products = [
         description: "Our automated molding line produces engine blocks with superior dimensional accuracy. See how we maintain consistent wall thickness and optimal heat dissipation properties for high-performance vehicles.",
         features: ["Grey Iron & Aluminum options", "Robotic core assembly", "Just-in-time delivery"],
         video: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/video2.mp4`,
-        poster: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image2.jpeg`
+        poster: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/Curb_Inlet_renders.1246.png`
     },
     {
         id: 3,

@@ -9,7 +9,7 @@ import React, { useState } from 'react';
 // You need a database table with: id, factory_name, location, thumbnail_url, vimeo_id
 const sampleStreams = [
   { id: 1, name: "Mega Forge USA - Plant A", location: "Texas, USA", thumbnail: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image1.jpeg`, vimeoId: "76979871" }, // Sample Vimeo ID
-  { id: 2, name: "Mega Casting India", location: "Gujarat, India", thumbnail: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image2.jpeg`, vimeoId: "76979871" },
+  { id: 2, name: "Mega Casting India", location: "Gujarat, India", thumbnail: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/Curb_Inlet_renders.1246.png`, vimeoId: "76979871" },
   { id: 3, name: "CANADA_FOUNDRIES Unit 4", location: "Ontario, Canada", thumbnail: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image3.jpeg`, vimeoId: "76979871" },
   { id: 4, name: "Precision Molds UK", location: "London, UK", thumbnail: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image4.jpg`, vimeoId: "76979871" },
   { id: 5, name: "Euro Fabricators", location: "Berlin, Germany", thumbnail: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image5.jpeg`, vimeoId: "76979871" },

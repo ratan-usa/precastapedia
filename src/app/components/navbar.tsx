@@ -220,7 +220,7 @@ const Navbar = () => {
                             <div className="mt-4">
                                 <DropdownMenu>
                                     <DropdownMenuTrigger className="flex items-center gap-2 group outline-none cursor-pointer text-left">
-                                        <h2 className='text-lg md:text-xl font-black text-[#CC0000] flex items-center gap-2 tracking-tight uppercase group-hover:text-black transition-colors'>
+                                        <h2 className='text-xl md:text-sm font-black text-[#CC0000] flex items-center gap-2 tracking-tight uppercase group-hover:text-black transition-colors'>
                                             Globally Connected
                                             <span className="text-xs bg-red-50 text-[#CC0000] border border-red-200 px-2 py-0.5 rounded font-mono font-bold flex items-center gap-1.5 normal-case">
                                                 <span>{selectedRegion.flag}</span>

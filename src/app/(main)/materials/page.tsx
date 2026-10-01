@@ -76,7 +76,7 @@ const MaterialsHelpCenter = () => {
           <h1 className="text-3xl md:text-5xl font-bold tracking-tight">
             Leading Edge & Advanced Technologies
           </h1>
-          <p className="text-gray-100 text-lg md:text-xl">
+          <p className="text-white text-lg md:text-xl">
             Join the futuristic metal industries. Search our capabilities below.
           </p>
 
@@ -98,11 +98,11 @@ const MaterialsHelpCenter = () => {
                 <item.icon className="w-8 h-8 text-[#CC0000] group-hover:text-white transition-colors duration-300" />
               </div>
 
-              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#CC0000] text-xl transition-colors">
+              <h3 className="text-xl font-bold text-black mb-3 group-hover:text-[#CC0000] text-xl transition-colors">
                 {item.title}
               </h3>
 
-              <p className="text-gray-500 text-sm mb-6 leading-relaxed grow">
+              <p className="text-black text-sm mb-6 leading-relaxed grow">
                 {item.description}
               </p>
 
@@ -115,7 +115,7 @@ const MaterialsHelpCenter = () => {
       </section>
 
       <section className="text-center py-12 pb-24">
-        <p className="text-gray-600 mb-4">Can't find what you are looking for?</p>
+        <p className="text-black mb-4">Can't find what you are looking for?</p>
         <Button className="bg-[#CC0000] hover:bg-red-700 text-white px-8 py-6 text-lg rounded-full">
           Contact Our Engineering Team
         </Button>

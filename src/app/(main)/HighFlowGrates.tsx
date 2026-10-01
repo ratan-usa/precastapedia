@@ -36,7 +36,7 @@ export default function HighFlowGrates() {
               High Flow Grates & <span className="text-[#CC0000]">Drainage Systems</span>
             </h2>
           </div>
-          <p className="text-gray-500 text-xs sm:text-sm font-light leading-relaxed max-w-lg">
+          <p className="text-black text-xs sm:text-sm font-light leading-relaxed max-w-lg">
             Engineered high-velocity runoff interception matrices with minimized fluid turbulence and 100% frontal-flow containment.
           </p>
         </div>
@@ -115,7 +115,7 @@ export default function HighFlowGrates() {
                 <h4 className="text-xs sm:text-sm font-black uppercase tracking-wide text-[#0a0a0a] mb-0.5">
                   High Capacity Inlets for Extra Drainage
                 </h4>
-                <p className="text-xs text-gray-500 font-light leading-relaxed">
+                <p className="text-xs text-black font-light leading-relaxed">
                   Engineered to capture maximum runoff volume, clearing pooling surface water rapidly during critical peak downpour events.
                 </p>
               </div>
@@ -130,7 +130,7 @@ export default function HighFlowGrates() {
                 <h4 className="text-xs sm:text-sm font-black uppercase tracking-wide text-[#0a0a0a] mb-0.5">
                   Hydraulically Efficient Cast Geometry
                 </h4>
-                <p className="text-xs text-gray-500 font-light leading-relaxed">
+                <p className="text-xs text-black font-light leading-relaxed">
                   Advanced casting geometry structures reduce fluid turbulence, driving water down into system infrastructure networks smoothly with minimized resistance.
                 </p>
               </div>
@@ -145,7 +145,7 @@ export default function HighFlowGrates() {
                 <h4 className="text-xs sm:text-sm font-black uppercase tracking-wide text-[#0a0a0a] mb-0.5">
                   100% Frontal-Flow Interception
                 </h4>
-                <p className="text-xs text-gray-500 font-light leading-relaxed">
+                <p className="text-xs text-black font-light leading-relaxed">
                   The complete horizontal casting matrix barrier alignment blocks bypass flow entirely, guaranteeing all surface water heading towards the grate is safely contained.
                 </p>
               </div>
@@ -160,7 +160,7 @@ export default function HighFlowGrates() {
 
           {/* Spec 1: Standard Flat Matrix */}
           <div className="bg-gray-50 border border-gray-100 p-3 flex flex-col justify-between group rounded-none hover:bg-white hover:border-[#CC0000] transition-all duration-300">
-            <span className="text-[9px] font-mono tracking-widest text-gray-400 uppercase font-bold block mb-2">
+            <span className="text-[9px] font-mono tracking-widest text-black uppercase font-bold block mb-2">
               Spec 01 // Inline Profile
             </span>
             <div className="w-full h-24 relative bg-white border border-gray-100 rounded-none overflow-hidden mb-2 p-1.5 flex items-center justify-center">
@@ -171,14 +171,14 @@ export default function HighFlowGrates() {
                 className="object-contain p-1 grayscale group-hover:grayscale-0 transition-all duration-300"
               />
             </div>
-            <p className="text-xs font-bold text-gray-700 uppercase tracking-wide group-hover:text-[#CC0000] transition-colors truncate">
+            <p className="text-xs font-bold text-black uppercase tracking-wide group-hover:text-[#CC0000] transition-colors truncate">
               Standard Flat Grid
             </p>
           </div>
 
           {/* Spec 2: Single Rear Hood */}
           <div className="bg-gray-50 border border-gray-100 p-3 flex flex-col justify-between group rounded-none hover:bg-white hover:border-[#CC0000] transition-all duration-300">
-            <span className="text-[9px] font-mono tracking-widest text-gray-400 uppercase font-bold block mb-2">
+            <span className="text-[9px] font-mono tracking-widest text-black uppercase font-bold block mb-2">
               Spec 02 // Rear Hood
             </span>
             <div className="w-full h-24 relative bg-white border border-gray-100 rounded-none overflow-hidden mb-2 p-1.5 flex items-center justify-center">
@@ -189,14 +189,14 @@ export default function HighFlowGrates() {
                 className="object-contain p-1 grayscale group-hover:grayscale-0 transition-all duration-300"
               />
             </div>
-            <p className="text-xs font-bold text-gray-700 uppercase tracking-wide group-hover:text-[#CC0000] transition-colors truncate">
+            <p className="text-xs font-bold text-black uppercase tracking-wide group-hover:text-[#CC0000] transition-colors truncate">
               Rear-Curb Deflector
             </p>
           </div>
 
           {/* Spec 3: Multi-Window Curb Port */}
           <div className="bg-gray-50 border border-gray-100 p-3 flex flex-col justify-between group rounded-none hover:bg-white hover:border-[#CC0000] transition-all duration-300">
-            <span className="text-[9px] font-mono tracking-widest text-gray-400 uppercase font-bold block mb-2">
+            <span className="text-[9px] font-mono tracking-widest text-black uppercase font-bold block mb-2">
               Spec 03 // Ported Curb
             </span>
             <div className="w-full h-24 relative bg-white border border-gray-100 rounded-none overflow-hidden mb-2 p-1.5 flex items-center justify-center">
@@ -207,14 +207,14 @@ export default function HighFlowGrates() {
                 className="object-contain p-1 grayscale group-hover:grayscale-0 transition-all duration-300"
               />
             </div>
-            <p className="text-xs font-bold text-gray-700 uppercase tracking-wide group-hover:text-[#CC0000] transition-colors truncate">
+            <p className="text-xs font-bold text-black uppercase tracking-wide group-hover:text-[#CC0000] transition-colors truncate">
               Integrated Weir Unit
             </p>
           </div>
 
           {/* Spec 4: Heavy-Duty Structural Installation Assembly */}
           <div className="bg-gray-50 border border-gray-100 p-3 flex flex-col justify-between group rounded-none hover:bg-white hover:border-[#CC0000] transition-all duration-300">
-            <span className="text-[9px] font-mono tracking-widest text-gray-400 uppercase font-bold block mb-2">
+            <span className="text-[9px] font-mono tracking-widest text-black uppercase font-bold block mb-2">
               Spec 04 // Complete Assembly
             </span>
             <div className="w-full h-24 relative bg-white border border-gray-100 rounded-none overflow-hidden mb-2 p-1.5 flex items-center justify-center">
@@ -225,7 +225,7 @@ export default function HighFlowGrates() {
                 className="object-contain p-1 grayscale group-hover:grayscale-0 transition-all duration-300"
               />
             </div>
-            <p className="text-xs font-bold text-gray-700 uppercase tracking-wide group-hover:text-[#CC0000] transition-colors truncate">
+            <p className="text-xs font-bold text-black uppercase tracking-wide group-hover:text-[#CC0000] transition-colors truncate">
               Catch Basin Assembly
             </p>
           </div>

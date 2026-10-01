@@ -81,7 +81,7 @@ export default function MegaQSeries() {
               className={`px-4 py-2 text-xs font-black uppercase tracking-wider transition-all duration-200 flex items-center gap-2 ${
                 activeSection === "q-series"
                   ? "bg-[#CC0000] text-white shadow-sm"
-                  : "text-gray-600 hover:text-black hover:bg-gray-200"
+                  : "text-black hover:text-black hover:bg-gray-200"
               }`}
             >
               <Sliders className="w-4 h-4" /> Q-Series Lineup
@@ -91,10 +91,10 @@ export default function MegaQSeries() {
               className={`px-4 py-2 text-xs font-black uppercase tracking-wider transition-all duration-200 flex items-center gap-2 ${
                 activeSection === "fea"
                   ? "bg-[#0a0a0a] text-white shadow-sm"
-                  : "text-gray-600 hover:text-black hover:bg-gray-200"
+                  : "text-black hover:text-black hover:bg-gray-200"
               }`}
             >
-              <Activity className={`w-4 h-4 ${activeSection === "fea" ? "text-[#CC0000] animate-pulse" : "text-gray-500"}`} /> FEA Stress Simulation
+              <Activity className={`w-4 h-4 ${activeSection === "fea" ? "text-[#CC0000] animate-pulse" : "text-black"}`} /> FEA Stress Simulation
             </button>
           </div>
         </div>
@@ -106,7 +106,7 @@ export default function MegaQSeries() {
 
               {/* COLUMN 1: VARIANT SELECTOR (1/3 Width) */}
               <div className="flex flex-col justify-between gap-2 w-full h-full bg-gray-50/50 border border-gray-200 p-3 sm:p-4">
-                <span className="text-[10px] font-mono tracking-widest text-gray-400 uppercase font-bold block mb-1">
+                <span className="text-[10px] font-mono tracking-widest text-black uppercase font-bold block mb-1">
                   Select Series Variant:
                 </span>
 
@@ -120,19 +120,19 @@ export default function MegaQSeries() {
                         className={`w-full text-left p-3.5 border transition-all duration-200 rounded-none flex items-center justify-between group flex-1
                           ${isActive
                             ? "bg-white border-[#CC0000] shadow-sm ring-1 ring-[#CC0000]/20"
-                            : "bg-white/80 border-gray-200 text-gray-400 hover:border-gray-400 hover:text-[#0a0a0a]"
+                            : "bg-white/80 border-gray-200 text-black hover:border-gray-400 hover:text-[#0a0a0a]"
                           }
                         `}
                       >
                         <div>
-                          <p className={`text-sm font-black uppercase tracking-tight transition-colors ${isActive ? 'text-[#CC0000]' : 'text-gray-900'}`}>
+                          <p className={`text-sm font-black uppercase tracking-tight transition-colors ${isActive ? 'text-[#CC0000]' : 'text-black'}`}>
                             {variant.name}
                           </p>
-                          <p className="text-[10px] text-gray-400 font-mono uppercase tracking-wider mt-0.5">
+                          <p className="text-[10px] text-black font-mono uppercase tracking-wider mt-0.5">
                             {variant.metric} • {variant.metricLabel}
                           </p>
                         </div>
-                        <ArrowUpRight className={`w-4 h-4 transition-transform duration-200 ${isActive ? 'text-[#CC0000] rotate-45' : 'text-gray-300 group-hover:text-gray-600'}`} />
+                        <ArrowUpRight className={`w-4 h-4 transition-transform duration-200 ${isActive ? 'text-[#CC0000] rotate-45' : 'text-white group-hover:text-black'}`} />
                       </button>
                     );
                   })}
@@ -143,7 +143,7 @@ export default function MegaQSeries() {
               <div className="w-full bg-white border border-gray-200 p-4 sm:p-5 flex flex-col justify-between h-full space-y-3">
                 <div>
                   <div className="flex items-center justify-between border-b border-gray-100 pb-2 mb-2">
-                    <div className="inline-flex items-center gap-1.5 text-gray-600 text-[10px] font-mono uppercase tracking-wider">
+                    <div className="inline-flex items-center gap-1.5 text-black text-[10px] font-mono uppercase tracking-wider">
                       <Sliders className="w-3 h-3 text-[#CC0000]" /> Dynamic Configuration Unit
                     </div>
                     <span className="text-[10px] font-mono text-[#CC0000] font-bold uppercase">
@@ -158,7 +158,7 @@ export default function MegaQSeries() {
                     {activeVariant.tagline}
                   </p>
 
-                  <p className="text-gray-600 text-xs sm:text-sm leading-relaxed font-light mb-3">
+                  <p className="text-black text-xs sm:text-sm leading-relaxed font-light mb-3">
                     {activeVariant.description}
                   </p>
                 </div>
@@ -167,7 +167,7 @@ export default function MegaQSeries() {
                   {/* Analytical Metrics */}
                   <div className="grid grid-cols-2 gap-2">
                     <div className="bg-gray-50 p-2.5 border border-gray-100">
-                      <span className="text-[9px] font-mono uppercase text-gray-400 block mb-0.5">
+                      <span className="text-[9px] font-mono uppercase text-black block mb-0.5">
                         {activeVariant.metricLabel}
                       </span>
                       <span className="text-base font-black text-[#0a0a0a] font-mono tracking-tight">
@@ -176,10 +176,10 @@ export default function MegaQSeries() {
                     </div>
 
                     <div className="bg-gray-50 p-2.5 border border-gray-100 flex flex-col justify-center">
-                      <span className="text-[9px] font-mono uppercase text-gray-400 block mb-0.5">
+                      <span className="text-[9px] font-mono uppercase text-black block mb-0.5">
                         Material Matrix
                       </span>
-                      <span className="text-xs font-bold text-gray-800 uppercase tracking-wide">
+                      <span className="text-xs font-bold text-black uppercase tracking-wide">
                         Nodular Ductile Iron
                       </span>
                     </div>
@@ -198,7 +198,7 @@ export default function MegaQSeries() {
                 <div className="relative w-full h-full min-h-[280px] bg-gray-50 border border-gray-200 rounded-none overflow-hidden p-3 flex flex-col justify-between group shadow-inner hover:border-[#CC0000] transition-colors duration-300 flex-1">
 
                   <div className="flex items-center justify-between z-20 pb-1 border-b border-gray-200/80">
-                    <span className="text-[9px] font-mono uppercase font-bold text-zinc-700">
+                    <span className="text-[9px] font-mono uppercase font-bold text-black">
                       3D CAD Blueprint Render
                     </span>
                     <span className="text-[8px] font-mono text-[#CC0000] uppercase font-bold">
@@ -222,7 +222,7 @@ export default function MegaQSeries() {
                   <div className="absolute bottom-8 left-2 w-2 h-2 border-b border-l border-gray-300 pointer-events-none" />
                   <div className="absolute bottom-8 right-2 w-2 h-2 border-b border-r border-gray-300 pointer-events-none" />
 
-                  <div className="bg-[#0a0a0a]/90 text-[8px] font-mono uppercase font-bold tracking-wider text-zinc-400 text-center py-1 z-20">
+                  <div className="bg-[#0a0a0a]/90 text-[8px] font-mono uppercase font-bold tracking-wider text-white text-center py-1 z-20">
                     {activeVariant.name} // High-Tolerance Foundry CAD
                   </div>
                 </div>
@@ -249,7 +249,7 @@ export default function MegaQSeries() {
                   <h3 className="text-2xl md:text-3xl font-black uppercase tracking-tight text-[#0a0a0a]">
                     Finite Element Analysis & <span className="text-[#CC0000]">Stress Simulation</span>
                   </h3>
-                  <p className="text-gray-600 text-xs sm:text-sm leading-relaxed font-light mt-2">
+                  <p className="text-black text-xs sm:text-sm leading-relaxed font-light mt-2">
                     To ensure Mega casting systems deliver continuous fatigue stability under heavy municipal networks, we utilize advanced Finite Element Analysis (FEA) deep within our pipeline prototyping cycles. High-fidelity heat maps illustrate how internal geometric support ribs manage and disperse downward point forces evenly across both cover and frame.
                   </p>
                 </div>
@@ -264,7 +264,7 @@ export default function MegaQSeries() {
                       <h4 className="text-xs sm:text-sm font-black uppercase tracking-wide text-[#0a0a0a] mb-0.5">
                         Inverted T-Flange Seating Frame
                       </h4>
-                      <p className="text-xs text-gray-500 leading-relaxed font-light">
+                      <p className="text-xs text-black leading-relaxed font-light">
                         Wide baseline flange securely anchors vault chamber paths and dissipates continuous overhead shear stresses directly into surrounding concrete pours.
                       </p>
                     </div>
@@ -278,7 +278,7 @@ export default function MegaQSeries() {
                       <h4 className="text-xs sm:text-sm font-black uppercase tracking-wide text-[#0a0a0a] mb-0.5">
                         Non-Welded, Monolithic Casting Construction
                       </h4>
-                      <p className="text-xs text-gray-500 leading-relaxed font-light">
+                      <p className="text-xs text-black leading-relaxed font-light">
                         Molded completely as an unbroken, solid nodular iron unit. Entirely isolates and eliminates structural heat weld fatigue boundaries.
                       </p>
                     </div>
@@ -292,7 +292,7 @@ export default function MegaQSeries() {
                       <h4 className="text-xs sm:text-sm font-black uppercase tracking-wide text-[#0a0a0a] mb-0.5">
                         Inboard Tamper-Proof Locking System
                       </h4>
-                      <p className="text-xs text-gray-500 leading-relaxed font-light">
+                      <p className="text-xs text-black leading-relaxed font-light">
                         Heavy internal compression locking bolts provide comprehensive safety against high-velocity road suction, theft, and unauthorized vault access.
                       </p>
                     </div>
@@ -314,18 +314,18 @@ export default function MegaQSeries() {
                   <div className="absolute top-2.5 left-2.5 bg-[#CC0000] text-white text-[8px] font-mono uppercase tracking-wider px-2 py-0.5 font-bold z-20">
                     FEA Active Strain Map
                   </div>
-                  <div className="absolute top-2.5 right-2.5 bg-black/80 text-zinc-400 border border-zinc-700 text-[8px] font-mono uppercase tracking-wider px-2 py-0.5 z-20">
+                  <div className="absolute top-2.5 right-2.5 bg-black/80 text-white border border-zinc-700 text-[8px] font-mono uppercase tracking-wider px-2 py-0.5 z-20">
                     Mesh: 0.05mm
                   </div>
 
-                  <div className="absolute bottom-2 left-2 right-2 bg-[#0a0a0a]/90 text-[8px] font-mono uppercase font-bold tracking-wider text-zinc-400 text-center py-1 z-20">
+                  <div className="absolute bottom-2 left-2 right-2 bg-[#0a0a0a]/90 text-[8px] font-mono uppercase font-bold tracking-wider text-white text-center py-1 z-20">
                     FEA Stress Dispersion // Real-Time Simulation
                   </div>
                 </div>
 
                 {/* Action Trigger for FEA */}
                 <div className="p-3 bg-gray-50 border border-gray-200 flex flex-col justify-between gap-2.5">
-                  <p className="text-xs text-gray-600 leading-relaxed font-light">
+                  <p className="text-xs text-black leading-relaxed font-light">
                     <span className="font-bold text-[#0a0a0a] uppercase tracking-wide block mb-0.5">
                       Micron-Tolerance Strain Dispersion:
                     </span>
@@ -348,7 +348,7 @@ export default function MegaQSeries() {
           <div className="p-3 bg-gray-50 border border-gray-100 flex items-center gap-2.5">
             <ShieldCheck className="w-5 h-5 text-[#CC0000] shrink-0" />
             <div className="min-w-0 text-left">
-              <span className="text-[8px] font-mono uppercase text-gray-400 block">Standard Validation</span>
+              <span className="text-[8px] font-mono uppercase text-black block">Standard Validation</span>
               <span className="text-xs font-black text-[#0a0a0a] uppercase tracking-tight truncate block">AASHTO H-20 / F900</span>
             </div>
           </div>
@@ -356,7 +356,7 @@ export default function MegaQSeries() {
           <div className="p-3 bg-gray-50 border border-gray-100 flex items-center gap-2.5">
             <Cpu className="w-5 h-5 text-[#CC0000] shrink-0" />
             <div className="min-w-0 text-left">
-              <span className="text-[8px] font-mono uppercase text-gray-400 block">Smart Architecture</span>
+              <span className="text-[8px] font-mono uppercase text-black block">Smart Architecture</span>
               <span className="text-xs font-black text-[#0a0a0a] uppercase tracking-tight truncate block">IoT Sensor Channels</span>
             </div>
           </div>
@@ -364,7 +364,7 @@ export default function MegaQSeries() {
           <div className="p-3 bg-gray-50 border border-gray-100 flex items-center gap-2.5">
             <Zap className="w-5 h-5 text-[#CC0000] shrink-0" />
             <div className="min-w-0 text-left">
-              <span className="text-[8px] font-mono uppercase text-gray-400 block">Mold Precision</span>
+              <span className="text-[8px] font-mono uppercase text-black block">Mold Precision</span>
               <span className="text-xs font-black text-[#0a0a0a] uppercase tracking-tight truncate block">Parallel Flash-Mold</span>
             </div>
           </div>
@@ -372,7 +372,7 @@ export default function MegaQSeries() {
           <div className="p-3 bg-gray-50 border border-gray-100 flex items-center gap-2.5">
             <CheckCircle2 className="w-5 h-5 text-[#CC0000] shrink-0" />
             <div className="min-w-0 text-left">
-              <span className="text-[8px] font-mono uppercase text-gray-400 block">Structural Guarantee</span>
+              <span className="text-[8px] font-mono uppercase text-black block">Structural Guarantee</span>
               <span className="text-xs font-black text-[#0a0a0a] uppercase tracking-tight truncate block">100% Monolithic Ductile</span>
             </div>
           </div>

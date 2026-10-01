@@ -54,7 +54,7 @@ export default function IndustrialManifest() {
               Conception to Inception <span className="text-[#CC0000]">All In One Go</span>
             </h2>
           </div>
-          <p className="text-zinc-400 text-xs sm:text-sm font-light leading-relaxed max-w-lg">
+          <p className="text-black text-xs sm:text-sm font-light leading-relaxed max-w-lg">
             No intermediary hand-offs. Mega Foundries integrates rapid metallurgical prototyping straight into heavy industrial mass production lines.
           </p>
         </div>
@@ -80,7 +80,7 @@ export default function IndustrialManifest() {
                 <span className="text-[#CC0000]">All Steps on a Flash</span>
               </h3>
 
-              <p className="text-zinc-400 text-xs leading-relaxed font-light">
+              <p className="text-black text-xs leading-relaxed font-light">
                 We eliminated the sequential lag of traditional manufacturing by unifying pattern design, alloy formulation, and automated molding in parallel threads.
               </p>
             </div>
@@ -110,7 +110,7 @@ export default function IndustrialManifest() {
               >
                 <div>
                   <div className="flex items-center justify-between border-b border-gray-100 pb-2 mb-2">
-                    <span className="text-[9px] font-mono uppercase tracking-wider text-gray-400 font-bold">
+                    <span className="text-[9px] font-mono uppercase tracking-wider text-black font-bold">
                       {step.phaseNumber} // Processing
                     </span>
                     <div className="w-7 h-7 bg-gray-50 border border-gray-200 flex items-center justify-center rounded-none group-hover:border-[#CC0000] transition-colors">
@@ -121,14 +121,14 @@ export default function IndustrialManifest() {
                   <h4 className="text-xs sm:text-sm font-black uppercase tracking-wide text-[#0a0a0a] group-hover:text-[#CC0000] transition-colors mb-1">
                     {step.title}
                   </h4>
-                  <p className="text-xs text-gray-500 leading-relaxed font-light">
+                  <p className="text-xs text-black leading-relaxed font-light">
                     {step.description}
                   </p>
                 </div>
 
                 <div className="mt-3 pt-2 border-t border-gray-100 flex items-center gap-2">
                   <span className="w-1.5 h-1.5 bg-[#CC0000] rounded-full animate-pulse" />
-                  <span className="text-[8px] font-mono uppercase tracking-widest text-gray-400 font-bold">
+                  <span className="text-[8px] font-mono uppercase tracking-widest text-black font-bold">
                     Synchronous Processing Thread
                   </span>
                 </div>
@@ -143,7 +143,7 @@ export default function IndustrialManifest() {
           <div className="p-3 bg-white border border-gray-200 flex items-center gap-2.5">
             <Cpu className="w-5 h-5 text-[#CC0000] shrink-0" />
             <div className="min-w-0 text-left">
-              <span className="text-[8px] font-mono uppercase text-gray-400 block">CAD Prototyping</span>
+              <span className="text-[8px] font-mono uppercase text-black block">CAD Prototyping</span>
               <span className="text-xs font-black text-[#0a0a0a] uppercase tracking-tight truncate block">Zero Drafting Backlog</span>
             </div>
           </div>
@@ -151,7 +151,7 @@ export default function IndustrialManifest() {
           <div className="p-3 bg-white border border-gray-200 flex items-center gap-2.5">
             <Flame className="w-5 h-5 text-[#CC0000] shrink-0" />
             <div className="min-w-0 text-left">
-              <span className="text-[8px] font-mono uppercase text-gray-400 block">Alloy Precision</span>
+              <span className="text-[8px] font-mono uppercase text-black block">Alloy Precision</span>
               <span className="text-xs font-black text-[#0a0a0a] uppercase tracking-tight truncate block">Spectrometer Monitored</span>
             </div>
           </div>
@@ -159,7 +159,7 @@ export default function IndustrialManifest() {
           <div className="p-3 bg-white border border-gray-200 flex items-center gap-2.5">
             <Zap className="w-5 h-5 text-[#CC0000] shrink-0" />
             <div className="min-w-0 text-left">
-              <span className="text-[8px] font-mono uppercase text-gray-400 block">Cycle Velocity</span>
+              <span className="text-[8px] font-mono uppercase text-black block">Cycle Velocity</span>
               <span className="text-xs font-black text-[#0a0a0a] uppercase tracking-tight truncate block">Flaskless Sand Molding</span>
             </div>
           </div>
@@ -167,7 +167,7 @@ export default function IndustrialManifest() {
           <div className="p-3 bg-white border border-gray-200 flex items-center gap-2.5">
             <ShieldCheck className="w-5 h-5 text-[#CC0000] shrink-0" />
             <div className="min-w-0 text-left">
-              <span className="text-[8px] font-mono uppercase text-gray-400 block">Verification Standard</span>
+              <span className="text-[8px] font-mono uppercase text-black block">Verification Standard</span>
               <span className="text-xs font-black text-[#CC0000] uppercase tracking-tight truncate block">90-Ton Proof Tested</span>
             </div>
           </div>

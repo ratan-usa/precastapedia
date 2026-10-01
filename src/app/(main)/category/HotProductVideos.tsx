@@ -68,7 +68,7 @@ export default function HotProductVideos({ title, videos, videoUrl, videoName }:
     <section className="py-12 bg-white border-t border-gray-100 overflow-hidden">
       <div className="w-full px-4 sm:px-6 lg:px-10 mx-auto">
 
-        <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-6 border-l-4 border-red-600 pl-3">
+        <h2 className="text-xl md:text-2xl font-bold text-black mb-6 border-l-4 border-red-600 pl-3">
           {title}
         </h2>
 
@@ -117,7 +117,7 @@ export default function HotProductVideos({ title, videos, videoUrl, videoName }:
                   </div>
                 </div>
 
-                <h3 className="text-sm font-bold text-gray-800 leading-snug group-hover:text-red-600 transition-colors line-clamp-2">
+                <h3 className="text-sm font-bold text-black leading-snug group-hover:text-red-600 transition-colors line-clamp-2">
                   {video.title}
                 </h3>
               </div>

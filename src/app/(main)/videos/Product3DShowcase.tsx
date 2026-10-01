@@ -160,7 +160,7 @@ export default function Product3DShowcase() {
               {/* Top-Left Live Status Badge */}
               <div className="absolute top-4 left-4 z-20 flex items-center gap-2 bg-[#0a0a0a]/90 backdrop-blur-md border border-zinc-800 px-3 py-1.5 shadow-lg">
                 <span className="w-2 h-2 bg-[#CC0000] rounded-full animate-ping shrink-0" />
-                <span className="text-[10px] font-mono tracking-widest text-zinc-300 uppercase font-bold">
+                <span className="text-[10px] font-mono tracking-widest text-white uppercase font-bold">
                   {activeVideo.badge} • 0{activeVideoIndex + 1}/0{MOST_POPULAR_PRODUCTS.length}
                 </span>
               </div>
@@ -178,17 +178,17 @@ export default function Product3DShowcase() {
                   <Badge variant="outline" className="text-[#CC0000] border-[#CC0000] bg-[#CC0000]/10 rounded-none uppercase text-[10px] tracking-wider font-black">
                     {activeVideo.category}
                   </Badge>
-                  <span className="text-xs text-zinc-400 font-mono tracking-wide">
+                  <span className="text-xs text-white font-mono tracking-wide">
                     {activeVideo.duration} Run Duration
                   </span>
                 </div>
 
-                <div className="flex items-center gap-4 text-xs font-mono text-zinc-400">
+                <div className="flex items-center gap-4 text-xs font-mono text-white">
                   <span className="flex items-center gap-1.5">
                     <ShieldCheck className="w-3.5 h-3.5 text-[#CC0000]" /> {activeVideo.materialStandard}
                   </span>
                   <span className="flex items-center gap-1.5">
-                    <Activity className="w-3.5 h-3.5 text-emerald-400" /> {activeVideo.loadClass}
+                    <Activity className="w-3.5 h-3.5 text-white" /> {activeVideo.loadClass}
                   </span>
                 </div>
               </div>
@@ -197,7 +197,7 @@ export default function Product3DShowcase() {
                 <h3 className="text-2xl font-black text-white uppercase tracking-tight mb-2">
                   {activeVideo.title}
                 </h3>
-                <p className="text-zinc-300 text-sm font-light leading-relaxed">
+                <p className="text-white text-sm font-light leading-relaxed">
                   {activeVideo.description}
                 </p>
               </div>
@@ -208,11 +208,11 @@ export default function Product3DShowcase() {
           <div className="lg:col-span-4 bg-zinc-900/30 rounded-none border border-zinc-800 p-5 flex flex-col justify-between w-full space-y-6">
             <div className="w-full">
               <div className="flex items-center justify-between border-b border-zinc-800 pb-3 mb-4">
-                <h4 className="text-zinc-300 font-bold uppercase text-xs tracking-widest flex items-center gap-2">
+                <h4 className="text-white font-bold uppercase text-xs tracking-widest flex items-center gap-2">
                   <Layers className="w-4 h-4 text-[#CC0000]" />
                   Popular Lineup Playlist
                 </h4>
-                <span className="text-[10px] font-mono text-zinc-500 uppercase">
+                <span className="text-[10px] font-mono text-white uppercase">
                   Auto-playing sequence
                 </span>
               </div>
@@ -252,17 +252,17 @@ export default function Product3DShowcase() {
                           <span className="text-[9px] font-mono uppercase tracking-widest text-[#CC0000] font-bold">
                             {video.badge}
                           </span>
-                          <span className="text-[9px] font-mono text-zinc-500">
+                          <span className="text-[9px] font-mono text-white">
                             {video.duration}
                           </span>
                         </div>
                         <h5 className={cn(
                           "font-bold text-xs uppercase tracking-wide leading-tight line-clamp-1 transition-colors",
-                          isCurrent ? "text-white font-black" : "text-zinc-200 group-hover:text-white"
+                          isCurrent ? "text-white font-black" : "text-white group-hover:text-white"
                         )}>
                           {video.title}
                         </h5>
-                        <p className="text-[11px] text-zinc-400 line-clamp-1 font-light mt-0.5">
+                        <p className="text-[11px] text-white line-clamp-1 font-light mt-0.5">
                           {video.category}
                         </p>
                       </div>

@@ -89,7 +89,7 @@ export default function WordInTheMarket() {
                 <h3 className="text-[#CC0000] font-medium text-lg mb-3">
                   {item.title}
                 </h3>
-                <p className="text-sm text-gray-600 leading-relaxed">
+                <p className="text-sm text-black leading-relaxed">
                   {item.description}
                 </p>
               </div>

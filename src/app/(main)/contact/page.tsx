@@ -37,22 +37,22 @@ const OfficeCard = ({
         </div>
       </div>
 
-      <h3 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">{title}</h3>
-      <p className="text-gray-500 text-sm mb-8 leading-relaxed max-w-sm mx-auto">
+      <h3 className="text-2xl font-semibold text-black mt-8 mb-4">{title}</h3>
+      <p className="text-black text-sm mb-8 leading-relaxed max-w-sm mx-auto">
         {description}
       </p>
 
-      <div className="w-full space-y-4 text-left mb-8 text-gray-600 text-sm">
+      <div className="w-full space-y-4 text-left mb-8 text-black text-sm">
         <div className="flex items-start gap-3">
-          <MapPin className="w-5 h-5 text-gray-400 mt-0.5 shrink-0" />
+          <MapPin className="w-5 h-5 text-black mt-0.5 shrink-0" />
           <span>{address}</span>
         </div>
         <div className="flex items-center gap-3">
-          <Phone className="w-5 h-5 text-gray-400 shrink-0" />
+          <Phone className="w-5 h-5 text-black shrink-0" />
           <span>{phone}</span>
         </div>
         <div className="flex items-center gap-3">
-          <Mail className="w-5 h-5 text-gray-400 shrink-0" />
+          <Mail className="w-5 h-5 text-black shrink-0" />
           <span>{email}</span>
         </div>
       </div>
@@ -166,7 +166,7 @@ const ContactUs = () => {
             </Button>
           </div>
         </div>
-        <p className="text-[18px] text-gray-700 max-w-4xl mx-auto mb-16">
+        <p className="text-[18px] text-black max-w-4xl mx-auto mb-16">
           Engage with dedicated experts
         </p>
       </div>
@@ -183,7 +183,7 @@ const ContactUs = () => {
             <h4 className="text-[#CC0000] font-bold uppercase tracking-wider mb-3">
               MEGA FOUNDRIES | SEND US A MESSAGE
             </h4>
-            <p className="text-gray-500">
+            <p className="text-black">
               The next-generation platform for industrial trade.
             </p>
           </div>
@@ -193,10 +193,10 @@ const ContactUs = () => {
 
               {/* Left Side Text Content (takes 2/5 columns on large screens) */}
               <div className="lg:col-span-2 space-y-6">
-                <h2 className="text-3xl md:text-4xl text-gray-800">
+                <h2 className="text-3xl md:text-4xl text-black">
                   Send Your Inquiry. <span className="font-bold block mt-2">We Will Respond Shortly.</span>
                 </h2>
-                <p className="text-gray-500 leading-relaxed">
+                <p className="text-black leading-relaxed">
                   We are committed to exceeding your expectations. Feel free to send us your questions or suggestions—we are here to listen and assist.
                 </p>
               </div>

@@ -36,7 +36,7 @@ const TopNavbar = () => {
   const [selectedCountry, setSelectedCountry] = useState(countryOptions[0])
   return (
     <div className='w-full relative z-50'>
-      <nav className="bg-neutral-800 text-neutral-200 w-full mx-auto shadow-md">
+      <nav className="bg-neutral-800 text-white w-full mx-auto shadow-md">
 
         {/* Corrected lg:px-30 to lg:px-8 or standard container usage */}
         <div className="w-full px-4 sm:px-6 lg:px-10  mx-auto">
@@ -61,7 +61,7 @@ const TopNavbar = () => {
             <div className="lg:hidden flex items-center">
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="text-neutral-200 hover:text-[#CC0000] focus:outline-none"
+                className="text-white hover:text-[#CC0000] focus:outline-none"
               >
                 {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
               </button>
@@ -129,7 +129,7 @@ const TopNavbar = () => {
               {topMenuItems.map((item) => (
                 <Link
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className='text-xs text-neutral-300 hover:text-[#CC0000] transition-colors'
+                  className='text-xs text-white hover:text-[#CC0000] transition-colors'
                   key={item.label}
                   href={item.href}
                 >

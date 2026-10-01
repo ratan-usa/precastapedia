@@ -31,7 +31,7 @@ export default function RootLayout({
          {/* Optional: Add custom favicon links here if needed */}
          <link rel="icon" type="image/png" href={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/apple-touch-icon.png`} />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate-50 text-slate-900`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate-50 text-black`}>
         
         {/* Render the Page Content */}
         <FixedQuoteBtn />

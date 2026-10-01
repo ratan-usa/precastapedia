@@ -94,10 +94,10 @@ export default function CategoryMegaMenu() {
         {/* Tab 1: Energy */}
         <button
           onMouseEnter={() => handleTabChange('energy')}
-          className={`flex items-center gap-2 pb-2 text-sm font-semibold transition-all relative ${activeTab === 'energy' ? 'text-gray-900' : 'text-gray-500 hover:text-gray-700'
+          className={`flex items-center gap-2 pb-2 text-sm font-semibold transition-all relative ${activeTab === 'energy' ? 'text-black' : 'text-black hover:text-black'
             }`}
         >
-          <Zap className={`w-5 h-5 ${activeTab === 'energy' ? 'text-[#CC0000]' : 'text-gray-400'}`} />
+          <Zap className={`w-5 h-5 ${activeTab === 'energy' ? 'text-[#CC0000]' : 'text-black'}`} />
           Energy
           {/* Red Underline Animation */}
           {activeTab === 'energy' && (
@@ -108,10 +108,10 @@ export default function CategoryMegaMenu() {
         {/* Tab 2: Power Generation */}
         <button
           onMouseEnter={() => handleTabChange('powerGen')}
-          className={`flex items-center gap-2 pb-2 text-sm font-semibold transition-all relative ${activeTab === 'powerGen' ? 'text-gray-900' : 'text-gray-500 hover:text-gray-700'
+          className={`flex items-center gap-2 pb-2 text-sm font-semibold transition-all relative ${activeTab === 'powerGen' ? 'text-black' : 'text-black hover:text-black'
             }`}
         >
-          <Factory className={`w-5 h-5 ${activeTab === 'powerGen' ? 'text-[#CC0000]' : 'text-gray-400'}`} />
+          <Factory className={`w-5 h-5 ${activeTab === 'powerGen' ? 'text-[#CC0000]' : 'text-black'}`} />
           Power Generation
           {/* Red Underline Animation */}
           {activeTab === 'powerGen' && (
@@ -135,7 +135,7 @@ export default function CategoryMegaMenu() {
                     onMouseEnter={() => setActiveCategoryIndex(index)}
                     className={`w-full flex items-center justify-between px-6 py-3 text-sm font-bold transition-colors ${isActive
                         ? 'text-[#CC0000] bg-red-50/50'
-                        : 'text-gray-800 hover:text-[#CC0000]'
+                        : 'text-black hover:text-[#CC0000]'
                       }`}
                   >
                     <span>{cat.name}</span>
@@ -160,7 +160,7 @@ export default function CategoryMegaMenu() {
                       // Just styling the 3rd item red to match your image example, normally logic would differ
                       item === 'Electrical Equipment'
                         ? 'text-[#CC0000] font-medium'
-                        : 'text-gray-600 hover:text-[#CC0000]'
+                        : 'text-black hover:text-[#CC0000]'
                       }`}
                   >
                     {item}

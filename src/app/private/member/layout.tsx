@@ -139,7 +139,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
               <Link key={item.href} href={item.href}>
                 <span className={`flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-medium transition-colors ${isActive
                   ? 'bg-[#CC0000] text-white'
-                  : 'text-slate-400 hover:text-white hover:bg-slate-800'
+                  : 'text-black hover:text-white hover:bg-slate-800'
                   }`}>
                   <item.icon className="w-4 h-4" />
                   {item.label}
@@ -150,7 +150,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
         </nav>
 
         <div className="p-4 border-t border-slate-800">
-          <div className="bg-slate-800 rounded-lg p-3 text-xs text-slate-400">
+          <div className="bg-slate-800 rounded-lg p-3 text-xs text-black">
             <p className="font-semibold text-white mb-1">Foundry Portal</p>
             <p>v1.2.0 • Enterprise</p>
           </div>
@@ -174,7 +174,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
               <div className="font-bold text-xl mb-8"><span className="text-[#CC0000]">MEGA</span>FOUNDRIES</div>
               <nav className="space-y-2">
                 {navItems.map((item) => (
-                  <Link key={item.href} href={item.href} className="flex items-center gap-3 px-3 py-2 text-slate-300 hover:text-white">
+                  <Link key={item.href} href={item.href} className="flex items-center gap-3 px-3 py-2 text-white hover:text-white">
                     <item.icon className="w-4 h-4" />
                     {item.label}
                   </Link>
@@ -184,7 +184,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
           </Sheet>
 
           {/* Breadcrumb / Title */}
-          <h1 className="text-lg font-semibold text-slate-800 hidden sm:block">
+          <h1 className="text-lg font-semibold text-black hidden sm:block">
             Dashboard Overview
           </h1>
 

@@ -12,7 +12,7 @@ export default function CategoryProductLinks({ items }: CategoryProductLinksProp
 
   return (
     <div className="mt-12 pt-8 border-t border-gray-100">
-      <h3 className="text-xl font-bold text-gray-900 mb-6">
+      <h3 className="text-xl font-bold text-black mb-6">
         All Products in this Category
       </h3>
 
@@ -30,7 +30,7 @@ export default function CategoryProductLinks({ items }: CategoryProductLinksProp
                 px-4 py-2 
                 bg-white 
                 border border-gray-200 
-                text-sm text-gray-600 
+                text-sm text-black 
                 hover:text-[#CC0000] hover:border-[#CC0000] hover:shadow-sm
                 transition-all duration-200
                 cursor-pointer

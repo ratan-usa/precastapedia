@@ -92,11 +92,11 @@ export default function LiveStreamCommandCenter() {
               MEGA GLOBAL MANUFACTURING NETWORK
             </h1>
 
-            <div className="flex justify-center gap-6 text-xs text-gray-400 font-mono mt-4">
+            <div className="flex justify-center gap-6 text-xs text-white font-mono mt-4">
               <span className="flex items-center gap-1 "><span className="text-[#CC0000]">●</span> 54,201 FACTORIES <div className="text-[#CC0000]">ONLINE</div> </span>
               <span className="flex items-center gap-1"><span className="text-green-500">●</span> 98.4% UPTIME</span>
             </div>
-            <div className="flex justify-center gap-6 text-xs text-gray-400 mt-4">
+            <div className="flex justify-center gap-6 text-xs text-white mt-4">
             </div>
             <span className="text-xl md:text-2xl font-bold  bg-clip-text text-[#CC0000] mb-2 uppercase tracking-tight">FOLLOW YOUR PRODUCT BEING BORN & DELIVERED TO YOU LIVE <span className="text-sm "> (PRE-REGISTRATION REQUIRED) </span> </span>
           </div>
@@ -113,7 +113,7 @@ export default function LiveStreamCommandCenter() {
             <div className="h-40 bg-neutral-900/50 border border-[#CC0000] rounded-lg p-5 relative overflow-hidden group hover:border-[#CC0000]/50 transition-colors">
               <div className="flex justify-between items-start mb-4">
                 <div>
-                  <h3 className="text-gray-400 text-xs font-bold uppercase tracking-wider">Overall Efficiency</h3>
+                  <h3 className="text-white text-xs font-bold uppercase tracking-wider">Overall Efficiency</h3>
                   <p className="text-2xl font-bold text-white mt-1">94.2% <span className="text-green-500 text-xs">▲ 2.4%</span></p>
                 </div>
                 <div className="p-1.5 bg-green-500/10 rounded text-green-500">
@@ -137,13 +137,13 @@ export default function LiveStreamCommandCenter() {
 
             {/* 2. PRODUCTION OUTPUT (Progress Bars) */}
             <div className="h-40 bg-neutral-900/50 border border-[#CC0000] rounded-lg p-5 flex flex-col justify-between hover:border-[#CC0000]/50 transition-colors">
-              <h3 className="text-gray-400 text-xs font-bold uppercase tracking-wider">Daily Production</h3>
+              <h3 className="text-white text-xs font-bold uppercase tracking-wider">Daily Production</h3>
 
               <div className="space-y-3">
                 {/* Item 1 */}
                 <div>
                   <div className="flex justify-between text-xs mb-1">
-                    <span className="text-gray-300">Steel Castings</span>
+                    <span className="text-white">Steel Castings</span>
                     <span className="text-white font-mono">1,240 / 1,500</span>
                   </div>
                   <div className="w-full bg-neutral-800 h-1.5 rounded-full overflow-hidden">
@@ -153,7 +153,7 @@ export default function LiveStreamCommandCenter() {
                 {/* Item 2 */}
                 <div>
                   <div className="flex justify-between text-xs mb-1">
-                    <span className="text-gray-300">Iron Forgings</span>
+                    <span className="text-white">Iron Forgings</span>
                     <span className="text-white font-mono">850 / 900</span>
                   </div>
                   <div className="w-full bg-neutral-800 h-1.5 rounded-full overflow-hidden">
@@ -165,7 +165,7 @@ export default function LiveStreamCommandCenter() {
 
             {/* 3. ENERGY CONSUMPTION (Gauge/Stats) */}
             <div className="h-40 bg-neutral-900/50 border border-[#CC0000] rounded-lg p-5 hover:border-[#CC0000]/50 transition-colors">
-              <h3 className="text-gray-400 text-xs font-bold uppercase tracking-wider mb-4">Grid Load</h3>
+              <h3 className="text-white text-xs font-bold uppercase tracking-wider mb-4">Grid Load</h3>
               <div className="flex items-center gap-4">
                 {/* Circular "Gauge" using CSS borders */}
                 <div className="relative w-16 h-16 rounded-full border-4 border-neutral-800 flex items-center justify-center">
@@ -173,8 +173,8 @@ export default function LiveStreamCommandCenter() {
                   <span className="text-xs font-bold text-white">78%</span>
                 </div>
                 <div className="space-y-1">
-                  <p className="text-sm text-gray-300">Current Usage</p>
-                  <p className="text-xl font-bold text-white">42.5 <span className="text-sm font-normal text-gray-500">MW</span></p>
+                  <p className="text-sm text-white">Current Usage</p>
+                  <p className="text-xl font-bold text-white">42.5 <span className="text-sm font-normal text-white">MW</span></p>
                   <p className="text-[10px] text-green-500">● Optimal Range</p>
                 </div>
               </div>
@@ -182,7 +182,7 @@ export default function LiveStreamCommandCenter() {
 
             {/* 4. LOGISTICS MAP (Dot Simulation) */}
             <div className="h-40 bg-neutral-900/50 border border-[#CC0000] rounded-lg p-5 relative overflow-hidden hover:border-[#CC0000]/50 transition-colors">
-              <h3 className="text-gray-400 text-xs font-bold uppercase tracking-wider relative z-10">Active Shipments</h3>
+              <h3 className="text-white text-xs font-bold uppercase tracking-wider relative z-10">Active Shipments</h3>
 
               {/* Fake Map Dots */}
               <div className="absolute inset-0 opacity-30">
@@ -206,7 +206,7 @@ export default function LiveStreamCommandCenter() {
 
               <div className="absolute bottom-4 left-5 z-10">
                 <p className="text-2xl font-bold text-white">1,892</p>
-                <p className="text-[10px] text-gray-400">In Transit Global</p>
+                <p className="text-[10px] text-white">In Transit Global</p>
               </div>
             </div>
 

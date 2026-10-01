@@ -162,7 +162,7 @@ export function MegaStories() {
           {/* Two Buttons on Top Right */}
           <div className="flex items-center gap-2">
             <Link href="/contact">
-              <Button variant="outline" className="border-zinc-300 text-zinc-800 hover:border-black hover:bg-zinc-100 rounded-none text-xs font-black uppercase tracking-wider h-9 px-3">
+              <Button variant="outline" className="border-zinc-300 text-black hover:border-black hover:bg-zinc-100 rounded-none text-xs font-black uppercase tracking-wider h-9 px-3">
                 Download Master Spec
               </Button>
             </Link>
@@ -178,17 +178,17 @@ export function MegaStories() {
         <div className="border border-gray-200 bg-white shadow-sm relative rounded-none overflow-hidden">
 
           {/* Bookshelf Header Strip */}
-          <div className="w-full bg-zinc-50 border-b border-gray-200 text-zinc-900 py-2.5 px-4 sm:px-6 flex flex-wrap justify-between items-center gap-2">
+          <div className="w-full bg-zinc-50 border-b border-gray-200 text-black py-2.5 px-4 sm:px-6 flex flex-wrap justify-between items-center gap-2">
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 bg-[#CC0000] rounded-full animate-pulse" />
-              <h3 className="text-xs sm:text-sm font-black uppercase tracking-widest text-zinc-900">
+              <h3 className="text-xs sm:text-sm font-black uppercase tracking-widest text-black">
                 VOLUMES 01 – 09 // PRODUCTION MATRIX
               </h3>
             </div>
             
             {/* Top Right Badges */}
             <div className="flex items-center gap-2 font-mono text-[10px] uppercase font-bold">
-              <span className="bg-white border border-gray-200 text-zinc-700 px-2 py-0.5 rounded-none">
+              <span className="bg-white border border-gray-200 text-black px-2 py-0.5 rounded-none">
                 9 Active Volumes
               </span>
               <span className="bg-zinc-900 text-white px-2 py-0.5 rounded-none">
@@ -205,14 +205,14 @@ export function MegaStories() {
 
               {/* --- 1 HERO CARD ON LEFT (50% = 6 cols) --- */}
               <div className="lg:col-span-6 h-full min-h-[510px] flex flex-col">
-                <Card className="h-full w-full overflow-hidden border-2 border-[#CC0000] bg-white text-zinc-900 rounded-none shadow-sm flex flex-col justify-between p-3.5 group relative hover:shadow-md transition-all duration-300">
+                <Card className="h-full w-full overflow-hidden border-2 border-[#CC0000] bg-white text-black rounded-none shadow-sm flex flex-col justify-between p-3.5 group relative hover:shadow-md transition-all duration-300">
 
                   {/* Top Header */}
                   <div className="flex items-center justify-between z-20 pb-2 border-b border-gray-100">
                     <Badge className="bg-[#CC0000] text-white rounded-none text-[10px] font-mono uppercase tracking-wider font-bold border-none px-2.5 py-0.5">
                       {heroProduct.volume} // TOP SELLER
                     </Badge>
-                    <span className="text-[11px] font-mono text-zinc-600 uppercase font-bold">
+                    <span className="text-[11px] font-mono text-black uppercase font-bold">
                       {heroProduct.category}
                     </span>
                   </div>
@@ -246,7 +246,7 @@ export function MegaStories() {
                     </h4>
 
                     <div className="flex items-center justify-between text-xs pt-1">
-                      <span className="text-zinc-600 font-mono text-[11px] uppercase">
+                      <span className="text-black font-mono text-[11px] uppercase">
                         Spec: <strong className="text-black font-sans font-bold">{heroProduct.loadRating}</strong>
                       </span>
                       <Link href="/contact" className="inline-flex items-center gap-1.5 text-xs font-bold text-[#CC0000] hover:text-black uppercase tracking-wider">
@@ -264,14 +264,14 @@ export function MegaStories() {
                   return (
                     <Card
                       key={product.id}
-                      className="group flex flex-col justify-between overflow-hidden border-2 border-[#CC0000] bg-white text-zinc-900 rounded-none shadow-sm hover:shadow-md transition-all duration-200 min-h-[275px] p-2.5"
+                      className="group flex flex-col justify-between overflow-hidden border-2 border-[#CC0000] bg-white text-black rounded-none shadow-sm hover:shadow-md transition-all duration-200 min-h-[275px] p-2.5"
                     >
                       {/* Top Volume Tag & Full Category */}
                       <div className="flex items-center justify-between pb-1.5 border-b border-gray-100 mb-1 gap-2">
                         <span className="text-[10px] font-mono uppercase font-bold text-[#CC0000] shrink-0">
                           {product.volume}
                         </span>
-                        <span className="text-[9px] font-mono text-zinc-600 uppercase font-semibold text-right leading-tight">
+                        <span className="text-[9px] font-mono text-black uppercase font-semibold text-right leading-tight">
                           {product.category}
                         </span>
                       </div>
@@ -292,12 +292,12 @@ export function MegaStories() {
                           {product.title}
                         </h5>
 
-                        <div className="flex items-center justify-between text-[10px] text-zinc-600 pt-0.5 border-t border-gray-50">
-                          <span className="flex items-center gap-1 text-zinc-700 font-mono text-[9.5px]">
+                        <div className="flex items-center justify-between text-[10px] text-black pt-0.5 border-t border-gray-50">
+                          <span className="flex items-center gap-1 text-black font-mono text-[9.5px]">
                             <Icon className="w-3.5 h-3.5 text-[#CC0000] shrink-0" />
                             <span className="font-semibold">{product.loadRating}</span>
                           </span>
-                          <ArrowUpRight className="w-3.5 h-3.5 text-zinc-400 group-hover:text-[#CC0000] shrink-0 transition-colors" />
+                          <ArrowUpRight className="w-3.5 h-3.5 text-black group-hover:text-[#CC0000] shrink-0 transition-colors" />
                         </div>
                       </CardContent>
                     </Card>
@@ -314,14 +314,14 @@ export function MegaStories() {
                 return (
                   <Card
                     key={product.id}
-                    className="group flex flex-col justify-between overflow-hidden border-2 border-[#CC0000] bg-white text-zinc-900 rounded-none shadow-sm hover:shadow-md transition-all duration-200 min-h-[275px] p-2.5"
+                    className="group flex flex-col justify-between overflow-hidden border-2 border-[#CC0000] bg-white text-black rounded-none shadow-sm hover:shadow-md transition-all duration-200 min-h-[275px] p-2.5"
                   >
                     {/* Top Volume Tag & Full Category */}
                     <div className="flex items-center justify-between pb-1.5 border-b border-gray-100 mb-1 gap-2">
                       <span className="text-[10px] font-mono uppercase font-bold text-[#CC0000] shrink-0">
                         {product.volume}
                       </span>
-                      <span className="text-[9px] font-mono text-zinc-600 uppercase font-semibold text-right leading-tight">
+                      <span className="text-[9px] font-mono text-black uppercase font-semibold text-right leading-tight">
                         {product.category}
                       </span>
                     </div>
@@ -342,12 +342,12 @@ export function MegaStories() {
                         {product.title}
                       </h5>
 
-                      <div className="flex items-center justify-between text-[10px] text-zinc-600 pt-0.5 border-t border-gray-50">
-                        <span className="flex items-center gap-1 text-zinc-700 font-mono text-[9.5px]">
+                      <div className="flex items-center justify-between text-[10px] text-black pt-0.5 border-t border-gray-50">
+                        <span className="flex items-center gap-1 text-black font-mono text-[9.5px]">
                           <Icon className="w-3.5 h-3.5 text-[#CC0000] shrink-0" />
                           <span className="font-semibold">{product.loadRating}</span>
                         </span>
-                        <ArrowUpRight className="w-3.5 h-3.5 text-zinc-400 group-hover:text-[#CC0000] shrink-0 transition-colors" />
+                        <ArrowUpRight className="w-3.5 h-3.5 text-black group-hover:text-[#CC0000] shrink-0 transition-colors" />
                       </div>
                     </CardContent>
                   </Card>

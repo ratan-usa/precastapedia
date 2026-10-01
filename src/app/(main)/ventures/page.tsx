@@ -62,12 +62,12 @@ const AboutSection = () => {
                 <div className="w-12 h-12 rounded-full border-2 border-red-300 bg-red-50 flex items-center justify-center mb-4">
                   <feature.icon className="w-8 h-8 text-[#CC0000]" />
                 </div>
-                <CardTitle className="text-[20px] font-semibold text-gray-900">
+                <CardTitle className="text-[20px] font-semibold text-black">
                   {feature.title}
                 </CardTitle>
               </CardHeader>
               <CardContent className="text-center px-6 pb-10">
-                <p className="text-sm text-justify text-gray-600 leading-relaxed">
+                <p className="text-sm text-justify text-black leading-relaxed">
                   {feature.description}
                 </p>
               </CardContent>

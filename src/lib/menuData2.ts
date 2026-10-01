@@ -521,7 +521,7 @@ export const menuData = {
     label: 'BUILDING SUPPLY',
     icon: Building2, // choose any lucide icon you like
     bannerImage: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image5.jpeg`,
-    color: 'bg-stone-100 text-stone-900',
+    color: 'bg-stone-100 text-black',
 
     categories: [
 
@@ -730,7 +730,7 @@ export const menuData = {
     label: 'MINING PRODUCTS',
     icon: Pickaxe, // pick any lucide icon you like
     bannerImage: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image7.jpeg`,
-    color: 'bg-stone-100 text-stone-900',
+    color: 'bg-stone-100 text-black',
 
     categories: [
 
@@ -853,7 +853,7 @@ export const menuData = {
     label: 'FABRICATION PRODUCTS',
     icon: Wrench, // choose any lucide icon you prefer
     bannerImage: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image8.jpeg`,
-    color: 'bg-gray-100 text-gray-900',
+    color: 'bg-gray-100 text-black',
 
     categories: [
 
@@ -2002,7 +2002,7 @@ export const menuData = {
     label: 'INDUSTRIAL MACHINERY',
     icon: Factory, // choose any lucide icon you prefer
     bannerImage: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image18.jpeg`,
-    color: 'bg-gray-100 text-gray-900',
+    color: 'bg-gray-100 text-black',
 
     categories: [
 
@@ -2193,7 +2193,7 @@ export const menuData = {
     label: 'METALS & ALLOYS',
     icon: Zap, // choose any lucide icon you prefer
     bannerImage: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image6.jpg`,
-    color: 'bg-slate-100 text-slate-900',
+    color: 'bg-slate-100 text-black',
 
     categories: [
 

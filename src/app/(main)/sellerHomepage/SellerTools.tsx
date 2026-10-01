@@ -53,10 +53,10 @@ export default function SellerTools() {
           <span className="text-[#CC0000] font-bold text-sm uppercase tracking-widest">
             Mega Foundries | PARTNER SUITE
           </span>
-          <h2 className="text-[30px] md:text-[40px] font-bold text-gray-900">
+          <h2 className="text-[30px] md:text-[40px] font-bold text-black">
             Engineered for <span className="text-[#CC0000]">Modern Foundries</span>
           </h2>
-          <p className="text-gray-500 max-w-2xl mx-auto text-xl">
+          <p className="text-black max-w-2xl mx-auto text-xl">
             Transition from traditional job-work to a digitally integrated manufacturing hub.
             Utilize our specialized tools to optimize your production workflow.
           </p>
@@ -76,7 +76,7 @@ export default function SellerTools() {
                     ${isActive ? 'border-[#CC0000] bg-red-50/30 rounded-r-lg' : 'border-transparent hover:border-red-100'}
                   `}
                 >
-                  <h3 className={`text-xl font-bold transition-colors ${isActive ? 'text-[#CC0000]' : 'text-gray-600 group-hover:text-gray-900'}`}>
+                  <h3 className={`text-xl font-bold transition-colors ${isActive ? 'text-[#CC0000]' : 'text-black group-hover:text-black'}`}>
                     {tool.number} {tool.title}
                   </h3>
 
@@ -86,7 +86,7 @@ export default function SellerTools() {
                       ${isActive ? 'max-h-40 opacity-100 mt-3' : 'max-h-0 opacity-0'}
                     `}
                   >
-                    <p className="text-sm text-gray-500 leading-relaxed">
+                    <p className="text-sm text-black leading-relaxed">
                       {tool.description}
                     </p>
                   </div>

@@ -54,7 +54,7 @@ export default function NewTechnologiesPage() {
             THE FUTURE IS <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-red-400 to-cyan-400">FORGED</span>
           </h1>
-          <p className="text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl text-black max-w-2xl mx-auto leading-relaxed">
             We are bridging the gap between heavy industry and high technology. Explore the innovations defining the next era of metallurgy.
           </p>
         </div>
@@ -77,13 +77,13 @@ export default function NewTechnologiesPage() {
                   <h3 className="text-2xl font-bold text-white mb-1 group-hover:text-cyan-400 transition-colors">{tech.title}</h3>
                   <p className="text-xs font-bold text-red-500 uppercase tracking-widest mb-4">{tech.subtitle}</p>
 
-                  <p className="text-slate-400 leading-relaxed mb-6 text-sm">
+                  <p className="text-black leading-relaxed mb-6 text-sm">
                     {tech.description}
                   </p>
 
                   <ul className="space-y-2 border-t border-slate-800 pt-6">
                     {tech.specs.map((spec, i) => (
-                      <li key={i} className="flex items-center gap-2 text-sm text-slate-300">
+                      <li key={i} className="flex items-center gap-2 text-sm text-white">
                         <div className="w-1.5 h-1.5 bg-cyan-500 rounded-full shadow-[0_0_5px_cyan]"></div>
                         {spec}
                       </li>
@@ -102,7 +102,7 @@ export default function NewTechnologiesPage() {
 
           <div className="w-full md:w-1/2">
             <h2 className="text-4xl font-bold mb-6">Inside <span className="text-red-600">Site-X</span></h2>
-            <p className="text-slate-400 mb-8 text-lg">
+            <p className="text-black mb-8 text-lg">
               Site-X is our dedicated R&D facility located in Austin, TX. Here, 50+ PhD metallurgists and data scientists work in secrecy to develop alloys that can withstand the temperatures of Mars entry and the pressure of the ocean floor.
             </p>
 
@@ -110,12 +110,12 @@ export default function NewTechnologiesPage() {
               <div className="p-4 bg-slate-900 rounded border border-slate-800">
                 <Microscope className="w-6 h-6 text-cyan-400 mb-2" />
                 <div className="text-2xl font-bold text-white">45</div>
-                <div className="text-xs text-slate-500 uppercase">Active Patents</div>
+                <div className="text-xs text-black uppercase">Active Patents</div>
               </div>
               <div className="p-4 bg-slate-900 rounded border border-slate-800">
                 <BarChart3 className="w-6 h-6 text-cyan-400 mb-2" />
                 <div className="text-2xl font-bold text-white">$120M</div>
-                <div className="text-xs text-slate-500 uppercase">Annual R&D Budget</div>
+                <div className="text-xs text-black uppercase">Annual R&D Budget</div>
               </div>
             </div>
           </div>
@@ -143,7 +143,7 @@ export default function NewTechnologiesPage() {
       {/* === PARTNERSHIPS === */}
       <section className="py-20 bg-slate-950">
         <div className="max-w-5xl mx-auto px-4 text-center">
-          <p className="text-slate-500 font-bold uppercase tracking-widest mb-10">Innovation Partners</p>
+          <p className="text-black font-bold uppercase tracking-widest mb-10">Innovation Partners</p>
           <div className="flex flex-wrap justify-center gap-12 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
             {/* Mock Logos - Replace with <Image> */}
             <div className="text-xl font-black text-white">MIT <span className="font-light">MATSCI</span></div>
@@ -159,7 +159,7 @@ export default function NewTechnologiesPage() {
         <div className="absolute inset-0 bg-gradient-to-r from-red-900 to-slate-900 opacity-50"></div>
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">Have a Challenge for Us?</h2>
-          <p className="text-slate-300 text-lg mb-10">
+          <p className="text-white text-lg mb-10">
             If it can't be made with traditional methods, it belongs in our lab. Collaborate with our engineering team on your next breakthrough.
           </p>
           <Link href="/contact" className="inline-flex items-center gap-2 bg-cyan-600 hover:bg-cyan-500 text-white font-bold py-4 px-10 rounded-full shadow-[0_0_20px_rgba(8,145,178,0.5)] transition-all transform hover:scale-105">

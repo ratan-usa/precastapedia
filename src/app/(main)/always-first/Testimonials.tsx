@@ -72,7 +72,7 @@ export default function ProductVideoShowcase() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
 
                 {/* Header */}
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16">
+                <h2 className="text-3xl md:text-4xl font-bold text-center text-black mb-16">
                     Featured <span className="text-[#CC0000]">Products</span>
                 </h2>
 
@@ -106,18 +106,18 @@ export default function ProductVideoShowcase() {
 
                                     {/* RIGHT: Text Content */}
                                     <div className="flex flex-col justify-center space-y-6">
-                                        <h3 className="text-3xl font-bold text-gray-900">
+                                        <h3 className="text-3xl font-bold text-black">
                                             {product.title}
                                         </h3>
 
-                                        <p className="text-gray-600 text-lg leading-relaxed">
+                                        <p className="text-black text-lg leading-relaxed">
                                             {product.description}
                                         </p>
 
                                         {/* Features List */}
                                         <ul className="space-y-3">
                                             {product.features.map((feature, i) => (
-                                                <li key={i} className="flex items-center gap-3 text-gray-700 font-medium">
+                                                <li key={i} className="flex items-center gap-3 text-black font-medium">
                                                     <CheckCircle2 className="w-5 h-5 text-[#CC0000]" />
                                                     {feature}
                                                 </li>
@@ -141,14 +141,14 @@ export default function ProductVideoShowcase() {
                     {/* Arrows */}
                     <button
                         onClick={prevSlide}
-                        className="hidden md:flex absolute top-1/2 -left-4 lg:-left-12 -translate-y-1/2 w-12 h-12 bg-white text-gray-800 rounded-full shadow-lg items-center justify-center hover:bg-[#CC0000] hover:text-white transition-all z-20 border border-gray-100"
+                        className="hidden md:flex absolute top-1/2 -left-4 lg:-left-12 -translate-y-1/2 w-12 h-12 bg-white text-black rounded-full shadow-lg items-center justify-center hover:bg-[#CC0000] hover:text-white transition-all z-20 border border-gray-100"
                     >
                         <ChevronLeft className="w-6 h-6" />
                     </button>
 
                     <button
                         onClick={nextSlide}
-                        className="hidden md:flex absolute top-1/2 -right-4 lg:-right-12 -translate-y-1/2 w-12 h-12 bg-white text-gray-800 rounded-full shadow-lg items-center justify-center hover:bg-[#CC0000] hover:text-white transition-all z-20 border border-gray-100"
+                        className="hidden md:flex absolute top-1/2 -right-4 lg:-right-12 -translate-y-1/2 w-12 h-12 bg-white text-black rounded-full shadow-lg items-center justify-center hover:bg-[#CC0000] hover:text-white transition-all z-20 border border-gray-100"
                     >
                         <ChevronRight className="w-6 h-6" />
                     </button>

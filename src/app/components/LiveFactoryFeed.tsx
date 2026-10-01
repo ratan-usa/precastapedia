@@ -37,14 +37,14 @@ export default function LiveFactoryFeed() {
               <Signal className="text-[#CC0000] animate-pulse" />
               Global Live Operations
             </h2>
-            <p className="text-gray-400 mt-2">
+            <p className="text-black mt-2">
               Real-time monitoring of 50,000+ active manufacturing units.
             </p>
           </div>
 
           {/* SEARCH BAR */}
           <div className="relative w-full md:w-96">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-black" />
             <input
               type="text"
               placeholder="Search by Factory or Country..."
@@ -65,7 +65,7 @@ export default function LiveFactoryFeed() {
               {/* Thumbnail */}
               <div className="relative h-48 w-full bg-neutral-900">
                 {/* Replace src with real images */}
-                <div className="absolute inset-0 bg-neutral-800 flex items-center justify-center text-gray-600">
+                <div className="absolute inset-0 bg-neutral-800 flex items-center justify-center text-black">
                   {/* Placeholder if image missing */}
                   <span className="text-xs">Thumbnail: {stream.name}</span>
                 </div>
@@ -87,7 +87,7 @@ export default function LiveFactoryFeed() {
               {/* Info */}
               <div className="p-4">
                 <h3 className="font-bold text-sm truncate">{stream.name}</h3>
-                <p className="text-xs text-gray-400 mt-1 flex items-center gap-1">
+                <p className="text-xs text-black mt-1 flex items-center gap-1">
                   📍 {stream.location}
                 </p>
               </div>

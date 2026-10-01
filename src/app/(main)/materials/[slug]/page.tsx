@@ -39,39 +39,39 @@ export default async function MaterialPage({ params }: PageProps) {
             <Icon className="w-10 h-10 text-white" />
           </div>
           <h1 className="text-[30px]   font-bold text-white mb-4">{data.title}</h1>
-          <p className="text-gray-200 text-xl max-w-2xl">{data.description}</p>
+          <p className="text-white text-xl max-w-2xl">{data.description}</p>
         </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <Link href="/materials" className="inline-flex items-center text-gray-500 hover:text-[#CC0000] mb-8 transition-colors text-xl">
+        <Link href="/materials" className="inline-flex items-center text-black hover:text-[#CC0000] mb-8 transition-colors text-xl">
           <ChevronLeft className="w-3 h-3 mr-1" /> Back to Home
         </Link>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div>
-            <h2 className="text-xl font-bold text-gray-900 mb-6 border-b pb-2">Key Properties</h2>
+            <h2 className="text-xl font-bold text-black mb-6 border-b pb-2">Key Properties</h2>
             <ul className="space-y-4">
               {data.properties.map((prop: string, i: number) => (
                 <li key={i} className="flex items-start">
                   <CheckCircle2 className="w-3 h-3 text-[#CC0000] mr-3 shrink-0" />
-                  <span className="text-gray-700 text-sm">{prop}</span>
+                  <span className="text-black text-sm">{prop}</span>
                 </li>
               ))}
             </ul>
           </div>
 
           <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100">
-            <h2 className="text-2xl font-bold  text-xl text-gray-900 mb-6">Common Applications</h2>
+            <h2 className="text-2xl font-bold  text-xl text-black mb-6">Common Applications</h2>
             <div className="flex flex-wrap gap-3">
               {data.applications.map((app: string, i: number) => (
-                <span key={i} className="bg-white px-4  text-sm py-2 rounded-full border border-gray-200 text-gray-700 shadow-sm">
+                <span key={i} className="bg-white px-4  text-sm py-2 rounded-full border border-gray-200 text-black shadow-sm">
                   {app}
                 </span>
               ))}
             </div>
             <div className="mt-10 p-6 text-xl bg-[#CC0000]/5 rounded-xl border border-[#CC0000]/10">
-              <h3 className="font-bold text-gray-900 mb-2">Need a custom ?</h3>
+              <h3 className="font-bold text-black mb-2">Need a custom ?</h3>
               <Link href="/custom-projects">
                 <Button className="w-full  text-xl bg-[#CC0000] hover:bg-red-700 text-white mt-4">
                   Request Quote for {data.title}

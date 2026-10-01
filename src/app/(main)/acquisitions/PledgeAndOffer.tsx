@@ -30,12 +30,12 @@ export default function PledgeAndOffer() {
             </h2>
 
             <blockquote className="border-l-4 border-[#CC0000] pl-6 py-2">
-              <p className="text-xl md:text-2xl text-slate-300 italic font-light leading-relaxed">
+              <p className="text-xl md:text-2xl text-white italic font-light leading-relaxed">
                 "We will undertake every casting that is presented to us... regardless."
               </p>
             </blockquote>
 
-            <p className="text-slate-400 text-lg">
+            <p className="text-black text-lg">
               No geometry is too complex, no alloy too difficult. We challenge the industry standards to deliver what others say is impossible.
             </p>
           </div>
@@ -51,7 +51,7 @@ export default function PledgeAndOffer() {
                 <Gift className="w-8 h-8 text-[#CC0000]" />
               </div>
 
-              <h3 className="text-2xl md:text-3xl font-black text-gray-900 uppercase mb-2">
+              <h3 className="text-2xl md:text-3xl font-black text-black uppercase mb-2">
                 Order Your Prototypes
               </h3>
 
@@ -59,7 +59,7 @@ export default function PledgeAndOffer() {
                 ON US <span className="text-black">FREE</span>
               </div>
 
-              <p className="text-gray-600 mb-8">
+              <p className="text-black mb-8">
                 Experience our quality risk-free. Submit your design today and let us prove our pledge to you.
               </p>
 
@@ -69,7 +69,7 @@ export default function PledgeAndOffer() {
                 </Button>
               </Link>
 
-              <p className="text-xs text-gray-400 mt-4">
+              <p className="text-xs text-black mt-4">
                 *Terms and conditions apply. Valid for new partners and verified projects.
               </p>
             </div>

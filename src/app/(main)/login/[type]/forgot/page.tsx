@@ -55,7 +55,7 @@ export default function ForgotPasswordPage({ params }: { params: Promise<{ type:
       <Card className="max-w-md w-full shadow-xl">
         <CardHeader className="text-center">
           <div className="mx-auto bg-slate-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-            <KeyRound className="w-6 h-6 text-slate-600" />
+            <KeyRound className="w-6 h-6 text-black" />
           </div>
           <CardTitle className="text-2xl font-bold">Forgot Password?</CardTitle>
           <CardDescription>
@@ -85,7 +85,7 @@ export default function ForgotPasswordPage({ params }: { params: Promise<{ type:
         </CardContent>
 
         <CardFooter className="justify-center border-t pt-4">
-            <Link href={`/login/${type}`} className="flex items-center text-sm text-slate-500 hover:text-slate-800">
+            <Link href={`/login/${type}`} className="flex items-center text-sm text-black hover:text-black">
                 <ArrowLeft className="w-3 h-3 mr-1" /> Back to Login
             </Link>
         </CardFooter>

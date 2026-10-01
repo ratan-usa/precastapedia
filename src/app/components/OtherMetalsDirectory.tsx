@@ -93,7 +93,7 @@ export default function OtherMetalsDirectory() {
   const currentContent = OTHER_METALS_DATA[activeTab] || OTHER_METALS_DATA["phosphor-bronze"];
 
   return (
-    <section className="bg-[#0a0a0a] text-zinc-300 py-10 font-sans border-t border-zinc-900 w-full">
+    <section className="bg-[#0a0a0a] text-white py-10 font-sans border-t border-zinc-900 w-full">
       <div className="w-full px-4 sm:px-6 lg:px-10">
 
         {/* TOP ROW: Header Banner */}
@@ -103,12 +103,12 @@ export default function OtherMetalsDirectory() {
               MEGA <span className="text-[#CC0000]">FOUNDRIES</span>
             </div>
             <div className="h-5 w-[1px] bg-zinc-800 hidden md:block" />
-            <span className="text-[10px] font-mono tracking-widest text-zinc-500 uppercase">
+            <span className="text-[10px] font-mono tracking-widest text-white uppercase">
               Secondary & Custom Alloy Directory
             </span>
           </div>
-          <div className="text-center md:text-right text-xs text-zinc-400 font-mono">
-            CUSTOM CASTINGS DESK <span className="mx-2 text-zinc-700">•</span> CALL: (512) 782-8880
+          <div className="text-center md:text-right text-xs text-white font-mono">
+            CUSTOM CASTINGS DESK <span className="mx-2 text-white">•</span> CALL: +1 (512) 782-8880
           </div>
         </div>
 
@@ -134,19 +134,19 @@ export default function OtherMetalsDirectory() {
                       className={`w-full text-left px-4 py-3 text-xs font-medium border-l-2 transition-all duration-200 flex items-center justify-between
                         ${isActive
                           ? "bg-[#0a0a0a] text-[#CC0000] border-[#CC0000] font-bold"
-                          : "bg-transparent text-zinc-400 border-transparent hover:bg-[#1a1a1a] hover:text-white"
+                          : "bg-transparent text-white border-transparent hover:bg-[#1a1a1a] hover:text-white"
                         }
                       `}
                     >
                       <span>{tab.label}</span>
-                      <ArrowUpRight className={`w-3.5 h-3.5 transition-transform duration-200 ${isActive ? 'text-[#CC0000] rotate-45' : 'text-zinc-700'}`} />
+                      <ArrowUpRight className={`w-3.5 h-3.5 transition-transform duration-200 ${isActive ? 'text-[#CC0000] rotate-45' : 'text-white'}`} />
                     </button>
                   );
                 })}
               </nav>
             </div>
 
-            <div className="p-3.5 bg-[#101010] border-t border-zinc-900 text-[10px] font-mono text-zinc-500 uppercase">
+            <div className="p-3.5 bg-[#101010] border-t border-zinc-900 text-[10px] font-mono text-white uppercase">
               // Strict ISO/ASTM Metallurgy Specs
             </div>
           </div>
@@ -157,7 +157,7 @@ export default function OtherMetalsDirectory() {
               <div className="flex items-center justify-between border-b border-zinc-900 pb-3 mb-4">
                 <div className="flex items-center gap-2">
                   <span className="w-2 h-2 bg-[#CC0000] rounded-full animate-pulse" />
-                  <span className="text-[10px] font-mono uppercase tracking-widest text-zinc-400 font-bold">
+                  <span className="text-[10px] font-mono uppercase tracking-widest text-white font-bold">
                     Active Alloy Specimen
                   </span>
                 </div>
@@ -173,13 +173,13 @@ export default function OtherMetalsDirectory() {
                 {currentContent.subtitle}
               </p>
 
-              <p className="text-zinc-300 text-xs sm:text-sm leading-relaxed font-light mb-4">
+              <p className="text-white text-xs sm:text-sm leading-relaxed font-light mb-4">
                 {currentContent.description}
               </p>
 
               {/* Elemental Composition Badge */}
               <div className="p-3 bg-[#0a0a0a] border border-zinc-800 mb-4">
-                <span className="text-[9px] font-mono uppercase text-zinc-500 block mb-1 flex items-center gap-1">
+                <span className="text-[9px] font-mono uppercase text-white block mb-1 flex items-center gap-1">
                   <Activity className="w-3 h-3 text-[#CC0000]" /> Elemental Chemical Formula
                 </span>
                 <span className="text-sm font-mono font-black text-white">
@@ -208,7 +208,7 @@ export default function OtherMetalsDirectory() {
               </h4>
               <ul className="space-y-2 mb-5">
                 {currentContent.properties.map((prop, idx) => (
-                  <li key={idx} className="text-xs text-zinc-400 flex items-start gap-2">
+                  <li key={idx} className="text-xs text-white flex items-start gap-2">
                     <span className="w-1.5 h-1.5 bg-[#CC0000] rounded-full shrink-0 mt-1.5" />
                     <span className="font-light">{prop}</span>
                   </li>
@@ -222,7 +222,7 @@ export default function OtherMetalsDirectory() {
                 {currentContent.applications.map((app, idx) => (
                   <span
                     key={idx}
-                    className="text-[10px] font-mono text-zinc-300 bg-zinc-900 border border-zinc-800 px-2 py-0.5 rounded-none"
+                    className="text-[10px] font-mono text-white bg-zinc-900 border border-zinc-800 px-2 py-0.5 rounded-none"
                   >
                     {app}
                   </span>
@@ -230,7 +230,7 @@ export default function OtherMetalsDirectory() {
               </div>
             </div>
 
-            <div className="pt-3 border-t border-zinc-900 text-[10px] font-mono text-zinc-500">
+            <div className="pt-3 border-t border-zinc-900 text-[10px] font-mono text-white">
               Lab Verified ISO 9001:2015
             </div>
           </div>

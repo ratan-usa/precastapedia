@@ -27,7 +27,7 @@ export default function MegaFeaShowcase() {
               <span className="text-[#CC0000]">& Stress Simulation</span>
             </h2>
 
-            <div className="space-y-4 text-gray-600 text-sm md:text-base font-light leading-relaxed">
+            <div className="space-y-4 text-black text-sm md:text-base font-light leading-relaxed">
               <p>
                 To ensure Mega casting systems deliver the structural strength and fatigue stability required for heavy modern municipal networks, we utilize advanced Finite Element Analysis (FEA) deep within our pipeline prototyping cycles. This modeling allowing us to map exactly how the physical cover behaves under devastating continuous tire pounding.
               </p>
@@ -78,7 +78,7 @@ export default function MegaFeaShowcase() {
                   <h4 className="text-sm font-black uppercase tracking-wide text-[#0a0a0a]">
                     Inverted T-Flange Seating Frame
                   </h4>
-                  <p className="text-xs text-gray-500 leading-relaxed font-light">
+                  <p className="text-xs text-black leading-relaxed font-light">
                     The mechanical core of Mega systems is its wide structural baseline flange, specifically optimized to anchor secure vault chamber block paths and balance continuous overhead shear stresses safely.
                   </p>
                 </div>
@@ -93,7 +93,7 @@ export default function MegaFeaShowcase() {
                   <h4 className="text-sm font-black uppercase tracking-wide text-[#0a0a0a]">
                     Non-Welded, Monolithic Casting Construction
                   </h4>
-                  <p className="text-xs text-gray-500 leading-relaxed font-light">
+                  <p className="text-xs text-black leading-relaxed font-light">
                     Our high-capacity heavy frameworks are molded completely as an unbroken, solid iron casting unit. This entirely isolates and eliminates structural heat weld fatigue boundaries common to inferior builds.
                   </p>
                 </div>
@@ -108,7 +108,7 @@ export default function MegaFeaShowcase() {
                   <h4 className="text-sm font-black uppercase tracking-wide text-[#0a0a0a]">
                     Inboard Tamper-Proof Locking System
                   </h4>
-                  <p className="text-xs text-gray-500 leading-relaxed font-light">
+                  <p className="text-xs text-black leading-relaxed font-light">
                     Heavy internal compression locking bolts sit protected flush within the surface pattern matrix. This provides comprehensive safety against high-velocity road suction, theft, and unauthorized access entries.
                   </p>
                 </div>

@@ -182,7 +182,7 @@ export default function LoginPage({ params }: { params: Promise<{ type: string }
 
               <button
                 onClick={() => { setStep('credentials'); setError(''); }}
-                className="flex items-center text-sm text-slate-500 hover:text-slate-800"
+                className="flex items-center text-sm text-black hover:text-black"
               >
                 <ArrowLeft className="w-3 h-3 mr-1" /> Back to Login
               </button>
@@ -192,7 +192,7 @@ export default function LoginPage({ params }: { params: Promise<{ type: string }
 
         {step === 'credentials' && (
           <CardFooter className="justify-center border-t pt-4">
-            <p className="text-sm text-slate-500">
+            <p className="text-sm text-black">
               Don't have an account? <a href={`/signup/${type || 'customer'}`} className="text-[#CC0000] font-semibold hover:underline">Sign up</a>
             </p>
           </CardFooter>

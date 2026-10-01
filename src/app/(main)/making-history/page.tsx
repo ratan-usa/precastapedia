@@ -45,7 +45,7 @@ const STATS = [
 
 export default function MakingHistoryPage() {
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans">
+    <div className="min-h-screen bg-slate-50 text-black font-sans">
 
       {/* === HERO SECTION === */}
       <section className="relative h-[60vh] flex items-center justify-center bg-slate-900 text-white overflow-hidden">
@@ -65,12 +65,12 @@ export default function MakingHistoryPage() {
           <h1 className="text-5xl md:text-7xl font-black tracking-tighter uppercase mb-6">
             Making <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-800">History</span>
           </h1>
-          <p className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-black max-w-2xl mx-auto leading-relaxed">
             From a single furnace in Pennsylvania to a global manufacturing powerhouse. Explore the milestones that forged Mega Foundries.
           </p>
 
           <div className="mt-10 animate-bounce">
-            <ArrowDownCircle className="w-10 h-10 mx-auto text-slate-600" />
+            <ArrowDownCircle className="w-10 h-10 mx-auto text-black" />
           </div>
         </div>
       </section>
@@ -82,10 +82,10 @@ export default function MakingHistoryPage() {
             {STATS.map((stat, idx) => (
               <div key={idx} className="flex flex-col items-center text-center group">
                 <div className="mb-3 p-3 bg-slate-100 rounded-full group-hover:bg-red-50 transition-colors">
-                  <stat.icon className="w-6 h-6 text-slate-700 group-hover:text-red-600" />
+                  <stat.icon className="w-6 h-6 text-black group-hover:text-red-600" />
                 </div>
-                <span className="text-3xl md:text-4xl font-extrabold text-slate-900">{stat.value}</span>
-                <span className="text-xs uppercase tracking-wider text-slate-500 mt-1">{stat.label}</span>
+                <span className="text-3xl md:text-4xl font-extrabold text-black">{stat.value}</span>
+                <span className="text-xs uppercase tracking-wider text-black mt-1">{stat.label}</span>
               </div>
             ))}
           </div>
@@ -121,10 +121,10 @@ export default function MakingHistoryPage() {
                         {item.year}
                       </span>
 
-                      <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">
+                      <h3 className="text-xl md:text-2xl font-bold text-black mb-3">
                         {item.title}
                       </h3>
-                      <p className="text-slate-600 leading-relaxed text-sm md:text-base">
+                      <p className="text-black leading-relaxed text-sm md:text-base">
                         {item.description}
                       </p>
                     </div>
@@ -134,7 +134,7 @@ export default function MakingHistoryPage() {
                   <div className="w-full md:w-1/2 md:px-12 mt-6 md:mt-0 pl-12 md:pl-12">
                     <div className="aspect-video w-full bg-slate-200 rounded-xl overflow-hidden shadow-inner relative group">
                       {/* Placeholder for Image */}
-                      <div className="absolute inset-0 flex items-center justify-center text-slate-400 font-medium bg-slate-100">
+                      <div className="absolute inset-0 flex items-center justify-center text-black font-medium bg-slate-100">
 
                         <Image
                           src={item.image}
@@ -153,8 +153,8 @@ export default function MakingHistoryPage() {
 
           {/* Bottom CTA */}
           <div className="mt-24 text-center">
-            <h3 className="text-2xl font-bold text-slate-900 mb-4">Be Part of Our Future</h3>
-            <p className="text-slate-500 mb-8 max-w-lg mx-auto">
+            <h3 className="text-2xl font-bold text-black mb-4">Be Part of Our Future</h3>
+            <p className="text-black mb-8 max-w-lg mx-auto">
               We are constantly evolving. Join us as we forge the next chapter of Mega Foundries.
             </p>
             <button className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded shadow-lg transition-transform transform hover:-translate-y-1">

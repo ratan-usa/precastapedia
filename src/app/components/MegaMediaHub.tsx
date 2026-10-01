@@ -62,7 +62,7 @@ export default function MegaMediaHub() {
               Simulation <span className="text-[#CC0000]">& Lab Feeds</span>
             </h2>
           </div>
-          <p className="text-gray-500 text-xs sm:text-sm font-light leading-relaxed max-w-md">
+          <p className="text-black text-xs sm:text-sm font-light leading-relaxed max-w-md">
             Live technical benchmarks and simulation streams visualizing foundry dynamics and tooling cycles.
           </p>
         </div>
@@ -93,14 +93,14 @@ export default function MegaMediaHub() {
                 <h3 className="text-xs sm:text-sm font-black uppercase tracking-tight text-[#0a0a0a] group-hover:text-[#CC0000] transition-colors line-clamp-1 mb-1">
                   {video.title}
                 </h3>
-                <p className="text-xs text-gray-500 font-light leading-relaxed line-clamp-2">
+                <p className="text-xs text-black font-light leading-relaxed line-clamp-2">
                   {video.description}
                 </p>
               </div>
 
               {/* Minimal Footer */}
               <div className="pt-2 mt-2.5 border-t border-gray-200 flex items-center justify-between">
-                <div className="flex items-center gap-1 text-gray-400 text-[10px] font-mono uppercase">
+                <div className="flex items-center gap-1 text-black text-[10px] font-mono uppercase">
                   <Youtube className="w-3.5 h-3.5 text-[#CC0000]" />
                   <span>HD Stream</span>
                 </div>

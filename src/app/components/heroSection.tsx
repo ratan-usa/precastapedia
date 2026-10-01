@@ -39,7 +39,7 @@ const heroSection = () => {
                     </Button>
                 </div>
             </div>
-            <p className="text-[18px] text-gray-700 max-w-4xl mx-auto mb-16">Engage with dedicated experts
+            <p className="text-[18px] text-black max-w-4xl mx-auto mb-16">Engage with dedicated experts
             </p>
         </div>
     )

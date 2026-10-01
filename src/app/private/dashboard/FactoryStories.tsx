@@ -224,7 +224,7 @@ export default function FactoryStories() {
 
           {/* Bottom Half (Action) */}
           <div className="absolute bottom-0 left-0 right-0 h-[35%] bg-white flex flex-col items-center justify-end pb-3">
-            <span className="text-xs font-bold text-slate-800 text-center px-1">Create Story</span>
+            <span className="text-xs font-bold text-black text-center px-1">Create Story</span>
           </div>
 
           {/* Floating Plus Button */}
@@ -283,7 +283,7 @@ export default function FactoryStories() {
       <div className="absolute top-1/2 -translate-y-1/2 right-4 z-10 hidden md:group-hover:block">
         <button
           onClick={scrollRight}
-          className="bg-white/90 backdrop-blur-sm rounded-full p-2 shadow-lg border border-slate-100 hover:bg-white transition-colors text-slate-700"
+          className="bg-white/90 backdrop-blur-sm rounded-full p-2 shadow-lg border border-slate-100 hover:bg-white transition-colors text-black"
         >
           <ArrowRight className="w-5 h-5" />
         </button>
@@ -326,7 +326,7 @@ function StoryViewer({ stories, initialIndex, onClose }: { stories: Story[], ini
   return (
     <div className="fixed inset-0 z-[9999] bg-black/95 flex items-center justify-center">
       {/* Close Button */}
-      <button onClick={onClose} className="absolute top-4 right-4 text-white hover:text-gray-300 z-50 p-2 bg-black/20 rounded-full backdrop-blur-md">
+      <button onClick={onClose} className="absolute top-4 right-4 text-white hover:text-white z-50 p-2 bg-black/20 rounded-full backdrop-blur-md">
         <X className="w-6 h-6" />
       </button>
 
@@ -385,13 +385,13 @@ function UploadStoryModal({ onClose }: { onClose: () => void }) {
   return (
     <div className="fixed inset-0 z-[100] bg-black/60 flex items-center justify-center backdrop-blur-sm p-4 animate-in fade-in duration-200">
       <div className="bg-white rounded-xl p-6 w-full max-w-sm shadow-xl">
-        <h3 className="font-bold text-xl text-slate-800 mb-4">Add to Story</h3>
-        <div className="h-48 bg-slate-50 border-2 border-dashed border-slate-300 rounded-xl flex flex-col items-center justify-center text-slate-400 hover:bg-slate-100 hover:border-blue-400 transition-colors cursor-pointer">
+        <h3 className="font-bold text-xl text-black mb-4">Add to Story</h3>
+        <div className="h-48 bg-slate-50 border-2 border-dashed border-slate-300 rounded-xl flex flex-col items-center justify-center text-black hover:bg-slate-100 hover:border-blue-400 transition-colors cursor-pointer">
           <div className="bg-white p-3 rounded-full mb-3 shadow-sm">
             <Plus className="w-6 h-6 text-blue-600" />
           </div>
           <span className="font-medium">Upload Photo/Video</span>
-          <span className="text-xs mt-1 text-slate-400">Drag & drop or click</span>
+          <span className="text-xs mt-1 text-black">Drag & drop or click</span>
         </div>
         <div className="flex gap-3 mt-6">
           <Button variant="outline" className="flex-1" onClick={onClose}>Cancel</Button>

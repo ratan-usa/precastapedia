@@ -11,7 +11,7 @@ import { Button } from "@/components/ui/button";
 const ModelViewer = dynamic(() => import('./ModelViewer'), {
   ssr: false,
   loading: () => (
-    <div className="h-full flex flex-col items-center justify-center bg-gray-50 text-xs text-gray-400 gap-2 font-mono">
+    <div className="h-full flex flex-col items-center justify-center bg-gray-50 text-xs text-black gap-2 font-mono">
       <Rotate3d className="w-6 h-6 animate-spin text-[#CC0000]" />
       <span>Loading 3D Metallurgical Engine...</span>
     </div>
@@ -115,7 +115,7 @@ export default function ProductPage() {
               Popular Products <span className="text-[#CC0000]">3D Model Inspector</span>
             </h2>
           </div>
-          <p className="text-gray-500 text-xs sm:text-sm font-light leading-relaxed max-w-lg">
+          <p className="text-black text-xs sm:text-sm font-light leading-relaxed max-w-lg">
             Inspect precision 3D CAD dimensional models for our most popular municipal casting profiles. Rotate and examine tolerances in real-time.
           </p>
         </div>
@@ -134,7 +134,7 @@ export default function ProductPage() {
                   {selectedAsset.name}
                 </span>
               </div>
-              <span className="text-[9px] font-mono uppercase font-bold text-gray-400 bg-white border border-gray-200 px-2 py-0.5">
+              <span className="text-[9px] font-mono uppercase font-bold text-black bg-white border border-gray-200 px-2 py-0.5">
                 GLB // 3D Render
               </span>
             </div>
@@ -155,12 +155,12 @@ export default function ProductPage() {
             </div>
 
             {/* Bottom Active Spec Info Strip */}
-            <div className="mt-2.5 pt-2 border-t border-gray-200 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs text-gray-600">
+            <div className="mt-2.5 pt-2 border-t border-gray-200 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs text-black">
               <div className="flex items-center gap-3">
-                <span className="font-mono text-[10px] text-gray-400 uppercase">
-                  Standard: <strong className="text-gray-800 font-sans">{selectedAsset.materialStandard}</strong>
+                <span className="font-mono text-[10px] text-black uppercase">
+                  Standard: <strong className="text-black font-sans">{selectedAsset.materialStandard}</strong>
                 </span>
-                <span className="font-mono text-[10px] text-gray-400 uppercase">
+                <span className="font-mono text-[10px] text-black uppercase">
                   Rating: <strong className="text-[#CC0000] font-sans">{selectedAsset.loadClass}</strong>
                 </span>
               </div>
@@ -175,7 +175,7 @@ export default function ProductPage() {
 
           {/* RIGHT: POPULAR PRODUCT ASSETS SELECTOR (5 Cols) */}
           <div className="lg:col-span-5 flex flex-col justify-between gap-2 w-full">
-            <span className="text-[10px] font-mono tracking-widest text-gray-400 uppercase font-bold block">
+            <span className="text-[10px] font-mono tracking-widest text-black uppercase font-bold block">
               Select Popular Casting Asset:
             </span>
 
@@ -205,10 +205,10 @@ export default function ProductPage() {
 
                     {/* Meta Details */}
                     <div className="min-w-0 flex-1">
-                      <p className={`text-xs sm:text-sm font-black uppercase tracking-tight truncate transition-colors ${isSelected ? 'text-[#CC0000]' : 'text-gray-900'}`}>
+                      <p className={`text-xs sm:text-sm font-black uppercase tracking-tight truncate transition-colors ${isSelected ? 'text-[#CC0000]' : 'text-black'}`}>
                         {asset.name}
                       </p>
-                      <p className="text-[10px] text-gray-400 font-mono uppercase tracking-wider truncate mt-0.5">
+                      <p className="text-[10px] text-black font-mono uppercase tracking-wider truncate mt-0.5">
                         {asset.category} • {asset.loadClass}
                       </p>
                     </div>
@@ -217,7 +217,7 @@ export default function ProductPage() {
                     {isSelected ? (
                       <CheckCircle2 className="w-4 h-4 text-[#CC0000] shrink-0" />
                     ) : (
-                      <ArrowUpRight className="w-3.5 h-3.5 text-gray-300 group-hover:text-gray-500 shrink-0 transition-transform duration-200" />
+                      <ArrowUpRight className="w-3.5 h-3.5 text-white group-hover:text-black shrink-0 transition-transform duration-200" />
                     )}
                   </div>
                 );

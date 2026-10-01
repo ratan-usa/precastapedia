@@ -16,7 +16,7 @@ export default function CustomProjectsPage() {
         <div className="relative z-10 text-center px-4">
           <Cog className="w-16 h-16 text-[#CC0000] mx-auto mb-4 animate-spin-slow" />
           <h1 className="text-4xl md:text-5xl font-bold text-white">Custom Metal Projects</h1>
-          <p className="text-gray-300 mt-4 text-lg">No limits on metal selections. Tailored to your specs.</p>
+          <p className="text-white mt-4 text-lg">No limits on metal selections. Tailored to your specs.</p>
         </div>
       </div>
 
@@ -25,10 +25,10 @@ export default function CustomProjectsPage() {
 
           {/* Left: Info */}
           <div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl font-bold text-black mb-4">
               If you can design it, <span className="text-[#CC0000]">we can cast it.</span>
             </h2>
-            <p className="text-gray-600 mb-8 leading-relaxed">
+            <p className="text-black mb-8 leading-relaxed">
               Our engineering team specializes in complex geometries, unique alloy compositions, and large-scale productions. Whether you need a prototype or a production run of 10,000 units, we have the infrastructure to deliver.
             </p>
 
@@ -38,8 +38,8 @@ export default function CustomProjectsPage() {
                   <span className="text-[#CC0000] font-bold text-xl">1</span>
                 </div>
                 <div>
-                  <h3 className="font-bold text-gray-900">Consultation</h3>
-                  <p className="text-sm text-gray-500">Review specs with our metallurgists.</p>
+                  <h3 className="font-bold text-black">Consultation</h3>
+                  <p className="text-sm text-black">Review specs with our metallurgists.</p>
                 </div>
               </div>
               <div className="flex gap-4">
@@ -47,8 +47,8 @@ export default function CustomProjectsPage() {
                   <span className="text-[#CC0000] font-bold text-xl">2</span>
                 </div>
                 <div>
-                  <h3 className="font-bold text-gray-900">Pattern Making</h3>
-                  <p className="text-sm text-gray-500">3D modeling and mold creation.</p>
+                  <h3 className="font-bold text-black">Pattern Making</h3>
+                  <p className="text-sm text-black">3D modeling and mold creation.</p>
                 </div>
               </div>
               <div className="flex gap-4">
@@ -56,8 +56,8 @@ export default function CustomProjectsPage() {
                   <span className="text-[#CC0000] font-bold text-xl">3</span>
                 </div>
                 <div>
-                  <h3 className="font-bold text-gray-900">Casting & Finishing</h3>
-                  <p className="text-sm text-gray-500">Pouring, cooling, and CNC machining.</p>
+                  <h3 className="font-bold text-black">Casting & Finishing</h3>
+                  <p className="text-sm text-black">Pouring, cooling, and CNC machining.</p>
                 </div>
               </div>
             </div>
@@ -89,8 +89,8 @@ export default function CustomProjectsPage() {
               </div>
 
               <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:bg-gray-100 cursor-pointer transition-colors">
-                <UploadCloud className="w-8 h-8 text-gray-400 mx-auto mb-2" />
-                <p className="text-sm text-gray-500">Upload Blueprints / CAD Files</p>
+                <UploadCloud className="w-8 h-8 text-black mx-auto mb-2" />
+                <p className="text-sm text-black">Upload Blueprints / CAD Files</p>
               </div>
 
               <Button className="w-full bg-[#CC0000] hover:bg-red-700 text-white py-6">

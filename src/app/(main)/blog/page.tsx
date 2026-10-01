@@ -17,11 +17,11 @@ export default function BlogSection() {
             <span className="text-[#CC0000] font-bold text-xs uppercase tracking-widest block mb-2">
               Knowledge Hub
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+            <h2 className="text-3xl md:text-4xl font-bold text-black">
               Latest <span className="text-[#CC0000]">Insights</span>
             </h2>
           </div>
-          <Link href="/blog" className="hidden md:block text-sm font-semibold text-gray-600 hover:text-[#CC0000] transition-colors">
+          <Link href="/blog" className="hidden md:block text-sm font-semibold text-black hover:text-[#CC0000] transition-colors">
             View All Articles &rarr;
           </Link>
         </div>
@@ -53,18 +53,18 @@ export default function BlogSection() {
               <div className="flex flex-col grow p-5">
 
                 {/* Author Meta */}
-                <div className="flex items-center text-xs text-gray-400 mb-3">
+                <div className="flex items-center text-xs text-black mb-3">
                   <User className="w-3 h-3 mr-1" />
                   {post.author}
                 </div>
 
                 {/* Title */}
-                <h3 className="text-lg font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-[#CC0000] transition-colors">
+                <h3 className="text-lg font-bold text-black mb-3 line-clamp-2 group-hover:text-[#CC0000] transition-colors">
                   {post.title}
                 </h3>
 
                 {/* Excerpt */}
-                <p className="text-sm text-gray-600 leading-relaxed line-clamp-3 mb-4">
+                <p className="text-sm text-black leading-relaxed line-clamp-3 mb-4">
                   {post.excerpt}
                 </p>
 

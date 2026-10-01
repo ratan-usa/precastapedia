@@ -145,7 +145,7 @@ export function DesignCapabilities() {
               The Mega <span className="text-[#CC0000]">Philosophy</span>
             </h2>
           </div>
-          <span className="text-zinc-500 font-mono text-[11px] uppercase font-bold hidden sm:block">
+          <span className="text-black font-mono text-[11px] uppercase font-bold hidden sm:block">
             20 Core Pillars // Global Engineering Standards
           </span>
         </div>
@@ -184,7 +184,7 @@ export function DesignCapabilities() {
                     </h3>
                   </div>
 
-                  <p className="text-xs text-zinc-600 leading-relaxed pt-1 border-t border-gray-50">
+                  <p className="text-xs text-black leading-relaxed pt-1 border-t border-gray-50">
                     {item.description}
                   </p>
                 </div>

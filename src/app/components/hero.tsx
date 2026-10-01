@@ -33,7 +33,7 @@ const HeroSection = () => {
             The Largest Group of <br />
             <span className="text-[#CC0000]">Foundries & Forge Shops</span>
           </h2>
-          <p className="text-zinc-300 text-xs sm:text-sm md:text-base font-light leading-relaxed max-w-3xl mx-auto">
+          <p className="text-white text-xs sm:text-sm md:text-base font-light leading-relaxed max-w-3xl mx-auto">
             Mega Foundries delivers a comprehensive portfolio of infrastructure products—including civil municipal castings, energy & water management systems, and high-tensile structural profiles. Complete end-to-end execution from your desk to your dock.
           </p>
         </div>
@@ -47,7 +47,7 @@ const HeroSection = () => {
           </Link>
           <Link href="/about" className="w-full sm:w-auto">
             <Button className="w-full sm:w-auto bg-black/60 hover:bg-black/90 border border-zinc-700 hover:border-zinc-500 text-white font-black uppercase tracking-wider text-xs h-11 px-6 rounded-none transition-all duration-200 flex items-center justify-center gap-2 backdrop-blur-md">
-              Foundry Capacity Matrix <Factory className="w-4 h-4 text-zinc-400" />
+              Foundry Capacity Matrix <Factory className="w-4 h-4 text-black" />
             </Button>
           </Link>
         </div>
@@ -57,7 +57,7 @@ const HeroSection = () => {
           <div className="bg-black/60 border border-zinc-800/80 p-3 flex items-center gap-3 backdrop-blur-sm">
             <Factory className="w-5 h-5 text-[#CC0000] shrink-0" />
             <div>
-              <span className="text-[9px] font-mono uppercase text-zinc-400 block">Annual Scale</span>
+              <span className="text-[9px] font-mono uppercase text-black block">Annual Scale</span>
               <span className="text-xs font-black text-white uppercase tracking-wide">Multi-Foundry Network</span>
             </div>
           </div>
@@ -65,7 +65,7 @@ const HeroSection = () => {
           <div className="bg-black/60 border border-zinc-800/80 p-3 flex items-center gap-3 backdrop-blur-sm">
             <Truck className="w-5 h-5 text-[#CC0000] shrink-0" />
             <div>
-              <span className="text-[9px] font-mono uppercase text-zinc-400 block">Logistics Guarantee</span>
+              <span className="text-[9px] font-mono uppercase text-black block">Logistics Guarantee</span>
               <span className="text-xs font-black text-white uppercase tracking-wide">Desk-to-Dock Direct</span>
             </div>
           </div>
@@ -73,7 +73,7 @@ const HeroSection = () => {
           <div className="bg-black/60 border border-zinc-800/80 p-3 flex items-center gap-3 backdrop-blur-sm">
             <ShieldCheck className="w-5 h-5 text-[#CC0000] shrink-0" />
             <div>
-              <span className="text-[9px] font-mono uppercase text-zinc-400 block">Compliance</span>
+              <span className="text-[9px] font-mono uppercase text-black block">Compliance</span>
               <span className="text-xs font-black text-white uppercase tracking-wide">AASHTO & ASTM Certified</span>
             </div>
           </div>

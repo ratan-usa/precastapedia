@@ -33,7 +33,7 @@ const IMPACT_STATS = [
 
 export default function MegaFoundationPage() {
   return (
-    <div className="min-h-screen bg-white text-slate-900 font-sans">
+    <div className="min-h-screen bg-white text-black font-sans">
 
       {/* === HERO SECTION === */}
       <section className="relative h-[60vh] flex items-center justify-center bg-slate-900 text-white overflow-hidden">
@@ -52,7 +52,7 @@ export default function MegaFoundationPage() {
             Forging Stronger <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-300">Communities</span>
           </h1>
-          <p className="text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed mb-8">
+          <p className="text-xl text-white max-w-2xl mx-auto leading-relaxed mb-8">
             We believe that a strong company relies on a strong community. Since 2005, the Mega Foundation has been dedicated to giving back to the towns and cities that build our products.
           </p>
           <button className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-transform hover:-translate-y-1">
@@ -66,10 +66,10 @@ export default function MegaFoundationPage() {
         <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-slate-100">
           {IMPACT_STATS.map((stat, idx) => (
             <div key={idx} className="p-8 text-center bg-white group hover:bg-slate-50 transition-colors">
-              <div className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-2 group-hover:text-red-600 transition-colors">
+              <div className="text-3xl md:text-4xl font-extrabold text-black mb-2 group-hover:text-red-600 transition-colors">
                 {stat.value}
               </div>
-              <div className="text-xs uppercase tracking-widest text-slate-500 font-bold">
+              <div className="text-xs uppercase tracking-widest text-black font-bold">
                 {stat.label}
               </div>
             </div>
@@ -80,8 +80,8 @@ export default function MegaFoundationPage() {
       {/* === OUR PILLARS === */}
       <section className="pt-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-slate-900">Our Mission Pillars</h2>
-          <p className="mt-4 text-slate-600 max-w-2xl mx-auto">
+          <h2 className="text-3xl font-bold text-black">Our Mission Pillars</h2>
+          <p className="mt-4 text-black max-w-2xl mx-auto">
             Our giving is focused on three core areas where we believe we can make the most significant, long-term impact.
           </p>
         </div>
@@ -92,11 +92,11 @@ export default function MegaFoundationPage() {
               <div className={`w-14 h-14 rounded-full flex items-center justify-center ${pillar.color} mb-6`}>
                 <pillar.icon className="w-7 h-7" />
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-4">{pillar.title}</h3>
-              <p className="text-slate-600 leading-relaxed text-sm">
+              <h3 className="text-xl font-bold text-black mb-4">{pillar.title}</h3>
+              <p className="text-black leading-relaxed text-sm">
                 {pillar.desc}
               </p>
-              <Link href="#" className="inline-flex items-center gap-2 text-sm font-bold text-slate-900 mt-6 hover:text-red-600 group">
+              <Link href="#" className="inline-flex items-center gap-2 text-sm font-bold text-black mt-6 hover:text-red-600 group">
                 Learn More <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
@@ -112,7 +112,7 @@ export default function MegaFoundationPage() {
             {/* Image Box */}
             <div className="w-full lg:w-1/2 relative">
               <div className="aspect-[4/3] bg-slate-200 rounded-2xl overflow-hidden shadow-lg">
-                <div className="absolute inset-0 flex items-center justify-center text-slate-500 font-bold">
+                <div className="absolute inset-0 flex items-center justify-center text-black font-bold">
                   <Image
                     src={`${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/image8.jpeg`}
                     alt="Case Study Image"
@@ -129,8 +129,8 @@ export default function MegaFoundationPage() {
                     <Calendar className="w-5 h-5 text-yellow-700" />
                   </div>
                   <div>
-                    <p className="text-xs text-slate-500 uppercase font-bold">Next Event</p>
-                    <p className="text-sm font-bold text-slate-900">Robotics Final: Dec 12</p>
+                    <p className="text-xs text-black uppercase font-bold">Next Event</p>
+                    <p className="text-sm font-bold text-black">Robotics Final: Dec 12</p>
                   </div>
                 </div>
               </div>
@@ -141,13 +141,13 @@ export default function MegaFoundationPage() {
               <div className="inline-block px-3 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded mb-4">
                 Success Story
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-black mb-6">
                 The "Iron Minds" Initiative
               </h2>
-              <p className="text-slate-600 mb-6 leading-relaxed">
+              <p className="text-black mb-6 leading-relaxed">
                 Last year, Mega Foundation launched a pilot program in Detroit high schools to teach advanced CAD design and metallurgy.
               </p>
-              <p className="text-slate-600 mb-8 leading-relaxed">
+              <p className="text-black mb-8 leading-relaxed">
                 The result? 12 graduating seniors received full-ride engineering scholarships, and another 20 secured apprenticeships within our facilities. We are proving that American manufacturing has a bright, high-tech future.
               </p>
               <button className="text-red-600 font-bold border-b-2 border-red-600 pb-1 hover:text-red-800 hover:border-red-800 transition-colors">
@@ -168,14 +168,14 @@ export default function MegaFoundationPage() {
         <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
           <HandHeart className="w-16 h-16 mx-auto text-red-500 mb-6" />
           <h2 className="text-3xl md:text-5xl font-bold mb-6">Need Funding for a Local Project?</h2>
-          <p className="text-xl text-slate-300 mb-10 leading-relaxed">
+          <p className="text-xl text-white mb-10 leading-relaxed">
             We review grant applications quarterly. If your non-profit aligns with our pillars of Education, Environment, or Veteran Support, we want to hear from you.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-10 rounded-lg shadow-lg transition-transform transform hover:-translate-y-1">
               Download Grant Guidelines
             </button>
-            <button className="bg-transparent border border-white text-white font-bold py-4 px-10 rounded-lg hover:bg-white hover:text-slate-900 transition-colors">
+            <button className="bg-transparent border border-white text-white font-bold py-4 px-10 rounded-lg hover:bg-white hover:text-black transition-colors">
               Contact Foundation Director
             </button>
           </div>

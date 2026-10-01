@@ -36,7 +36,7 @@ export default function StartSelling() {
 
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+          <h2 className="text-3xl md:text-4xl font-bold text-black">
             Start Selling Smarter with <span className="text-[#CC0000]">Mega Foundries?</span>
           </h2>
         </div>
@@ -65,12 +65,12 @@ export default function StartSelling() {
                   <feature.icon className="w-10 h-10 text-[#CC0000] mb-4" strokeWidth={2} />
 
                   {/* Title */}
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  <h3 className="text-xl font-bold text-black mb-3">
                     {feature.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-gray-600 leading-relaxed text-sm">
+                  <p className="text-black leading-relaxed text-sm">
                     {feature.description}
                   </p>
                 </div>

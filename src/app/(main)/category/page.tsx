@@ -17,10 +17,10 @@ export default function CategoryList() {
         <div className="min-h-screen bg-white py-8">
 
             <div className="w-full px-4 sm:px-6 lg:px-10 mx-auto">
-                <p className="text-sm font-bold text-gray-700">
+                <p className="text-sm font-bold text-black">
                     <Link href={'/'} className="hover:text-[#CC0000]">Home</Link>
                     <span className="mx-2">/</span>
-                    <span className="text-gray-500 font-normal">All Categories</span>
+                    <span className="text-black font-normal">All Categories</span>
                 </p>
             </div>
 
@@ -38,7 +38,7 @@ export default function CategoryList() {
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
 
-                            <div className={`absolute top-6 left-0 px-6 py-2 rounded-r-full font-bold text-lg shadow-sm ${category.color || 'bg-gray-100 text-gray-900'}`}>
+                            <div className={`absolute top-6 left-0 px-6 py-2 rounded-r-full font-bold text-lg shadow-sm ${category.color || 'bg-gray-100 text-black'}`}>
                                 {category.label}
                             </div>
                         </div>
@@ -64,10 +64,10 @@ export default function CategoryList() {
 
                                         {/* Content */}
                                         <div className="flex flex-col grow">
-                                            <h3 className="font-bold text-gray-900 text-lg mb-2 group-hover:text-[#CC0000] transition-colors">
+                                            <h3 className="font-bold text-black text-lg mb-2 group-hover:text-[#CC0000] transition-colors">
                                                 {sub.name}
                                             </h3>
-                                            <p className="text-sm text-gray-500 leading-relaxed line-clamp-3">
+                                            <p className="text-sm text-black leading-relaxed line-clamp-3">
                                                 {sub.description || `Explore our ${sub.name} solutions.`}
                                             </p>
                                         </div>

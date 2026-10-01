@@ -34,7 +34,7 @@ export default function RootLayout({
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased pr-8`}>
         <div className="hidden md:block">
-          <BackgroundMusic />
+          {/* <BackgroundMusic /> */}
           <TopNavbar />
         </div>
         <TopNavbarr />

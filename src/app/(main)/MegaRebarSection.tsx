@@ -26,7 +26,7 @@ export default function MegaRebarSection() {
               Rebar Section & <span className="text-[#CC0000]">Reinforcement Bars</span>
             </h2>
           </div>
-          <p className="text-zinc-400 text-xs sm:text-sm font-light leading-relaxed max-w-lg">
+          <p className="text-white text-xs sm:text-sm font-light leading-relaxed max-w-lg">
             High-tensile deformed rebar matrix profiles engineered for extreme tensile load transfer in heavy concrete infrastructure.
           </p>
         </div>
@@ -46,7 +46,7 @@ export default function MegaRebarSection() {
                 <h4 className="text-xs sm:text-sm font-black uppercase tracking-wide text-white mb-0.5">
                   High Yield Tensile Grade Steel
                 </h4>
-                <p className="text-xs text-zinc-400 leading-relaxed font-light">
+                <p className="text-xs text-white leading-relaxed font-light">
                   Forged to ASTM standards for exceptional stress absorption, resisting shear deformation under continuous heavy municipal wheel loads.
                 </p>
               </div>
@@ -61,7 +61,7 @@ export default function MegaRebarSection() {
                 <h4 className="text-xs sm:text-sm font-black uppercase tracking-wide text-white mb-0.5">
                   Deformed Ribbed Surface Geometry
                 </h4>
-                <p className="text-xs text-zinc-400 leading-relaxed font-light">
+                <p className="text-xs text-white leading-relaxed font-light">
                   Precision engineered surface ribs anchor securely into wet concrete pours, creating maximum mechanical bonding force.
                 </p>
               </div>
@@ -76,7 +76,7 @@ export default function MegaRebarSection() {
                 <h4 className="text-xs sm:text-sm font-black uppercase tracking-wide text-white mb-0.5">
                   Corrosion Protective Coatings
                 </h4>
-                <p className="text-xs text-zinc-400 leading-relaxed font-light">
+                <p className="text-xs text-white leading-relaxed font-light">
                   Optionally available with epoxy or galvanization barriers to protect against chemical degradation and ground moisture.
                 </p>
               </div>
@@ -110,7 +110,7 @@ export default function MegaRebarSection() {
               <div className="absolute bottom-2 left-2 w-2 h-2 border-b border-l border-zinc-400" />
               <div className="absolute bottom-2 right-2 w-2 h-2 border-b border-r border-zinc-400" />
 
-              <div className="absolute bottom-2 left-2 right-2 bg-[#0a0a0a]/90 text-[8px] font-mono uppercase font-bold tracking-wider text-zinc-400 text-center py-1 z-20">
+              <div className="absolute bottom-2 left-2 right-2 bg-[#0a0a0a]/90 text-[8px] font-mono uppercase font-bold tracking-wider text-white text-center py-1 z-20">
                 Deformed Rebar Profile // Launching Soon
               </div>
             </div>
@@ -131,15 +131,15 @@ export default function MegaRebarSection() {
         {/* --- BASE PERFORMANCE SPEC INDEX --- */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-2.5 pt-1 border-t border-zinc-800 w-full bg-[#0a0a0a] text-center md:text-left">
           <div className="p-2.5 bg-zinc-900/60 border border-zinc-800 rounded-none">
-            <span className="text-[9px] font-mono uppercase text-zinc-500 block mb-0.5">Material Composition</span>
+            <span className="text-[9px] font-mono uppercase text-white block mb-0.5">Material Composition</span>
             <span className="text-xs sm:text-sm font-black text-white uppercase tracking-wide">Grade 60 / 75 Steel</span>
           </div>
           <div className="p-2.5 bg-zinc-900/60 border border-zinc-800 rounded-none">
-            <span className="text-[9px] font-mono uppercase text-zinc-500 block mb-0.5">Standard Sizes</span>
+            <span className="text-[9px] font-mono uppercase text-white block mb-0.5">Standard Sizes</span>
             <span className="text-xs sm:text-sm font-black text-white uppercase tracking-wide">#3 to #11 Bar Sizes</span>
           </div>
           <div className="p-2.5 bg-zinc-900/60 border border-zinc-800 rounded-none">
-            <span className="text-[9px] font-mono uppercase text-zinc-500 block mb-0.5">Availability Status</span>
+            <span className="text-[9px] font-mono uppercase text-white block mb-0.5">Availability Status</span>
             <span className="text-xs sm:text-sm font-black text-[#CC0000] uppercase tracking-wide">In Development</span>
           </div>
         </div>

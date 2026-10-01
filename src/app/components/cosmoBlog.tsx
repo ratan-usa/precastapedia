@@ -39,7 +39,7 @@ export default function CosmoBlog() {
               Mega Foundries <span className="text-[#CC0000]">Enterprise CRM</span>
             </h2>
           </div>
-          <p className="text-gray-500 text-xs sm:text-sm font-light leading-relaxed max-w-lg">
+          <p className="text-black text-xs sm:text-sm font-light leading-relaxed max-w-lg">
             Custom-built operations portal engineered for industrial buyers across municipal water, energy, and heavy civil construction sectors.
           </p>
         </div>
@@ -70,7 +70,7 @@ export default function CosmoBlog() {
               <div className="absolute bottom-2 left-2 w-2 h-2 border-b border-l border-gray-300" />
               <div className="absolute bottom-2 right-2 w-2 h-2 border-b border-r border-gray-300" />
 
-              <div className="absolute bottom-2 left-2 right-2 bg-[#0a0a0a]/90 text-[8px] font-mono uppercase font-bold tracking-wider text-zinc-400 text-center py-1 z-20">
+              <div className="absolute bottom-2 left-2 right-2 bg-[#0a0a0a]/90 text-[8px] font-mono uppercase font-bold tracking-wider text-white text-center py-1 z-20">
                 Client Command Center // Real-Time Sync
               </div>
             </div>
@@ -101,7 +101,7 @@ export default function CosmoBlog() {
                     <h4 className="text-xs sm:text-sm font-black uppercase tracking-wide text-[#0a0a0a] mb-0.5">
                       {feature.title}
                     </h4>
-                    <p className="text-xs text-gray-500 leading-relaxed font-light">
+                    <p className="text-xs text-black leading-relaxed font-light">
                       {feature.description}
                     </p>
                   </div>
@@ -115,15 +115,15 @@ export default function CosmoBlog() {
         {/* --- PERFORMANCE ASSURANCE MATRIX FLOOR (3 EQUAL CARDS) --- */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-2.5 pt-3 border-t border-gray-200 w-full bg-white text-center md:text-left">
           <div className="p-2.5 bg-gray-50 border border-gray-100 rounded-none">
-            <span className="text-[9px] font-mono uppercase text-gray-400 block mb-0.5">Target Sector Integration</span>
+            <span className="text-[9px] font-mono uppercase text-black block mb-0.5">Target Sector Integration</span>
             <span className="text-xs sm:text-sm font-black text-[#0a0a0a] uppercase tracking-wide">Energy, Municipal & Water</span>
           </div>
           <div className="p-2.5 bg-gray-50 border border-gray-100 rounded-none">
-            <span className="text-[9px] font-mono uppercase text-gray-400 block mb-0.5">Workflow Automation</span>
+            <span className="text-[9px] font-mono uppercase text-black block mb-0.5">Workflow Automation</span>
             <span className="text-xs sm:text-sm font-black text-[#0a0a0a] uppercase tracking-wide">100% Digital RFQ Routing</span>
           </div>
           <div className="p-2.5 bg-gray-50 border border-gray-100 rounded-none">
-            <span className="text-[9px] font-mono uppercase text-gray-400 block mb-0.5">Analytics Telemetry</span>
+            <span className="text-[9px] font-mono uppercase text-black block mb-0.5">Analytics Telemetry</span>
             <span className="text-xs sm:text-sm font-black text-[#CC0000] uppercase tracking-wide">Live Dispatch Tracking</span>
           </div>
         </div>

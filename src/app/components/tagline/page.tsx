@@ -152,7 +152,7 @@ const Taglines = () => {
                         <h3 className="text-[18px] font-bold text-[#CC0000] leading-tight">
                             {item.lines}
                         </h3>
-                        <p className="text-[13px] text-gray-600 leading-relaxed">
+                        <p className="text-[13px] text-black leading-relaxed">
                             {item.description}
                         </p>
                     </div>

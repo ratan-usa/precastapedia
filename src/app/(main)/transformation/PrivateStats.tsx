@@ -31,10 +31,10 @@ export default function PrivateStats() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-5xl font-bold text-black mb-4">
             Our <span className="text-[#CC0000]">Stats</span>
           </h2>
-          <p className="text-gray-400 text-sm italic uppercase tracking-wide">
+          <p className="text-black text-sm italic uppercase tracking-wide">
             Stats & Facts... Not for public display. Available to members only.
           </p>
         </div>
@@ -47,11 +47,11 @@ export default function PrivateStats() {
                 <stat.icon className="w-8 h-8 text-[#CC0000]" strokeWidth={1.5} />
               </div>
 
-              <h3 className="text-4xl font-extrabold text-slate-900 mb-2">
+              <h3 className="text-4xl font-extrabold text-black mb-2">
                 {stat.count}
               </h3>
 
-              <p className="text-slate-600 font-medium text-sm uppercase tracking-wide">
+              <p className="text-black font-medium text-sm uppercase tracking-wide">
                 {stat.label}
               </p>
             </div>
@@ -60,13 +60,13 @@ export default function PrivateStats() {
 
         <div className="max-w-2xl mx-auto text-center bg-slate-900 text-white rounded-2xl p-8 md:p-12 shadow-2xl">
           <h3 className="text-2xl font-bold mb-2">Be the first to know.</h3>
-          <p className="text-gray-400 mb-8">Subscribe to get full access to our network stats.</p>
+          <p className="text-black mb-8">Subscribe to get full access to our network stats.</p>
 
           <form className="flex flex-col sm:flex-row gap-4">
             <Input
               type="email"
               placeholder="Enter your email address"
-              className="bg-white/10 border-white/20 text-white placeholder:text-gray-500 h-12"
+              className="bg-white/10 border-white/20 text-white placeholder:text-black h-12"
             />
             <Button className="bg-[#CC0000] hover:bg-red-700 h-12 px-8 font-bold">
               Subscribe

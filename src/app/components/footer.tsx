@@ -63,7 +63,7 @@ const Footer = () => {
   ]
 
   return (
-    <footer className="bg-[#1a1a1a] text-gray-300 border-t border-gray-800 font-sans">
+    <footer className="bg-[#1a1a1a] text-white border-t border-gray-800 font-sans">
       <div className="w-full px-4 sm:px-6 lg:px-10 lg:pr-20 py-3 pt-16 ">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 xl:gap-16 border-b border-gray-800 pb-12">
 
@@ -96,7 +96,7 @@ const Footer = () => {
             <div className="flex flex-row flex-wrap gap-8 mt-4">
               <div>
                 <h4 className="text-white text-xs font-semibold mb-2">New York Office</h4>
-                <div className="text-sm space-y-1 text-gray-400">
+                <div className="text-sm space-y-1 text-white">
                   <p>105 MAXES ROAD</p>
                   <p>MELVILLE, NY 11737, USA</p>
                 </div>
@@ -111,7 +111,7 @@ const Footer = () => {
               </div>
               <div>
                 <h4 className="text-white text-xs font-semibold mb-2">Florida Office</h4>
-                <div className="text-sm space-y-1 text-gray-400">
+                <div className="text-sm space-y-1 text-white">
                   <p>850 NW FEDERAL HWY</p>
                   <p>STUART, FL 34994, USA</p>
                 </div>
@@ -168,7 +168,7 @@ const Footer = () => {
 
 
             <div>
-              <div className="text-sm space-y-1 text-gray-400">
+              <div className="text-sm space-y-1 text-white">
                 <p>ONE YOUNGE STREET</p>
                 <p>TORONTO, ONTARIO M5E 1R4 CANADA</p>
 
@@ -208,7 +208,7 @@ const Footer = () => {
                       <li key={link.href}>
                         <Link
                           href={link.href}
-                          className="text-xs text-gray-400 hover:text-[#CC0000] transition-colors block"
+                          className="text-xs text-white hover:text-[#CC0000] transition-colors block"
                         >
                           {link.label}
                         </Link>
@@ -254,7 +254,7 @@ const Footer = () => {
                 <Link
                   key={i}
                   href={'/'}
-                  className='p-2.5 border border-gray-700 rounded-full text-gray-400 hover:border-[#CC0000] hover:text-white hover:bg-[#CC0000] transition-all duration-300'
+                  className='p-2.5 border border-gray-700 rounded-full text-white hover:border-[#CC0000] hover:text-white hover:bg-[#CC0000] transition-all duration-300'
                 >
                   <Icon className='w-4 h-4' />
                 </Link>

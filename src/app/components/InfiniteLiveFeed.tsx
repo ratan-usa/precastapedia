@@ -47,9 +47,9 @@ export default function InfiniteLiveFeed() {
             </span>
             Live Factory Network
           </h2>
-          <p className="text-xs text-gray-400">Showing {items.length} of {allFactoryVideos.length} Streams</p>
+          <p className="text-xs text-black">Showing {items.length} of {allFactoryVideos.length} Streams</p>
         </div>
-        <div className="text-xs text-gray-500 hidden md:block">Scroll for more →</div>
+        <div className="text-xs text-black hidden md:block">Scroll for more →</div>
       </div>
 
       <div
@@ -115,7 +115,7 @@ export default function InfiniteLiveFeed() {
 
             <div className="absolute bottom-3 left-3 right-3 pointer-events-none">
               <h3 className="text-white text-sm font-bold truncate">{item.name}</h3>
-              <p className="text-gray-400 text-xs truncate">{item.location}</p>
+              <p className="text-black text-xs truncate">{item.location}</p>
             </div>
           </div>
         ))}

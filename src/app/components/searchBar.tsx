@@ -74,7 +74,7 @@ const SearchBar = () => {
                     <DropdownMenuItem
                         onClick={() => setSelectedId("all")}
                         className="
-                            cursor-pointer text-xs font-semibold px-3 py-2 text-neutral-800
+                            cursor-pointer text-xs font-semibold px-3 py-2 text-black
                             rounded-none
                             focus:bg-[#CC0000] focus:text-white
                         "
@@ -88,7 +88,7 @@ const SearchBar = () => {
                             key={section.id}
                             onClick={() => setSelectedId(section.id)}
                             className="
-                                cursor-pointer text-xs font-semibold px-3 py-2 text-neutral-800
+                                cursor-pointer text-xs font-semibold px-3 py-2 text-black
                                 rounded-none
                                 focus:bg-[#CC0000] focus:text-white
                             "
@@ -103,7 +103,7 @@ const SearchBar = () => {
             <input
                 type="text"
                 placeholder="Search products..."
-                className="w-full h-full pl-3 pr-4 text-sm text-neutral-700 focus:outline-none placeholder:text-neutral-400"
+                className="w-full h-full pl-3 pr-4 text-sm text-black focus:outline-none placeholder:text-black"
             />
 
             {/* === 3. BUTTON === */}

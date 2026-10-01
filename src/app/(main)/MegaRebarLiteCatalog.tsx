@@ -114,7 +114,7 @@ export default function MegaRebarLiteCatalog() {
               RebarLite Mesh™ & <span className="text-[#CC0000]">Steel Reinforcements</span>
             </h2>
           </div>
-          <p className="text-gray-500 text-xs sm:text-sm font-light leading-relaxed max-w-lg">
+          <p className="text-black text-xs sm:text-sm font-light leading-relaxed max-w-lg">
             Structural steel wire and mesh solutions engineered for precast infrastructure, mining stabilization, and automated cage welding.
           </p>
         </div>
@@ -146,7 +146,7 @@ export default function MegaRebarLiteCatalog() {
                   <h3 className="text-xs sm:text-sm font-black uppercase tracking-tight text-white group-hover:text-[#CC0000] transition-colors line-clamp-1">
                     {product.name}
                   </h3>
-                  <ArrowUpRight className="w-3.5 h-3.5 text-zinc-500 group-hover:text-[#CC0000] shrink-0 transition-colors" />
+                  <ArrowUpRight className="w-3.5 h-3.5 text-black group-hover:text-[#CC0000] shrink-0 transition-colors" />
                 </div>
 
                 <p className="text-[10px] font-mono uppercase tracking-wider text-[#CC0000] font-bold mb-1 line-clamp-1">
@@ -154,7 +154,7 @@ export default function MegaRebarLiteCatalog() {
                 </p>
 
                 {/* Short Description */}
-                <p className="text-xs text-zinc-400 font-light leading-relaxed mb-2 line-clamp-2">
+                <p className="text-xs text-white font-light leading-relaxed mb-2 line-clamp-2">
                   {product.description}
                 </p>
               </div>
@@ -176,21 +176,21 @@ export default function MegaRebarLiteCatalog() {
           <div className="p-2.5 bg-gray-50 border border-gray-100 rounded-none flex items-center gap-2">
             <ShieldCheck className="w-4 h-4 text-[#CC0000] shrink-0" />
             <div>
-              <span className="text-[9px] font-mono uppercase text-gray-400 block mb-0.5">Manufacturing Standard</span>
+              <span className="text-[9px] font-mono uppercase text-black block mb-0.5">Manufacturing Standard</span>
               <span className="text-xs font-black text-[#0a0a0a] uppercase tracking-wide">ASTM A1064 / A615</span>
             </div>
           </div>
           <div className="p-2.5 bg-gray-50 border border-gray-100 rounded-none flex items-center gap-2">
             <Cpu className="w-4 h-4 text-[#CC0000] shrink-0" />
             <div>
-              <span className="text-[9px] font-mono uppercase text-gray-400 block mb-0.5">Machine Integration</span>
+              <span className="text-[9px] font-mono uppercase text-black block mb-0.5">Machine Integration</span>
               <span className="text-xs font-black text-[#0a0a0a] uppercase tracking-wide">Cage-Welder Compatible</span>
             </div>
           </div>
           <div className="p-2.5 bg-gray-50 border border-gray-100 rounded-none flex items-center gap-2">
             <Wrench className="w-4 h-4 text-[#CC0000] shrink-0" />
             <div>
-              <span className="text-[9px] font-mono uppercase text-gray-400 block mb-0.5">Custom Fabrication</span>
+              <span className="text-[9px] font-mono uppercase text-black block mb-0.5">Custom Fabrication</span>
               <span className="text-xs font-black text-[#0a0a0a] uppercase tracking-wide">Tailored Cut & Bend</span>
             </div>
           </div>

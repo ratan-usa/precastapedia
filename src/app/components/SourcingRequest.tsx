@@ -48,7 +48,7 @@ export default function SourcingRequest() {
                             <span className="text-[#CC0000] font-bold uppercase tracking-wider text-sm">
                                 SEND US A MESSAGE
                             </span>
-                            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mt-1">
+                            <h3 className="text-2xl md:text-3xl font-bold text-black mt-1">
                                 Let’s commence <span className="text-[#CC0000]">your projects</span>
                             </h3>
                         </div>
@@ -72,7 +72,7 @@ export default function SourcingRequest() {
                                 />
 
                                 <Select>
-                                    <SelectTrigger className="h-12 border-gray-300 text-gray-500">
+                                    <SelectTrigger className="h-12 border-gray-300 text-black">
                                         <SelectValue placeholder="Unit/Sets" />
                                     </SelectTrigger>
                                     <SelectContent>
@@ -111,7 +111,7 @@ export default function SourcingRequest() {
                             <h2 className="text-3xl md:text-4xl font-bold mb-4">
                                 Seamless and smart production on your own terms
                             </h2>
-                            <p className="text-gray-300 text-lg">
+                            <p className="text-white text-lg">
                                 Easily submit your sourcing inquiries and receive competitive quotes.
                             </p>
                         </div>
@@ -120,7 +120,7 @@ export default function SourcingRequest() {
                             {benefits.map((item, index) => (
                                 <li key={index} className="flex items-start gap-3">
                                     <CheckCircle2 className="w-6 h-6 text-white shrink-0 mt-0.5" />
-                                    <span className="text-gray-100 text-base leading-relaxed">
+                                    <span className="text-white text-base leading-relaxed">
                                         {item}
                                     </span>
                                 </li>

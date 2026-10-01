@@ -3,8 +3,8 @@ import InfiniteLiveFeed from './InfiniteLiveFeed'; // Import your feed component
 import React from 'react';
 
 const AdPlaceholder = ({ side }: { side: 'Left' | 'Right' }) => (
-  <div className="w-[160px] h-[600px] bg-neutral-800 border border-neutral-700 rounded-lg flex flex-col items-center justify-center text-gray-500 text-xs gap-2 sticky top-24">
-    <span className="font-bold tracking-widest text-gray-600">ADVERTISEMENT</span>
+  <div className="w-[160px] h-[600px] bg-neutral-800 border border-neutral-700 rounded-lg flex flex-col items-center justify-center text-black text-xs gap-2 sticky top-24">
+    <span className="font-bold tracking-widest text-black">ADVERTISEMENT</span>
     <div className="w-full h-full bg-neutral-900/50 flex items-center justify-center">
       {/* Replace this with your Google AdSense / Vimeo Ad Code */}
       {side} Sidebar Ad
@@ -30,7 +30,7 @@ export default function LiveStreamLayout() {
             {/* Header */}
             <div className="mb-8 border-b border-neutral-800 pb-6">
                 <h1 className="text-3xl font-bold text-white mb-2">Global Factory Live Stream</h1>
-                <p className="text-gray-400">Watch real-time operations from our verified partners.</p>
+                <p className="text-black">Watch real-time operations from our verified partners.</p>
             </div>
 
             {/* YOUR INFINITE FEED COMPONENT */}

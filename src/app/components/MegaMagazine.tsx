@@ -96,7 +96,7 @@ export default function MegaMagazine() {
   const currentContent = MAGAZINE_DATA[activeTab] || MAGAZINE_DATA["ductile-iron"];
 
   return (
-    <section className="bg-[#0a0a0a] text-zinc-300 py-10 font-sans border-t border-zinc-950">
+    <section className="bg-[#0a0a0a] text-white py-10 font-sans border-t border-zinc-950">
       {/* Absolute strict fluid full width padding */}
       <div className="w-full px-4 sm:px-6 lg:px-10">
 
@@ -107,12 +107,12 @@ export default function MegaMagazine() {
               MEGA <span className="text-[#CC0000]">FOUNDRIES</span>
             </div>
             <div className="h-6 w-[1px] bg-zinc-800 hidden md:block" />
-            <span className="text-[10px] font-mono tracking-widest text-zinc-500 uppercase">
+            <span className="text-[10px] font-mono tracking-widest text-white uppercase">
               Primary Metals Spec Index
             </span>
           </div>
-          <div className="text-center md:text-right text-xs text-zinc-400 font-mono">
-            CALL: (512) 782-8880 <span className="mx-2 text-zinc-700">•</span> VISIT: WWW.MEGAFOUNDRIES.COM
+          <div className="text-center md:text-right text-xs text-white font-mono">
+            CALL: +1 (512) 782-8880 <span className="mx-2 text-white">•</span> VISIT: www.megafoundries.com
           </div>
         </div>
 
@@ -137,7 +137,7 @@ export default function MegaMagazine() {
                     className={`w-full text-left px-4 py-2.5 text-xs font-medium border-l-2 transition-all duration-200
                       ${isActive
                         ? "bg-[#0a0a0a] text-[#CC0000] border-[#CC0000] font-bold"
-                        : "bg-transparent text-zinc-400 border-transparent hover:bg-[#1a1a1a] hover:text-white"
+                        : "bg-transparent text-white border-transparent hover:bg-[#1a1a1a] hover:text-white"
                       }
                     `}
                   >
@@ -162,13 +162,13 @@ export default function MegaMagazine() {
                 {currentContent.title}
               </h3>
 
-              <div className="flex flex-wrap gap-2 text-xs font-mono text-zinc-500">
+              <div className="flex flex-wrap gap-2 text-xs font-mono text-white">
                 <span className="text-[#CC0000] font-bold italic">{currentContent.author}</span>
                 <span>•</span>
                 <span>{currentContent.date}</span>
               </div>
 
-              <p className="text-zinc-400 text-sm leading-relaxed font-light">
+              <p className="text-white text-sm leading-relaxed font-light">
                 {currentContent.excerpt}
               </p>
 
@@ -193,7 +193,7 @@ export default function MegaMagazine() {
                 <li key={index}>
                   <Link
                     href={`/magazine/matrix/${category.toLowerCase().replace(/ /g, "-")}`}
-                    className="text-xs text-zinc-500 hover:text-[#CC0000] transition-colors duration-150 block py-0.5"
+                    className="text-xs text-white hover:text-[#CC0000] transition-colors duration-150 block py-0.5"
                   >
                     {category}
                   </Link>

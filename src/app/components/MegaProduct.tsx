@@ -111,7 +111,7 @@ const products = [
     link: "/products/telecom-covers"
   },
   {
-    id: "precast-concrete molds",
+    id: "precast-concrete-molds-v2",
     title: "Precast Concrete Molds",
     description: "Premium linear drainage solutions engineered with solid ductile iron casting gratings to ensure rapid surface water evacuation and maximum performance.",
     image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/MEGA/catch-01.JPG`,
@@ -121,7 +121,7 @@ const products = [
 
 const MegaProduct = () => {
   return (
-    <section className="bg-[#121212] text-gray-200 py-16 w-full px-4 sm:px-6 lg:px-10 font-sans">
+    <section className="bg-[#121212] text-white py-16 w-full px-4 sm:px-6 lg:px-10 font-sans">
       <div className="">
 
         {/* Header Section */}
@@ -129,7 +129,7 @@ const MegaProduct = () => {
           <h2 className="text-3xl font-light tracking-wide text-white mb-2">
             Explore <span className="font-semibold text-[#CC0000]">Mega Foundries</span> Products
           </h2>
-          <p className="text-sm text-zinc-400">
+          <p className="text-sm text-white">
             Complete line of world-class nodular ductile iron castings (Fe 50007), delivering ultimate durability and engineering modernity to your infrastructure projects.
           </p>
         </div>
@@ -139,7 +139,7 @@ const MegaProduct = () => {
           {categories.map((cat, index) => (
             <button
               key={index}
-              className="px-3 py-2 border border-zinc-800 bg-[#1a1a1a] hover:bg-[#CC0000] hover:border-[#CC0000] text-zinc-300 hover:text-white transition-all duration-200 rounded-sm"
+              className="px-3 py-2 border border-zinc-800 bg-[#1a1a1a] hover:bg-[#CC0000] hover:border-[#CC0000] text-white hover:text-white transition-all duration-200 rounded-sm"
             >
               {cat}
             </button>
@@ -170,7 +170,7 @@ const MegaProduct = () => {
                 <h3 className="text-2xl font-semibold text-white tracking-wide mb-3">
                   {product.title}
                 </h3>
-                <p className="text-zinc-400 text-sm leading-relaxed mb-6 max-w-2xl">
+                <p className="text-white text-sm leading-relaxed mb-6 max-w-2xl">
                   {product.description}
                 </p>
 

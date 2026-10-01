@@ -244,7 +244,7 @@ export function VerticalAccordion() {
                                 )}
                             >
                                 <h3
-                                    className="text-white/60 hover:text-white whitespace-nowrap text-sm font-bold tracking-[0.2em] uppercase transition-colors"
+                                    className="text-white hover:text-white whitespace-nowrap text-sm font-bold tracking-[0.2em] uppercase transition-colors"
                                     style={{
                                         writingMode: 'vertical-rl',
                                         transform: 'rotate(180deg)',

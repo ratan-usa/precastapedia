@@ -48,12 +48,12 @@ export default async function RebarLiteDetailPage({ params }: PageProps) {
             <h1 className="text-4xl md:text-6xl font-black uppercase tracking-tighter text-[#0a0a0a]">
               {product.name}
             </h1>
-            <p className="text-sm font-mono uppercase tracking-wider text-gray-500 font-bold mt-1">
+            <p className="text-sm font-mono uppercase tracking-wider text-black font-bold mt-1">
               {product.tagline}
             </p>
           </div>
           <div className="inline-block bg-gray-50 border border-gray-200 px-4 py-3">
-            <span className="text-[10px] font-mono uppercase text-gray-400 block">Compliance Standard</span>
+            <span className="text-[10px] font-mono uppercase text-black block">Compliance Standard</span>
             <span className="text-xs font-black text-[#0a0a0a] uppercase font-mono">{product.materialStandard}</span>
           </div>
         </div>
@@ -76,7 +76,7 @@ export default async function RebarLiteDetailPage({ params }: PageProps) {
               <div className="absolute bottom-3 left-3 w-3 h-3 border-b border-l border-gray-300" />
               <div className="absolute bottom-3 right-3 w-3 h-3 border-b border-r border-gray-300" />
 
-              <div className="absolute bottom-4 left-4 right-4 bg-[#0a0a0a]/95 text-[9px] font-mono uppercase font-bold tracking-wider text-zinc-400 text-center py-2">
+              <div className="absolute bottom-4 left-4 right-4 bg-[#0a0a0a]/95 text-[9px] font-mono uppercase font-bold tracking-wider text-white text-center py-2">
                 CAD Render // Spec View
               </div>
             </div>
@@ -98,31 +98,31 @@ export default async function RebarLiteDetailPage({ params }: PageProps) {
               <h3 className="text-xl font-black uppercase tracking-tight text-[#0a0a0a] mb-3">
                 Product Engineering Overview
               </h3>
-              <p className="text-gray-600 text-sm leading-relaxed font-light">
+              <p className="text-black text-sm leading-relaxed font-light">
                 {product.description} Engineered specifically to withstand severe mechanical stresses in modern industrial and civil construction projects while maintaining dimensional stability.
               </p>
             </div>
 
             {/* Key Engineering Specifications */}
             <div className="border-t border-gray-200 pt-6">
-              <h4 className="text-xs font-mono uppercase tracking-wider text-gray-400 font-bold mb-4">
+              <h4 className="text-xs font-mono uppercase tracking-wider text-black font-bold mb-4">
                 Key Performance Characteristics:
               </h4>
               <div className="space-y-3">
                 <div className="flex items-start gap-3 p-3 bg-gray-50 border border-gray-100">
                   <CheckCircle2 className="w-4 h-4 text-[#CC0000] shrink-0 mt-0.5" />
-                  <span className="text-xs font-bold text-gray-800 uppercase tracking-wide">Standard Compliance: {product.materialStandard}</span>
+                  <span className="text-xs font-bold text-black uppercase tracking-wide">Standard Compliance: {product.materialStandard}</span>
                 </div>
                 <div className="flex items-start gap-3 p-3 bg-gray-50 border border-gray-100">
                   <CheckCircle2 className="w-4 h-4 text-[#CC0000] shrink-0 mt-0.5" />
-                  <span className="text-xs font-bold text-gray-800 uppercase tracking-wide">Engineered High-Tensile Structural Profile</span>
+                  <span className="text-xs font-bold text-black uppercase tracking-wide">Engineered High-Tensile Structural Profile</span>
                 </div>
               </div>
             </div>
 
             {/* Target Structural Applications */}
             <div className="border-t border-gray-200 pt-6">
-              <h4 className="text-xs font-mono uppercase tracking-wider text-gray-400 font-bold mb-4">
+              <h4 className="text-xs font-mono uppercase tracking-wider text-black font-bold mb-4">
                 Approved Structural Applications:
               </h4>
               <div className="flex flex-wrap gap-2">

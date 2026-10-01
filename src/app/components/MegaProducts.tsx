@@ -105,7 +105,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ item, index }) => {
           <h3 className="text-base font-bold text-white mb-1 group-hover:text-[#CC0000] transition-colors capitalize line-clamp-1">
             {item.title.replace(/_/g, ' ')}
           </h3>
-          <p className="text-zinc-400 mb-3 leading-relaxed font-light text-xs line-clamp-2">
+          <p className="text-white mb-3 leading-relaxed font-light text-xs line-clamp-2">
             {item.description}
           </p>
 
@@ -115,7 +115,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ item, index }) => {
               {item.specs.slice(0, 2).map((spec, i) => (
                 <span
                   key={i}
-                  className="text-[9px] font-mono uppercase tracking-wide bg-zinc-900 border border-zinc-800 text-zinc-300 px-2 py-0.5 rounded"
+                  className="text-[9px] font-mono uppercase tracking-wide bg-zinc-900 border border-zinc-800 text-white px-2 py-0.5 rounded"
                 >
                   {spec}
                 </span>
@@ -146,10 +146,10 @@ export const MegaProducts = () => {
           viewport={{ once: true }}
           className="mb-6 border-l-4 border-[#CC0000] pl-4"
         >
-          <h2 className="text-2xl md:text-3xl font-black text-slate-900 tracking-tight uppercase">
+          <h2 className="text-2xl md:text-3xl font-black text-black tracking-tight uppercase">
             New products <span className="text-[#CC0000]">Innovations</span>
           </h2>
-          <p className="text-slate-500 mt-1 text-xs sm:text-sm max-w-xl">
+          <p className="text-black mt-1 text-xs sm:text-sm max-w-xl">
             Precision-engineered casting solutions for demanding infrastructure.
           </p>
         </motion.div>

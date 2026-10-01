@@ -67,7 +67,7 @@ export default function MegaBlog() {
               The Melt <span className="text-[#CC0000]">Logistics</span>
             </h2>
           </div>
-          <p className="text-zinc-400 text-xs sm:text-sm max-w-md font-light leading-relaxed">
+          <p className="text-white text-xs sm:text-sm max-w-md font-light leading-relaxed">
             Industrial perspectives, metallurgical studies, and engineering updates directly from Mega Foundries.
           </p>
         </div>
@@ -81,7 +81,7 @@ export default function MegaBlog() {
             >
               {/* Index & Category */}
               <div className="lg:col-span-2 flex items-center lg:flex-col lg:items-start justify-between gap-1">
-                <span className="text-2xl font-black font-mono text-zinc-700 group-hover:text-[#CC0000] transition-colors">
+                <span className="text-2xl font-black font-mono text-white group-hover:text-[#CC0000] transition-colors">
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 <span className="text-[10px] font-mono uppercase tracking-wider font-bold text-[#CC0000] bg-[#CC0000]/10 px-2 py-0.5">
@@ -91,13 +91,13 @@ export default function MegaBlog() {
 
               {/* Textual Segment */}
               <div className="lg:col-span-7 flex flex-col justify-center">
-                <div className="flex items-center gap-3 text-[11px] text-zinc-500 mb-1 font-mono">
+                <div className="flex items-center gap-3 text-[11px] text-white mb-1 font-mono">
                   <span className="flex items-center gap-1">
                     <User className="w-3 h-3 text-[#CC0000]" /> {post.author}
                   </span>
                   <span>•</span>
                   <span className="flex items-center gap-1">
-                    <Clock className="w-3 h-3 text-zinc-400" /> {post.readTime}
+                    <Clock className="w-3 h-3 text-white" /> {post.readTime}
                   </span>
                 </div>
 
@@ -107,7 +107,7 @@ export default function MegaBlog() {
                   </h3>
                 </Link>
 
-                <p className="text-zinc-400 text-xs font-light leading-relaxed line-clamp-2">
+                <p className="text-white text-xs font-light leading-relaxed line-clamp-2">
                   {post.excerpt}
                 </p>
               </div>

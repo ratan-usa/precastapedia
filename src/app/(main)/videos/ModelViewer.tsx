@@ -55,37 +55,43 @@ export default function ModelViewer({ src, poster, alt = "3D Product Model" }: M
 
   return (
     <div className="w-full h-full min-h-[320px] sm:min-h-[360px] bg-[#0a0a0a] rounded-none overflow-hidden relative group flex flex-col items-center justify-center">
-      {/* 3D Model Viewer Custom Element */}
-      {/* @ts-ignore */}
-      <model-viewer
-        ref={viewerRef}
-        src={src}
-        poster={poster}
-        alt={alt}
-        auto-rotate={isAutoRotate ? "" : undefined}
-        camera-controls=""
-        touch-action="pan-y"
-        shadow-intensity="1.5"
-        exposure="1.2"
-        loading="eager"
-        reveal="auto"
-        interaction-prompt="none"
-        style={{
-          width: '100%',
-          height: '100%',
-          minHeight: '320px',
-          display: 'block',
-          backgroundColor: '#0a0a0a',
-          cursor: 'grab'
-        }}
-      />
+      {isLoaded ? (
+        // @ts-ignore
+        <model-viewer
+          ref={viewerRef}
+          src={src}
+          poster={poster}
+          alt={alt}
+          auto-rotate=""
+          camera-controls=""
+          touch-action="pan-y"
+          shadow-intensity="1"
+          exposure="1"
+          loading="lazy"
+          reveal="auto"
+          interaction-prompt="none"
+          style={{
+            width: '100%',
+            height: '100%',
+            minHeight: '320px',
+            display: 'block',
+            backgroundColor: '#0a0a0a',
+            cursor: 'grab'
+          }}
+        />
+      ) : (
+        <div className="flex flex-col items-center justify-center gap-2 text-white/70 font-mono text-xs">
+          <Rotate3d className="w-8 h-8 animate-spin text-[#CC0000]" />
+          <span>Initializing 3D Engine...</span>
+        </div>
+      )}
 
       {/* Floating Interactive 3D Control Bar */}
       <div className="absolute top-2.5 right-2.5 z-20 flex items-center gap-1 bg-black/80 backdrop-blur-md border border-zinc-800 p-1">
         <button
           onClick={toggleAutoRotate}
           title={isAutoRotate ? "Pause Auto Rotation" : "Start Auto Rotation"}
-          className={`p-1.5 transition-colors ${isAutoRotate ? 'text-[#CC0000] bg-zinc-900' : 'text-zinc-400 hover:text-white'}`}
+          className={`p-1.5 transition-colors ${isAutoRotate ? 'text-[#CC0000] bg-zinc-900' : 'text-white hover:text-[#CC0000]'}`}
         >
           {isAutoRotate ? <Pause className="w-3.5 h-3.5" /> : <Play className="w-3.5 h-3.5" />}
         </button>
@@ -93,7 +99,7 @@ export default function ModelViewer({ src, poster, alt = "3D Product Model" }: M
         <button
           onClick={handleZoomIn}
           title="Zoom In"
-          className="p-1.5 text-zinc-400 hover:text-white transition-colors"
+          className="p-1.5 text-white hover:text-[#CC0000] transition-colors"
         >
           <ZoomIn className="w-3.5 h-3.5" />
         </button>
@@ -101,7 +107,7 @@ export default function ModelViewer({ src, poster, alt = "3D Product Model" }: M
         <button
           onClick={handleZoomOut}
           title="Zoom Out"
-          className="p-1.5 text-zinc-400 hover:text-white transition-colors"
+          className="p-1.5 text-white hover:text-[#CC0000] transition-colors"
         >
           <ZoomOut className="w-3.5 h-3.5" />
         </button>
@@ -109,14 +115,14 @@ export default function ModelViewer({ src, poster, alt = "3D Product Model" }: M
         <button
           onClick={handleResetCamera}
           title="Reset 3D Viewpoint"
-          className="p-1.5 text-zinc-400 hover:text-white transition-colors"
+          className="p-1.5 text-white hover:text-[#CC0000] transition-colors"
         >
           <RotateCcw className="w-3.5 h-3.5" />
         </button>
       </div>
 
       {/* Bottom Hint Indicator */}
-      <div className="absolute bottom-2.5 left-2.5 z-20 flex items-center gap-1.5 bg-[#0a0a0a]/90 border border-zinc-800 px-2.5 py-1 text-[9px] font-mono uppercase tracking-wider text-zinc-300 pointer-events-none">
+      <div className="absolute bottom-2.5 left-2.5 z-20 flex items-center gap-1.5 bg-[#0a0a0a]/90 border border-zinc-800 px-2.5 py-1 text-[9px] font-mono uppercase tracking-wider text-white pointer-events-none">
         <Rotate3d className="w-3 h-3 text-[#CC0000]" />
         <span>360° Drag / Scroll to Zoom</span>
       </div>

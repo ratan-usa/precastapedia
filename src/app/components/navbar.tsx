@@ -56,17 +56,15 @@ const topMenuItems = [
 ];
 
 const countryOptions = [
-    { label: "USA", flag: "🇺🇸", id: "us" },
-    { label: "Canada", flag: "🇨🇦", id: "ca" },
-    { label: "Latin America", flag: "🇧🇷", id: "lat" },
-    { label: "North America", flag: "🌎", id: "na" },
-    { label: "Caribbean", flag: "🇯🇲", id: "car" },
-    { label: "Europe", flag: "🇪🇺", id: "eu" },
-]
+    { label: "USA", flag: "🇺🇸", id: "us", subtext: "Headquarters & Foundry Operations", href: "/contact?region=usa" },
+    { label: "Canada", flag: "🇨🇦", id: "ca", subtext: "Infrastructure & Casting Hub", href: "/contact?region=canada" },
+    { label: "Mexico", flag: "🇲🇽", id: "mx", subtext: "Manufacturing & Logistics Hub", href: "/contact?region=mexico" },
+];
 
 const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [showSticky, setShowSticky] = useState(false);
+    const [selectedRegion, setSelectedRegion] = useState(countryOptions[0]);
     // === 1. SCROLL LISTENER ===
     useEffect(() => {
         const handleScroll = () => {
@@ -90,24 +88,24 @@ const Navbar = () => {
                     return (
                         <DropdownMenu key={item.label}>
                             <DropdownMenuTrigger className="flex items-center gap-2 group outline-none cursor-pointer">
-                                <div className='text-neutral-600 group-hover:text-[#CC0000] transition-colors'>
+                                <div className='text-black group-hover:text-[#CC0000] transition-colors'>
                                     <item.icon size={28} strokeWidth={1.5} />
                                 </div>
                                 <div className="flex flex-col justify-center text-left">
-                                    <p className='text-sm text-neutral-500 leading-tight'>{item.label}</p>
-                                    <p className='text-xs font-bold text-neutral-800 group-hover:text-[#CC0000] transition-colors'>{item.content}</p>
+                                    <p className='text-sm text-black leading-tight'>{item.label}</p>
+                                    <p className='text-xs font-bold text-black group-hover:text-[#CC0000] transition-colors'>{item.content}</p>
                                 </div>
                             </DropdownMenuTrigger>
                             <DropdownMenuContent align="end" className="w-[420px] p-3 bg-white border border-gray-100 shadow-lg rounded-md">
                                 <div className="grid grid-cols-2 gap-2">
                                     {loginOptions.map((group) => (
                                         <div key={group.id} className="space-y-1">
-                                            <h4 className="text-[13px] font-semibold text-gray-500 px-2">{group.title}</h4>
+                                            <h4 className="text-[13px] font-semibold text-black px-2">{group.title}</h4>
                                             {group.links.map((item) => (
                                                 <DropdownMenuItem key={item.href} asChild>
                                                     <Link href={item.href} className="cursor-pointer flex items-center gap-2 py-2 hover:bg-red-50 rounded px-2 group">
                                                         <ChevronRight className="w-4 h-4 text-[#CC0000] opacity-0 group-hover:opacity-100 transition-opacity" />
-                                                        <span className="font-medium text-[13px] text-gray-700 group-hover:text-[#CC0000]">{item.label}</span>
+                                                        <span className="font-medium text-[13px] text-black group-hover:text-[#CC0000]">{item.label}</span>
                                                     </Link>
                                                 </DropdownMenuItem>
                                             ))}
@@ -120,12 +118,12 @@ const Navbar = () => {
                 }
                 return (
                     <Link className='flex items-center gap-2 group' key={item.label} href={item.href}>
-                        <div className='text-neutral-600 group-hover:text-[#CC0000] transition-colors'>
+                        <div className='text-black group-hover:text-[#CC0000] transition-colors'>
                             <item.icon size={28} strokeWidth={1.5} />
                         </div>
                         <div className="flex flex-col justify-center">
-                            <p className='text-sm text-neutral-500 leading-tight'>{item.label}</p>
-                            <p className='text-xs font-bold text-neutral-800 group-hover:text-[#CC0000] transition-colors'>{item.content}</p>
+                            <p className='text-sm text-black leading-tight'>{item.label}</p>
+                            <p className='text-xs font-bold text-black group-hover:text-[#CC0000] transition-colors'>{item.content}</p>
                         </div>
                     </Link>
                 )
@@ -159,7 +157,7 @@ const Navbar = () => {
                                 </div>
                             </div>
                             <div className="flex items-center gap-2 lg:hidden">
-                                <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="p-2 text-neutral-600 hover:text-[#CC0000] transition-colors">
+                                <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="p-2 text-black hover:text-[#CC0000] transition-colors">
                                     {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
                                 </button>
                             </div>
@@ -218,9 +216,50 @@ const Navbar = () => {
                                 </Link>
                             </div>
                             {/* ... Mobile Menu Button code ... */}
-                            {/* 2. User Menu (Aligned Bottom) */}
+                            {/* 2. Globally Connected Dropdown Menu */}
                             <div className="mt-4">
-                                <h1 className='text-xl md:text-2xl text-[#CC0000] flex gap-4 items-center'>Globally Connected <ChevronDownIcon className='h-8 w-8 text-gray-800 ' /></h1>
+                                <DropdownMenu>
+                                    <DropdownMenuTrigger className="flex items-center gap-2 group outline-none cursor-pointer text-left">
+                                        <h2 className='text-lg md:text-xl font-black text-[#CC0000] flex items-center gap-2 tracking-tight uppercase group-hover:text-black transition-colors'>
+                                            Globally Connected
+                                            <span className="text-xs bg-red-50 text-[#CC0000] border border-red-200 px-2 py-0.5 rounded font-mono font-bold flex items-center gap-1.5 normal-case">
+                                                <span>{selectedRegion.flag}</span>
+                                                <span>{selectedRegion.label}</span>
+                                            </span>
+                                            <ChevronDownIcon className='h-5 w-5 text-black group-hover:text-[#CC0000] transition-transform duration-200 group-data-[state=open]:rotate-180' />
+                                        </h2>
+                                    </DropdownMenuTrigger>
+                                    <DropdownMenuContent align="start" className="w-[300px] p-2 bg-white border border-gray-200 shadow-xl rounded-none z-50">
+                                        <div className="px-2.5 py-1.5 border-b border-gray-100 mb-1 flex items-center justify-between">
+                                            <span className="text-[10px] font-mono uppercase font-bold text-black">Global Operations Hub</span>
+                                            <span className="text-[9px] font-mono text-[#CC0000] font-bold uppercase">3 Active Hubs</span>
+                                        </div>
+                                        {countryOptions.map((country) => (
+                                            <DropdownMenuItem
+                                                key={country.id}
+                                                onClick={() => setSelectedRegion(country)}
+                                                className={`flex items-center justify-between p-2.5 cursor-pointer rounded-none hover:bg-red-50 transition-colors ${
+                                                    selectedRegion.id === country.id ? "bg-red-50/80 border-l-2 border-[#CC0000]" : ""
+                                                }`}
+                                            >
+                                                <div className="flex items-center gap-3">
+                                                    <span className="text-xl shrink-0">{country.flag}</span>
+                                                    <div>
+                                                        <p className="text-xs font-bold text-black leading-tight">{country.label}</p>
+                                                        <p className="text-[10px] text-black/70 font-sans">{country.subtext}</p>
+                                                    </div>
+                                                </div>
+                                                {selectedRegion.id === country.id ? (
+                                                    <span className="text-[9px] font-mono font-bold text-[#CC0000] uppercase bg-white border border-red-200 px-1.5 py-0.5">Active</span>
+                                                ) : (
+                                                    <Link href={country.href} className="text-[10px] text-black hover:text-[#CC0000] flex items-center">
+                                                        <ChevronRight className="w-3.5 h-3.5" />
+                                                    </Link>
+                                                )}
+                                            </DropdownMenuItem>
+                                        ))}
+                                    </DropdownMenuContent>
+                                </DropdownMenu>
                             </div>
                         </div>
 
@@ -274,6 +313,30 @@ const Navbar = () => {
                 {/* === MOBILE MENU DRAWER === */}
                 {isMobileMenuOpen && (
                     <div className="lg:hidden bg-neutral-50 border-t border-neutral-200 px-4 py-4 shadow-inner space-y-4 h-[calc(100vh-80px)] overflow-y-auto">
+                        {/* Regional Hub Selector on Mobile */}
+                        <div className="p-3 bg-white rounded-lg border border-gray-100">
+                            <div className="flex items-center justify-between mb-2">
+                                <span className="text-xs font-bold text-black uppercase">Region: {selectedRegion.flag} {selectedRegion.label}</span>
+                                <span className="text-[9px] font-mono text-[#CC0000] font-bold uppercase">Hub Select</span>
+                            </div>
+                            <div className="grid grid-cols-3 gap-2">
+                                {countryOptions.map((c) => (
+                                    <button
+                                        key={c.id}
+                                        onClick={() => setSelectedRegion(c)}
+                                        className={`flex flex-col items-center p-2 rounded text-xs font-bold border transition-colors ${
+                                            selectedRegion.id === c.id
+                                                ? "border-[#CC0000] bg-red-50 text-[#CC0000]"
+                                                : "border-gray-200 text-black hover:border-black"
+                                        }`}
+                                    >
+                                        <span className="text-lg">{c.flag}</span>
+                                        <span>{c.label}</span>
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
+
                         {topMenuItems.map((item) => (
                             <div key={item.label}>
                                 {item.isLogin ? (
@@ -281,16 +344,16 @@ const Navbar = () => {
                                         <div className='flex items-center gap-4 text-[#CC0000] mb-3'>
                                             <item.icon size={24} />
                                             <div>
-                                                <p className='text-xs text-neutral-500'>{item.label}</p>
+                                                <p className='text-xs text-black'>{item.label}</p>
                                                 <p className='text-sm font-bold'>Select Login Type</p>
                                             </div>
                                         </div>
                                         <div className="grid grid-cols-2 gap-3 px-1">
                                             {loginOptions.map((group) => (
                                                 <div key={group.id} className="space-y-1">
-                                                    <h4 className="text-[12px] font-semibold text-gray-500 pl-1">{group.title}</h4>
+                                                    <h4 className="text-[12px] font-semibold text-black pl-1">{group.title}</h4>
                                                     {group.links.map((link) => (
-                                                        <Link key={link.href} href={link.href} className="flex items-center gap-2 p-2 rounded text-[13px] text-neutral-600 hover:bg-red-50 hover:text-[#CC0000]">
+                                                        <Link key={link.href} href={link.href} className="flex items-center gap-2 p-2 rounded text-[13px] text-black hover:bg-red-50 hover:text-[#CC0000]">
                                                             <ChevronRight className="w-3 h-3" />
                                                             {link.label}
                                                         </Link>
@@ -303,8 +366,8 @@ const Navbar = () => {
                                     <Link className='flex items-center gap-4 p-2 rounded-lg hover:bg-white hover:shadow-sm transition-all' href={item.href}>
                                         <div className='text-[#CC0000]'><item.icon size={24} /></div>
                                         <div>
-                                            <p className='text-xs text-neutral-500'>{item.label}</p>
-                                            <p className='text-sm font-bold text-neutral-800'>{item.content}</p>
+                                            <p className='text-xs text-black'>{item.label}</p>
+                                            <p className='text-sm font-bold text-black'>{item.content}</p>
                                         </div>
                                     </Link>
                                 )}
@@ -333,7 +396,7 @@ const Navbar = () => {
                         </div>
 
                         <div className="flex items-center gap-2 lg:hidden ml-auto">
-                            <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="p-2 text-neutral-600">
+                            <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="p-2 text-black">
                                 {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
                             </button>
                         </div>

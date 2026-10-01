@@ -10,9 +10,9 @@ const categories = [
   "Petro Gas Station Products",
   "Tree Grates",
   "Marine Castings",
-  "Detectable_Warning_Plates",
+  "Detectable Warning Plates",
   "Water Works Products",
-  "Ornamental_Castings",
+  "Ornamental Castings",
   "Water Sampling Station",
   "Precast Concrete Molds"
 ];
@@ -84,7 +84,7 @@ const products = [
   },
   {
     id: "detectable-warning-plates",
-    title: "Detectable_Warning_Plates",
+    title: "Detectable Warning Plates",
     description: "Premium linear drainage solutions engineered with solid ductile iron casting gratings to ensure rapid surface water evacuation and maximum performance.",
     image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/MEGA/Detectable_Warning_Plates.jpeg`,
     link: "/products/drainage-castings"

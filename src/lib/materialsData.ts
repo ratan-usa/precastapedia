@@ -71,7 +71,7 @@ export const categories: Category[] = [
   {
     title: "Detectable Warning Plates",
     slug: "detectable-warning-plates",
-    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/MEGA/Detectable_Warning_Plates.jpeg`,
+    image: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/MEGA/Detectable_Warning_Plates.jpeg?v=2`,
     description: "ADA-compliant cast iron tactile plates with high-traction truncated domes.",
     specs: ["Class 35B Gray Iron", "AASHTO H-20", "Wet-Set Anchors"],
     icon: ShieldCheck,

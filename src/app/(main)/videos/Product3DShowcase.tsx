@@ -11,7 +11,8 @@ import {
   Sparkles,
   ShieldCheck,
   Activity,
-  FileText
+  FileText,
+  Search
 } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -24,8 +25,7 @@ export interface PopularProductVideo {
   category: string;
   description: string;
   materialStandard: string;
-  loadClass: string;
-  duration: string;
+  loadClass: string; 
   type: string;
   src: string;
   thumbnail: string;
@@ -35,56 +35,68 @@ const MOST_POPULAR_PRODUCTS: PopularProductVideo[] = [
   {
     id: 1,
     badge: "#1 Most Popular",
-    title: "Pro Series Paving Risers",
+    title: "Suffolk & Nassau County NY",
     category: "Highway & Asphalt Inlets",
     description: "Our top-selling precision ductile iron height-adjustment riser system. Eliminates pavement tear-outs during resurfacing, saving up to 60% in municipal labor.",
     materialStandard: "ASTM A536 Grade 80-55-06",
     loadClass: "AASHTO H-20 / HS-20 Traffic Rated",
-    duration: "0:45",
     type: "360° ROTATION",
     src: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/paving_riser/paving-riser-1.5213.mp4`,
-    thumbnail: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/PAVING-RISERS/paving_riser_1.5200.png`
+    thumbnail: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/MEGA/EVERYCITY__RENDERS/CHICAGO/CHIACAGO_FC1.22_-_Copy.png`
   },
   {
     id: 2,
     badge: "Top Trench System",
-    title: "Heavy-Duty Trench Drain 500",
+    title: "NYC DEP",
     category: "Continuous Linear Drainage",
     description: "Engineered monolithic ductile iron trench matrix designed for rapid fluid interception across airport aprons, industrial docks, and highway toll plazas.",
     materialStandard: "EN 1433 / ASTM A48 Class 35B",
     loadClass: "F900 (90-Ton Proof Load)",
-    duration: "1:15",
     type: "3D SIMULATION",
     src: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/trench/Trench_500_Animation.498.mp4`,
-    thumbnail: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/MEGA/pre-trench-01.JPG`
+    thumbnail: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/MEGA/EVERYCITY__RENDERS/NEWYORK/38_IN/38_in_frame.5_-_Copy.png`
   },
   {
     id: 3,
     badge: "Municipal Standard",
-    title: "High-Flow Hydraulic Pipe Grates",
+    title: "Boston Water & Sewer Commission",
     category: "Stormwater Management",
     description: "High-capacity drainage inlet grate with aerodynamic vane geometry that optimizes surface inflow while blocking debris accumulation in urban catch basins.",
     materialStandard: "Ductile Iron 65-45-12",
     loadClass: "D400 Heavy Municipal Class",
-    duration: "0:30",
     type: "HYDRO-DYNAMIC 3D",
     src: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/PAVING-RISERS/products/pipe_grate.mp4`,
-    thumbnail: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/PAVING-RISERS/products/pipe_grid.jpeg`
+    thumbnail: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/MEGA/EVERYCITY__RENDERS/BOSTON/BOSTON_1.68.png`
   },
   {
     id: 4,
     badge: "ADA Accessibility",
-    title: "ADA Detectable Warning Plates",
+    title: "OPSD Canada",
     category: "Tactile Safety Infrastructure",
     description: "ADA-compliant cast iron tactile plates with high-traction truncated domes engineered for permanent wet-set anchor installations and extreme durability.",
     materialStandard: "Class 35B Gray Iron / Ductile Iron",
     loadClass: "AASHTO H-20 Heavy Traffic",
-    duration: "0:30",
     type: "TACTILE 3D MODEL",
-    src: "/video/warning_plates/warning_plates.mp4",
-    thumbnail: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/assets/detectable_plates/detectable_warning_plate_1.jpeg`
+    src: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/opsd_canada/Manufactured_By_Standard_Casting(OPSD).mp4`,
+    thumbnail: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/MEGA/EVERYCITY__RENDERS/OPSD/400.010.20.png`
+  }
+  ,
+  {
+    id: 5,
+    badge: "ADA Accessibility",
+    title: "San Antanio TX",
+    category: "Tactile Safety Infrastructure",
+    description: "ADA-compliant cast iron tactile plates with high-traction truncated domes engineered for permanent wet-set anchor installations and extreme durability.",
+    materialStandard: "Class 35B Gray Iron / Ductile Iron",
+    loadClass: "AASHTO H-20 Heavy Traffic",
+    type: "TACTILE 3D MODEL",
+    src: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/video/warning_plates/warning_plates.mp4`,
+    thumbnail: `${process.env.NEXT_PUBLIC_R2_BUCKET_URL}/MEGA/EVERYCITY__RENDERS/HOUSTON/24_IN_HOUSTON.30_-_Copy.png`
   }
 ];
+
+
+ 
 
 export default function Product3DShowcase() {
   const [activeVideoIndex, setActiveVideoIndex] = useState(0);
@@ -141,7 +153,7 @@ export default function Product3DShowcase() {
 
           {/* LEFT: Main Interactive Video Showcase (8 Cols) */}
           <div className="lg:col-span-8 w-full space-y-4">
-            <div className="relative aspect-video bg-black rounded-none border border-zinc-800 shadow-2xl overflow-hidden group">
+            <div className="relative aspect-[16/8.5] max-h-[380px] md:max-h-[410px] bg-black rounded-none border border-zinc-800 shadow-2xl overflow-hidden group">
 
               <video
                 ref={videoRef}
@@ -177,10 +189,7 @@ export default function Product3DShowcase() {
                 <div className="flex items-center gap-2">
                   <Badge variant="outline" className="text-[#CC0000] border-[#CC0000] bg-[#CC0000]/10 rounded-none uppercase text-[10px] tracking-wider font-black">
                     {activeVideo.category}
-                  </Badge>
-                  <span className="text-xs text-white font-mono tracking-wide">
-                    {activeVideo.duration} Run Duration
-                  </span>
+                  </Badge> 
                 </div>
 
                 <div className="flex items-center gap-4 text-xs font-mono text-white">
@@ -251,10 +260,7 @@ export default function Product3DShowcase() {
                         <div className="flex items-center justify-between gap-1 mb-0.5">
                           <span className="text-[9px] font-mono uppercase tracking-widest text-[#CC0000] font-bold">
                             {video.badge}
-                          </span>
-                          <span className="text-[9px] font-mono text-white">
-                            {video.duration}
-                          </span>
+                          </span> 
                         </div>
                         <h5 className={cn(
                           "font-bold text-xs uppercase tracking-wide leading-tight line-clamp-1 transition-colors",
@@ -276,13 +282,44 @@ export default function Product3DShowcase() {
             <div className="pt-4 border-t border-zinc-800 text-left w-full space-y-2">
               <Link href="/contact" className="block w-full">
                 <Button className="w-full bg-[#CC0000] hover:bg-white hover:text-black text-white font-black uppercase tracking-wider text-xs h-11 rounded-none transition-all flex items-center justify-center gap-2">
-                  Get Bulk Quote For Popular Lineup <ChevronRight className="w-3.5 h-3.5" />
+                  Load More Products & Videos <ChevronRight className="w-3.5 h-3.5" />
                 </Button>
               </Link>
             </div>
+                      {/* Bottom Side Search Bar & Search Button */}
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              const form = e.currentTarget;
+              const input = form.elements.namedItem('searchQuery') as HTMLInputElement;
+              if (input && input.value.trim()) {
+                window.location.href = `/materials?q=${encodeURIComponent(input.value.trim())}`;
+              }
+            }}
+            className="w-full flex flex-col sm:flex-row items-stretch gap-2 bg-zinc-900/90 border border-zinc-800 p-2 rounded-none shadow-2xl focus-within:border-[#CC0000] transition-colors"
+          >
+            <div className="relative flex-1 flex items-center">
+              {/* <Search className="w-5 h-5 text-white/50 absolute left-3 pointer-events-none" /> */}
+              <input
+                type="text"
+                name="searchQuery"
+                placeholder="Search products, ASTM standards, CAD drawings, or casting specs..."
+                className="w-full bg-transparent pl-10 pr-4 py-3 text-sm text-white placeholder-zinc-500 focus:outline-none font-sans"
+              />
+            </div>
+            <Button
+              type="submit"
+              className="bg-[#CC0000] hover:bg-[#b01e1d] text-white font-black uppercase tracking-wider text-xs px-6 py-3 h-auto rounded-none transition-all flex items-center justify-center gap-2 shrink-0"
+            >
+              <Search className="w-4 h-4" />
+              Search
+            </Button>
+          </form>
           </div>
 
         </div>
+ 
+
       </div>
     </section>
   );
